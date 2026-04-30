@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nanis Communication</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:#000;color:#fff;overflow-x:hidden}
+
+header{
+ text-align:center;
+ padding:60px 20px;
+}
+
+header img{
+ width:180px;
+ animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+ from{filter:drop-shadow(0 0 5px gold)}
+ to{filter:drop-shadow(0 0 20px gold)}
+}
+
+header h1{
+ font-family:'Playfair Display',serif;
+ font-size:42px;
+ color:#d4af37;
+ margin:10px 0;
+}
+
+nav{
+ display:flex;
+ justify-content:center;
+ gap:25px;
+ padding:15px;
+ background:#050505;
+ position:sticky;
+ top:0
+}
+
+nav a{color:#fff;text-decoration:none}
+nav a:hover{color:#d4af37}
+
+.hero{
+ padding:140px 20px;
+ text-align:center;
+}
+
+.hero::before{
+ content:"";
+ position:absolute;
+ top:0;left:0;right:0;bottom:0;
+ background:url('logo.png') center/400px no-repeat;
+ opacity:0.08;
+ filter:blur(3px);
+}
+
+.hero h2{
+ font-size:48px;
+ font-family:'Playfair Display',serif;
+ color:#d4af37;
+}
+
+.btn{
+ display:inline-block;
+ margin-top:25px;
+ padding:14px 30px;
+ background:#d4af37;
+ color:#000;
+ border-radius:30px;
+ text-decoration:none;
+ font-weight:bold;
+}
+
+section{padding:70px 20px;text-align:center}
+
+h2{font-family:'Playfair Display',serif;color:#d4af37}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:25px;
+ margin-top:30px
+}
+
+.card{
+ background:#111;
+ padding:25px;
+ border-radius:15px;
+ border:1px solid #222;
+}
+
+footer{
+ padding:30px;
+ text-align:center;
+ color:#aaa;
+ border-top:1px solid rgba(212,175,55,0.3)
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <img src="logo.png" alt="Logo">
+ <h1>NANIS COMMUNICATION</h1>
+ <p>SA0351028-T</p>
+</header>
+
+<nav>
+ <a href="#about">Tentang</a>
+ <a href="#services">Perkhidmatan</a>
+ <a href="#contact">Hubungi</a>
+</nav>
+
+<section class="hero">
+ <h2>Media & Digital Communication Network</h2>
+ <a class="btn" href="#contact">Hubungi Sekarang</a>
+</section>
+
+<section id="about">
+ <h2>Tentang Kami</h2>
+ <p>Nanis Communication merupakan syarikat media dan teknologi digital berdaftar di Malaysia yang memfokuskan kepada penyiaran, komunikasi dan platform moden.</p>
+</section>
+
+<section id="services">
+ <h2>Perkhidmatan</h2>
+ <div class="grid">
+ <div class="card">📡 Broadcasting</div>
+ <div class="card">🎬 Media Production</div>
+ <div class="card">💻 Digital System</div>
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Hubungi</h2>
+ <p>📞 013-332 4777</p>
+ <a class="btn" href="https://wa.me/60133324777">WhatsApp</a>
+</section>
+
+<footer>
+ © 2026 Nanis Communication
+</footer>
+
+</body>
+</html>
