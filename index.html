@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nanis Communication</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+ margin:0;
+ font-family:'Poppins',sans-serif;
+ background:#000;
+ color:#fff;
+}
+
+/* HERO PREMIUM */
+.hero{
+ height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+ url('logo.png') center/300px no-repeat;
+}
+
+.hero h1{
+ font-size:50px;
+ color:#d4af37;
+ font-family:'Playfair Display',serif;
+ letter-spacing:3px;
+}
+
+.hero p{
+ color:#ccc;
+}
+
+.btn{
+ background:#d4af37;
+ color:#000;
+ padding:12px 30px;
+ border-radius:30px;
+ text-decoration:none;
+ margin-top:20px;
+}
+
+/* INFO BAR */
+.info{
+ margin-top:20px;
+ font-size:14px;
+ color:#aaa;
+}
+
+/* NAV */
+nav{
+ background:#111;
+ padding:15px;
+ text-align:center;
+}
+
+nav a{
+ color:#fff;
+ margin:0 15px;
+ text-decoration:none;
+}
+
+nav a:hover{color:#d4af37}
+
+/* SECTION */
+section{
+ padding:60px 20px;
+ text-align:center;
+}
+
+h2{
+ color:#d4af37;
+ font-family:'Playfair Display',serif;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+ margin-top:30px;
+}
+
+.card{
+ background:#111;
+ padding:20px;
+ border-radius:10px;
+ border:1px solid #222;
+}
+
+footer{
+ padding:20px;
+ text-align:center;
+ color:#aaa;
+ border-top:1px solid #333;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+ <h1>NANIS COMMUNICATION</h1>
+ <p>Media • Digital • Technology</p>
+ <a class="btn" href="#about">Masuk Website</a>
+
+ <div class="info">
+  <p id="date"></p>
+  <p>Visitor: <span id="visitor">0</span></p>
+ </div>
+</div>
+
+<!-- NAV -->
+<nav>
+ <a href="#about">Tentang</a>
+ <a href="#services">Servis</a>
+ <a href="#products">Produk</a>
+ <a href="#contact">Hubungi</a>
+</nav>
+
+<section id="about">
+ <h2>Tentang Kami</h2>
+ <p>Syarikat media dan teknologi digital di Malaysia.</p>
+</section>
+
+<section id="services">
+ <h2>Perkhidmatan</h2>
+ <div class="grid">
+  <div class="card">📡 Broadcasting</div>
+  <div class="card">🎬 Production</div>
+  <div class="card">🎨 Design</div>
+  <div class="card">🌐 Website</div>
+ </div>
+</section>
+
+<section id="products">
+ <h2>Produk Gadget</h2>
+ <div class="grid">
+  <div class="card">📱 Smartphone</div>
+  <div class="card">🎧 Accessories</div>
+  <div class="card">🔋 Powerbank</div>
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Hubungi</h2>
+ <a class="btn" href="https://wa.me/60133324777?text=Hi%20Nanis%20Communication">WhatsApp</a>
+</section>
+
+<footer>
+ © 2026 Nanis Communication
+</footer>
+
+<!-- SCRIPT -->
+<script>
+// TARIKH AUTO
+const today = new Date();
+document.getElementById("date").innerHTML =
+ "Tarikh: " + today.toLocaleDateString("ms-MY");
+
+// VISITOR COUNTER (basic local)
+let count = localStorage.getItem("visitor");
+
+if(!count){
+ count = 1;
+}else{
+ count = parseInt(count) + 1;
+}
+
+localStorage.setItem("visitor", count);
+document.getElementById("visitor").innerText = count;
+</script>
+
+</body>
+</html>
