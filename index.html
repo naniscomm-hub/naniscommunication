@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+
+<title>Nanis Communication</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+ margin:0;
+ font-family:'Poppins',sans-serif;
+ background:#000;
+ color:#fff;
+}
+
+/* HERO CINEMATIC */
+.hero{
+ height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ background:
+ linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+ url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986') center/cover;
+}
+
+.logo{
+ width:120px;
+ margin-bottom:20px;
+}
+
+.hero h1{
+ font-size:42px;
+ color:#d4af37;
+ font-family:'Playfair Display',serif;
+}
+
+.hero p{
+ color:#ccc;
+}
+
+/* BUTTON */
+.btn{
+ background:#d4af37;
+ color:#000;
+ padding:12px 25px;
+ border-radius:25px;
+ text-decoration:none;
+ margin-top:20px;
+}
+
+/* NAV */
+nav{
+ background:#111;
+ padding:12px;
+ text-align:center;
+}
+
+nav a{
+ color:#fff;
+ margin:0 10px;
+ text-decoration:none;
+}
+
+/* SECTION */
+section{
+ padding:50px 20px;
+ text-align:center;
+}
+
+h2{
+ color:#d4af37;
+ font-family:'Playfair Display',serif;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+ gap:15px;
+ margin-top:20px;
+}
+
+.card{
+ background:#111;
+ padding:20px;
+ border-radius:10px;
+}
+
+footer{
+ text-align:center;
+ padding:20px;
+ color:#aaa;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+ <img src="logo.jpg" class="logo">
+ <h1>NANIS COMMUNICATION</h1>
+ <p>Media • Design • Gadget • Logistic</p>
+ <a class="btn" href="#contact">Hubungi Kami</a>
+</div>
+
+<nav>
+ <a href="#about">Tentang</a>
+ <a href="#services">Servis</a>
+ <a href="#contact">Hubungi</a>
+</nav>
+
+<section id="about">
+ <h2>Tentang Kami</h2>
+ <p>Syarikat media, design, gadget dan logistic di Malaysia.</p>
+</section>
+
+<section id="services">
+ <h2>Perkhidmatan</h2>
+ <div class="grid">
+  <div class="card">Graphic Design</div>
+  <div class="card">Website</div>
+  <div class="card">Gadget</div>
+  <div class="card">Logistic Indonesia</div>
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Hubungi</h2>
+ <p>013-332 4777</p>
+</section>
+
+<footer>
+ © 2026 Nanis Communication
+</footer>
+
+</body>
+</html>
