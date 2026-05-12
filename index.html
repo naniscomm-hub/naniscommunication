@@ -1,164 +1,229 @@
-<!DOCTYPE html>
-<html lang="ms">
-<head>
 
-<title>Nanis Communication</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+export default function NanisCommunicationRedesign() { const services = [ { title: 'Brand Strategy', desc: 'We build bold identities that make brands unforgettable.', icon: '✦', }, { title: 'Media & PR', desc: 'Powerful storytelling that keeps your audience engaged.', icon: '◉', }, { title: 'Social Campaigns', desc: 'Creative digital campaigns designed to go viral.', icon: '⬢', }, { title: 'Events & Activations', desc: 'Immersive experiences that bring brands to life.', icon: '✺', }, ];
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+const projects = [ 'Luxury Brand Campaign', 'Global Media Launch', 'Creative Product Activation', 'Digital Storytelling Experience', ];
 
-<style>.wa-float{
- position:fixed;
- bottom:20px;
- right:20px;
- background:#25D366;
- color:white;
- font-size:24px;
- padding:15px;
- border-radius:50%;
- text-decoration:none;
- box-shadow:0 0 15px rgba(0,0,0,0.5);
- z-index:999;
-}
+return ( <div className="min-h-screen bg-black text-white overflow-hidden font-sans"> {/* Background Glow */} <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.25),transparent_35%),radial-gradient(circle_at_bottom,rgba(255,215,0,0.1),transparent_30%)]" />
 
-.wa-float:hover{
- transform:scale(1.1);
-}
+{/* Navbar */}
+  <header className="flex items-center justify-between px-8 py-6 border-b border-yellow-700/20 backdrop-blur-md sticky top-0 z-50 bg-black/60">
+    <div className="flex items-center gap-3">
+      <div className="w-10 h-10 rounded-full border border-yellow-500 flex items-center justify-center text-yellow-400 font-bold shadow-[0_0_25px_rgba(255,215,0,0.4)]">
+        N
+      </div>
+      <h1 className="text-xl font-bold tracking-[0.2em] uppercase text-yellow-400">
+        Nanis Communication
+      </h1>
+    </div>
 
-body{
- margin:0;
- font-family:'Poppins',sans-serif;
- background:#000;
- color:#fff;
-}
+    <nav className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-zinc-300">
+      <a href="#services" className="hover:text-yellow-400 transition">Services</a>
+      <a href="#projects" className="hover:text-yellow-400 transition">Projects</a>
+      <a href="#about" className="hover:text-yellow-400 transition">About</a>
+      <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
+    </nav>
+  </header>
 
-/* HERO CINEMATIC */
-.hero{
- height:100vh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
- background:
- linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
- url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986') center/cover;
-}
+  {/* Hero */}
+  <section className="relative px-8 md:px-16 py-28 md:py-40 flex flex-col items-center text-center">
+    {/* Globe */}
+    <div className="absolute top-10 md:top-16 w-[320px] h-[320px] rounded-full border border-yellow-500/20 bg-gradient-to-br from-yellow-500/20 to-zinc-900 blur-0 opacity-70 shadow-[0_0_100px_rgba(255,215,0,0.25)] animate-pulse">
+      <div className="absolute inset-5 rounded-full border border-yellow-400/20"></div>
+      <div className="absolute inset-10 rounded-full border border-yellow-400/10"></div>
+    </div>
 
-.logo{
- width:120px;
- margin-bottom:20px;
- filter:drop-shadow(0 0 10px gold);
-}
+    <div className="relative z-10 max-w-5xl">
+      <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-300 text-sm tracking-widest uppercase mb-8">
+        Golden Black Creative Agency
+      </div>
 
-.hero h1{
- font-size:42px;
- color:#d4af37;
- font-family:'Playfair Display',serif;
-}
+      <h2 className="text-5xl md:text-8xl font-black leading-none tracking-tight mb-8">
+        We Turn
+        <span className="block bg-gradient-to-r from-yellow-200 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
+          Brands Into
+        </span>
+        Experiences.
+      </h2>
 
-.hero p{
- color:#ccc;
-}
+      <p className="text-zinc-400 text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed mb-10">
+        A futuristic communication agency powered by strategy, storytelling, media, and unforgettable digital experiences.
+      </p>
 
-/* BUTTON */
-.btn{
- background:#d4af37;
- color:#000;
- padding:12px 25px;
- border-radius:25px;
- text-decoration:none;
- margin-top:20px;
-}
+      <div className="flex flex-col sm:flex-row gap-5 justify-center">
+        <button className="px-8 py-4 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-700 text-black font-bold text-lg hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,215,0,0.45)]">
+          Start Your Project
+        </button>
 
-/* NAV */
-nav{
- background:#111;
- padding:12px;
- text-align:center;
-}
+        <button className="px-8 py-4 rounded-full border border-yellow-500/40 text-yellow-400 hover:bg-yellow-500/10 transition-all duration-300">
+          View Portfolio
+        </button>
+      </div>
+    </div>
+  </section>
 
-nav a{
- color:#fff;
- margin:0 10px;
- text-decoration:none;
-}
+  {/* Stats */}
+  <section className="grid grid-cols-2 md:grid-cols-4 gap-6 px-8 md:px-16 pb-24">
+    {[
+      ['120+', 'Campaigns'],
+      ['50+', 'Global Clients'],
+      ['10M+', 'Audience Reach'],
+      ['24/7', 'Creative Energy'],
+    ].map(([num, label]) => (
+      <div
+        key={label}
+        className="rounded-3xl border border-yellow-500/10 bg-zinc-900/50 backdrop-blur-md p-8 text-center hover:border-yellow-400/40 hover:-translate-y-1 transition-all duration-300"
+      >
+        <div className="text-4xl md:text-5xl font-black text-yellow-400 mb-2">{num}</div>
+        <div className="text-zinc-400 uppercase tracking-widest text-sm">{label}</div>
+      </div>
+    ))}
+  </section>
 
-/* SECTION */
-section{
- padding:50px 20px;
- text-align:center;
-}
+  {/* Services */}
+  <section id="services" className="px-8 md:px-16 py-24">
+    <div className="max-w-3xl mb-16">
+      <h3 className="text-4xl md:text-6xl font-black mb-6">
+        Creative <span className="text-yellow-400">Services</span>
+      </h3>
+      <p className="text-zinc-400 text-lg leading-relaxed">
+        We combine communication, design, media, and innovation into campaigns that make people stop scrolling and start paying attention.
+      </p>
+    </div>
 
-h2{
- color:#d4af37;
- font-family:'Playfair Display',serif;
-}
+    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+      {services.map((service) => (
+        <div
+          key={service.title}
+          className="group rounded-[30px] border border-yellow-500/10 bg-gradient-to-b from-zinc-900 to-black p-8 hover:border-yellow-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(255,215,0,0.15)]"
+        >
+          <div className="text-5xl text-yellow-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+            {service.icon}
+          </div>
 
-.grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
- gap:15px;
- margin-top:20px;
-}
+          <h4 className="text-2xl font-bold mb-4">{service.title}</h4>
 
-.card{
- background:#111;
- padding:20px;
- border-radius:10px;
-}
+          <p className="text-zinc-400 leading-relaxed">{service.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
 
-footer{
- text-align:center;
- padding:20px;
- color:#aaa;
-}
+  {/* Projects */}
+  <section id="projects" className="px-8 md:px-16 py-24 bg-gradient-to-b from-black to-zinc-950">
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
+      <div>
+        <h3 className="text-4xl md:text-6xl font-black mb-6">
+          Featured <span className="text-yellow-400">Projects</span>
+        </h3>
+        <p className="text-zinc-400 max-w-2xl text-lg">
+          Every campaign is crafted with precision, creativity, and immersive storytelling.
+        </p>
+      </div>
 
-</style>
+      <button className="px-6 py-3 rounded-full border border-yellow-500/30 text-yellow-400 hover:bg-yellow-500/10 transition w-fit">
+        Explore More
+      </button>
+    </div>
 
-</head>
- 
-<body>
+    <div className="grid md:grid-cols-2 gap-8">
+      {projects.map((project, i) => (
+        <div
+          key={project}
+          className="relative overflow-hidden rounded-[35px] min-h-[320px] border border-yellow-500/10 bg-zinc-900 group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-black to-zinc-900 opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
 
-<div class="hero">
- <img src="logo.jpg" class="logo">
- <h1>NANIS COMMUNICATION</h1>
- <p>Media • Design • Gadget • Logistic</p>
- <a class="btn" href="#contact">Hubungi Kami</a>
+          <div className="absolute top-6 right-6 text-yellow-500 text-sm tracking-[0.3em] uppercase">
+            0{i + 1}
+          </div>
+
+          <div className="relative z-10 p-10 flex flex-col justify-end h-full">
+            <div className="mb-4 text-yellow-400 uppercase tracking-[0.25em] text-sm">
+              Creative Experience
+            </div>
+
+            <h4 className="text-3xl md:text-4xl font-black leading-tight mb-4">
+              {project}
+            </h4>
+
+            <p className="text-zinc-400 max-w-md leading-relaxed">
+              Strategic communication blended with premium design and modern digital experiences.
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* About */}
+  <section id="about" className="px-8 md:px-16 py-28">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div className="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-4">
+          About Nanis
+        </div>
+
+        <h3 className="text-5xl md:text-7xl font-black leading-tight mb-8">
+          Elegant.
+          <br />
+          Bold.
+          <br />
+          Limitless.
+        </h3>
+
+        <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+          Nanis Communication is built for brands that want more than visibility. We create immersive communication strategies designed to inspire audiences and elevate brand identity.
+        </p>
+
+        <button className="px-8 py-4 rounded-full bg-yellow-500 text-black font-bold hover:scale-105 transition-all duration-300">
+          Discover Our Story
+        </button>
+      </div>
+
+      <div className="relative h-[500px] rounded-[40px] border border-yellow-500/20 bg-gradient-to-br from-zinc-900 to-black overflow-hidden flex items-center justify-center">
+        <div className="absolute w-[350px] h-[350px] rounded-full border border-yellow-500/30"></div>
+        <div className="absolute w-[250px] h-[250px] rounded-full border border-yellow-400/20"></div>
+        <div className="absolute w-[150px] h-[150px] rounded-full bg-gradient-to-br from-yellow-400 to-yellow-700 shadow-[0_0_80px_rgba(255,215,0,0.55)]"></div>
+      </div>
+    </div>
+  </section>
+
+  {/* Contact CTA */}
+  <section id="contact" className="px-8 md:px-16 pb-28">
+    <div className="rounded-[40px] border border-yellow-500/20 bg-gradient-to-r from-yellow-500/10 via-black to-zinc-900 p-12 md:p-20 text-center overflow-hidden relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.15),transparent_50%)]"></div>
+
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-6">
+          Ready To Go Viral?
+        </div>
+
+        <h3 className="text-4xl md:text-7xl font-black mb-8 leading-tight">
+          Let’s Build Something
+          <span className="block text-yellow-400">Extraordinary.</span>
+        </h3>
+
+        <p className="text-zinc-400 text-lg md:text-xl mb-10 leading-relaxed">
+          Elevate your brand with futuristic communication, immersive storytelling, and unforgettable creative experiences.
+        </p>
+
+        <button className="px-10 py-5 rounded-full bg-gradient-to-r from-yellow-300 to-yellow-700 text-black font-black text-lg hover:scale-105 transition-all duration-300 shadow-[0_0_50px_rgba(255,215,0,0.35)]">
+          Contact Nanis Communication
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="px-8 md:px-16 py-10 border-t border-yellow-500/10 flex flex-col md:flex-row justify-between items-center gap-5 text-zinc-500 text-sm">
+    <div>© 2026 Nanis Communication. All rights reserved.</div>
+
+    <div className="flex gap-6 uppercase tracking-widest">
+      <a href="#" className="hover:text-yellow-400 transition">Instagram</a>
+      <a href="#" className="hover:text-yellow-400 transition">LinkedIn</a>
+      <a href="#" className="hover:text-yellow-400 transition">TikTok</a>
+    </div>
+  </footer>
 </div>
 
-<nav>
- <a href="#about">Tentang</a>
- <a href="#services">Servis</a>
- <a href="#contact">Hubungi</a>
-</nav>
-
-<section id="about">
- <h2>Tentang Kami</h2>
- <p>Syarikat Media, Design, Hadget dan Logistic di Malaysia.</p>
-</section>
-
-<section id="services">
- <h2>Perkhidmatan</h2>
- <div class="grid">
-  <div class="card">Graphic Design</div>
-  <div class="card">Website</div>
-  <div class="card">Gadget</div>
-  <div class="card">Logistic Indonesia</div>
- </div>
-</section>
-
-<section id="contact">
- <h2>Hubungi</h2>
- <p>013-332 4777</p>
-</section>
-
-<footer>
- © 2026 Nanis Communication
-</footer>
-<a href="https://wa.me/60133324777?text=Hi%20Nanis%20Communication" class="wa-float" target="_blank">
- 💬
-</a>
-</body>
-</html>
+); }
