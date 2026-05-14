@@ -2,34 +2,25 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Nanis Communication</title>
 
   <!-- SEO -->
-  <meta name="description" content="Nanis Communication - Luxury Media, Logistics, Gadgets & Creative Communication Company.">
-  <meta name="keywords" content="Nanis Communication, media, logistics, gadgets, entertainment, design">
-  <meta name="author" content="Nanis Communication">
+  <meta name="description" content="Nanis Communication - Global Entertainment, Humanitarian & Business Solutions">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Nanis Communication">
-  <meta property="og:description" content="Luxury Media, Logistics & Creative Communication.">
-  <meta property="og:image" content="logo.jpg">
-  <meta property="og:url" content="https://naniscommunication.com/">
-  <meta property="og:type" content="website">
-
-  <!-- Theme -->
   <meta name="theme-color" content="#d4af37">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts -->
+  <!-- Luxury Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
@@ -40,79 +31,162 @@
     body {
       background: #000;
       overflow-x: hidden;
-      font-family: 'Inter', sans-serif;
+      color: white;
+      font-family: 'Cormorant Garamond', serif;
     }
 
-    h1, h2, h3, .luxury-font {
+    h1, h2, h3, h4, .luxury-font {
       font-family: 'Cinzel', serif;
     }
 
+    /* GOLD TEXT */
+    .gold-text {
+
+      background: linear-gradient(
+        to bottom,
+        #fff8d6,
+        #f7d774,
+        #d4af37,
+        #8f6b10
+      );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* GLASS */
     .glass {
-      background: rgba(10,10,10,0.55);
+      background: rgba(10,10,10,0.45);
       backdrop-filter: blur(18px);
     }
 
+    /* GOLD GLOW */
     .gold-glow {
+
       box-shadow:
-      0 0 20px rgba(255,215,0,.18),
-      0 0 45px rgba(255,215,0,.12),
-      0 0 80px rgba(255,215,0,.08);
+      0 0 20px rgba(255,215,0,0.15),
+      0 0 60px rgba(255,215,0,0.08),
+      0 0 120px rgba(255,215,0,0.04);
+
     }
 
+    /* FLOATING */
     .floating {
       animation: float 6s ease-in-out infinite;
     }
 
     @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-14px); }
-      100% { transform: translateY(0px); }
+
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+
     }
 
+    /* SPIN */
     .spin-slow {
-      animation: spin 30s linear infinite;
+      animation: spin 35s linear infinite;
     }
 
     @keyframes spin {
+
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
+
     }
 
-    .hero-text {
+    /* HERO GLOW */
+    .hero-shadow {
+
       text-shadow:
-      0 0 20px rgba(255,215,0,.15),
-      0 0 40px rgba(255,215,0,.08);
+      0 0 20px rgba(255,215,0,.18),
+      0 0 40px rgba(255,215,0,.12),
+      0 0 90px rgba(255,215,0,.08);
+
     }
 
-    .card-hover {
+    /* CARD */
+    .luxury-card {
+
+      background: rgba(15,15,15,0.55);
+
+      border: 1px solid rgba(255,215,0,0.12);
+
+      backdrop-filter: blur(20px);
+
+      box-shadow:
+      0 0 30px rgba(255,215,0,0.05);
+
       transition: all .4s ease;
+
     }
 
-    .card-hover:hover {
+    .luxury-card:hover {
+
       transform: translateY(-10px);
-      border-color: rgba(255,215,0,.45);
+
+      border-color: rgba(255,215,0,0.35);
+
+      box-shadow:
+      0 0 40px rgba(255,215,0,0.12);
+
     }
 
+    /* BUTTON */
     .gold-button {
-      background: linear-gradient(to right, #f6e27a, #d4af37, #b8860b);
+
+      background: linear-gradient(
+        to right,
+        #fff0a6,
+        #d4af37,
+        #8f6b10
+      );
+
     }
 
   </style>
 
 </head>
 
-<body class="text-white">
+<body>
 
-  <!-- Background -->
-  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,215,0,0.16),transparent_35%),radial-gradient(circle_at_bottom,rgba(255,215,0,0.08),transparent_30%)]"></div>
+  <!-- CINEMATIC BACKGROUND -->
+  <div class="fixed inset-0 -z-10 overflow-hidden bg-black">
 
-  <!-- Texture -->
-  <div class="fixed inset-0 opacity-10 pointer-events-none -z-10">
-    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+    <!-- TOP GLOW -->
+    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2
+      w-[1200px] h-[1200px]
+      bg-yellow-500/20
+      blur-[180px]
+      rounded-full">
+    </div>
+
+    <!-- BOTTOM PLANET LIGHT -->
+    <div class="absolute bottom-[-250px] left-1/2 -translate-x-1/2
+      w-[1600px] h-[600px]
+      bg-gradient-to-t from-yellow-500/40 to-transparent
+      blur-[120px]
+      rounded-full">
+    </div>
+
+    <!-- STARS -->
+    <div class="absolute inset-0 opacity-20
+      bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+    </div>
+
   </div>
 
   <!-- NAVBAR -->
@@ -120,29 +194,34 @@
 
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-5">
 
-      <!-- Logo -->
+      <!-- LOGO -->
       <div class="flex items-center gap-4">
 
         <img
           src="logo.jpg"
-          alt="Nanis Communication Logo"
-          loading="eager"
-          class="w-14 h-14 md:w-16 md:h-16 object-contain rounded-full border border-yellow-400/40 p-1 bg-black gold-glow">
+          alt="Nanis Communication"
+          class="w-14 h-14 md:w-16 md:h-16 rounded-full border border-yellow-500/30 object-cover gold-glow">
 
         <div>
-          <h1 class="text-lg md:text-2xl font-black uppercase tracking-[0.25em] text-yellow-400 luxury-font">
+
+          <h1 class="text-lg md:text-2xl font-black uppercase tracking-[0.25em] gold-text luxury-font">
+
             Nanis
+
           </h1>
 
-          <p class="text-[10px] md:text-xs tracking-[0.3em] uppercase text-zinc-400">
+          <p class="uppercase tracking-[0.3em] text-[10px] text-yellow-200/60">
+
             Communication
+
           </p>
+
         </div>
 
       </div>
 
-      <!-- Desktop Menu -->
-      <nav class="hidden md:flex items-center gap-8 uppercase tracking-[0.25em] text-sm text-zinc-300">
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex items-center gap-10 uppercase tracking-[0.25em] text-sm text-yellow-100/70">
 
         <a href="#services" class="hover:text-yellow-400 transition">
           Services
@@ -157,23 +236,25 @@
         </a>
 
         <a href="#contact"
-          class="px-5 py-3 rounded-full border border-yellow-500/40 hover:bg-yellow-500/10 transition">
+          class="px-5 py-3 rounded-full border border-yellow-500/30 hover:bg-yellow-500/10 transition">
+
           Contact
+
         </a>
 
       </nav>
 
-      <!-- Mobile Button -->
+      <!-- MOBILE BUTTON -->
       <button id="menuBtn" class="md:hidden text-yellow-400 text-3xl">
         ☰
       </button>
 
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="hidden md:hidden px-6 pb-6">
 
-      <div class="flex flex-col gap-5 uppercase tracking-[0.2em] text-sm text-zinc-300">
+      <div class="flex flex-col gap-5 uppercase tracking-[0.2em] text-sm text-yellow-100/70">
 
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -187,147 +268,176 @@
   </header>
 
   <!-- HERO -->
-  <section class="relative min-h-screen flex items-center justify-center text-center px-6 md:px-16 overflow-hidden">
+  <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">
 
-    <!-- Globe -->
-    <div class="absolute w-[350px] h-[350px] md:w-[550px] md:h-[550px] rounded-full border border-yellow-500/20 spin-slow floating">
-
-      <div class="absolute inset-5 rounded-full border border-yellow-500/20"></div>
-
-      <div class="absolute inset-12 rounded-full border border-yellow-400/10"></div>
-
-      <div class="absolute inset-20 rounded-full border border-yellow-300/10"></div>
-
+    <!-- PLANET HORIZON -->
+    <div class="absolute bottom-[-350px] left-1/2 -translate-x-1/2
+      w-[1800px] h-[700px]
+      rounded-full
+      border-t border-yellow-400/30
+      bg-gradient-to-t from-yellow-500/30 to-transparent
+      blur-[2px]">
     </div>
 
-    <div class="relative z-10 max-w-6xl pt-32">
+    <!-- GLOW -->
+    <div class="absolute w-[800px] h-[800px]
+      bg-yellow-400/10 rounded-full blur-[120px]">
+    </div>
 
+    <div class="relative z-10 max-w-6xl pt-28">
+
+      <!-- LOGO -->
       <img
         src="logo.jpg"
         alt="Nanis Communication"
-        loading="eager"
-        class="w-44 md:w-64 mx-auto mb-10 floating gold-glow">
+        class="w-48 md:w-60 mx-auto mb-10 floating drop-shadow-[0_0_40px_rgba(255,215,0,0.4)]">
 
-      <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-300 uppercase tracking-[0.25em] text-xs md:text-sm mb-8">
-        Media • Graphic Design • Gadgets • Logistics
+      <!-- ORNAMENT -->
+      <div class="text-yellow-400 text-3xl md:text-5xl mb-6 tracking-[0.5em]">
+        ✦ ✦ ✦
       </div>
 
-      <h2 class="hero-text text-5xl md:text-8xl font-black leading-none mb-8 luxury-font">
+      <!-- TITLE -->
+      <h1 class="text-5xl md:text-8xl font-black uppercase leading-tight hero-shadow gold-text">
 
-        We Create
+        NANIS COMMUNICATION
 
-        <span class="block bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-700 bg-clip-text text-transparent">
+      </h1>
 
-          Sensational
-          Entertainment
-          Media
+      <!-- SUBTITLE -->
+      <p class="mt-8 text-xl md:text-3xl text-yellow-100/80 tracking-[0.15em] leading-relaxed">
 
-        </span>
+        Global Entertainment,
+        Humanitarian &
+        Business Solutions
 
-        Experiences.
-
-      </h2>
-
-      <p class="text-zinc-400 text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto mb-10">
-        Futuristic communication, immersive storytelling, logistics solutions,
-        and unforgettable media campaigns built for modern brands.
       </p>
 
+      <!-- DIVIDER -->
+      <div class="flex items-center justify-center gap-4 my-10">
+
+        <div class="w-20 h-[1px] bg-yellow-500"></div>
+
+        <div class="text-yellow-400 text-2xl">
+          ✦
+        </div>
+
+        <div class="w-20 h-[1px] bg-yellow-500"></div>
+
+      </div>
+
+      <!-- BUTTON -->
       <div class="flex flex-col sm:flex-row gap-5 justify-center">
 
         <a href="#contact"
-          class="px-10 py-5 rounded-full gold-button text-black font-black text-lg hover:scale-105 transition-all duration-300 gold-glow">
+          class="px-12 py-5 rounded-xl gold-button text-black font-black uppercase tracking-[0.2em]
+          shadow-[0_0_40px_rgba(255,215,0,0.3)]
+          hover:scale-105 transition duration-300">
 
-          Start Your Project
+          Get In Touch
 
         </a>
 
         <a href="#social"
-          class="px-10 py-5 rounded-full border border-yellow-500/40 text-yellow-400 hover:bg-yellow-500/10 transition-all duration-300">
+          class="px-12 py-5 rounded-xl border border-yellow-500/30
+          text-yellow-300 uppercase tracking-[0.2em]
+          hover:bg-yellow-500/10 transition duration-300">
 
-          Live Media Channel
+          Live Media
 
         </a>
 
       </div>
 
-    </div>
-
-  </section>
-
-  <!-- STATS -->
-  <section class="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-16 pb-24">
-
-    <div class="rounded-3xl border border-yellow-500/10 glass p-8 text-center">
-      <h3 class="text-5xl font-black text-yellow-400 mb-2">120+</h3>
-      <p class="uppercase tracking-widest text-zinc-400 text-sm">Campaigns</p>
-    </div>
-
-    <div class="rounded-3xl border border-yellow-500/10 glass p-8 text-center">
-      <h3 class="text-5xl font-black text-yellow-400 mb-2">50+</h3>
-      <p class="uppercase tracking-widest text-zinc-400 text-sm">Clients</p>
-    </div>
-
-    <div class="rounded-3xl border border-yellow-500/10 glass p-8 text-center">
-      <h3 class="text-5xl font-black text-yellow-400 mb-2">10M+</h3>
-      <p class="uppercase tracking-widest text-zinc-400 text-sm">Audience Reach</p>
-    </div>
-
-    <div class="rounded-3xl border border-yellow-500/10 glass p-8 text-center">
-      <h3 class="text-5xl font-black text-yellow-400 mb-2">24/7</h3>
-      <p class="uppercase tracking-widest text-zinc-400 text-sm">Creative Energy</p>
     </div>
 
   </section>
 
   <!-- SERVICES -->
-  <section id="services" class="px-6 md:px-16 py-24">
+  <section id="services" class="px-6 md:px-16 py-28">
 
-    <div class="max-w-3xl mb-16">
+    <div class="text-center mb-20">
 
-      <h3 class="text-4xl md:text-6xl font-black mb-6 luxury-font">
-        Creative <span class="text-yellow-400">Services</span>
-      </h3>
+      <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
+        Our Expertise
+      </div>
 
-      <p class="text-zinc-400 text-lg leading-relaxed">
-        We blend communication, media, branding, journalism, logistics,
-        and innovation into immersive experiences that capture attention.
-      </p>
+      <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">
+
+        Premium Services
+
+      </h2>
 
     </div>
 
     <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
 
-      <div class="rounded-[30px] border border-yellow-500/10 bg-zinc-900/50 p-8 card-hover">
-        <div class="text-5xl text-yellow-400 mb-6">✦</div>
-        <h4 class="text-2xl font-bold mb-4">Brand Strategy</h4>
-        <p class="text-zinc-400">
-          We create identities that transform brands into experiences.
+      <!-- CARD -->
+      <div class="luxury-card rounded-[35px] p-10 text-center">
+
+        <div class="text-5xl text-yellow-400 mb-6">
+          ✦
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4 gold-text">
+          Brand Strategy
+        </h3>
+
+        <p class="text-yellow-100/70 leading-relaxed text-lg">
+          Transforming businesses into premium global brands.
         </p>
+
       </div>
 
-      <div class="rounded-[30px] border border-yellow-500/10 bg-zinc-900/50 p-8 card-hover">
-        <div class="text-5xl text-yellow-400 mb-6">◉</div>
-        <h4 class="text-2xl font-bold mb-4">Media & PR</h4>
-        <p class="text-zinc-400">
-          Strategic communication designed to amplify visibility.
+      <!-- CARD -->
+      <div class="luxury-card rounded-[35px] p-10 text-center">
+
+        <div class="text-5xl text-yellow-400 mb-6">
+          ◉
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4 gold-text">
+          Media & PR
+        </h3>
+
+        <p class="text-yellow-100/70 leading-relaxed text-lg">
+          Strategic media communication with cinematic storytelling.
         </p>
+
       </div>
 
-      <div class="rounded-[30px] border border-yellow-500/10 bg-zinc-900/50 p-8 card-hover">
-        <div class="text-5xl text-yellow-400 mb-6">⬢</div>
-        <h4 class="text-2xl font-bold mb-4">Social Campaigns</h4>
-        <p class="text-zinc-400">
-          Creative campaigns engineered for engagement and reach.
+      <!-- CARD -->
+      <div class="luxury-card rounded-[35px] p-10 text-center">
+
+        <div class="text-5xl text-yellow-400 mb-6">
+          ⬢
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4 gold-text">
+          Social Campaigns
+        </h3>
+
+        <p class="text-yellow-100/70 leading-relaxed text-lg">
+          Viral engagement engineered for modern audiences.
         </p>
+
       </div>
 
-      <div class="rounded-[30px] border border-yellow-500/10 bg-zinc-900/50 p-8 card-hover">
-        <div class="text-5xl text-yellow-400 mb-6">✺</div>
-        <h4 class="text-2xl font-bold mb-4">Logistics Solutions</h4>
-        <p class="text-zinc-400">
-          Reliable Indonesia logistics and gadget supply services.
+      <!-- CARD -->
+      <div class="luxury-card rounded-[35px] p-10 text-center">
+
+        <div class="text-5xl text-yellow-400 mb-6">
+          ✺
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4 gold-text">
+          Logistics
+        </h3>
+
+        <p class="text-yellow-100/70 leading-relaxed text-lg">
+          Reliable logistics and international supply solutions.
         </p>
+
       </div>
 
     </div>
@@ -339,44 +449,71 @@
 
     <div class="grid lg:grid-cols-2 gap-16 items-center">
 
+      <!-- LEFT -->
       <div>
 
-        <div class="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-4">
-          About Nanis Communication
+        <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
+          About Us
         </div>
 
-        <h3 class="text-5xl md:text-7xl font-black leading-tight mb-8 luxury-font">
+        <h2 class="text-5xl md:text-7xl font-black leading-tight mb-8 gold-text luxury-font">
+
           Elegant.<br>
           Bold.<br>
           Limitless.
-        </h3>
 
-        <p class="text-zinc-400 text-lg leading-relaxed mb-8">
-          Nanis Communication is an integrated creative and commercial agency
-          specializing in media communication, graphic design,
-          logistics, gadgets supply, and humanitarian support.
+        </h2>
+
+        <p class="text-yellow-100/70 text-xl leading-relaxed mb-10">
+
+          Nanis Communication is a premium creative,
+          humanitarian and media company delivering
+          cinematic branding, luxury communication,
+          digital storytelling and international business solutions.
+
         </p>
 
         <a href="#contact"
-          class="px-8 py-4 rounded-full bg-yellow-500 text-black font-bold hover:scale-105 transition-all duration-300 inline-block">
+          class="inline-block px-10 py-5 rounded-xl
+          gold-button text-black font-black uppercase tracking-[0.2em]
+          hover:scale-105 transition duration-300">
+
           Discover More
+
         </a>
 
       </div>
 
-      <div class="relative h-[500px] rounded-[40px] border border-yellow-500/20 overflow-hidden flex items-center justify-center bg-gradient-to-br from-zinc-900 to-black">
+      <!-- RIGHT -->
+      <div class="relative h-[550px] rounded-[45px]
+        border border-yellow-500/20
+        overflow-hidden
+        flex items-center justify-center
+        bg-black/40
+        backdrop-blur-xl
+        gold-glow">
 
-        <div class="absolute w-[350px] h-[350px] rounded-full border border-yellow-500/30 spin-slow"></div>
+        <!-- RINGS -->
+        <div class="absolute w-[400px] h-[400px]
+          rounded-full border border-yellow-500/20 spin-slow">
+        </div>
 
-        <div class="absolute w-[220px] h-[220px] rounded-full border border-yellow-400/20"></div>
+        <div class="absolute w-[260px] h-[260px]
+          rounded-full border border-yellow-400/15">
+        </div>
 
-        <div class="absolute w-[140px] h-[140px] rounded-full bg-gradient-to-br from-yellow-300 to-yellow-700 gold-glow"></div>
+        <div class="absolute w-[160px] h-[160px]
+          rounded-full bg-gradient-to-br
+          from-yellow-200 to-yellow-700 gold-glow">
+        </div>
 
+        <!-- IMAGE -->
         <img
           src="IMG.jpg"
           alt="Nanis Communication"
-          loading="lazy"
-          class="relative z-10 w-72 rounded-3xl object-cover border border-yellow-500/20">
+          class="relative z-10 w-80 rounded-[30px]
+          border border-yellow-500/20
+          object-cover">
 
       </div>
 
@@ -387,43 +524,62 @@
   <!-- CONTACT -->
   <section id="contact" class="px-6 md:px-16 pb-28">
 
-    <div class="rounded-[40px] border border-yellow-500/20 bg-gradient-to-r from-yellow-500/10 via-black to-zinc-900 p-12 md:p-20 text-center relative overflow-hidden">
+    <div class="relative rounded-[45px]
+      border border-yellow-500/20
+      overflow-hidden
+      glass
+      p-12 md:p-24
+      text-center">
+
+      <!-- GLOW -->
+      <div class="absolute inset-0
+        bg-gradient-to-r
+        from-yellow-500/10
+        via-transparent
+        to-yellow-500/10">
+      </div>
 
       <div class="relative z-10 max-w-4xl mx-auto">
 
         <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-6">
-          Ready To Grow With Us?
+          Ready To Grow?
         </div>
 
-        <h3 class="text-4xl md:text-7xl font-black leading-tight mb-8 luxury-font">
+        <h2 class="text-4xl md:text-7xl font-black leading-tight mb-10 gold-text luxury-font">
 
-          Let’s Build Something
+          Let’s Build Something Extraordinary
 
-          <span class="block text-yellow-400">
-            Extraordinary.
-          </span>
+        </h2>
 
-        </h3>
+        <p class="text-yellow-100/70 text-xl leading-relaxed mb-12">
 
-        <p class="text-zinc-400 text-lg md:text-xl mb-10 leading-relaxed">
-          We provide media services, journalism support, graphic design,
-          gadget supply, and logistics solutions into Indonesia.
+          Luxury media communication, humanitarian initiatives,
+          entertainment branding and global business solutions.
+
         </p>
 
-        <div class="flex flex-col gap-5 items-center justify-center">
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
 
+          <!-- CALL -->
           <a href="tel:0133324777"
-            class="px-10 py-5 rounded-full gold-button text-black font-black text-lg hover:scale-105 transition-all duration-300 inline-block gold-glow">
+            class="px-12 py-5 rounded-xl gold-button
+            text-black font-black uppercase tracking-[0.2em]
+            hover:scale-105 transition duration-300
+            shadow-[0_0_40px_rgba(255,215,0,0.3)]">
 
-            📞 Call: 0133324777
+            📞 Call Now
 
           </a>
 
+          <!-- WHATSAPP -->
           <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"
             target="_blank"
-            class="px-10 py-5 rounded-full border border-yellow-500/40 text-yellow-400 font-bold text-lg hover:bg-yellow-500/10 transition-all duration-300 inline-block">
+            class="px-12 py-5 rounded-xl
+            border border-yellow-500/30
+            text-yellow-300 font-bold uppercase tracking-[0.2em]
+            hover:bg-yellow-500/10 transition duration-300">
 
-            WhatsApp Us
+            WhatsApp
 
           </a>
 
@@ -436,88 +592,87 @@
   </section>
 
   <!-- SOCIAL -->
-  <section id="social" class="px-6 md:px-16 py-24 bg-black">
+  <section id="social" class="px-6 md:px-16 py-28">
 
-    <div class="text-center mb-16">
+    <div class="text-center mb-20">
 
-      <h3 class="text-4xl md:text-6xl font-black mb-6 luxury-font">
-        Live <span class="text-yellow-400">Media Channel</span>
-      </h3>
+      <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
+        Media Channel
+      </div>
 
-      <p class="text-zinc-400 text-lg max-w-3xl mx-auto">
-        Follow our latest TikTok and Facebook media updates.
-      </p>
+      <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">
+
+        Live Entertainment
+
+      </h2>
 
     </div>
 
     <div class="grid md:grid-cols-3 gap-10">
 
-      <!-- Card 1 -->
+      <!-- CARD -->
       <a href="https://www.tiktok.com/@ipk.tv5"
         target="_blank"
-        class="group rounded-[35px] overflow-hidden border border-yellow-500/20 bg-zinc-900 hover:border-yellow-400 transition-all duration-300 gold-glow">
+        class="luxury-card rounded-[35px] overflow-hidden group">
 
         <img
-          loading="lazy"
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-          class="h-64 w-full object-cover group-hover:scale-105 transition duration-500">
+          class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">
 
-        <div class="p-8">
+        <div class="p-8 text-center">
 
-          <h4 class="text-3xl font-black text-yellow-400 mb-3">
+          <h3 class="text-3xl font-black mb-4 gold-text">
             IPK.TV
-          </h4>
+          </h3>
 
-          <p class="text-zinc-400">
-            Watch our latest TikTok entertainment and media content.
+          <p class="text-yellow-100/70 text-lg">
+            Entertainment & media storytelling.
           </p>
 
         </div>
 
       </a>
 
-      <!-- Card 2 -->
+      <!-- CARD -->
       <a href="https://www.tiktok.com/@nanis7885"
         target="_blank"
-        class="group rounded-[35px] overflow-hidden border border-yellow-500/20 bg-zinc-900 hover:border-yellow-400 transition-all duration-300 gold-glow">
+        class="luxury-card rounded-[35px] overflow-hidden group">
 
         <img
-          loading="lazy"
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
-          class="h-64 w-full object-cover group-hover:scale-105 transition duration-500">
+          class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">
 
-        <div class="p-8">
+        <div class="p-8 text-center">
 
-          <h4 class="text-3xl font-black text-yellow-400 mb-3">
-            NANIS D.WEBSTER
-          </h4>
+          <h3 class="text-3xl font-black mb-4 gold-text">
+            NANIS MEDIA
+          </h3>
 
-          <p class="text-zinc-400">
-            Follow our media stories and social campaigns.
+          <p class="text-yellow-100/70 text-lg">
+            Global social campaigns and communication.
           </p>
 
         </div>
 
       </a>
 
-      <!-- Card 3 -->
+      <!-- CARD -->
       <a href="https://www.tiktok.com/@nanis.7777"
         target="_blank"
-        class="group rounded-[35px] overflow-hidden border border-yellow-500/20 bg-zinc-900 hover:border-yellow-400 transition-all duration-300 gold-glow">
+        class="luxury-card rounded-[35px] overflow-hidden group">
 
         <img
-          loading="lazy"
           src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-          class="h-64 w-full object-cover group-hover:scale-105 transition duration-500">
+          class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">
 
-        <div class="p-8">
+        <div class="p-8 text-center">
 
-          <h4 class="text-3xl font-black text-yellow-400 mb-3">
-            Humanitarian Channel
-          </h4>
+          <h3 class="text-3xl font-black mb-4 gold-text">
+            HUMANITARIAN
+          </h3>
 
-          <p class="text-zinc-400">
-            Explore our latest humanitarian and entertainment updates.
+          <p class="text-yellow-100/70 text-lg">
+            Humanitarian missions & global awareness.
           </p>
 
         </div>
@@ -529,13 +684,21 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="px-6 md:px-16 py-10 border-t border-yellow-500/10 flex flex-col md:flex-row justify-between items-center gap-5 text-zinc-500 text-sm">
+  <footer class="px-6 md:px-16 py-10 border-t border-yellow-500/10 text-center">
 
-    <div>
-      © 2026 Nanis Communication. All rights reserved.
+    <div class="gold-text text-2xl font-black tracking-[0.2em] mb-4 luxury-font">
+
+      NANIS COMMUNICATION
+
     </div>
 
-    <div class="flex gap-6 uppercase tracking-widest">
+    <p class="text-yellow-100/50 tracking-[0.2em] uppercase text-sm">
+
+      Global Entertainment • Humanitarian • Business Solutions
+
+    </p>
+
+    <div class="mt-8 flex justify-center gap-8 text-yellow-100/60 uppercase tracking-[0.2em] text-sm">
 
       <a href="https://www.facebook.com/naniscommunication"
         class="hover:text-yellow-400 transition">
@@ -560,31 +723,38 @@
 
     </div>
 
+    <div class="mt-8 text-yellow-100/40 text-sm">
+
+      © 2026 Nanis Communication. All Rights Reserved.
+
+    </div>
+
   </footer>
 
-  <!-- Floating WhatsApp -->
+  <!-- FLOATING WHATSAPP -->
   <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"
     target="_blank"
-    class="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-yellow-300 to-yellow-600 text-black px-6 py-4 rounded-full font-black gold-glow hover:scale-110 transition-all duration-300">
+    class="fixed bottom-6 right-6 z-50
+    px-6 py-4 rounded-full
+    gold-button text-black font-black uppercase
+    shadow-[0_0_40px_rgba(255,215,0,0.3)]
+    hover:scale-110 transition duration-300">
 
     WhatsApp
 
   </a>
 
-  <!-- Mobile Menu Script -->
+  <!-- MOBILE MENU SCRIPT -->
   <script>
 
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
 
   </script>
-
-  <!-- TikTok -->
-  <script async src="https://www.tiktok.com/embed.js"></script>
 
 </body>
 
