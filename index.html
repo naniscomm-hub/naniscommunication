@@ -1,874 +1,812 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Nanis Communication</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Nanis Communication - Global Entertainment, Humanitarian & Business Solutions">
-  <meta name="theme-color" content="#d4af37">
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
-  <!-- PRELOAD -->
-  <link rel="preload" as="image" href="logo.png">
-
-  <!-- TAILWIND -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #000;
-      overflow-x: hidden;
-      color: #f5e7a1;
-      font-family: 'Cormorant Garamond', serif;
-    }
-
-    h1, h2, h3, h4, .luxury-font {
-      font-family: 'Cinzel', serif;
-    }
-
-    /* GOLD TEXT */
-    .gold-text {
-
-      background: linear-gradient(
-        to bottom,
-        #fff8d6,
-        #f7d774,
-        #d4af37,
-        #8f6b10
-      );
-
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      text-shadow:
-        0 0 10px rgba(255,215,0,0.15),
-        0 0 25px rgba(255,215,0,0.08);
-
-    }
-
-    /* GLASS */
-    .glass {
-      background: rgba(10,10,10,0.45);
-      backdrop-filter: blur(18px);
-    }
-
-    /* GOLD GLOW */
-    .gold-glow {
-
-      box-shadow:
-      0 0 20px rgba(255,215,0,0.15),
-      0 0 60px rgba(255,215,0,0.08),
-      0 0 120px rgba(255,215,0,0.04);
-
-    }
-
-    /* FLOAT */
-    .floating {
-      animation: float 10s ease-in-out infinite;
-    }
-
-    @keyframes float {
-
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-12px);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
-
-    }
-
-    /* GOLD PULSE */
-    .pulse-gold {
-      animation: pulseGold 4s ease-in-out infinite;
-    }
-
-    @keyframes pulseGold {
-
-      0%,100% {
-
-        box-shadow:
-          0 0 20px rgba(255,215,0,0.15),
-          0 0 60px rgba(255,215,0,0.08);
-
-      }
-
-      50% {
-
-        box-shadow:
-          0 0 40px rgba(255,215,0,0.3),
-          0 0 120px rgba(255,215,0,0.18);
-
-      }
-
-    }
-
-    /* SPIN */
-    .spin-slow {
-      animation: spin 35s linear infinite;
-    }
-
-    @keyframes spin {
-
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-
-    }
-
-    /* HERO SHADOW */
-    .hero-shadow {
-
-      text-shadow:
-      0 0 20px rgba(255,215,0,.18),
-      0 0 40px rgba(255,215,0,.12),
-      0 0 90px rgba(255,215,0,.08);
-
-    }
-
-    /* CARD */
-    .luxury-card {
-
-      background: rgba(15,15,15,0.55);
-
-      border: 1px solid rgba(255,215,0,0.12);
-
-      backdrop-filter: blur(20px);
-
-      box-shadow:
-      0 0 30px rgba(255,215,0,0.05);
-
-      transition: all .4s ease;
-
-    }
-
-    .luxury-card:hover {
-
-      transform: translateY(-10px);
-
-      border-color: rgba(255,215,0,0.35);
-
-      box-shadow:
-      0 0 40px rgba(255,215,0,0.12);
-
-    }
-
-    /* BUTTON */
-    .gold-button {
-
-      background: linear-gradient(
-        to right,
-        #fff0a6,
-        #d4af37,
-        #8f6b10
-      );
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <!-- BACKGROUND -->
-  <div class="fixed inset-0 -z-10 overflow-hidden bg-black">
-
-    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2
-      w-[1200px] h-[1200px]
-      bg-yellow-500/20
-      blur-[180px]
-      rounded-full">
-    </div>
-
-    <div class="absolute bottom-[-250px] left-1/2 -translate-x-1/2
-      w-[1600px] h-[600px]
-      bg-gradient-to-t from-yellow-500/40 to-transparent
-      blur-[120px]
-      rounded-full">
-    </div>
-
-    <div class="absolute inset-0 opacity-20
-      bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
-    </div>
-
-  </div>
-
-  <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 w-full z-50 glass border-b border-yellow-500/10">
-
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-5">
-
-      <!-- LOGO -->
-      <div class="flex items-center gap-4">
-
-        <img
-          src="logo.png"
-          alt="Nanis Communication"
-          class="w-24 h-24 md:w-36 md:h-36 rounded-full border border-yellow-500/30 object-cover gold-glow">
-
-        <div>
-
-          <h1 class="text-lg md:text-2xl font-black uppercase tracking-[0.25em] gold-text luxury-font">
-
-            NANIS
-
-          </h1>
-
-          <p class="uppercase tracking-[0.4em] text-[10px] text-yellow-200/60">
-
-            COMMUNICATION
-
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- MENU -->
-      <nav class="hidden md:flex items-center gap-10 uppercase tracking-[0.35em] text-sm text-yellow-100/80">
-
-        <a href="#services" class="hover:text-yellow-400 transition">
-          Services
-        </a>
-
-        <a href="#about" class="hover:text-yellow-400 transition">
-          About
-        </a>
-
-        <a href="#social" class="hover:text-yellow-400 transition">
-          Media
-        </a>
-
-        <a href="#contact"
-          class="px-5 py-3 rounded-full border border-yellow-500/30 hover:bg-yellow-500/10 transition">
-
-          Contact
-
-        </a>
-
-      </nav>
-
-      <!-- MOBILE BUTTON -->
-      <button id="menuBtn" class="md:hidden text-white text-3xl">
-        ☰
-      </button>
-
-    </div>
-
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="hidden md:hidden px-6 pb-6">
-
-      <div class="flex flex-col gap-5 uppercase tracking-[0.3em] text-sm text-yellow-100/80">
-
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#social">Media</a>
-        <a href="#contact">Contact</a>
-
-      </div>
-
-    </div>
-
-  </header>
-
-  <!-- HERO -->
-  <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">
-
-    <div class="absolute bottom-[-350px] left-1/2 -translate-x-1/2
-      w-[1800px] h-[700px]
-      rounded-full
-      border-t border-yellow-400/30
-      bg-gradient-to-t from-yellow-500/30 to-transparent
-      blur-[2px]">
-    </div>
-
-    <div class="absolute w-[800px] h-[800px]
-      bg-yellow-400/10 rounded-full blur-[120px]">
-    </div>
-
-    <div class="relative z-10 max-w-6xl pt-48 md:pt-32">
-
-      <!-- HERO VIDEO -->
-<div class="relative mx-auto mb-20 max-w-6xl overflow-hidden rounded-[40px] border border-yellow-500/20 gold-glow">
-
-  <!-- VIDEO -->
-  <video
-    id="heroVideo"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    class="w-full h-auto object-cover">
-
-    <source src="promo.mp4" type="video/mp4">
-
-    Browser anda tidak support video.
-
-  </video>
-   <!-- OVERLAY -->
-  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/40"></div>
-
-    </p>
-
-  </div>
-
-  <!-- SOUND BUTTON -->
-  <button
-    id="soundBtn"
-    onclick="toggleSound()"
-    class="absolute bottom-5 right-5 z-20
-    bg-black/50 backdrop-blur-xl
-    border border-yellow-500/30
-    text-yellow-300
-    px-5 py-3
-    rounded-full
-    hover:bg-yellow-500/20
-    transition duration-300">
-
-    🔇 Sound Off
-
-  </button>
+<!DOCTYPE html>  
+<html lang="en">  
+  <head>    
+    <meta charset="UTF-8" />  
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    <title>Nanis Communication</title>    <!-- SEO -->    <meta name="description" content="Nanis Communication - Global Entertainment, Humanitarian & Business Solutions">  
+  <meta name="theme-color" content="#d4af37">    <!-- FAVICON -->    <link rel="icon" type="image/png" href="favicon.png">  
+  <link rel="apple-touch-icon" href="favicon.png">    <!-- PRELOAD -->    <link rel="preload" as="image" href="logo.png">    <!-- TAILWIND -->    <script src="https://cdn.tailwindcss.com"></script>    <!-- FONTS -->    <link rel="preconnect" href="https://fonts.googleapis.com">  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <style>  
+  
+    html {  
+      scroll-behavior: smooth;  
+    }  
+  
+    body {  
+      background: #000;  
+      overflow-x: hidden;  
+      color: #f5e7a1;  
+      font-family: 'Cormorant Garamond', serif;  
+    }  
+  
+    h1, h2, h3, h4, .luxury-font {  
+      font-family: 'Cinzel', serif;  
+    }  
+  
+    /* GOLD TEXT */  
+    .gold-text {  
+  
+      background: linear-gradient(  
+        to bottom,  
+        #fff8d6,  
+        #f7d774,  
+        #d4af37,  
+        #8f6b10  
+      );  
+  
+      -webkit-background-clip: text;  
+      -webkit-text-fill-color: transparent;  
+  
+      text-shadow:  
+        0 0 10px rgba(255,215,0,0.15),  
+        0 0 25px rgba(255,215,0,0.08);  
+  
+    }  
+  
+    /* GLASS */  
+    .glass {  
+      background: rgba(10,10,10,0.45);  
+      backdrop-filter: blur(18px);  
+    }  
+  
+    /* GOLD GLOW */  
+    .gold-glow {  
+  
+      box-shadow:  
+      0 0 20px rgba(255,215,0,0.15),  
+      0 0 60px rgba(255,215,0,0.08),  
+      0 0 120px rgba(255,215,0,0.04);  
+  
+    }  
+  
+    /* FLOAT */  
+    .floating {  
+      animation: float 10s ease-in-out infinite;  
+    }  
+  
+    @keyframes float {  
+  
+      0% {  
+        transform: translateY(0px);  
+      }  
+  
+      50% {  
+        transform: translateY(-12px);  
+      }  
+  
+      100% {  
+        transform: translateY(0px);  
+      }  
+  
+    }  
+  
+    /* GOLD PULSE */  
+    .pulse-gold {  
+      animation: pulseGold 4s ease-in-out infinite;  
+    }  
+  
+    @keyframes pulseGold {  
+  
+      0%,100% {  
+  
+        box-shadow:  
+          0 0 20px rgba(255,215,0,0.15),  
+          0 0 60px rgba(255,215,0,0.08);  
+  
+      }  
+  
+      50% {  
+  
+        box-shadow:  
+          0 0 40px rgba(255,215,0,0.3),  
+          0 0 120px rgba(255,215,0,0.18);  
+  
+      }  
+  
+    }  
+  
+    /* SPIN */  
+    .spin-slow {  
+      animation: spin 35s linear infinite;  
+    }  
+  
+    @keyframes spin {  
+  
+      from {  
+        transform: rotate(0deg);  
+      }  
+  
+      to {  
+        transform: rotate(360deg);  
+      }  
+  
+    }  
+  
+    /* HERO SHADOW */  
+    .hero-shadow {  
+  
+      text-shadow:  
+      0 0 20px rgba(255,215,0,.18),  
+      0 0 40px rgba(255,215,0,.12),  
+      0 0 90px rgba(255,215,0,.08);  
+  
+    }  
+  
+    /* CARD */  
+    .luxury-card {  
+  
+      background: rgba(15,15,15,0.55);  
+  
+      border: 1px solid rgba(255,215,0,0.12);  
+  
+      backdrop-filter: blur(20px);  
+  
+      box-shadow:  
+      0 0 30px rgba(255,215,0,0.05);  
+  
+      transition: all .4s ease;  
+  
+    }  
+  
+    .luxury-card:hover {  
+  
+      transform: translateY(-10px);  
+  
+      border-color: rgba(255,215,0,0.35);  
+  
+      box-shadow:  
+      0 0 40px rgba(255,215,0,0.12);  
+  
+    }  
+  
+    /* BUTTON */  
+    .gold-button {  
+  
+      background: linear-gradient(  
+        to right,  
+        #fff0a6,  
+        #d4af37,  
+        #8f6b10  
+      );  
+  
+    }  
+  
+  </style>  
+</head>  
+  <body>    
+    <!-- BACKGROUND -->    
+    <div class="fixed inset-0 -z-10 overflow-hidden bg-black">  <div class="absolute top-[-20%] left-1/2 -translate-x-1/2  
+  w-[1200px] h-[1200px]  
+  bg-yellow-500/20  
+  blur-[180px]  
+  rounded-full">  
+</div>  
+
+<div class="absolute bottom-[-250px] left-1/2 -translate-x-1/2  
+  w-[1600px] h-[600px]  
+  bg-gradient-to-t from-yellow-500/40 to-transparent  
+  blur-[120px]  
+  rounded-full">  
+</div>  
+
+<div class="absolute inset-0 opacity-20  
+  bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">  
+</div>
+
+  </div>    
+    <!-- NAVBAR -->    
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-yellow-500/10">  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-5">  
+
+  <!-- LOGO -->  
+  <div class="flex items-center gap-4">  
+
+    <img  
+      src="logo.png"  
+      alt="Nanis Communication"  
+      class="w-24 h-24 md:w-36 md:h-36 rounded-full border border-yellow-500/30 object-cover gold-glow">  
+
+    <div>  
+
+      <h1 class="text-lg md:text-2xl font-black uppercase tracking-[0.25em] gold-text luxury-font">  
+
+        NANIS  
+
+      </h1>  
+
+      <p class="uppercase tracking-[0.4em] text-[10px] text-yellow-200/60">  
+
+        COMMUNICATION  
+
+      </p>  
+
+    </div>  
+
+  </div>  
+
+  <!-- MENU -->  
+  <nav class="hidden md:flex items-center gap-10 uppercase tracking-[0.35em] text-sm text-yellow-100/80">  
+
+    <a href="#services" class="hover:text-yellow-400 transition">  
+      Services  
+    </a>  
+
+    <a href="#about" class="hover:text-yellow-400 transition">  
+      About  
+    </a>  
+
+    <a href="#social" class="hover:text-yellow-400 transition">  
+      Media  
+    </a>  
+
+    <a href="#contact"  
+      class="px-5 py-3 rounded-full border border-yellow-500/30 hover:bg-yellow-500/10 transition">  
+
+      Contact  
+
+    </a>  
+
+  </nav>  
+
+  <!-- MOBILE BUTTON -->  
+  <button id="menuBtn" class="md:hidden text-white text-3xl">  
+    ☰  
+  </button>  
+
+</div>  
+
+<!-- MOBILE MENU -->  
+<div id="mobileMenu" class="hidden md:hidden px-6 pb-6">  
+
+  <div class="flex flex-col gap-5 uppercase tracking-[0.3em] text-sm text-yellow-100/80">  
+
+    <a href="#services">Services</a>  
+    <a href="#about">About</a>  
+    <a href="#social">Media</a>  
+    <a href="#contact">Contact</a>  
+
+  </div>  
 
 </div>
 
-<!-- VIDEO SCRIPT -->
-<script>
-
-  const video = document.getElementById("heroVideo");
-  const button = document.getElementById("soundBtn");
-
-  function toggleSound() {
-
-    if(video.muted){
-
-      video.muted = false;
-      video.volume = 1;
-
-      button.innerHTML = "🔊 Sound On";
-
-      video.play();
-
-    } else {
-
-      video.muted = true;
-
-      button.innerHTML = "🔇 Sound Off";
-
-    }
-
-  }
-
-</script>
-      
-      <!-- ORNAMENT -->
-      <div class="text-yellow-400 text-3xl md:text-5xl mb-6 tracking-[0.4em]">
-        🌒 🌓 🌔 🌕 🌖 🌗 🌘
-      </div>
-
-      <!-- TITLE -->
-      <h1 class="text-5xl md:text-8xl font-black uppercase leading-tight hero-shadow gold-text tracking-[0.15em]">
-
-        NANIS COMMUNICATION
-
-      </h1>
-
-      <!-- SUBTITLE -->
-      <p class="mt-8 text-xl md:text-3xl text-yellow-100/80 tracking-[0.15em] leading-relaxed">
-
-        Global Entertainment,
-        Humanitarian &
-        Business Solutions
-
-      </p>
-
-      <!-- DIVIDER -->
-      <div class="flex items-center justify-center gap-4 my-10">
-
-        <div class="w-20 h-[1px] bg-yellow-500"></div>
-
-        <div class="text-yellow-400 text-2xl">
-          🌕
-        </div>
-
-        <div class="w-20 h-[1px] bg-yellow-500"></div>
-
-      </div>
-
-      <!-- BUTTONS -->
-      <div class="flex flex-col sm:flex-row gap-5 justify-center">
-
-        <a href="#contact"
-          class="px-12 py-5 rounded-xl gold-button text-black font-black uppercase tracking-[0.2em]
-          shadow-[0_0_40px_rgba(255,215,0,0.3)]
-          hover:scale-105 transition duration-300">
-
-          Get In Touch
-
-        </a>
-
-        <a href="#social"
-          class="px-12 py-5 rounded-xl border border-yellow-500/30
-          text-yellow-300 uppercase tracking-[0.2em]
-          hover:bg-yellow-500/10 transition duration-300">
-
-          Live Media
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="px-6 md:px-16 py-28">
-
-    <div class="text-center mb-20">
-
-      <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
-        Our Expertise
-      </div>
-
-      <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">
-
-        Premium Services
-
-      </h2>
-
-    </div>
-
-    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-
-      <div class="luxury-card rounded-[35px] p-10 text-center">
-
-        <div class="text-5xl text-yellow-400 mb-6">
-          🌕
-        </div>
-
-        <h3 class="text-2xl font-bold mb-4 gold-text">
-          Brand Strategy
-        </h3>
-
-        <p class="text-yellow-100/70 leading-relaxed text-lg">
-          Transforming businesses into premium global brands.
-        </p>
-
-      </div>
-
-      <div class="luxury-card rounded-[35px] p-10 text-center">
-
-        <div class="text-5xl text-yellow-400 mb-6">
-          🌕
-        </div>
-
-        <h3 class="text-2xl font-bold mb-4 gold-text">
-          Media & PR
-        </h3>
-
-        <p class="text-yellow-100/70 leading-relaxed text-lg">
-          Strategic media communication with cinematic storytelling.
-        </p>
-
-      </div>
-
-      <div class="luxury-card rounded-[35px] p-10 text-center">
-
-        <div class="text-5xl text-yellow-400 mb-6">
-          🌕
-        </div>
-
-        <h3 class="text-2xl font-bold mb-4 gold-text">
-          Social Campaigns
-        </h3>
-
-        <p class="text-yellow-100/70 leading-relaxed text-lg">
-          Viral engagement engineered for modern audiences.
-        </p>
-
-      </div>
-
-      <div class="luxury-card rounded-[35px] p-10 text-center">
-
-        <div class="text-5xl text-yellow-400 mb-6">
-          🌕
-        </div>
-
-        <h3 class="text-2xl font-bold mb-4 gold-text">
-          Logistics
-        </h3>
-
-        <p class="text-yellow-100/70 leading-relaxed text-lg">
-          Reliable logistics and international supply solutions.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="px-6 md:px-16 py-28">
-
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-      <div>
-
-        <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
-          About Us
-        </div>
-
-        <h2 class="text-5xl md:text-7xl font-black leading-tight mb-8 gold-text luxury-font">
-
-          Elegant.<br>
-          Bold.<br>
-          Limitless.
-
-        </h2>
-
-        <p class="text-yellow-100/70 text-xl leading-relaxed mb-10">
-
-          Nanis Communication is a graphic & web design, entertainment media,
-          information technology and communication company providing business consulting,
-          humanitarian support, study assistance, digital supply chains,
-          entrepreneurial solutions and logistics support to Indonesia.
-
-        </p>
-
-        <a href="#contact"
-          class="inline-block px-10 py-5 rounded-xl
-          gold-button text-black font-black uppercase tracking-[0.2em]
-          hover:scale-105 transition duration-300">
-
-          Discover More
-
-        </a>
-
-      </div>
-
-      <div class="relative h-[550px] rounded-[45px]
-        border border-yellow-500/20
-        overflow-hidden
-        flex items-center justify-center
-        bg-black/40
-        backdrop-blur-xl
-        gold-glow">
-
-        <div class="absolute w-[400px] h-[400px]
-          rounded-full border border-yellow-500/20 spin-slow">
-        </div>
-
-        <div class="absolute w-[260px] h-[260px]
-          rounded-full border border-yellow-400/15">
-        </div>
-
-        <div class="absolute w-[160px] h-[160px]
-          rounded-full bg-gradient-to-br
-          from-yellow-200 to-yellow-700 gold-glow">
-        </div>
-
-        <img
-          src="IMG.jpg"
-          alt="Nanis Communication"
-          class="relative z-10 w-80 rounded-[30px]
-          border border-yellow-500/20
-          object-cover">
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="px-6 md:px-16 pb-28">
-
-    <div class="relative rounded-[45px]
-      border border-yellow-500/20
-      overflow-hidden
-      glass
-      p-12 md:p-24
-      text-center">
-
-      <div class="absolute inset-0
-        bg-gradient-to-r
-        from-yellow-500/10
-        via-transparent
-        to-yellow-500/10">
-      </div>
-
-      <div class="relative z-10 max-w-4xl mx-auto">
-
-        <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-6">
-          Ready To Grow?
-        </div>
-
-        <h2 class="text-4xl md:text-7xl font-black leading-tight mb-10 gold-text luxury-font">
-
-          Let’s Build Something Extraordinary
-
-        </h2>
-
-        <p class="text-yellow-100/80 text-xl leading-relaxed mb-12">
-
-          Luxury media communication, humanitarian initiatives,
-          entertainment branding and global business solutions.
-
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-
-          <a href="tel:0133324777"
-            class="px-12 py-5 rounded-xl gold-button
-            text-black font-black uppercase tracking-[0.3em]
-            hover:scale-105 transition duration-300
-            shadow-[0_0_40px_rgba(255,215,0,0.3)]">
-
-            📞 Call Now
-
-          </a>
-
-          <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"
-            target="_blank"
-            class="px-12 py-5 rounded-xl
-            border border-yellow-500/30
-            text-yellow-300 font-bold uppercase tracking-[0.2em]
-            hover:bg-yellow-500/10 transition duration-300">
-
-            WhatsApp
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-<!-- SOCIAL -->
-<section id="social" class="px-6 md:px-16 py-28">
-
-  <div class="text-center mb-20">
-
-    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
-      Media Channel
-    </div>
-
-    <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">
-
-      Live Entertainment
-
-    </h2>
-
-  </div>
-
-  <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-10">
-
-    <!-- CARD -->
-    <a href="https://www.tiktok.com/@ipk.tv5"
-      target="_blank"
-      class="luxury-card rounded-[35px] overflow-hidden group">
-
-      <img
-        src="image.jpg"
-        class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">
-
-      <div class="p-8 text-center">
-
-        <h3 class="text-2xl font-black mb-4 gold-text">
-          IPK.TV (IPK.MEDIA)
-        </h3>
-
-        <p class="text-yellow-100/70 text-lg">
-          Information & Entertainment
-        </p>
-
-      </div>
-
-    </a>
-
-    <!-- CARD -->
-    <a href="https://www.tiktok.com/@nanis7885"
-      target="_blank"
-      class="luxury-card rounded-[35px] overflow-hidden group">
-
-      <img
-        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
-        class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">
-
-      <div class="p-8 text-center">
-
-        <h3 class="text-2xl font-black mb-4 gold-text">
-          NANIS MEDIA
-        </h3>
-
-        <p class="text-yellow-100/70 text-lg">
-          Global social campaigns and communication.
-        </p>
-
-      </div>
-
-    </a>
-
-    <!-- CARD -->
-    <a href="https://www.tiktok.com/@nanis.7777"
-      target="_blank"
-      class="luxury-card rounded-[35px] overflow-hidden group">
-
-      <img
-        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-        class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">
-
-      <div class="p-8 text-center">
-
-        <h3 class="text-2xl font-black mb-4 gold-text">
-          IPK.TV / MHO
-        </h3>
-
-        <p class="text-yellow-100/70 text-lg">
-          Info & Supporter
-        </p>
-
-      </div>
-
-    </a>
-
-    <!-- CARD -->
-    <a href="https://www.tiktok.com/@ihishamuddinhashim?_r=1&_t=ZS-96NMgP1YU54"
-      target="_blank"
-      class="luxury-card rounded-[35px] overflow-hidden group">
-
-      <img
-        src="Logo MHO.png"
-        class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">
-
-      <div class="p-8 text-center">
-
-        <h3 class="text-2xl font-black mb-4 gold-text">
-          MHO
-        </h3>
-
-        <p class="text-yellow-100/70 text-lg">
-          Humanitarian missions & global awareness.
-        </p>
-
-      </div>
-
-    </a>
-
-  </div>
-
-</section>
+  </header>    
+    <!-- HERO -->    
+    <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">  <div class="absolute bottom-[-350px] left-1/2 -translate-x-1/2  
+  w-[1800px] h-[700px]  
+  rounded-full  
+  border-t border-yellow-400/30  
+  bg-gradient-to-t from-yellow-500/30 to-transparent  
+  blur-[2px]">  
+</div>  
+
+<div class="absolute w-[800px] h-[800px]  
+  bg-yellow-400/10 rounded-full blur-[120px]">  
+</div>  
+
+<div class="relative z-10 max-w-6xl pt-48 md:pt-32">  
+
+  <!-- HERO VIDEO -->
+
+<div class="relative mx-auto mb-20 max-w-6xl overflow-hidden rounded-[40px] border border-yellow-500/20 gold-glow">    <!-- VIDEO -->  <video  
+id="heroVideo"  
+autoplay  
+muted  
+loop  
+playsinline  
+preload="auto"  
+class="w-full h-auto object-cover">
+
+<source src=".promo.mp4" type="video/mp4">  
+
+Browser anda tidak support video.
+
+  </video>    
+  <!-- DARK OVERLAY -->    
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40"></div>    <!-- CONTENT OVER VIDEO -->    <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-6">  <h2 class="text-3xl md:text-6xl font-black gold-text luxury-font tracking-[0.2em] hero-shadow">  
+
+  NANIS COMMUNICATION  
+
+</h2>  
+
+<p class="mt-4 text-yellow-100/80 text-lg md:text-2xl tracking-[0.15em]">  
+
+  Luxury Media & Global Entertainment  
+
+</p>
+
+  </div>    
+  <!-- SOUND BUTTON -->  
+  <button  
+id="soundBtn"  
+onclick="toggleSound()"  
+class="absolute bottom-5 right-5 z-20  
+bg-black/50 backdrop-blur-xl  
+border border-yellow-500/30  
+text-yellow-300  
+px-5 py-3  
+rounded-full  
+hover:bg-yellow-500/20  
+transition duration-300">
+
+🔇 Sound Off
+
+  </button>  
+</div>  
+  <!-- VIDEO SCRIPT -->  
+  <script>  
   
-  <!-- FOOTER -->
-  <footer class="px-6 md:px-16 py-10 border-t border-yellow-500/10 text-center">
+  const video = document.getElementById("heroVideo");  
+  const button = document.getElementById("soundBtn");  
+  
+  function toggleSound() {  
+  
+    if(video.muted){  
+  
+      video.muted = false;  
+      video.volume = 1;  
+  
+      button.innerHTML = "🔊 Sound On";  
+  
+      video.play();  
+  
+    } else {  
+  
+      video.muted = true;  
+  
+      button.innerHTML = "🔇 Sound Off";  
+  
+    }  
+  
+  }  
+  
+</script>  
+  <!-- ORNAMENT -->  
+  <div class="text-yellow-400 text-3xl md:text-5xl mb-6 tracking-[0.4em]">  
+    🌒 🌓 🌔 🌕 🌖 🌗 🌘  
+  </div>  
 
-    <div class="gold-text text-2xl font-black tracking-[0.2em] mb-4 luxury-font">
+  <!-- TITLE -->  
+  <h1 class="text-5xl md:text-8xl font-black uppercase leading-tight hero-shadow gold-text tracking-[0.15em]">  
 
-      NANIS COMMUNICATION
+    NANIS COMMUNICATION  
 
-    </div>
+  </h1>  
 
-    <p class="text-yellow-100/50 tracking-[0.2em] uppercase text-sm">
+  <!-- SUBTITLE -->  
+  <p class="mt-8 text-xl md:text-3xl text-yellow-100/80 tracking-[0.15em] leading-relaxed">  
 
-      Global Entertainment 🌕 Humanitarian 🌕 Business Solutions
+    Global Entertainment,  
+    Humanitarian &  
+    Business Solutions  
 
-    </p> 
-    <div class="mt-8 flex justify-center gap-6">
+  </p>  
 
-  <a href="https://www.facebook.com/naniscommunication"
-    target="_blank"
-    class="px-5 py-2 rounded-full border border-yellow-500/20
-    text-yellow-200/70 hover:bg-yellow-500/10 transition">
+  <!-- DIVIDER -->  
+  <div class="flex items-center justify-center gap-4 my-10">  
 
-    Facebook
+    <div class="w-20 h-[1px] bg-yellow-500"></div>  
 
-  </a>
+    <div class="text-yellow-400 text-2xl">  
+      🌕  
+    </div>  
 
-  <a href="https://www.tiktok.com/@nanis7885"
-    target="_blank"
-    class="px-5 py-2 rounded-full border border-yellow-500/20
-    text-yellow-200/70 hover:bg-yellow-500/10 transition">
+    <div class="w-20 h-[1px] bg-yellow-500"></div>  
 
-    TikTok
+  </div>  
 
-  </a>
+  <!-- BUTTONS -->  
+  <div class="flex flex-col sm:flex-row gap-5 justify-center">  
 
-  <a href="https://naniscommunication.com/"
-    target="_blank"
-    class="px-5 py-2 rounded-full border border-yellow-500/20
-    text-yellow-200/70 hover:bg-yellow-500/10 transition">
+    <a href="#contact"  
+      class="px-12 py-5 rounded-xl gold-button text-black font-black uppercase tracking-[0.2em]  
+      shadow-[0_0_40px_rgba(255,215,0,0.3)]  
+      hover:scale-105 transition duration-300">  
 
-    Website
+      Get In Touch  
 
-  </a>
+    </a>  
 
-    </div>
+    <a href="#social"  
+      class="px-12 py-5 rounded-xl border border-yellow-500/30  
+      text-yellow-300 uppercase tracking-[0.2em]  
+      hover:bg-yellow-500/10 transition duration-300">  
 
-    <div class="mt-8 text-yellow-100/40 text-sm">
+      Live Media  
 
-      © 2026 Nanis Communication. All Rights Reserved.
+    </a>  
 
-    </div>
+  </div>  
 
-  </footer>
+</div>
 
-  <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"
-    target="_blank"
-    class="fixed bottom-6 right-6 z-50
-    px-6 py-4 rounded-full
-    gold-button text-black font-black uppercase
-    shadow-[0_0_40px_rgba(255,215,0,0.3)]
-    hover:scale-110 transition duration-300">
+  </section>    
+    <!-- SERVICES -->    
+    <section id="services" class="px-6 md:px-16 py-28">  <div class="text-center mb-20">  
 
-    WhatsApp
+  <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">  
+    Our Expertise  
+  </div>  
 
-  </a>
+  <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">  
 
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
+    Premium Services  
 
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+  </h2>  
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+</div>  
 
-  </script>
+<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">  
 
-</body>
+  <div class="luxury-card rounded-[35px] p-10 text-center">  
+
+    <div class="text-5xl text-yellow-400 mb-6">  
+      🌕  
+    </div>  
+
+    <h3 class="text-2xl font-bold mb-4 gold-text">  
+      Brand Strategy  
+    </h3>  
+
+    <p class="text-yellow-100/70 leading-relaxed text-lg">  
+      Transforming businesses into premium global brands.  
+    </p>  
+
+  </div>  
+
+  <div class="luxury-card rounded-[35px] p-10 text-center">  
+
+    <div class="text-5xl text-yellow-400 mb-6">  
+      🌕  
+    </div>  
+
+    <h3 class="text-2xl font-bold mb-4 gold-text">  
+      Media & PR  
+    </h3>  
+
+    <p class="text-yellow-100/70 leading-relaxed text-lg">  
+      Strategic media communication with cinematic storytelling.  
+    </p>  
+
+  </div>  
+
+  <div class="luxury-card rounded-[35px] p-10 text-center">  
+
+    <div class="text-5xl text-yellow-400 mb-6">  
+      🌕  
+    </div>  
+
+    <h3 class="text-2xl font-bold mb-4 gold-text">  
+      Social Campaigns  
+    </h3>  
+
+    <p class="text-yellow-100/70 leading-relaxed text-lg">  
+      Viral engagement engineered for modern audiences.  
+    </p>  
+
+  </div>  
+
+  <div class="luxury-card rounded-[35px] p-10 text-center">  
+
+    <div class="text-5xl text-yellow-400 mb-6">  
+      🌕  
+    </div>  
+
+    <h3 class="text-2xl font-bold mb-4 gold-text">  
+      Logistics  
+    </h3>  
+
+    <p class="text-yellow-100/70 leading-relaxed text-lg">  
+      Reliable logistics and international supply solutions.  
+    </p>  
+
+  </div>  
+
+</div>
+
+  </section>    
+    <!-- ABOUT -->    
+    <section id="about" class="px-6 md:px-16 py-28">  <div class="grid lg:grid-cols-2 gap-16 items-center">  
+
+  <div>  
+
+    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">  
+      About Us  
+    </div>  
+
+    <h2 class="text-5xl md:text-7xl font-black leading-tight mb-8 gold-text luxury-font">  
+
+      Elegant.<br>  
+      Bold.<br>  
+      Limitless.  
+
+    </h2>  
+
+    <p class="text-yellow-100/70 text-xl leading-relaxed mb-10">  
+
+      Nanis Communication is a graphic & web design, entertainment media,  
+      information technology and communication company providing business consulting,  
+      humanitarian support, study assistance, digital supply chains,  
+      entrepreneurial solutions and logistics support to Indonesia.  
+
+    </p>  
+
+    <a href="#contact"  
+      class="inline-block px-10 py-5 rounded-xl  
+      gold-button text-black font-black uppercase tracking-[0.2em]  
+      hover:scale-105 transition duration-300">  
+
+      Discover More  
+
+    </a>  
+
+  </div>  
+
+  <div class="relative h-[550px] rounded-[45px]  
+    border border-yellow-500/20  
+    overflow-hidden  
+    flex items-center justify-center  
+    bg-black/40  
+    backdrop-blur-xl  
+    gold-glow">  
+
+    <div class="absolute w-[400px] h-[400px]  
+      rounded-full border border-yellow-500/20 spin-slow">  
+    </div>  
+
+    <div class="absolute w-[260px] h-[260px]  
+      rounded-full border border-yellow-400/15">  
+    </div>  
+
+    <div class="absolute w-[160px] h-[160px]  
+      rounded-full bg-gradient-to-br  
+      from-yellow-200 to-yellow-700 gold-glow">  
+    </div>  
+
+    <img  
+      src="IMG.jpg"  
+      alt="Nanis Communication"  
+      class="relative z-10 w-80 rounded-[30px]  
+      border border-yellow-500/20  
+      object-cover">  
+
+  </div>  
+
+</div>
+
+  </section>    
+    <!-- CONTACT -->    
+    <section id="contact" class="px-6 md:px-16 pb-28">  <div class="relative rounded-[45px]  
+  border border-yellow-500/20  
+  overflow-hidden  
+  glass  
+  p-12 md:p-24  
+  text-center">  
+
+  <div class="absolute inset-0  
+    bg-gradient-to-r  
+    from-yellow-500/10  
+    via-transparent  
+    to-yellow-500/10">  
+  </div>  
+
+  <div class="relative z-10 max-w-4xl mx-auto">  
+
+    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-6">  
+      Ready To Grow?  
+    </div>  
+
+    <h2 class="text-4xl md:text-7xl font-black leading-tight mb-10 gold-text luxury-font">  
+
+      Let’s Build Something Extraordinary  
+
+    </h2>  
+
+    <p class="text-yellow-100/80 text-xl leading-relaxed mb-12">  
+
+      Luxury media communication, humanitarian initiatives,  
+      entertainment branding and global business solutions.  
+
+    </p>  
+
+    <div class="flex flex-col sm:flex-row gap-6 justify-center">  
+
+      <a href="tel:0133324777"  
+        class="px-12 py-5 rounded-xl gold-button  
+        text-black font-black uppercase tracking-[0.3em]  
+        hover:scale-105 transition duration-300  
+        shadow-[0_0_40px_rgba(255,215,0,0.3)]">  
+
+        📞 Call Now  
+
+      </a>  
+
+      <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"  
+        target="_blank"  
+        class="px-12 py-5 rounded-xl  
+        border border-yellow-500/30  
+        text-yellow-300 font-bold uppercase tracking-[0.2em]  
+        hover:bg-yellow-500/10 transition duration-300">  
+
+        WhatsApp  
+
+      </a>  
+
+    </div>  
+
+  </div>  
+
+</div>
+
+  </section>  
+<!-- SOCIAL -->  
+<section id="social" class="px-6 md:px-16 py-28">    <div class="text-center mb-20">  <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">  
+  Media Channel  
+</div>  
+
+<h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">  
+
+  Live Entertainment  
+
+</h2>
+
+  </div>    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-10">  <!-- CARD -->  
+<a href="https://www.tiktok.com/@ipk.tv5"  
+  target="_blank"  
+  class="luxury-card rounded-[35px] overflow-hidden group">  
+
+  <img  
+    src="image.jpg"  
+    class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">  
+
+  <div class="p-8 text-center">  
+
+    <h3 class="text-2xl font-black mb-4 gold-text">  
+      IPK.TV (IPK.MEDIA)  
+    </h3>  
+
+    <p class="text-yellow-100/70 text-lg">  
+      Information & Entertainment  
+    </p>  
+
+  </div>  
+
+</a>  
+
+<!-- CARD -->  
+<a href="https://www.tiktok.com/@nanis7885"  
+  target="_blank"  
+  class="luxury-card rounded-[35px] overflow-hidden group">  
+
+  <img  
+    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"  
+    class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">  
+
+  <div class="p-8 text-center">  
+
+    <h3 class="text-2xl font-black mb-4 gold-text">  
+      NANIS MEDIA  
+    </h3>  
+
+    <p class="text-yellow-100/70 text-lg">  
+      Global social campaigns and communication.  
+    </p>  
+
+  </div>  
+
+</a>  
+
+<!-- CARD -->  
+<a href="https://www.tiktok.com/@nanis.7777"  
+  target="_blank"  
+  class="luxury-card rounded-[35px] overflow-hidden group">  
+
+  <img  
+    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"  
+    class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">  
+
+  <div class="p-8 text-center">  
+
+    <h3 class="text-2xl font-black mb-4 gold-text">  
+      IPK.TV / MHO  
+    </h3>  
+
+    <p class="text-yellow-100/70 text-lg">  
+      Info & Supporter  
+    </p>  
+
+  </div>  
+
+</a>  
+
+<!-- CARD -->  
+<a href="https://www.tiktok.com/@ihishamuddinhashim?_r=1&_t=ZS-96NMgP1YU54"  
+  target="_blank"  
+  class="luxury-card rounded-[35px] overflow-hidden group">  
+
+  <img  
+    src="Logo MHO.png"  
+    class="h-72 w-full object-cover group-hover:scale-105 transition duration-700">  
+
+  <div class="p-8 text-center">  
+
+    <h3 class="text-2xl font-black mb-4 gold-text">  
+      MHO  
+    </h3>  
+
+    <p class="text-yellow-100/70 text-lg">  
+      Humanitarian missions & global awareness.  
+    </p>  
+
+  </div>  
+
+</a>
+
+  </div>  </section>    
+    <!-- FOOTER -->    
+    <footer class="px-6 md:px-16 py-10 border-t border-yellow-500/10 text-center">  <div class="gold-text text-2xl font-black tracking-[0.2em] mb-4 luxury-font">  
+
+  NANIS COMMUNICATION  
+
+</div>  
+
+<p class="text-yellow-100/50 tracking-[0.2em] uppercase text-sm">  
+
+  Global Entertainment 🌕 Humanitarian 🌕 Business Solutions  
+
+</p>   
+<div class="mt-8 flex justify-center gap-6">
+
+<a href="https://www.facebook.com/naniscommunication"  
+target="_blank"  
+class="px-5 py-2 rounded-full border border-yellow-500/20  
+text-yellow-200/70 hover:bg-yellow-500/10 transition">
+
+Facebook
+
+  </a>  <a href="https://www.tiktok.com/@nanis7885"  
+target="_blank"  
+class="px-5 py-2 rounded-full border border-yellow-500/20  
+text-yellow-200/70 hover:bg-yellow-500/10 transition">
+
+TikTok
+
+  </a>  <a href="https://naniscommunication.com/"  
+target="_blank"  
+class="px-5 py-2 rounded-full border border-yellow-500/20  
+text-yellow-200/70 hover:bg-yellow-500/10 transition">
+
+Website
+
+  </a>  </div>  
+
+<div class="mt-8 text-yellow-100/40 text-sm">  
+
+  © 2026 Nanis Communication. All Rights Reserved.  
+
+</div>
+
+  </footer>    
+    <!-- WHATSAPP FLOAT -->  
+    <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"  
+target="_blank"  
+class="fixed bottom-6 right-6 z-50  
+px-6 py-4 rounded-full  
+gold-button text-black font-black uppercase  
+shadow-[0_0_40px_rgba(255,215,0,0.3)]  
+hover:scale-110 transition duration-300">
+
+WhatsApp
+
+  </a>    
+    <!-- MOBILE MENU SCRIPT -->    
+    <script>  
+  
+    const menuBtn = document.getElementById('menuBtn');  
+    const mobileMenu = document.getElementById('mobileMenu');  
+  
+    menuBtn.addEventListener('click', () => {  
+      mobileMenu.classList.toggle('hidden');  
+    });  
+  
+  </script>  
+  </body>  
 </html>
