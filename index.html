@@ -317,77 +317,132 @@
 
     <div class="relative z-10 max-w-6xl pt-48 md:pt-32">
 
-      <!-- HERO VIDEO -->
-<div class="relative mx-auto mb-20 max-w-6xl overflow-hidden
-rounded-[40px]
-border border-yellow-500/20
-gold-glow">
+      <!-- HERO VIDEO SLIDESHOW -->
+<div class="relative mx-auto mb-20 max-w-6xl h-[700px] overflow-hidden rounded-[40px] border border-yellow-500/20 gold-glow">
 
-  <!-- VIDEO -->
-  <video
-    id="heroVideo"
-    autoplay
-    muted
-    loop
-    playsinline
-    class="w-full h-auto object-cover">
-
-    <source src="promo.mp4" type="video/mp4">
-
+  <!-- VIDEO 1 -->
+  <video class="hero-slide active" autoplay muted loop playsinline>
+    <source src="promo1.mp4" type="video/mp4">
   </video>
 
-  <!-- DARK OVERLAY -->
-  <div class="absolute inset-0
-    bg-gradient-to-t
-    from-black/60
-    via-transparent
-    to-black/40">
+  <!-- VIDEO 2 -->
+  <video class="hero-slide" muted loop playsinline>
+    <source src="promo2.mp4" type="video/mp4">
+  </video>
+
+  <!-- VIDEO 3 -->
+  <video class="hero-slide" muted loop playsinline>
+    <source src="promo3.mp4" type="video/mp4">
+  </video>
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+  <!-- TEXT -->
+  <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6">
+
+    <h1 class="text-4xl md:text-7xl font-black gold-text luxury-font tracking-[0.2em]">
+
+      NANIS COMMUNICATION
+
+    </h1>
+
+    <p class="mt-5 text-yellow-100/80 text-lg md:text-2xl">
+
+      Global Luxury Media & Entertainment
+
+    </p>
+
   </div>
 
   <!-- SOUND BUTTON -->
   <button
     id="soundBtn"
     onclick="toggleSound()"
-    class="absolute bottom-5 right-5 z-20
-    bg-black/50 backdrop-blur-xl
-    border border-yellow-500/20
+    class="absolute bottom-6 right-6 z-30
+    bg-black/60
+    border border-yellow-500/30
     text-yellow-300
-    px-5 py-3
-    rounded-full
-    hover:bg-yellow-500/20
-    transition duration-300">
+    px-6 py-3 rounded-full
+    backdrop-blur-xl">
 
-    🔇 Sound Off
+    🔇 Enable Sound
 
   </button>
 
 </div>
 
-<!-- SCRIPT -->
+<style>
+
+.hero-slide{
+
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  opacity:0;
+  transition:opacity 1.5s ease;
+
+}
+
+.hero-slide.active{
+  opacity:1;
+  z-index:1;
+}
+
+</style>
+
 <script>
 
-function toggleSound() {
+const slides = document.querySelectorAll(".hero-slide");
 
-  const video = document.getElementById("heroVideo");
-  const button = document.getElementById("soundBtn");
+let current = 0;
+let soundEnabled = false;
 
-  video.muted = !video.muted;
+slides[current].play();
 
-  if(video.muted){
+setInterval(() => {
 
-    button.innerHTML = "🔇 Sound Off";
+  slides[current].classList.remove("active");
+  slides[current].pause();
+
+  current = (current + 1) % slides.length;
+
+  slides[current].classList.add("active");
+
+  slides[current].muted = !soundEnabled;
+
+  slides[current].play();
+
+}, 6000);
+
+function toggleSound(){
+
+  soundEnabled = !soundEnabled;
+
+  slides.forEach(video => {
+
+    video.muted = !soundEnabled;
+
+  });
+
+  const btn = document.getElementById("soundBtn");
+
+  if(soundEnabled){
+
+    btn.innerHTML = "🔊 Sound On";
 
   } else {
 
-    button.innerHTML = "🔊 Sound On";
-
-    video.play();
+    btn.innerHTML = "🔇 Enable Sound";
 
   }
 
 }
 
-</script>
+    </script>
 
       <!-- ORNAMENT -->
       <div class="text-yellow-400 text-3xl md:text-5xl mb-6 tracking-[0.4em]">
