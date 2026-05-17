@@ -318,15 +318,76 @@
     <div class="relative z-10 max-w-6xl pt-48 md:pt-32">
 
       <!-- HERO VIDEO -->
-<div class="relative mx-auto mb-20 max-w-5xl rounded-[40px] overflow-hidden
-border border-yellow-500/20 gold-glow">
+<div class="relative mx-auto mb-20 max-w-6xl overflow-hidden
+rounded-[40px]
+border border-yellow-500/20
+gold-glow">
 
+  <!-- VIDEO -->
   <video
+    id="heroVideo"
     autoplay
     muted
     loop
     playsinline
     class="w-full h-auto object-cover">
+
+    <source src="promo.mp4" type="video/mp4">
+
+  </video>
+
+  <!-- DARK OVERLAY -->
+  <div class="absolute inset-0
+    bg-gradient-to-t
+    from-black/60
+    via-transparent
+    to-black/40">
+  </div>
+
+  <!-- SOUND BUTTON -->
+  <button
+    id="soundBtn"
+    onclick="toggleSound()"
+    class="absolute bottom-5 right-5 z-20
+    bg-black/50 backdrop-blur-xl
+    border border-yellow-500/20
+    text-yellow-300
+    px-5 py-3
+    rounded-full
+    hover:bg-yellow-500/20
+    transition duration-300">
+
+    🔇 Sound Off
+
+  </button>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+function toggleSound() {
+
+  const video = document.getElementById("heroVideo");
+  const button = document.getElementById("soundBtn");
+
+  video.muted = !video.muted;
+
+  if(video.muted){
+
+    button.innerHTML = "🔇 Sound Off";
+
+  } else {
+
+    button.innerHTML = "🔊 Sound On";
+
+    video.play();
+
+  }
+
+}
+
+</script>
 
     <source src="promo.mp4" type="video/mp4">
 
@@ -340,7 +401,7 @@ border border-yellow-500/20 gold-glow">
 </div>
 
       <!-- ORNAMENT -->
-      <div class="text-yellow-400-glow text-3xl md:text-5xl mb-6 tracking-[0.4em]">
+      <div class="text-yellow-400-glowing text-3xl md:text-5xl mb-6 tracking-[0.4em]">
         🌒 🌓 🌔 🌕 🌖 🌗 🌘
       </div>
 
