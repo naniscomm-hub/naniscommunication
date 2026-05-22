@@ -963,6 +963,180 @@ WhatsApp
     });  
   
   </script>
-  
-  </body>
+
+<!-- VISITOR COUNTER -->
+
+<div class="visitor-box">
+
+  <div class="visitor-title">
+    TOTAL VISITORS
+  </div>
+
+  <div id="visitor-count">
+    0
+  </div>
+
+  <div class="online-box">
+
+    <span class="online-dot"></span>
+
+    <span id="online-users">
+      1
+    </span>
+
+    USERS ONLINE
+
+  </div>
+
+</div>
+
+<style>
+
+.visitor-box{
+
+  width:320px;
+  margin:60px auto;
+  padding:30px;
+  text-align:center;
+
+  background:rgba(0,0,0,0.55);
+
+  border:1px solid rgba(255,215,0,0.2);
+
+  border-radius:35px;
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:
+    0 0 30px rgba(255,215,0,0.10),
+    0 0 80px rgba(255,215,0,0.05);
+
+}
+
+.visitor-title{
+
+  color:#d4af37;
+
+  letter-spacing:5px;
+
+  font-size:13px;
+
+  margin-bottom:15px;
+
+  text-transform:uppercase;
+
+}
+
+#visitor-count{
+
+  font-size:58px;
+
+  font-weight:900;
+
+  background:linear-gradient(
+    to bottom,
+    #fff8d6,
+    #f7d774,
+    #d4af37,
+    #8f6b10
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 0 20px rgba(255,215,0,0.25);
+
+}
+
+.online-box{
+
+  margin-top:18px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:10px;
+
+  color:#eee;
+
+  font-size:12px;
+
+  letter-spacing:3px;
+
+}
+
+.online-dot{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#00ff88;
+
+  box-shadow:0 0 15px #00ff88;
+
+  animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  50%{
+    transform:scale(1.5);
+    opacity:.5;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+</style>
+
+<script>
+
+let visitors =
+localStorage.getItem('nanis_visitors');
+
+if(!visitors){
+
+  visitors = 1;
+
+}else{
+
+  visitors = parseInt(visitors) + 1;
+
+}
+
+localStorage.setItem(
+  'nanis_visitors',
+  visitors
+);
+
+document.getElementById(
+  'visitor-count'
+).innerText = visitors;
+
+const onlineUsers =
+Math.floor(Math.random() * 20) + 1;
+
+document.getElementById(
+  'online-users'
+).innerText = onlineUsers;
+
+</script>
+
+</body>
 </html>
