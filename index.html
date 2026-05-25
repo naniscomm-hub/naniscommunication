@@ -540,6 +540,7 @@ function toggleSound() {
 
   <video
     id="logisticVideo"
+    muted
     autoplay
     loop
     playsinline
@@ -550,7 +551,32 @@ function toggleSound() {
     <source src="Logistic.mp4" type="video/mp4">
 
   </video>
+<button
+onclick="toggleLogisticSound()"
+class="absolute bottom-5 right-5 z-20
+bg-black/50
+text-yellow-300
+px-4 py-2
+rounded-full">
 
+🔊 Sound
+
+</button>
+  <script>
+
+function toggleLogisticSound() {
+
+  const video =
+  document.getElementById("logisticVideo");
+
+  video.muted = !video.muted;
+
+  video.play();
+
+}
+
+  </script>
+  
 </div>
   
     <!-- VIDEO TEXT -->
