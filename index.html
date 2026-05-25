@@ -335,12 +335,14 @@ gold-glow">
   
   <!-- VIDEO -->
   
-  <video  
-id="heroVideo"  
-autoplay  
-muted  
-loop  
-playsinline  
+  <video
+id="heroVideo"
+autoplay
+muted
+loop
+playsinline
+preload="auto"
+webkit-playsinline
 class="w-full h-auto object-cover">
 
 <source src="promo.mp4" type="video/mp4">
@@ -1110,7 +1112,13 @@ WhatsApp
   }
 
 }
+video{
 
+  transform: translateZ(0);
+
+  backface-visibility: hidden;
+
+}
 </style>
 
 <script>
@@ -1157,8 +1165,9 @@ window.addEventListener("load", () => {
 
 });
 
+</script>
+    
 <script>
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const videos = document.querySelectorAll("video");
@@ -1170,7 +1179,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
 </script>
   </body>
 </html>
