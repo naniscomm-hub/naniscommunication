@@ -537,18 +537,18 @@ function toggleSound() {
 <div class="relative overflow-hidden rounded-3xl mb-6 border border-yellow-500/20 gold-glow shadow-2xl">
 
   <video
+    id="logisticVideo"
+    muted
     autoplay
-    controls
     loop
     playsinline
-    preload="auto"
+    preload="metadata"
+    webkit-playsinline
     class="w-full h-[500px] object-cover">
 
     <source src="Logistic.mp4" type="video/mp4">
 
   </video>
-
-  <div class="absolute inset-0 bg-black/20"></div>
 
 </div>
   
@@ -1145,6 +1145,18 @@ document.getElementById(
 ).innerText = onlineUsers;
 
 </script>
+    
+<script>
 
+window.addEventListener("load", () => {
+
+  const logisticVideo =
+  document.getElementById("logisticVideo");
+
+  logisticVideo.play().catch(() => {});
+
+});
+
+</script>
 </body>
 </html>
