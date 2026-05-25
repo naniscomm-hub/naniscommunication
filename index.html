@@ -1157,6 +1157,20 @@ window.addEventListener("load", () => {
 
 });
 
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const videos = document.querySelectorAll("video");
+
+  videos.forEach(video => {
+
+    video.play().catch(() => {});
+
+  });
+
+});
+
 </script>
-</body>
+  </body>
 </html>
