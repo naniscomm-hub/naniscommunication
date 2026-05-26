@@ -208,88 +208,232 @@
   </head>
   
   <body> 
-    <!-- LIVE KEMENTERIAN NEWS BAR -->
-<div class="top-news-wrapper">
+    <!-- LIVE MALAYSIA NEWS BAR -->
 
-  <div class="live-badge">
-    LIVE NEWS
+<div class="malaysia-news-wrapper">
+
+  <!-- LEFT LIVE -->
+  <div class="live-malaysia">
+
+    <span class="live-dot"></span>
+
+    🇲🇾 LIVE NEWS
+
   </div>
 
-  <div id="rss-news" class="rss-news-container">
-    Loading berita rasmi kerajaan...
+  <!-- NEWS -->
+  <div id="rss-news" class="malaysia-news-container">
+
+    Loading berita rasmi Malaysia...
+
   </div>
 
 </div>
 
 <style>
 
-.top-news-wrapper{
+/* MAIN BAR */
+
+.malaysia-news-wrapper{
+
   width:100%;
-  background:linear-gradient(to right,#000000,#111111,#000000);
-  border-top:3px solid #d4af37;
-  border-bottom:3px solid #d4af37;
+
   display:flex;
+
   align-items:center;
+
   overflow:hidden;
+
   position:relative;
-  z-index:9999;
-  box-shadow:0 0 20px rgba(212,175,55,0.25);
+
+  z-index:99999;
+
+  border-top:4px solid #ffd700;
+
+  border-bottom:4px solid #ffd700;
+
+  background:
+  linear-gradient(
+    90deg,
+    #001a66 0%,
+    #001a66 25%,
+    #c00000 25%,
+    #c00000 50%,
+    #ffffff 50%,
+    #ffffff 75%,
+    #ffd700 75%,
+    #ffd700 100%
+  );
+
+  box-shadow:
+    0 0 25px rgba(255,215,0,0.35),
+    0 0 60px rgba(255,0,0,0.20);
+
 }
 
-.live-badge{
-  background:linear-gradient(to right,#d4af37,#f5d76e,#d4af37);
-  color:#000;
-  font-weight:bold;
-  padding:18px 24px;
-  font-size:16px;
-  letter-spacing:2px;
+/* LIVE SIDE */
+
+.live-malaysia{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:22px 34px;
+
+  background:rgba(0,0,0,0.65);
+
+  backdrop-filter:blur(15px);
+
+  color:#fff;
+
+  font-weight:900;
+
+  font-size:22px;
+
+  letter-spacing:3px;
+
   white-space:nowrap;
+
+  border-right:
+  2px solid rgba(255,255,255,0.2);
+
+  text-shadow:
+    0 0 15px rgba(255,255,255,0.4);
+
 }
 
-.rss-news-container{
+/* LIVE DOT */
+
+.live-dot{
+
+  width:14px;
+
+  height:14px;
+
+  border-radius:50%;
+
+  background:#ff0000;
+
+  box-shadow:
+    0 0 20px #ff0000;
+
+  animation:livePulse 1.2s infinite;
+
+}
+
+@keyframes livePulse{
+
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  50%{
+    transform:scale(1.6);
+    opacity:.5;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+/* NEWS AREA */
+
+.malaysia-news-container{
+
   flex:1;
+
   overflow:hidden;
+
   white-space:nowrap;
-  color:white;
-  font-size:16px;
-  font-weight:500;
+
+  color:#ffffff;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.7);
+
 }
+
+/* SCROLL */
 
 .news-scroll{
+
   display:inline-block;
+
   padding-left:100%;
-  animation:scrollNews 40s linear infinite;
+
+  animation:
+  malaysiaScroll 70s linear infinite;
+
 }
 
+/* NEWS LINK */
+
 .news-scroll a{
+
   color:#ffffff;
+
   text-decoration:none;
-  margin-right:70px;
+
+  margin-right:90px;
+
   transition:0.3s;
+
 }
 
 .news-scroll a:hover{
-  color:#d4af37;
+
+  color:#ffd700;
+
+  text-shadow:
+    0 0 15px rgba(255,215,0,0.7);
+
 }
 
-@keyframes scrollNews {
-  0% {
-    transform: translateX(0%);
+/* ANIMATION */
+
+@keyframes malaysiaScroll {
+
+  0%{
+    transform:translateX(0%);
   }
-  100% {
-    transform: translateX(-100%);
+
+  100%{
+    transform:translateX(-100%);
   }
+
 }
+
+/* MOBILE */
 
 @media(max-width:780px){
 
-  .live-badge{
-    padding:14px 17px;
+  .live-malaysia{
+
+    padding:16px 20px;
+
     font-size:14px;
+
+    letter-spacing:2px;
+
   }
 
-  .rss-news-container{
+  .malaysia-news-container{
+
     font-size:14px;
+
   }
 
 }
@@ -299,34 +443,48 @@
 <script>
 
 fetch("https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rss")
+
 .then(response => response.json())
+
 .then(data => {
 
-  let output = '<div class="news-scroll">';
+  let output =
+  '<div class="news-scroll">';
 
-  data.items.slice(0,8).forEach(item => {
+  data.items.slice(0,10).forEach(item => {
 
     output += `
+
       <a href="${item.link}" target="_blank">
-        ${item.title}
+
+        🇲🇾 ${item.title}
+
       </a>
+
     `;
 
   });
 
   output += '</div>';
 
-  document.getElementById("rss-news").innerHTML = output;
+  document.getElementById(
+    "rss-news"
+  ).innerHTML = output;
 
 })
+
 .catch(error => {
 
-  document.getElementById("rss-news").innerHTML =
-  "Berita rasmi kerajaan sedang dikemaskini...";
+  document.getElementById(
+    "rss-news"
+  ).innerHTML =
+
+  "Berita rasmi Malaysia sedang dikemaskini...";
 
 });
 
 </script>
+
     <!-- BACKGROUND -->
     <div class="fixed inset-0 -z-10 overflow-hidden bg-black">
       <div class="absolute top-[-20%] left-1/2 -translate-x-1/2  
