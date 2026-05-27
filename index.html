@@ -732,24 +732,32 @@ class="md:hidden text-white text-3xl hover:text-yellow-400 transition">
         
 </div>  
 
-<!-- MOBILE MENU -->  
-<div id="mobileMenu" class="hidden md:hidden px-6 pb-6">  
+<!-- MOBILE MENU -->
 
-  <div class="flex flex-col gap-5 uppercase tracking-[0.3em] text-sm text-yellow-100/80">  
+<div id="mobileMenu"
+class="hidden md:hidden px-6 pb-6 bg-black/90 backdrop-blur-xl">
 
-    <a href="#services">Services</a>  
-    <a href="#about">About</a>  
-    <a href="#social">Media</a>  
-    <a href="#contact">Contact</a>  
+  <div class="flex flex-col gap-5 uppercase tracking-[0.3em] text-sm text-yellow-100/80 py-4">
 
-  </div>  
+    <a href="#services">Services</a>
+
+    <a href="#about">About</a>
+
+    <a href="#social">Media</a>
+
+    <a href="#contact">Contact</a>
+
+  </div>
 
 </div>
-
-  </header>
     
     <!-- HERO -->
-    <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">
+    <section class="relative
+min-h-screen
+flex items-center justify-center
+text-center
+overflow-hidden
+px-5 md:px-6">
       
       <div class="absolute bottom-[-350px] left-1/2 -translate-x-1/2  
   w-[1800px] h-[700px]  
@@ -759,11 +767,15 @@ class="md:hidden text-white text-3xl hover:text-yellow-400 transition">
   blur-[2px]">  
 </div>  
 
-<div class="absolute w-[800px] h-[800px]  
-  bg-yellow-400/10 rounded-full blur-[120px]">  
-</div>  
+<div class="absolute
+w-[500px] h-[500px]
+md:w-[800px] md:h-[800px]
+bg-yellow-400/10
+rounded-full
+blur-[80px] md:blur-[120px]">
+</div>
 
-<div class="relative z-10 max-w-6xl pt-36 md:pt-24">  
+<div class="relative z-10 max-w-6xl pt-[220px] md:pt-[180px]">  
 
   <!-- HERO VIDEO -->
 
@@ -1951,5 +1963,26 @@ loadRSS(
 );
 
     </script>
+  <body>
+
+  CONTENT WEBSITE...
+
+  <!-- SCRIPT -->
+  <script>
+
+  const menuBtn =
+  document.getElementById("menuBtn");
+
+  const mobileMenu =
+  document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("hidden");
+
+  });
+
+  </script>
+
   </body>
 </html>
