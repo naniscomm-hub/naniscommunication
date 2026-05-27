@@ -1814,36 +1814,11 @@ video{
 </style>
 
 <script>
-
-let visitors =
-localStorage.getItem('nanis_visitors');
-
-if(!visitors){
-
-  visitors = 1;
-
-}else{
-
-  visitors = parseInt(visitors) + 1;
-
-}
-
-localStorage.setItem(
-  'nanis_visitors',
-  visitors
-);
-
-document.getElementById(
-  'visitor-count'
-).innerText = visitors;
-
-const onlineUsers =
-Math.floor(Math.random() * 20) + 1;
-
-document.getElementById(
-  'online-users'
-).innerText = onlineUsers;
-
+fetch('https://api.countapi.xyz/hit/naniscommunication.com/visits')
+.then(res => res.json())
+.then(res => {
+document.getElementById('visitor-count').innerHTML = res.value;
+})
 </script>
     
 <script>
