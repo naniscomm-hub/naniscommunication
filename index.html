@@ -1869,75 +1869,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
-    
-    <script>
+   
 
-function loadRSS(feedUrl, elementId){
-
-  fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`)
-
-  .then(response => response.json())
-
-  .then(data => {
-
-    let output = '';
-
-    data.items.slice(0,4).forEach(item => {
-
-      output += `
-
-      <div class="rss-item">
-
-        <a href="${item.link}" target="_blank">
-
-          ${item.title}
-
-        </a>
-
-      </div>
-
-      `;
-
-    });
-
-    document.getElementById(elementId).innerHTML = output;
-
-  })
-
-  .catch(error => {
-
-    document.getElementById(elementId).innerHTML =
-    "News sedang dikemaskini...";
-
-  });
-
-}
-
-/* MALAYSIA */
-loadRSS(
-  'https://berita.rtm.gov.my/rss',
-  'rss-malaysia'
-);
-
-/* GLOBAL */
-loadRSS(
-  'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
-  'rss-global'
-);
-
-/* ENTERTAINMENT */
-loadRSS(
-  'https://www.billboard.com/feed/',
-  'rss-entertainment'
-);
-
-/* SPORTS */
-loadRSS(
-  'https://www.espn.com/espn/rss/news',
-  'rss-sports'
-);
-
-    </script>
     <script>
 
 function loadRSS(feedUrl, elementId){
