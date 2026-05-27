@@ -365,8 +365,7 @@
 }
 
 /* MAIN BAR */
-
-.malaysia-news-wrapper{
+ .malaysia-news-wrapper{
 
   width:100%;
   height:90px;
@@ -380,7 +379,7 @@
   top:0;
   left:0;
 
-  z-index:60;
+  z-index:99999;
 
   border-top:4px solid #ffd700;
   border-bottom:4px solid #ffd700;
@@ -721,6 +720,9 @@ fetch("https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rs
     
     <!-- HERO -->
     <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">
+      <section{
+  scroll-margin-top:120px;
+}
       
       <div class="absolute bottom-[-350px] left-1/2 -translate-x-1/2  
   w-[1800px] h-[700px]  
@@ -1815,38 +1817,19 @@ video{
 
 <script>
 
-let visitors =
-localStorage.getItem('nanis_visitors');
+fetch('https://api.countapi.xyz/hit/naniscommunication.com/visits')
 
-if(!visitors){
+.then(response => response.json())
 
-  visitors = 1;
+.then(data => {
 
-}else{
+  document.getElementById(
+    'visitor-count'
+  ).innerText = data.value;
 
-  visitors = parseInt(visitors) + 1;
-
-}
-
-localStorage.setItem(
-  'nanis_visitors',
-  visitors
-);
-
-document.getElementById(
-  'visitor-count'
-).innerText = visitors;
-
-const onlineUsers =
-Math.floor(Math.random() * 20) + 1;
-
-document.getElementById(
-  'online-users'
-).innerText = onlineUsers;
+});
 
 </script>
-    
-<script>
 
 window.addEventListener("load", () => {
 
