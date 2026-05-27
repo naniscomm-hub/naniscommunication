@@ -546,7 +546,8 @@ h1, h2, h3, h4, .luxury-font {
   
 }  
   
-</style>  <script>  
+</style>  
+    <script>  
   
 fetch("https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rss")  
   
@@ -598,19 +599,25 @@ bg-yellow-500/20
 blur-[180px]
 rounded-full">
 
-</div>    <div class="absolute bottom-[-250px] left-1/2 -translate-x-1/2    
+</div>    
+  
+  <div class="absolute bottom-[-250px] left-1/2 -translate-x-1/2    
   w-[1600px] h-[600px]    
   bg-gradient-to-t from-yellow-500/40 to-transparent    
   blur-[120px]    
   rounded-full">    
-</div>    <div class="absolute inset-0 opacity-20    
+</div>    
+  
+  <div class="absolute inset-0 opacity-20    
   bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">    </div>    </div>  <!-- NAVBAR -->  
   
 <header class="fixed top-[78px] left-0 w-full z-50 glass border-b border-yellow-500/10">  
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-5">
 
-  <!-- LOGO -->      <div class="flex items-center gap-4">    <img    
-  src="logo.png"    
+  <!-- LOGO -->      
+    
+    <div class="flex items-center gap-4">    
+      <img src="logo.png"    
   alt="Nanis Communication"    
   class="w-20 h-20 md:w-30 md:h-30 rounded-full border border-yellow-500/30 object-cover gold-glow">    
 
@@ -630,7 +637,10 @@ rounded-full">
 
 </div>
 
-  </div>      <!-- MENU -->      <nav class="hidden md:flex items-center gap-10 uppercase tracking-[0.35em] text-sm text-yellow-100/80">    <a href="#services" class="hover:text-yellow-400 transition">    
+  </div>      
+    <!-- MENU -->      
+    <nav class="hidden md:flex items-center gap-10 uppercase tracking-[0.35em] text-sm text-yellow-100/80">    
+      <a href="#services" class="hover:text-yellow-400 transition">    
   Services    
 </a>    
 
@@ -649,14 +659,25 @@ rounded-full">
 
 </a>
 
-  </nav>      <!-- MOBILE BUTTON -->      <button id="menuBtn" class="md:hidden text-white text-3xl">    
+  </nav>      
+    <!-- MOBILE BUTTON -->      
+    <button id="menuBtn" class="md:hidden text-white text-3xl">    
     ☰    
-  </button>    </div>    <!-- MOBILE MENU -->    <div id="mobileMenu" class="hidden md:hidden px-6 pb-6">      <div class="flex flex-col gap-5 uppercase tracking-[0.3em] text-sm text-yellow-100/80">    <a href="#services">Services</a>    
+  </button>    
+  </div>    
+  <!-- MOBILE MENU -->    
+  <div id="mobileMenu" class="hidden md:hidden px-6 pb-6">      
+    <div class="flex flex-col gap-5 uppercase tracking-[0.3em] text-sm text-yellow-100/80">    
+<a href="#services">Services</a>    
 <a href="#about">About</a>    
 <a href="#social">Media</a>    
 <a href="#contact">Contact</a>
 
-  </div>    </div>    </header>  <!-- HERO -->  
+  </div>
+  </div>
+</header>
+    
+    <!-- HERO -->  
 <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">  
     
   <div class="absolute bottom-[-350px] left-1/2 -translate-x-1/2
@@ -667,23 +688,32 @@ border-t border-yellow-400/30
 bg-gradient-to-t from-yellow-500/30 to-transparent
 blur-[2px]">
 
-</div>    <div class="absolute w-[800px] h-[800px]    
+</div>
+  <div class="absolute w-[800px] h-[800px]    
   bg-yellow-400/10 rounded-full blur-[120px]">    
-</div>    <div class="relative z-10 max-w-6xl pt-36 md:pt-24">      <!-- HERO VIDEO -->  <div class="relative mx-auto mb-20 max-w-6xl overflow-hidden    
+</div>    
+  <div class="relative z-10 max-w-6xl pt-36 md:pt-24">      
+    <!-- HERO VIDEO -->
+    <div class="relative mx-auto mb-20 max-w-6xl overflow-hidden    
 rounded-[40px]    
 border border-yellow-500/20    
-gold-glow">    <!-- VIDEO -->  <video  
-id="heroVideo"  
-autoplay  
-muted  
-loop  
-playsinline  
-preload="auto"  
-webkit-playsinline  
-class="w-full h-auto object-cover">
+gold-glow">    
+      <!-- VIDEO -->  
+      <video 
+        id="heroVideo" 
+        autoplay  
+        muted  
+        loop  
+        playsinline  
+        preload="auto"  
+        webkit-playsinline  
+        class="w-full h-auto object-cover">
 
-<source src="promo.mp4" type="video/mp4">    </video>    <!-- SOUND BUTTON -->  <button    
-id="soundBtn"    
+<source src="promo.mp4" type="video/mp4">    
+      </video>    
+    
+      <!-- SOUND BUTTON -->  
+<button id="soundBtn"    
 onclick="toggleSound()"    
 class="absolute bottom-5 right-5 z-20    
 bg-black/50 backdrop-blur-xl    
@@ -696,7 +726,10 @@ transition duration-300">
 
 🔇 Sound Off
 
-  </button>  </div>    <!-- SCRIPT -->    <script>    
+  </button>  
+    </div>    
+    <!-- SCRIPT -->    
+    <script>    
     
 function toggleSound() {    
     
@@ -719,23 +752,42 @@ function toggleSound() {
     
 }    
     
-</script>    <!-- ORNAMENT -->      <div class="text-yellow-400 text-2xl md:text-4xl mb-5 tracking-[0.2em]">    
+</script>    
+    <!-- ORNAMENT -->      
+    <div class="text-yellow-400 text-2xl md:text-4xl mb-5 tracking-[0.2em]">    
     🌒 🌓 🌔 🌕 🌖 🌗 🌘    
-  </div>      <!-- TITLE -->      <h1 class="text-2xl md:text-4xl font-black uppercase leading-tight hero-shadow gold-text tracking-[0.15em]">    NANIS COMMUNICATION
+  </div>      
+    <!-- TITLE -->     
+    <h1 class="text-2xl md:text-4xl font-black uppercase leading-tight hero-shadow gold-text tracking-[0.15em]">
+      NANIS COMMUNICATION
 
-  </h1>      <!-- SUBTITLE -->      <p class="mt-8 text-xl md:text-3xl text-yellow-100/80 tracking-[0.15em] leading-relaxed">    Global Entertainment,    
+  </h1>      
+    <!-- SUBTITLE -->      
+    <p class="mt-8 text-xl md:text-3xl text-yellow-100/80 tracking-[0.15em] leading-relaxed">
+
+Global Entertainment,    
 Humanitarian &    
 Business Solutions
 
-  </p>      <!-- DIVIDER -->      <div class="flex items-center justify-center gap-4 my-10">    <div class="w-20 h-[1px] bg-yellow-500"></div>    
+  </p>      
+    <!-- DIVIDER -->
+    <div class="flex items-center justify-center gap-4 my-10">
+      <div class="w-20 h-[1px] bg-yellow-500">
+        
+      </div>    
 
 <div class="text-yellow-400 text-2xl">    
   🌕    
 </div>    
 
-<div class="w-20 h-[1px] bg-yellow-500"></div>
+<div class="w-20 h-[1px] bg-yellow-500">
+  
+</div>
 
-  </div>      <!-- BUTTONS -->      <div class="flex flex-col sm:flex-row gap-5 justify-center">    <a href="#contact"    
+  </div>
+    <!-- BUTTONS -->
+    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+      <a href="#contact"    
   class="px-12 py-5 rounded-xl gold-button text-black font-black uppercase tracking-[0.2em]    
   shadow-[0_0_40px_rgba(255,215,0,0.3)]    
   hover:scale-105 transition duration-300">    
@@ -754,31 +806,53 @@ Business Solutions
 </a>
 
   </div>    
-  <!-- MEDIA QUICK BUTTONS -->  <div class="mt-10 flex flex-wrap justify-center gap-4">    <!-- MALAYSIA -->  <a href="#malaysia-news"  
+  <!-- MEDIA QUICK BUTTONS -->
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      
+      <!-- MALAYSIA -->  
+      
+      <a href="#malaysia-news"  
 class="media-btn malaysia-btn">
 
 🇲🇾 Berita Terkini
 
-  </a>    <!-- GLOBAL -->  <a href="#global-news"  
+  </a>
+      <!-- GLOBAL -->
+      <a href="#global-news"  
 class="media-btn global-btn">
 
 🌍 Berita Global
 
-  </a>    <!-- ENTERTAINMENT -->  <a href="#entertainment-news"  
+  </a>
+      <!-- ENTERTAINMENT -->
+      
+      <a href="#entertainment-news"  
 class="media-btn entertainment-btn">
 
 🎵 Entertainment
 
-  </a>    <!-- SPORTS -->  <a href="#sports-news"  
+  </a>
+      <!-- SPORTS -->
+      <a href="#sports-news"  
 class="media-btn sports-btn">
 
 ⚽ Berita Sukan
 
-  </a>  </div>  </div>    </section>   
-    <!-- MALAYSIA NEWS -->  <section id="malaysia-news"  
-class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-14 text-center">  🇲🇾 Berita Terkini Malaysia
+    </div>
+  </div>
+</section>   
+    
+    <!-- MALAYSIA NEWS -->
+    <section id="malaysia-news"  
+class="px-6 md:px-16 py-20">
+      <h2 class="text-4xl font-black gold-text mb-14 text-center">
+        🇲🇾 Berita Terkini Malaysia
 
-  </h2>    <div class="grid md:grid-cols-3 gap-8">  <!-- CARD -->  
+  </h2>    
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- CARD -->  
 
 <div class="luxury-card rounded-[30px] overflow-hidden">  
 
@@ -796,7 +870,7 @@ class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-14 t
 
     <p class="text-yellow-100/70">  
 
-      Info terkini politik, ekonomi dan perkembangan negara.  
+      Info terkini isu semasa, Ekonomi dan perkembangan negara.  
 
     </p>  
 
@@ -856,26 +930,55 @@ class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-14 t
 
 </div>
 
-  </div>  </section>  <!-- GLOBAL -->  <section id="global-news"  
-class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-10">  🌍 Berita Global & Bencana Alam
+  </div>
+    </section>
+    <!-- GLOBAL -->
+    <section id="global-news"  
+class="px-6 md:px-16 py-20">
+      <h2 class="text-4xl font-black gold-text mb-10">
+        🌍 Berita Global & Bencana Alam
 
-  </h2>  </section>  <!-- ENTERTAINMENT -->  <section id="entertainment-news"  
-class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-10">  🎵 Entertainment & BTS
+  </h2>
+    </section>
+    <!-- ENTERTAINMENT -->
+    <section id="entertainment-news"  
+class="px-6 md:px-16 py-20">
+      <h2 class="text-4xl font-black gold-text mb-10">  🎵 Entertainment & BTS
 
-  </h2>  </section>  <!-- SPORTS -->  <section id="sports-news"  
-class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-10">  ⚽ Berita Sukan
+  </h2>
+    </section>
+    <!-- SPORTS -->
+    <section id="sports-news"  
+class="px-6 md:px-16 py-20">
+     
+      <h2 class="text-4xl font-black gold-text mb-10">
+        ⚽ Berita Sukan
 
-  </h2>  </section>  <!-- RSS NEWS SECTION -->
+  </h2>
+    
+    </section>
+    
+    <!-- RSS NEWS SECTION -->
 
-<section class="px-6 md:px-16 py-24">    <div class="text-center mb-20">  <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">  
-  LIVE MEDIA CENTER  
-</div>  
+<section class="px-6 md:px-16 py-24">
+  <div class="text-center mb-20">
+    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">  
+ 
+      LIVE MEDIA CENTER  
+
+    </div>  
 
 <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">  
+  
   Global News Network  
+
 </h2>
 
-  </div>    <!-- GRID -->    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">  <!-- MALAYSIA -->  
+  </div>
+  <!-- GRID -->
+  <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+    
+    <!-- MALAYSIA -->  
 
 <div class="luxury-card rounded-[35px] p-6">  
 
@@ -939,17 +1042,29 @@ class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-10">
 
 </div>
 
-  </div>  </section>  
+  </div>
+</section>  
+    
     <!-- SERVICES -->  
-<section id="services" class="px-6 md:px-16 py-28">    <div class="text-center mb-20">  <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">  
+
+    <section id="services" class="px-6 md:px-16 py-28">
+  
+  <div class="text-center mb-20">
+    
+    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">  
   Our Expertise  
-</div>  
+
+    </div>  
 
 <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">  
   Premium Services  
+
 </h2>
 
-  </div>    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">  <!-- CARD 1 -->  
+  </div>
+      
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8"> 
+        <!-- CARD 1 -->  
 <div class="luxury-card rounded-[35px] p-10 text-center">  
 
   <div class="text-5xl text-yellow-400 mb-6">  
@@ -1002,11 +1117,16 @@ class="px-6 md:px-16 py-20">    <h2 class="text-4xl font-black gold-text mb-10">
 
 <!-- CARD 4 LOGISTICS -->
 
-<div class="luxury-card rounded-[35px] p-10 text-center">    <div class="text-5xl text-yellow-400 mb-6 floating">  
+<div class="luxury-card rounded-[35px] p-10 text-center">  
+  <div class="text-5xl text-yellow-400 mb-6 floating">  
     🌕  
-  </div>    <h3 class="text-2xl font-bold mb-6 gold-text">  
+  </div> 
+  <h3 class="text-2xl font-bold mb-6 gold-text">  
     Logistics  
-  </h3>    <!-- LOGISTIC VIDEO -->  <div class="relative overflow-hidden rounded-3xl mb-6 border border-yellow-500/20 gold-glow shadow-2xl">  <video  
+  </h3> 
+  <!-- LOGISTIC VIDEO -->
+  <div class="relative overflow-hidden rounded-3xl mb-6 border border-yellow-500/20 gold-glow shadow-2xl">
+    <video  
 id="logisticVideo"  
 muted  
 autoplay  
@@ -1039,7 +1159,9 @@ video.play();
 
 }
 
-  </script>  </div>  <!-- VIDEO TEXT -->  
+  </script>
+  </div>
+  <!-- VIDEO TEXT -->  
 <div class="absolute bottom-4 left-4 text-left">  
 
   <h4 class="text-yellow-300 font-bold text-lg">  
@@ -1052,9 +1174,13 @@ video.play();
 
 </div>
 
-  </div>    <p class="text-yellow-100/70 leading-relaxed text-lg mb-6">  
+  </div> 
+        <p class="text-yellow-100/70 leading-relaxed text-lg mb-6">  
+          
     Penghantaran paket dari Malaysia ke Indonesia dengan servis cepat, selamat dan dipercayai.  
-  </p>    <!-- LOGISTIC LIST -->    <div class="space-y-4 text-left">  <!-- BOX 1 -->  
+  </p>
+        <!-- LOGISTIC LIST --> 
+        <div class="space-y-4 text-left">  <!-- BOX 1 -->  
 <div class="bg-black/40 border border-yellow-500/20 rounded-2xl p-4">  
 
   <h4 class="text-yellow-300 font-bold text-lg mb-2">  
@@ -1093,16 +1219,23 @@ video.play();
 
 </div>
 
-  </div>    <!-- BUTTON -->  <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"  
+  </div> 
+        <!-- BUTTON -->
+        <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"  
 target="_blank"  
 class="inline-block mt-8 px-8 py-4 rounded-full gold-button text-black font-black uppercase tracking-[0.15em] hover:scale-105 transition duration-300">
 
 Contact Logistics
 
-  </a>  </div>  </section>    <!-- ABOUT -->  <section id="about" class="px-6 md:px-16 py-28">  
+  </a> 
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="px-6 md:px-16 py-28">  
   <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-  <div>    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">    
+  <div>
+    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">    
   About Us    
 </div>    
 
@@ -1139,13 +1272,16 @@ we guarantee fast customs clearance processes, competitive costs, and safe deliv
 
 </a>
 
-  </div>      <div class="relative h-[550px] rounded-[45px]    
+  </div>
+    
+    <div class="relative h-[550px] rounded-[45px]    
     border border-yellow-500/20    
     overflow-hidden    
     flex items-center justify-center    
     bg-black/40    
     backdrop-blur-xl    
-    gold-glow">    <div class="absolute w-[400px] h-[400px]    
+    gold-glow">
+      <div class="absolute w-[400px] h-[400px]    
   rounded-full border border-yellow-500/20 spin-slow">    
 </div>    
 
@@ -1165,7 +1301,11 @@ we guarantee fast customs clearance processes, competitive costs, and safe deliv
   border border-yellow-500/20    
   object-cover">
 
-  </div>    </div>    </section>  <!-- CONTACT -->  
+  </div>
+  </div> 
+    </section>
+    
+    <!-- CONTACT -->  
   
 <section id="contact" class="px-6 md:px-16 pb-28">  
     
@@ -1181,8 +1321,14 @@ text-center">
     bg-gradient-to-r    
     from-yellow-500/10    
     via-transparent    
-    to-yellow-500/10">      </div>      <div class="relative z-10 max-w-4xl mx-auto">    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-6">    
-  Ready To Grow?    
+    to-yellow-500/10"> 
+    
+  </div> 
+  
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-6">    
+ 
+        Ready To Grow?    
   
 </div>    
 
@@ -1224,13 +1370,24 @@ text-center">
 
 </div>
 
-  </div>    </div>    </section>    <!-- SOCIAL -->    <section id="social" class="px-6 md:px-16 py-28">    <div class="text-center mb-20">  <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
+  </div>
+  </div> 
+</section>
+    <!-- SOCIAL -->
+    <section id="social" class="px-6 md:px-16 py-28">
+      <div class="text-center mb-20">
+        <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
 
 Media Channel
 
-</div>    <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">    Live Entertainment
+</div>
+        <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">
+          
+          Live Entertainment
 
-</h2>    </div>    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-10">  <!-- CARD -->
+</h2>    </div> 
+      
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-10">  <!-- CARD -->
 
 <a href="https://www.tiktok.com/@ipk.tv5"    
 target="_blank"    
@@ -1240,7 +1397,8 @@ class="luxury-card rounded-[35px] overflow-hidden group">
 src="image.jpg"    
 class="h-60 w-full object-cover group-hover:scale-105 transition duration-700">
 
-  <div class="p-8 text-center">    <h3 class="text-2xl font-black mb-4 gold-text">    
+  <div class="p-8 text-center">
+    <h3 class="text-2xl font-black mb-4 gold-text">    
   IPK.TV (IPK.MEDIA)    
 </h3>    
 
@@ -1248,7 +1406,10 @@ class="h-60 w-full object-cover group-hover:scale-105 transition duration-700">
   Information & Entertainment    
 </p>
 
-  </div>    </a>    <!-- CARD -->    <a href="https://www.tiktok.com/@nanis7885"    
+  </div> 
+</a>   
+        <!-- CARD --> 
+        <a href="https://www.tiktok.com/@nanis7885"    
 target="_blank"    
 class="luxury-card rounded-[35px] overflow-hidden group">
 
@@ -1256,7 +1417,8 @@ class="luxury-card rounded-[35px] overflow-hidden group">
 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"    
 class="h-60 w-full object-cover group-hover:scale-105 transition duration-700">
 
-  <div class="p-8 text-center">    <h3 class="text-2xl font-black mb-4 gold-text">    
+  <div class="p-8 text-center">
+    <h3 class="text-2xl font-black mb-4 gold-text">    
   NANIS MEDIA    
 </h3>    
 
@@ -1264,7 +1426,10 @@ class="h-60 w-full object-cover group-hover:scale-105 transition duration-700">
   Global social campaigns and communication.    
 </p>
 
-  </div>    </a>    <!-- CARD -->    <a href="https://www.tiktok.com/@nanis.7777"    
+  </div> 
+        </a> 
+        <!-- CARD --> 
+        <a href="https://www.tiktok.com/@nanis.7777"    
 target="_blank"    
 class="luxury-card rounded-[35px] overflow-hidden group">
 
@@ -1272,7 +1437,8 @@ class="luxury-card rounded-[35px] overflow-hidden group">
 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"    
 class="h-60 w-full object-cover group-hover:scale-105 transition duration-700">
 
-  <div class="p-8 text-center">    <h3 class="text-2xl font-black mb-4 gold-text">    
+  <div class="p-8 text-center"> 
+    <h3 class="text-2xl font-black mb-4 gold-text">    
   IPK.TV / MHO    
 </h3>    
 
@@ -1281,7 +1447,10 @@ class="h-60 w-full object-cover group-hover:scale-105 transition duration-700">
   
 </p>
 
-  </div>    </a>    <!-- CARD -->    <a href="https://www.tiktok.com/@ihishamuddinhashim?_r=1&_t=ZS-96NMgP1YU54"    
+  </div>
+        </a>
+        <!-- CARD --> 
+        <a href="https://www.tiktok.com/@ihishamuddinhashim?_r=1&_t=ZS-96NMgP1YU54"    
 target="_blank"    
 class="luxury-card rounded-[35px] overflow-hidden group">
 
@@ -1289,23 +1458,34 @@ class="luxury-card rounded-[35px] overflow-hidden group">
 src="Logo MHO.png"    
 class="h-60 w-full object-cover group-hover:scale-105 transition duration-700">
 
-  <div class="p-8 text-center">    <h3 class="text-2xl font-black mb-4 gold-text">    
-  MHO    
+  <div class="p-8 text-center">
+    <h3 class="text-2xl font-black mb-4 gold-text">    
+ 
+      MHO    
 </h3>    
 
 <p class="text-yellow-100/70 text-lg">    
   Humanitarian missions & global awareness.    
 </p>
 
-  </div>    </a>     </div>  </section>  <!-- FOOTER -->  
+  </div>
+        </a> 
+      </div>
+    </section> 
+    
+    <!-- FOOTER -->  
 <footer class="px-6 md:px-16 py-10 border-t border-yellow-500/10 text-center">  
   <div class="gold-text text-2xl font-black tracking-[0.2em] mb-4 luxury-font">
 
 NANIS COMMUNICATION
 
-</div>    <p class="text-yellow-100/50 tracking-[0.2em] uppercase text-sm">    Global Entertainment 🌕 Humanitarian 🌕 Business Solutions
+</div> 
+  <p class="text-yellow-100/50 tracking-[0.2em] uppercase text-sm">
+    
+    Global Entertainment 🌕 Humanitarian 🌕 Business Solutions
 
-</p>     <div class="mt-8 flex justify-center gap-6">
+</p> 
+  <div class="mt-8 flex justify-center gap-6">
 
 <a href="https://www.facebook.com/naniscommunication"    
 target="_blank"    
@@ -1314,7 +1494,8 @@ text-yellow-200/70 hover:bg-yellow-500/10 transition">
 
 Facebook
 
-  </a>  <a href="https://www.tiktok.com/@nanis7885"
+  </a> 
+    <a href="https://www.tiktok.com/@nanis7885"
 
 target="_blank"
 class="px-5 py-2 rounded-full border border-yellow-500/20
@@ -1322,7 +1503,8 @@ text-yellow-200/70 hover:bg-yellow-500/10 transition">
 
 TikTok
 
-  </a>  <a href="https://naniscommunication.com/"
+  </a>
+    <a href="https://naniscommunication.com/"
 
 target="_blank"
 class="px-5 py-2 rounded-full border border-yellow-500/20
@@ -1330,11 +1512,16 @@ text-yellow-200/70 hover:bg-yellow-500/10 transition">
 
 Website
 
-  </a>  </div>
+  </a>
+  </div>
 
-<div class="mt-8 text-yellow-100/40 text-sm">    © 2026 Nanis Communication. All Rights Reserved.
+<div class="mt-8 text-yellow-100/40 text-sm">
+  © 2026 Nanis Communication. All Rights Reserved.
 
-</div>    </footer>  <!-- WHATSAPP FLOAT -->  
+</div> 
+</footer>
+    
+    <!-- WHATSAPP FLOAT -->  
   
 <a href="https://wa.me/qr/2S5NJ2PUOKD3K1" target="_blank"
 
@@ -1346,7 +1533,9 @@ hover:scale-110 transition duration-300">
 
 WhatsApp
 
-  </a>  <!-- MOBILE MENU SCRIPT -->  
+  </a> 
+    
+    <!-- MOBILE MENU SCRIPT -->  
   
 <script>    
 
@@ -1357,11 +1546,22 @@ menuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden');    
 });
 
-  </script>  <!-- VISITOR COUNTER -->  <div class="visitor-box">    <div class="visitor-title">  
+  </script> 
+    <!-- VISITOR COUNTER -->
+    <div class="visitor-box">
+      <div class="visitor-title">  
     TOTAL VISITORS  
-  </div>    <div id="visitor-count">  
+  </div> 
+      
+      <div id="visitor-count">  
     0  
-  </div>    <div class="online-box">  <span class="online-dot"></span>  
+  </div>
+      
+      <div class="online-box">
+        
+        <span class="online-dot">
+          
+        </span>  
 
 <span id="online-users">  
   1  
@@ -1369,7 +1569,9 @@ menuBtn.addEventListener('click', () => {
 
 USERS ONLINE
 
-  </div>  </div>  <style>  
+  </div>
+    </div>
+    <style>  
   
 .visitor-box{  
   
@@ -1488,7 +1690,8 @@ video{
   backface-visibility: hidden;  
   
 }  
-</style>  <script>  
+</style> 
+    <script>  
   
 let visitors =  
 localStorage.getItem('nanis_visitors');  
@@ -1519,7 +1722,8 @@ document.getElementById(
   'online-users'  
 ).innerText = onlineUsers;  
   
-</script>  <script>  
+</script>
+    <script>  
   
 window.addEventListener("load", () => {  
   
@@ -1530,7 +1734,8 @@ window.addEventListener("load", () => {
   
 });  
   
-</script>  <script>  
+</script>
+    <script>  
 document.addEventListener("DOMContentLoaded", () => {  
   
   const videos = document.querySelectorAll("video");  
