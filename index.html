@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nanis Communication</title>
+
+  <meta name="description" content="Nanis Communication - Global Entertainment, Humanitarian & Business Solutions">
+  <meta name="keywords" content="Malaysia news, logistics Malaysia Indonesia, website design Malaysia, media communication">
+  <meta name="theme-color" content="#d4af37">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Nanis Communication">
+  <meta property="og:description" content="Global Entertainment, Humanitarian & Business Solutions">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0G5SRTRSY0"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-0G5SRTRSY0');
+  </script>
+
+  <style>
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#000;
+      color:#f5e7a1;
+      overflow-x:hidden;
+      font-family:'Cormorant Garamond', serif;
+    }
+
+    h1,h2,h3,h4{
+      font-family:'Cinzel', serif;
+    }
+
+    .gold-text{
+      background:linear-gradient(
+        to bottom,
+        #fff8d6,
+        #f7d774,
+        #d4af37,
+        #8f6b10
+      );
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(0,0,0,0.55);
+      backdrop-filter:blur(16px);
+    }
+
+    .gold-glow{
+      box-shadow:
+      0 0 20px rgba(255,215,0,0.15),
+      0 0 60px rgba(255,215,0,0.08);
+    }
+
+    .luxury-card{
+      background:rgba(15,15,15,0.65);
+
+      border:1px solid rgba(255,215,0,0.15);
+
+      backdrop-filter:blur(15px);
+
+      transition:0.4s;
+    }
+
+    .luxury-card:hover{
+      transform:translateY(-8px);
+
+      border-color:rgba(255,215,0,0.35);
+
+      box-shadow:
+      0 0 30px rgba(255,215,0,0.12);
+    }
+
+    .gold-button{
+      background:linear-gradient(
+        to right,
+        #fff0a6,
+        #d4af37,
+        #8f6b10
+      );
+    }
+
+    .news-bar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:60;
+
+      background:linear-gradient(
+        to right,
+        #001a66,
+        #cc0000,
+        #d4af37
+      );
+
+      height:50px;
+
+      display:flex;
+      align-items:center;
+
+      overflow:hidden;
+
+      border-bottom:2px solid #ffd700;
+    }
+
+    .news-title{
+      padding:0 20px;
+      font-weight:700;
+      color:#fff;
+      white-space:nowrap;
+    }
+
+    .news-scroll{
+      white-space:nowrap;
+      display:inline-block;
+      padding-left:100%;
+      animation:scrollNews 40s linear infinite;
+    }
+
+    .news-scroll a{
+      color:#fff;
+      margin-right:70px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    @keyframes scrollNews{
+      0%{
+        transform:translateX(0);
+      }
+
+      100%{
+        transform:translateX(-100%);
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- NEWS BAR -->
+
+<div class="news-bar">
+
+  <div class="news-title">
+    🇲🇾 LIVE NEWS
+  </div>
+
+  <div id="rss-news">
+    Loading news...
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<header class="fixed top-[50px] left-0 w-full z-50 glass border-b border-yellow-500/10">
+
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+    <!-- LOGO -->
+
+    <div class="flex items-center gap-4">
+
+      <img
+      src="logo.png"
+      alt="Nanis Communication"
+      class="w-16 h-16 rounded-full object-cover border border-yellow-500/30 gold-glow">
+
+      <div>
+
+        <h1 class="text-xl font-black uppercase gold-text">
+          NANIS
+        </h1>
+
+        <p class="text-[10px] tracking-[0.3em] text-yellow-100/60 uppercase">
+          Communication
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- MENU -->
+
+    <nav class="hidden md:flex items-center gap-8 uppercase text-sm tracking-[0.2em]">
+
+      <a href="#services" class="hover:text-yellow-400">
+        Services
+      </a>
+
+      <a href="#about" class="hover:text-yellow-400">
+        About
+      </a>
+
+      <a href="#social" class="hover:text-yellow-400">
+        Social
+      </a>
+
+      <a href="#contact" class="hover:text-yellow-400">
+        Contact
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+
+  <!-- BG -->
+
+  <div class="absolute inset-0 -z-10">
+
+    <div class="absolute top-[-300px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-yellow-500/20 rounded-full blur-[140px]"></div>
+
+  </div>
+
+  <div class="max-w-5xl pt-44">
+
+    <!-- VIDEO -->
+
+    <div class="rounded-[30px] overflow-hidden border border-yellow-500/20 gold-glow mb-10">
+
+      <video
+      id="heroVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="w-full">
+
+        <source src="promo.mp4" type="video/mp4">
+
+      </video>
+
+    </div>
+
+    <!-- TITLE -->
+
+    <h1 class="text-4xl md:text-6xl font-black uppercase leading-tight gold-text">
+
+      NANIS COMMUNICATION
+
+    </h1>
+
+    <p class="mt-8 text-xl md:text-2xl text-yellow-100/70 leading-relaxed">
+
+      Global Entertainment,
+      Humanitarian &
+      Business Solutions
+
+    </p>
+
+    <!-- BUTTONS -->
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-5 justify-center">
+
+      <a href="#contact"
+      class="px-10 py-4 rounded-xl gold-button text-black font-black uppercase hover:scale-105 transition">
+
+        Contact Us
+
+      </a>
+
+      <a href="#social"
+      class="px-10 py-4 rounded-xl border border-yellow-500/30 hover:bg-yellow-500/10 transition">
+
+        TikTok Channel
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="px-6 md:px-16 py-24">
+
+  <div class="text-center mb-16">
+
+    <h2 class="text-4xl md:text-5xl font-black gold-text">
+      Premium Services
+    </h2>
+
+  </div>
+
+  <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+    <!-- CARD -->
+
+    <div class="luxury-card rounded-[30px] p-8 text-center">
+
+      <div class="text-5xl mb-5">
+        🌕
+      </div>
+
+      <h3 class="text-2xl font-bold gold-text mb-4">
+        Brand Strategy
+      </h3>
+
+      <p class="text-yellow-100/70">
+        Premium business branding and strategy solutions.
+      </p>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="luxury-card rounded-[30px] p-8 text-center">
+
+      <div class="text-5xl mb-5">
+        🌕
+      </div>
+
+      <h3 class="text-2xl font-bold gold-text mb-4">
+        Media & PR
+      </h3>
+
+      <p class="text-yellow-100/70">
+        Modern media communication and social promotion.
+      </p>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="luxury-card rounded-[30px] p-8 text-center">
+
+      <div class="text-5xl mb-5">
+        🌕
+      </div>
+
+      <h3 class="text-2xl font-bold gold-text mb-4">
+        Website Design
+      </h3>
+
+      <p class="text-yellow-100/70">
+        Professional website and digital content solutions.
+      </p>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="luxury-card rounded-[30px] p-8 text-center">
+
+      <div class="text-5xl mb-5">
+        🌕
+      </div>
+
+      <h3 class="text-2xl font-bold gold-text mb-4">
+        Logistics
+      </h3>
+
+      <p class="text-yellow-100/70 mb-6">
+        Malaysia to Indonesia delivery services.
+      </p>
+
+      <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="rounded-2xl overflow-hidden">
+
+        <source src="Logistic.mp4" type="video/mp4">
+
+      </video>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="px-6 md:px-16 py-24">
+
+  <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+    <div>
+
+      <h2 class="text-4xl md:text-5xl font-black gold-text leading-tight mb-8">
+
+        INFORMATION.<br>
+        MEDIA.<br>
+        HUMANITY.<br>
+        LOGISTICS.
+
+      </h2>
+
+      <p class="text-yellow-100/70 text-lg leading-relaxed">
+
+        We are a telecommunications company and information platform
+        supporting education, business, logistics and humanitarian activities.
+
+        We also provide website development, digital media,
+        social campaigns and international logistics services,
+        especially between Malaysia and Indonesia.
+
+      </p>
+
+    </div>
+
+    <!-- IMAGE -->
+
+    <div class="relative">
+
+      <div class="absolute inset-0 bg-yellow-500/10 blur-[100px] rounded-full"></div>
+
+      <img
+      src="IMG.jpg"
+      alt="Nanis Communication"
+      class="relative rounded-[35px] border border-yellow-500/20 gold-glow">
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SOCIAL -->
+
+<section id="social" class="px-6 md:px-16 py-24">
+
+  <div class="text-center mb-16">
+
+    <h2 class="text-4xl md:text-5xl font-black gold-text">
+
+      Media Channels
+
+    </h2>
+
+  </div>
+
+  <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+    <!-- TIKTOK -->
+
+    <a href="https://www.tiktok.com/@ipk.tv5"
+    target="_blank"
+    class="luxury-card rounded-[30px] overflow-hidden">
+
+      <img
+      src="image.jpg"
+      class="h-60 w-full object-cover">
+
+      <div class="p-6 text-center">
+
+        <h3 class="text-2xl font-bold gold-text mb-3">
+          IPK.TV
+        </h3>
+
+        <p class="text-yellow-100/70">
+          Information & Entertainment
+        </p>
+
+      </div>
+
+    </a>
+
+    <!-- TIKTOK -->
+
+    <a href="https://www.tiktok.com/@nanis7885"
+    target="_blank"
+    class="luxury-card rounded-[30px] overflow-hidden">
+
+      <img
+      src="logo.png"
+      class="h-60 w-full object-cover">
+
+      <div class="p-6 text-center">
+
+        <h3 class="text-2xl font-bold gold-text mb-3">
+          NANIS MEDIA
+        </h3>
+
+        <p class="text-yellow-100/70">
+          Global Media Campaigns
+        </p>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="px-6 md:px-16 py-24">
+
+  <div class="glass rounded-[40px] border border-yellow-500/20 p-10 md:p-20 text-center">
+
+    <h2 class="text-4xl md:text-6xl font-black gold-text mb-8">
+
+      Contact Us
+
+    </h2>
+
+    <p class="text-yellow-100/70 text-xl mb-10">
+
+      Ready to build your brand and media network.
+
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-5">
+
+      <a href="tel:0133324777"
+      class="px-10 py-4 rounded-xl gold-button text-black font-black uppercase">
+
+        📞 Call Now
+
+      </a>
+
+      <a href="https://wa.me/qr/2S5NJ2PUOKD3K1"
+      target="_blank"
+      class="px-10 py-4 rounded-xl border border-yellow-500/30 hover:bg-yellow-500/10 transition">
+
+        WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="px-6 py-10 border-t border-yellow-500/10 text-center">
+
+  <h3 class="text-2xl font-black gold-text mb-4">
+
+    NANIS COMMUNICATION
+
+  </h3>
+
+  <p class="text-yellow-100/50">
+
+    Global Entertainment • Humanitarian • Business Solutions
+
+  </p>
+
+  <div class="mt-8 text-yellow-100/30 text-sm">
+
+    © 2026 Nanis Communication. All Rights Reserved.
+
+  </div>
+
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+
+<a href="https://wa.me/qr/2S5NJ2PUOKD3K1"
+target="_blank"
+class="fixed bottom-6 right-6 z-50 bg-green-500 text-white px-6 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition">
+
+  WhatsApp
+
+</a>
+
+<!-- RSS SCRIPT -->
+
+<script>
+
+fetch("https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rss")
+
+.then(response => response.json())
+
+.then(data => {
+
+  let output = '<div class="news-scroll">';
+
+  data.items.slice(0,10).forEach(item => {
+
+    output += `
+      <a href="${item.link}" target="_blank">
+        ${item.title}
+      </a>
+    `;
+
+  });
+
+  output += '</div>';
+
+  document.getElementById("rss-news").innerHTML = output;
+
+})
+
+.catch(() => {
+
+  document.getElementById("rss-news").innerHTML =
+  "News sedang dikemaskini...";
+
+});
+
+</script>
+
+</body>
+</html>
