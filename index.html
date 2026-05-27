@@ -19,6 +19,25 @@
     <!-- SEO -->
     <meta name="description" content="Nanis Communication - Global Entertainment, Humanitarian & Business Solutions">  
   <meta name="theme-color" content="#d4af37">
+    <meta name="keywords"
+content="Malaysia news, logistics Malaysia Indonesia, website design Malaysia, media communication, Nanis Communication">
+
+<meta property="og:title"
+content="Nanis Communication">
+    <meta name="keywords"
+content="Malaysia news, logistics Malaysia Indonesia, website design Malaysia, media communication, Nanis Communication">
+
+<meta property="og:title"
+content="Nanis Communication">
+
+<meta property="og:description"
+content="Global Entertainment, Humanitarian & Business Solutions">
+
+<meta property="og:image"
+content="logo.png">
+
+<meta property="og:type"
+content="website">
     
     <!-- FAVICON -->
     
@@ -293,7 +312,9 @@
     }  
   
   </style>
-    
+    <script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ID"
+crossorigin="anonymous"></script>
   </head>
   
   <body> 
@@ -363,7 +384,28 @@
   color:#ffd700;
 
 }
+output += `
 
+<div class="rss-item">
+
+<img src="${item.thumbnail}" 
+class="w-full h-40 object-cover rounded-xl mb-4">
+
+<a href="${item.link}" target="_blank">
+${item.title}
+</a>
+
+</div>
+`;
+  setInterval(()=>{
+
+loadRSS(
+'https://berita.rtm.gov.my/rss',
+'rss-malaysia'
+);
+
+},300000);
+  
 /* MAIN BAR */
 
 .malaysia-news-wrapper{
