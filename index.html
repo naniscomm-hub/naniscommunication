@@ -384,27 +384,6 @@ crossorigin="anonymous"></script>
   color:#ffd700;
 
 }
-output += `
-
-<div class="rss-item">
-
-<img src="${item.thumbnail}" 
-class="w-full h-40 object-cover rounded-xl mb-4">
-
-<a href="${item.link}" target="_blank">
-${item.title}
-</a>
-
-</div>
-`;
-  setInterval(()=>{
-
-loadRSS(
-'https://berita.rtm.gov.my/rss',
-'rss-malaysia'
-);
-
-},300000);
   
 /* MAIN BAR */
 
@@ -640,7 +619,8 @@ fetch("https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rs
 
   });
 
-  output += '</div>';
+  output += 
+    </div>';
 
   document.getElementById(
     "rss-news"
@@ -1952,6 +1932,84 @@ loadRSS(
 );
 
 /* SPORTS */
+loadRSS(
+  'https://www.espn.com/espn/rss/news',
+  'rss-sports'
+);
+
+    </script>
+    <script>
+
+function loadRSS(feedUrl, elementId){
+
+  fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`)
+
+  .then(response => response.json())
+
+  .then(data => {
+
+    let output = '';
+
+    data.items.slice(0,4).forEach(item => {
+
+      output += `
+
+      <div class="rss-item">
+
+        <img src="${item.thumbnail || ''}" 
+        class="w-full h-40 object-cover rounded-xl mb-4">
+
+        <a href="${item.link}" target="_blank">
+
+          ${item.title}
+
+        </a>
+
+      </div>
+
+      `;
+
+    });
+
+    document.getElementById(elementId).innerHTML = output;
+
+  })
+
+  .catch(error => {
+
+    document.getElementById(elementId).innerHTML =
+    "News sedang dikemaskini...";
+
+  });
+
+}
+
+/* AUTO REFRESH */
+setInterval(()=>{
+
+  loadRSS(
+    'https://berita.rtm.gov.my/rss',
+    'rss-malaysia'
+  );
+
+},300000);
+
+/* LOAD RSS */
+loadRSS(
+  'https://berita.rtm.gov.my/rss',
+  'rss-malaysia'
+);
+
+loadRSS(
+  'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
+  'rss-global'
+);
+
+loadRSS(
+  'https://www.billboard.com/feed/',
+  'rss-entertainment'
+);
+
 loadRSS(
   'https://www.espn.com/espn/rss/news',
   'rss-sports'
