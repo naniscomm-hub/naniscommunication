@@ -1,0 +1,61 @@
+body{
+  background:#000;
+  color:#fff;
+  font-family:'Cormorant Garamond', serif;
+}
+
+.gold-text{
+  background:linear-gradient(
+    to bottom,
+    #fff8d6,
+    #f7d774,
+    #d4af37,
+    #8f6b10
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.glass{
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(16px);
+}
+
+.luxury-card{
+  background:rgba(15,15,15,0.65);
+  border:1px solid rgba(255,215,0,0.15);
+  border-radius:30px;
+  padding:30px;
+}
+
+.news-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:50px;
+  background:linear-gradient(
+    to right,
+    #001a66,
+    #cc0000,
+    #d4af37
+  );
+}
+
+.hero-section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-video{
+  width:100%;
+  border-radius:30px;
+}
+
+.section-padding{
+  padding:100px 30px;
+}
