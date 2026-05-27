@@ -327,7 +327,50 @@ min-width:220px;
 
 </div>
 
-<style>
+<style>/* RSS CARD */
+
+.rss-item{
+
+  padding:16px;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,0.03);
+
+  border:1px solid rgba(255,215,0,0.08);
+
+  transition:0.3s;
+
+}
+
+.rss-item:hover{
+
+  transform:translateY(-5px);
+
+  border-color:rgba(255,215,0,0.35);
+
+  box-shadow:
+    0 0 25px rgba(255,215,0,0.12);
+
+}
+
+.rss-item a{
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  line-height:1.6;
+
+}
+
+.rss-item a:hover{
+
+  color:#ffd700;
+
+}
 
 /* MAIN BAR */
 
@@ -1000,7 +1043,94 @@ class="px-6 md:px-16 py-20">
   </h2>
 
 </section>
+    
+    <!-- RSS NEWS SECTION -->
 
+<section class="px-6 md:px-16 py-24">
+
+  <div class="text-center mb-20">
+
+    <div class="text-yellow-400 uppercase tracking-[0.35em] text-sm mb-5">
+      LIVE MEDIA CENTER
+    </div>
+
+    <h2 class="text-4xl md:text-6xl font-black gold-text luxury-font">
+      Global News Network
+    </h2>
+
+  </div>
+
+  <!-- GRID -->
+
+  <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+    <!-- MALAYSIA -->
+
+    <div class="luxury-card rounded-[35px] p-6">
+
+      <h3 class="text-2xl font-black gold-text mb-6 text-center">
+        🇲🇾 Malaysia News
+      </h3>
+
+      <div id="rss-malaysia" class="space-y-4">
+
+        Loading Malaysia news...
+
+      </div>
+
+    </div>
+
+    <!-- GLOBAL -->
+
+    <div class="luxury-card rounded-[35px] p-6">
+
+      <h3 class="text-2xl font-black gold-text mb-6 text-center">
+        🌍 Global News
+      </h3>
+
+      <div id="rss-global" class="space-y-4">
+
+        Loading global news...
+
+      </div>
+
+    </div>
+
+    <!-- ENTERTAINMENT -->
+
+    <div class="luxury-card rounded-[35px] p-6">
+
+      <h3 class="text-2xl font-black gold-text mb-6 text-center">
+        🎵 Entertainment
+      </h3>
+
+      <div id="rss-entertainment" class="space-y-4">
+
+        Loading entertainment news...
+
+      </div>
+
+    </div>
+
+    <!-- SPORTS -->
+
+    <div class="luxury-card rounded-[35px] p-6">
+
+      <h3 class="text-2xl font-black gold-text mb-6 text-center">
+        ⚽ Sports News
+      </h3>
+
+      <div id="rss-sports" class="space-y-4">
+
+        Loading sports news...
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
     <!-- SERVICES -->
 <section id="services" class="px-6 md:px-16 py-28">
 
@@ -1750,5 +1880,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+    
+    <script>
+
+function loadRSS(feedUrl, elementId){
+
+  fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`)
+
+  .then(response => response.json())
+
+  .then(data => {
+
+    let output = '';
+
+    data.items.slice(0,4).forEach(item => {
+
+      output += `
+
+      <div class="rss-item">
+
+        <a href="${item.link}" target="_blank">
+
+          ${item.title}
+
+        </a>
+
+      </div>
+
+      `;
+
+    });
+
+    document.getElementById(elementId).innerHTML = output;
+
+  })
+
+  .catch(error => {
+
+    document.getElementById(elementId).innerHTML =
+    "News sedang dikemaskini...";
+
+  });
+
+}
+
+/* MALAYSIA */
+loadRSS(
+  'https://berita.rtm.gov.my/rss',
+  'rss-malaysia'
+);
+
+/* GLOBAL */
+loadRSS(
+  'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
+  'rss-global'
+);
+
+/* ENTERTAINMENT */
+loadRSS(
+  'https://www.billboard.com/feed/',
+  'rss-entertainment'
+);
+
+/* SPORTS */
+loadRSS(
+  'https://www.espn.com/espn/rss/news',
+  'rss-sports'
+);
+
+    </script>
   </body>
 </html>
