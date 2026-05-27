@@ -39,7 +39,100 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>  
-  
+  /* MEDIA BUTTONS */
+
+.media-btn{
+
+  padding:16px 28px;
+
+  border-radius:18px;
+
+  font-weight:800;
+
+  letter-spacing:1px;
+
+  color:white;
+
+  text-decoration:none;
+
+  transition:0.35s;
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.08);
+
+}
+
+/* MALAYSIA */
+
+.malaysia-btn{
+
+  background:
+  linear-gradient(
+    to right,
+    #001a66,
+    #c00000,
+    #ffd700
+  );
+
+}
+
+/* GLOBAL */
+
+.global-btn{
+
+  background:
+  linear-gradient(
+    to right,
+    #00c6ff,
+    #0072ff
+  );
+
+}
+
+/* ENTERTAINMENT */
+
+.entertainment-btn{
+
+  background:
+  linear-gradient(
+    to right,
+    #ff00cc,
+    #3333ff
+  );
+
+}
+
+/* SPORTS */
+
+.sports-btn{
+
+  background:
+  linear-gradient(
+    to right,
+    #00c853,
+    #b2ff59
+  );
+
+  color:black;
+
+}
+
+/* HOVER */
+
+.media-btn:hover{
+
+  transform:
+  translateY(-5px)
+  scale(1.05);
+
+  box-shadow:
+    0 0 35px rgba(255,255,255,0.25);
+
+}
     html {  
       scroll-behavior: smooth;  
     }  
@@ -724,15 +817,103 @@ function toggleSound() {
       text-yellow-300 uppercase tracking-[0.2em]  
       hover:bg-yellow-500/10 transition duration-300">  
 
-      Live Media  
+      Live Tik Tok Chanel
 
-    </a>  
+    </a>
 
   </div>  
+  <!-- MEDIA QUICK BUTTONS -->
+
+<div class="mt-10 flex flex-wrap justify-center gap-4">
+
+  <!-- MALAYSIA -->
+  <a href="#malaysia-news"
+  class="media-btn malaysia-btn">
+
+    🇲🇾 Berita Terkini
+
+  </a>
+
+  <!-- GLOBAL -->
+  <a href="#global-news"
+  class="media-btn global-btn">
+
+    🌍 Berita Global
+
+  </a>
+
+  <!-- ENTERTAINMENT -->
+  <a href="#entertainment-news"
+  class="media-btn entertainment-btn">
+
+    🎵 Entertainment
+
+  </a>
+
+  <!-- SPORTS -->
+  <a href="#sports-news"
+  class="media-btn sports-btn">
+
+    ⚽ Berita Sukan
+
+  </a>
 
 </div>
 
-  </section>
+</div>
+
+  </section> 
+    <!-- MALAYSIA NEWS -->
+
+<section id="malaysia-news"
+class="px-6 md:px-16 py-20">
+
+  <h2 class="text-4xl font-black gold-text mb-10">
+
+    🇲🇾 Berita Terkini Malaysia
+
+  </h2>
+
+</section>
+
+<!-- GLOBAL -->
+
+<section id="global-news"
+class="px-6 md:px-16 py-20">
+
+  <h2 class="text-4xl font-black gold-text mb-10">
+
+    🌍 Berita Global & Bencana Alam
+
+  </h2>
+
+</section>
+
+<!-- ENTERTAINMENT -->
+
+<section id="entertainment-news"
+class="px-6 md:px-16 py-20">
+
+  <h2 class="text-4xl font-black gold-text mb-10">
+
+    🎵 Entertainment & BTS
+
+  </h2>
+
+</section>
+
+<!-- SPORTS -->
+
+<section id="sports-news"
+class="px-6 md:px-16 py-20">
+
+  <h2 class="text-4xl font-black gold-text mb-10">
+
+    ⚽ Berita Sukan
+
+  </h2>
+
+</section>
 
     <!-- SERVICES -->
 <section id="services" class="px-6 md:px-16 py-28">
