@@ -1654,18 +1654,26 @@ WhatsApp
 
   </a>
     
-    <!-- MOBILE MENU SCRIPT -->
-    
-    <script>  
-  
-    const menuBtn = document.getElementById('menuBtn');  
-    const mobileMenu = document.getElementById('mobileMenu');  
-  
-    menuBtn.addEventListener('click', () => {  
-      mobileMenu.classList.toggle('hidden');  
-    });  
-  
-  </script>
+    <!-- MOBILE MENU -->
+<script>
+
+const menuBtn =
+document.getElementById('menuBtn');
+
+const mobileMenu =
+document.getElementById('mobileMenu');
+
+if(menuBtn && mobileMenu){
+
+  menuBtn.addEventListener('click', () => {
+
+    mobileMenu.classList.toggle('hidden');
+
+  });
+
+}
+
+</script>
 
 <!-- VISITOR COUNTER -->
 
@@ -1676,7 +1684,7 @@ WhatsApp
   </div>
 
   <div id="visitor-count">
-    1517
+    Loading...
   </div>
 
   <div class="online-box">
@@ -1684,7 +1692,7 @@ WhatsApp
     <span class="online-dot"></span>
 
     <span id="online-users">
-    77
+      77
     </span>
 
     USERS ONLINE
@@ -1698,8 +1706,12 @@ WhatsApp
 .visitor-box{
 
   width:320px;
+  max-width:90%;
+
   margin:60px auto;
+
   padding:30px;
+
   text-align:center;
 
   background:rgba(0,0,0,0.55);
@@ -1775,6 +1787,7 @@ WhatsApp
 .online-dot{
 
   width:10px;
+
   height:10px;
 
   border-radius:50%;
@@ -1805,40 +1818,60 @@ WhatsApp
   }
 
 }
+
 video{
 
-  transform: translateZ(0);
+  transform:translateZ(0);
 
-  backface-visibility: hidden;
+  backface-visibility:hidden;
 
 }
+
+img{
+
+  max-width:100%;
+
+  display:block;
+
+}
+
 </style>
 
+<!-- VISITOR API -->
 <script>
+
 fetch('https://api.countapi.xyz/hit/naniscommunication.com/visits')
-.then(res => res.json())
-.then(res => {
-document.getElementById('visitor-count').innerHTML = res.value;
+
+.then(response => response.json())
+
+.then(data => {
+
+  const visitor =
+  document.getElementById('visitor-count');
+
+  if(visitor){
+
+    visitor.innerHTML = data.value;
+
+  }
+
 })
-</script>
-    
-<script>
 
-window.addEventListener("load", () => {
+.catch(error => {
 
-  const logisticVideo =
-  document.getElementById("logisticVideo");
-
-  logisticVideo.play().catch(() => {});
+  console.log(error);
 
 });
 
 </script>
-    
+
+<!-- VIDEO AUTO PLAY -->
 <script>
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  const videos = document.querySelectorAll("video");
+  const videos =
+  document.querySelectorAll("video");
 
   videos.forEach(video => {
 
@@ -1847,13 +1880,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 </script>
-    
-    <script>
+
+<!-- RSS FUNCTION -->
+<script>
 
 function loadRSS(feedUrl, elementId){
 
-  fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`)
+  fetch(
+    `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`
+  )
 
   .then(response => response.json())
 
@@ -1861,11 +1898,30 @@ function loadRSS(feedUrl, elementId){
 
     let output = '';
 
+    if(!data.items || data.items.length === 0){
+
+      document.getElementById(elementId).innerHTML =
+      "Tiada berita terkini.";
+
+      return;
+
+    }
+
     data.items.slice(0,4).forEach(item => {
 
       output += `
 
       <div class="rss-item">
+
+        ${
+          item.thumbnail
+          ? `
+          <img
+          src="${item.thumbnail}"
+          class="w-full h-40 object-cover rounded-xl mb-4">
+          `
+          : ''
+        }
 
         <a href="${item.link}" target="_blank">
 
@@ -1885,76 +1941,7 @@ function loadRSS(feedUrl, elementId){
 
   .catch(error => {
 
-    document.getElementById(elementId).innerHTML =
-    "News sedang dikemaskini...";
-
-  });
-
-}
-
-/* MALAYSIA */
-loadRSS(
-  'https://berita.rtm.gov.my/rss',
-  'rss-malaysia'
-);
-
-/* GLOBAL */
-loadRSS(
-  'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
-  'rss-global'
-);
-
-/* ENTERTAINMENT */
-loadRSS(
-  'https://www.billboard.com/feed/',
-  'rss-entertainment'
-);
-
-/* SPORTS */
-loadRSS(
-  'https://www.espn.com/espn/rss/news',
-  'rss-sports'
-);
-
-    </script>
-    <script>
-
-function loadRSS(feedUrl, elementId){
-
-  fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`)
-
-  .then(response => response.json())
-
-  .then(data => {
-
-    let output = '';
-
-    data.items.slice(0,4).forEach(item => {
-
-      output += `
-
-      <div class="rss-item">
-
-        <img src="${item.thumbnail || ''}" 
-        class="w-full h-40 object-cover rounded-xl mb-4">
-
-        <a href="${item.link}" target="_blank">
-
-          ${item.title}
-
-        </a>
-
-      </div>
-
-      `;
-
-    });
-
-    document.getElementById(elementId).innerHTML = output;
-
-  })
-
-  .catch(error => {
+    console.log(error);
 
     document.getElementById(elementId).innerHTML =
     "News sedang dikemaskini...";
@@ -1962,38 +1949,41 @@ function loadRSS(feedUrl, elementId){
   });
 
 }
-
-/* AUTO REFRESH */
-setInterval(()=>{
-
-  loadRSS(
-    'https://berita.rtm.gov.my/rss',
-    'rss-malaysia'
-  );
-
-},300000);
 
 /* LOAD RSS */
+
 loadRSS(
+'https://berita.rtm.gov.my/rss',
+'rss-malaysia'
+);
+
+loadRSS(
+'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
+'rss-global'
+);
+
+loadRSS(
+'https://www.billboard.com/feed/',
+'rss-entertainment'
+);
+
+loadRSS(
+'https://www.espn.com/espn/rss/news',
+'rss-sports'
+);
+
+/* AUTO REFRESH */
+
+setInterval(() => {
+
+  loadRSS(
   'https://berita.rtm.gov.my/rss',
   'rss-malaysia'
-);
+  );
 
-loadRSS(
-  'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
-  'rss-global'
-);
+}, 300000);
 
-loadRSS(
-  'https://www.billboard.com/feed/',
-  'rss-entertainment'
-);
+</script>
 
-loadRSS(
-  'https://www.espn.com/espn/rss/news',
-  'rss-sports'
-);
-
-    </script>
-  </body>
-      </html>
+</body>
+</html>
