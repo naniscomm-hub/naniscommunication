@@ -1459,7 +1459,6 @@ hover:scale-110 transition duration-300">
 WhatsApp
 
   </a>
-    
     <!-- MOBILE MENU -->
 <script>
 
@@ -1498,7 +1497,7 @@ if(menuBtn && mobileMenu){
     <span class="online-dot"></span>
 
     <span id="online-users">
-      777
+      77
     </span>
 
     USERS ONLINE
@@ -1508,6 +1507,32 @@ if(menuBtn && mobileMenu){
 </div>
 
 <style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+section{
+  position:relative;
+  z-index:2;
+}
+
+video{
+  width:100%;
+  display:block;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
 
 .visitor-box{
 
@@ -1622,22 +1647,6 @@ if(menuBtn && mobileMenu){
     transform:scale(1);
     opacity:1;
   }
-
-}
-
-video{
-
-  transform:translateZ(0);
-
-  backface-visibility:hidden;
-
-}
-
-img{
-
-  max-width:100%;
-
-  display:block;
 
 }
 
@@ -1759,7 +1768,7 @@ function loadRSS(feedUrl, elementId){
 /* LOAD RSS */
 
 loadRSS(
-'https://berita.rtm.gov.my/rss',
+'https://www.bernama.com/en/rss.php',
 'rss-malaysia'
 );
 
@@ -1783,8 +1792,23 @@ loadRSS(
 setInterval(() => {
 
   loadRSS(
-  'https://berita.rtm.gov.my/rss',
-  'rss-malaysia'
+    'https://www.bernama.com/en/rss.php',
+    'rss-malaysia'
+  );
+
+  loadRSS(
+    'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
+    'rss-global'
+  );
+
+  loadRSS(
+    'https://www.billboard.com/feed/',
+    'rss-entertainment'
+  );
+
+  loadRSS(
+    'https://www.espn.com/espn/rss/news',
+    'rss-sports'
   );
 
 }, 300000);
@@ -1793,3 +1817,4 @@ setInterval(() => {
 
 </body>
 </html>
+    
