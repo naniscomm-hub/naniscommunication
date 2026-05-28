@@ -347,9 +347,16 @@
   </style>
 
 </head>
-  
-  <body> 
-    <!-- LIVE MALAYSIA NEWS BAR -->
+  <!-- ADSENSE -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ID"
+crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!-- LIVE MALAYSIA NEWS BAR -->
 
 <div class="malaysia-news-wrapper">
 
@@ -371,7 +378,11 @@
 
 </div>
 
-<style>/* RSS CARD */
+<!-- RSS STYLE -->
+
+<style>
+
+/* RSS CARD */
 
 .rss-item{
 
@@ -415,26 +426,31 @@
   color:#ffd700;
 
 }
-  
+
 /* MAIN BAR */
 
 .malaysia-news-wrapper{
 
   width:100%;
+
   height:90px;
 
   display:flex;
+
   align-items:center;
 
   overflow:hidden;
 
   position:fixed;
+
   top:0;
+
   left:0;
 
   z-index:60;
 
   border-top:4px solid #ffd700;
+
   border-bottom:4px solid #ffd700;
 
   background:
@@ -482,8 +498,7 @@
 
   white-space:nowrap;
 
-  border-right:
-  2px solid rgba(255,255,255,0.2);
+  border-right:2px solid rgba(255,255,255,0.2);
 
   text-shadow:
     0 0 15px rgba(255,255,255,0.4);
@@ -559,8 +574,7 @@
 
   padding-left:100%;
 
-  animation:
-  malaysiaScroll 70s linear infinite;
+  animation:malaysiaScroll 70s linear infinite;
 
 }
 
@@ -589,7 +603,7 @@
 
 /* ANIMATION */
 
-@keyframes malaysiaScroll {
+@keyframes malaysiaScroll{
 
   0%{
     transform:translateX(0%);
@@ -625,16 +639,19 @@
 
 </style>
 
+<!-- RSS SCRIPT -->
+
 <script>
 
-fetch("https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rss")
+fetch(
+  "https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rss"
+)
 
 .then(response => response.json())
 
 .then(data => {
 
-  let output =
-  '<div class="news-scroll">';
+  let output = '<div class="news-scroll">';
 
   data.items.slice(0,10).forEach(item => {
 
@@ -650,21 +667,15 @@ fetch("https://api.rss2json.com/v1/api.json?rss_url=https://berita.rtm.gov.my/rs
 
   });
 
-  output += 
-    </div>';
+  output += '</div>';
 
-  document.getElementById(
-    "rss-news"
-  ).innerHTML = output;
+  document.getElementById("rss-news").innerHTML = output;
 
 })
 
 .catch(error => {
 
-  document.getElementById(
-    "rss-news"
-  ).innerHTML =
-
+  document.getElementById("rss-news").innerHTML =
   "Berita rasmi Malaysia sedang dikemaskini...";
 
 });
