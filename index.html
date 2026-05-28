@@ -67,263 +67,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-
-  <!-- CUSTOM CSS -->
-  <style>/* MEDIA BUTTONS */
-
-.media-btn{
-
-  padding:16px 28px;
-  border-radius:18px;
-  font-weight:800;
-  letter-spacing:1px;
-  color:white;
-  text-decoration:none;
-  transition:0.35s;
-  backdrop-filter:blur(12px);
-
-  border:1px solid rgba(255,255,255,0.15);
-
-  box-shadow:
-    0 0 20px rgba(255,255,255,0.08);
-
-  text-transform:uppercase;
-  font-size:14px;
-  min-width:220px;
-
-}
-/* MALAYSIA */
-
-.malaysia-btn{
-
-  background:
-  linear-gradient(
-    to right,
-    #001a66,
-    #c00000,
-    #ffd700
-  );
-
-}
-
-/* GLOBAL */
-
-.global-btn{
-
-  background:
-  linear-gradient(
-    to right,
-    #00c6ff,
-    #0072ff
-  );
-
-}
-
-/* ENTERTAINMENT */
-
-.entertainment-btn{
-
-  background:
-  linear-gradient(
-    to right,
-    #ff00cc,
-    #3333ff
-  );
-
-}
-
-/* SPORTS */
-
-.sports-btn{
-
-  background:
-  linear-gradient(
-    to right,
-    #00c853,
-    #b2ff59
-  );
-
-  color:black;
-
-}
-
-/* HOVER */
-
-.media-btn:hover{
-
-  transform:
-  translateY(-5px)
-  scale(1.05);
-
-  box-shadow:
-    0 0 35px rgba(255,255,255,0.25);
-
-}
-    html {  
-      scroll-behavior: smooth;  
-    }  
   
-    body {  
-      background: #000;  
-      overflow-x: hidden;  
-      color: #f5e7a1;  
-      font-family: 'Cormorant Garamond', serif;  
-    }  
-  
-    h1, h2, h3, h4, .luxury-font {  
-      font-family: 'Cinzel', serif;  
-    }  
-  
-    /* GOLD TEXT */  
-    .gold-text {  
-  
-      background: linear-gradient(  
-        to bottom,  
-        #fff8d6,  
-        #f7d774,  
-        #d4af37,  
-        #8f6b10  
-      );  
-  
-      -webkit-background-clip: text;  
-      -webkit-text-fill-color: transparent;  
-  
-      text-shadow:  
-        0 0 10px rgba(255,215,0,0.15),  
-        0 0 25px rgba(255,215,0,0.08);  
-  
-    }  
-  
-    /* GLASS */  
-    .glass {  
-      background: rgba(10,10,10,0.45);  
-      backdrop-filter: blur(18px);  
-    }  
-  
-    /* GOLD GLOW */  
-    .gold-glow {  
-  
-      box-shadow:  
-      0 0 20px rgba(255,215,0,0.15),  
-      0 0 60px rgba(255,215,0,0.08),  
-      0 0 120px rgba(255,215,0,0.04);  
-  
-    }  
-  
-    /* FLOAT */  
-    .floating {  
-      animation: float 10s ease-in-out infinite;  
-    }  
-  
-    @keyframes float {  
-  
-      0% {  
-        transform: translateY(0px);  
-      }  
-  
-      50% {  
-        transform: translateY(-12px);  
-      }  
-  
-      100% {  
-        transform: translateY(0px);  
-      }  
-  
-    }  
-  
-    /* GOLD PULSE */  
-    .pulse-gold {  
-      animation: pulseGold 4s ease-in-out infinite;  
-    }  
-  
-    @keyframes pulseGold {  
-  
-      0%,100% {  
-  
-        box-shadow:  
-          0 0 20px rgba(255,215,0,0.15),  
-          0 0 60px rgba(255,215,0,0.08);  
-  
-      }  
-  
-      50% {  
-  
-        box-shadow:  
-          0 0 40px rgba(255,215,0,0.3),  
-          0 0 120px rgba(255,215,0,0.18);  
-  
-      }  
-  
-    }  
-  
-    /* SPIN */  
-    .spin-slow {  
-      animation: spin 35s linear infinite;  
-    }  
-  
-    @keyframes spin {  
-  
-      from {  
-        transform: rotate(0deg);  
-      }  
-  
-      to {  
-        transform: rotate(360deg);  
-      }  
-  
-    }  
-  
-    /* HERO SHADOW */  
-    .hero-shadow {  
-  
-      text-shadow:  
-      0 0 20px rgba(255,215,0,.18),  
-      0 0 40px rgba(255,215,0,.12),  
-      0 0 90px rgba(255,215,0,.08);  
-  
-    }  
-  
-    /* CARD */  
-    .luxury-card {  
-  
-      background: rgba(15,15,15,0.55);  
-  
-      border: 1px solid rgba(255,215,0,0.12);  
-  
-      backdrop-filter: blur(20px);  
-  
-      box-shadow:  
-      0 0 30px rgba(255,215,0,0.05);  
-  
-      transition: all .4s ease;  
-  
-    }  
-  
-    .luxury-card:hover {  
-  
-      transform: translateY(-10px);  
-  
-      border-color: rgba(255,215,0,0.35);  
-  
-      box-shadow:  
-      0 0 40px rgba(255,215,0,0.12);  
-  
-    }  
-  
-    /* BUTTON */  
-    .gold-button {  
-  
-      background: linear-gradient(  
-        to right,  
-        #fff0a6,  
-        #d4af37,  
-        #8f6b10  
-      );  
-  
-    }  
-  
-  </style>
-    
   </head>
   
   <body> 
@@ -890,6 +634,7 @@ function toggleSound() {
     </a>
 
   </div>  
+  
   <!-- MEDIA QUICK BUTTONS -->
 
 <div class="mt-10 flex flex-wrap justify-center gap-4">
@@ -1152,6 +897,7 @@ class="px-6 md:px-16 py-20">
   </div>
 
 </section>
+    
     <!-- SERVICES -->
 <section id="services" class="px-6 md:px-16 py-28">
 
@@ -1269,9 +1015,7 @@ function toggleLogisticSound() {
 
   video.play();
 
-}
-
-  </script>
+} </script>
   
 </div>
   
@@ -1371,7 +1115,7 @@ function toggleLogisticSound() {
 
     </h2>  
 
-    <p class="text-yellow-100/70 text-xl leading-relaxed mb-10">  
+    <p class="text-yellow-100/80 text-xl leading-relaxed mb-10">  
 
       We are a telecommunications company and a medium for the latest information channels. 
 we strongly support every effort to provide knowledge in all aspects of education and humanity, 
@@ -1395,26 +1139,7 @@ in addition, our main strength lies in efficient cross-border logistics services
 
   </div>  
 
-  <div class="relative h-[550px] rounded-[45px]  
-    border border-yellow-500/20  
-    overflow-hidden  
-    flex items-center justify-center  
-    bg-black/40  
-    backdrop-blur-xl  
-    gold-glow">  
-
-    <div class="absolute w-[400px] h-[400px]  
-      rounded-full border border-yellow-500/20 spin-slow">  
-    </div>  
-
-    <div class="absolute w-[260px] h-[260px]  
-      rounded-full border border-yellow-400/15">  
-    </div>  
-
-    <div class="absolute w-[160px] h-[160px]  
-      rounded-full bg-gradient-to-br  
-      from-yellow-200 to-yellow-700 gold-glow">  
-    </div>  
+  <div class="relative h-[550px] rounded-[45px]
 
     <img  
       src="IMG.jpg"  
