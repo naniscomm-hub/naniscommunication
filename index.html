@@ -1655,26 +1655,37 @@ img{
 <!-- VISITOR API -->
 <script>
 
-fetch('https://api.countapi.xyz/hit/naniscommunication.com/visits')
-
-.then(response => response.json())
-
-.then(data => {
+document.addEventListener("DOMContentLoaded", () => {
 
   const visitor =
   document.getElementById('visitor-count');
 
-  if(visitor){
+  fetch('https://api.countapi.xyz/hit/naniscommunication.com/visits')
 
-    visitor.innerHTML = data.value;
+  .then(response => response.json())
 
-  }
+  .then(data => {
 
-})
+    if(visitor){
 
-.catch(error => {
+      visitor.innerHTML =
+      Number(data.value).toLocaleString();
 
-  console.log(error);
+    }
+
+  })
+
+  .catch(error => {
+
+    console.log('Visitor Counter Error:', error);
+
+    if(visitor){
+
+      visitor.innerHTML = '0';
+
+    }
+
+  });
 
 });
 
@@ -1689,6 +1700,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("video");
 
   videos.forEach(video => {
+
+    video.muted = true;
 
     video.play().catch(() => {});
 
@@ -1814,6 +1827,9 @@ setInterval(() => {
 }, 300000);
 
 </script>
+<script>Visitor Counter...</script>
+
+<script>Video Auto Play...</script>
 
 </body>
 </html>
