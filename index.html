@@ -1053,23 +1053,80 @@ menuBtn.addEventListener("click", () => {
 
     </div>
 
-    <!-- CARD 3 -->
+    <!-- MHO KAD PERKHIDMATAN -->
     <div class="luxury-card rounded-[35px] p-10 text-center">
 
       <div class="text-5xl text-yellow-400 mb-6">
         🌕
       </div>
 
-      <h3 class="text-2xl font-bold mb-4 gold-text">
-        Social Campaigns
+      <h3 class="text-2xl font-bold mb-6 gold-text">
+        MHO (KAD PERKHIDMATAN)
       </h3>
 
-      <p class="text-yellow-100/70 leading-relaxed text-lg">
-        Viral engagement engineered for modern audiences.
+    <!-- VIDEO -->
+      <div class="relative overflow-hidden rounded-3xl mb-6 border border-yellow-500/20 gold-glow shadow-2xl">
+
+        <video
+          id="promomhoVideo"
+          muted
+          autoplay
+          loop
+          playsinline
+          preload="metadata"
+          class="w-full max-h-[500px] object-contain bg-black"
+
+          <source src="promomho.mp4" type="video/mp4">
+
+        </video>
+
+        <!-- BUTTON -->
+        <button
+          onclick="togglepromomhoSound()"
+          class="absolute bottom-5 right-5 z-20
+          bg-black/50
+          text-yellow-300
+          px-4 py-2
+          rounded-full">
+
+          🔊 Sound
+
+        </button>
+
+        <!-- TEXT -->
+        <div class="absolute bottom-4 left-4 text-left">
+
+          <h4 class="text-yellow-300 font-bold text-lg">
+            Permohonan Kad perkhidmatan MHO
+          </h4>
+
+          <p class="text-yellow-100/80 text-sm">
+            MALAYSIAN HUMANITARIAN ORGANISATION (MHO)
+          </p>
+
+        </div>
+
+      </div>
+
+      <script>
+
+      function togglepromomhoSound() {
+
+        const video = document.getElementById("promomhoVideo");
+
+        video.muted = !video.muted;
+
+        video.play();
+
+      }
+
+      </script>
+
+      <p class="text-yellow-100/70 leading-relaxed text-lg mb-6">
+        Hubungi Aktivis kami untuk permohonan lebih cepat, selamat dan dipercayai.
+        IPK MEDIA (IPK TV) / NANIS COMMUNICATION (CIK, NANI)
       </p>
-
-    </div>
-
+      
     <!-- LOGISTICS -->
     <div class="luxury-card rounded-[35px] p-10 text-center relative">
 
