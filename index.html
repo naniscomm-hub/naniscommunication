@@ -430,9 +430,9 @@ crossorigin="anonymous"></script>
 
 .malaysia-news-wrapper{
 
-  width:100%;
+  width:90%;
 
-  height:90px;
+  height:70px;
 
   display:flex;
 
@@ -448,9 +448,9 @@ crossorigin="anonymous"></script>
 
   z-index:60;
 
-  border-top:4px solid #ffd700;
+  border-top:3px solid #ffd700;
 
-  border-bottom:4px solid #ffd700;
+  border-bottom:3px solid #ffd700;
 
   background:
   linear-gradient(
@@ -479,9 +479,9 @@ crossorigin="anonymous"></script>
 
   align-items:center;
 
-  gap:14px;
+  gap:12px;
 
-  padding:22px 34px;
+  padding:20px 32px;
 
   background:rgba(0,0,0,0.65);
 
@@ -491,9 +491,9 @@ crossorigin="anonymous"></script>
 
   font-weight:900;
 
-  font-size:22px;
+  font-size:24px;
 
-  letter-spacing:3px;
+  letter-spacing:2px;
 
   white-space:nowrap;
 
@@ -616,7 +616,7 @@ crossorigin="anonymous"></script>
 
 /* MOBILE */
 
-@media(max-width:780px){
+@media(max-width:700px){
 
   .live-malaysia{
 
@@ -624,7 +624,7 @@ crossorigin="anonymous"></script>
 
     font-size:14px;
 
-    letter-spacing:2px;
+    letter-spacing:1px;
 
   }
 
@@ -730,7 +730,7 @@ fetch(
     </a>
 
     <!-- DESKTOP MENU -->
-    <nav class="hidden md:flex items-center gap-8 uppercase tracking-[0.25em] text-sm text-yellow-100/80">
+    <nav class="hidden lg:flex items-center gap-6 uppercase tracking-[0.25em] text-sm text-yellow-100/80">
 
       <a href="infotoday.html" class="hover:text-yellow-400 transition">
         INFO TODAY
@@ -757,7 +757,7 @@ fetch(
 
     <!-- MOBILE BUTTON -->
     <button id="menuBtn"
-        class="md:hidden text-white text-3xl z-[9999] relative">
+        class="md:hidden text-white text-2xl z-[9999] relative">
   ☰
     </button>
     
@@ -963,6 +963,27 @@ fetch(
       Ikuti perkembangan terkini dari Berita Harian
     </p>
   </div>
+  
+  <div class="grid md:grid-cols-3 gap-6">
+    <a href="link-berita.html"
+class="bg-black rounded-2xl overflow-hidden border border-yellow-500/20">
+
+  <img src="berita1.jpg"
+       class="w-full h-56 object-cover">
+
+  <div class="p-4">
+
+      <h3 class="font-bold text-yellow-400">
+         Tajuk Berita
+      </h3>
+
+      <p class="text-sm text-gray-300">
+         Ringkasan berita...
+      </p>
+
+  </div>
+
+  </a></div>
 
   <div class="grid md:grid-cols-3 gap-8">
 
@@ -1088,7 +1109,7 @@ fetch(
 
     <video
       id="promomhoVideo"
-      video controls autoplay
+      video control autoplay
       autoplay
       loop
       playsinline
@@ -1098,14 +1119,6 @@ fetch(
       <source src="promomho.mp4" type="video/mp4">
 
     </video>
-
-    <button
-      onclick="togglepromomhoSound()"
-      class="absolute bottom-5 right-5 z-20 bg-black/50 text-yellow-300 px-4 py-2 rounded-full">
-
-      🔊 Sound
-
-    </button>
 
     <div class="absolute bottom-4 left-4 text-left">
 
