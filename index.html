@@ -701,13 +701,14 @@ fetch(
 
 </div>
 
-<!-- NAVBAR -->
+<!-- HEADER / NAVIGATION -->
+
 <header class="fixed top-[90px] left-0 w-full z-50 glass border-b border-yellow-500/10">
 
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-4">
 
     <!-- LOGO -->
-    <div class="flex items-center gap-4">
+    <a href="index.html" class="flex items-center gap-4">
 
       <img
         src="logo.png"
@@ -723,87 +724,85 @@ fetch(
         <p class="uppercase tracking-[0.2em] text-[10px] text-yellow-200/60">
           COMMUNICATION
         </p>
+
       </div>
 
-    </div>
+    </a>
 
     <!-- DESKTOP MENU -->
-    <nav class="hidden md:flex items-center gap-10 uppercase tracking-[0.35em] text-sm text-yellow-100/80">
+    <nav class="hidden md:flex items-center gap-8 uppercase tracking-[0.25em] text-sm text-yellow-100/80">
 
-      <a href="Activity Media Journey.html"class="hover:text-yellow-400 transition">
-      Info Today
-      </a>
-      <section id="Activity Media Journel.html" class="px-6 md:px-16 py-20">
-
-        <h2 class="text-4xl font-bold text-center mb-12">
-          INFO TODAY
-        </h2>
-
-<div class="max-w-5xl mx-auto bg-black/30 rounded-2xl overflow-hidden">
-
-<img src="images/news1.jpg"
-     alt="Aktiviti Media Journal.html"
-     class="w-full">
-
-<div class="p-8">
-
-<h3 class="text-2xl font-bold mb-4">
-Liputan Program Komuniti PPIM
-</h3>
-
-<p class="text-gray-300">
-IPK Media membuat liputan aktiviti komuniti bersama NGO dan agensi berkaitan bagi meningkatkan kesedaran masyarakat terhadap isu semasa.
-</p>
-
-<a href="artikel/program-komuniti.html"
-   class="inline-block mt-5 text-yellow-400">
-Baca Selanjutnya →
-</a>
-
-</div>
-
-</div>
-
-</section>
-      
-      <a href="#about" class="hover:text-yellow-400 transition">
-        About
+      <a href="infotoday.html" class="hover:text-yellow-400 transition">
+        INFO TODAY
       </a>
 
-      <a href="#social" class="hover:text-yellow-400 transition">
-        Media
+      <a href="agent.html" class="hover:text-yellow-400 transition">
+        AGENT INFO / JOIN US
       </a>
 
-      <a href="#contact"
-        class="px-5 py-3 rounded-full border border-yellow-500/30 hover:bg-yellow-500/10 transition">
-        Contact
+      <a href="media.html" class="hover:text-yellow-400 transition">
+        MEDIA CHANNEL
+      </a>
+
+      <a href="mho-details.html" class="hover:text-yellow-400 transition">
+        MHO DETAILS
+      </a>
+
+      <a href="konsultasi.html"
+         class="px-5 py-3 rounded-full border border-yellow-500/30 hover:bg-yellow-500/10 transition">
+         MHO KONSULTASI
       </a>
 
     </nav>
 
     <!-- MOBILE BUTTON -->
     <button id="menuBtn" class="md:hidden text-white text-3xl">
-     •••••
+      ☰
     </button>
 
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="hidden md:hidden px-6 pb-6">
+  <div id="mobileMenu"
+       class="hidden md:hidden bg-black/95 border-t border-yellow-500/20 px-6 py-6">
 
-    <div class="flex flex-col gap-5 uppercase tracking-[0.3em] text-sm text-yellow-100/80">
+    <div class="flex flex-col gap-5 uppercase tracking-[0.25em] text-sm text-yellow-100/80">
 
-      <a href="#Activity Media Journey.html">INFO TODAY</a>
-      <a href="#NANIS TEAM.html">Agent Info/Join Us</a>
-      <a href="#social">Media Channal</a>
-      <a href="#MHO DETAILS.HTML">MHO DETAILS
-      <a href="#contact">MHO KONSALTASI</a>
+      <a href="infotoday.html">INFO TODAY</a>
+
+      <a href="agent.html">AGENT INFO / JOIN US</a>
+
+      <a href="media.html">MEDIA CHANNEL</a>
+
+      <a href="mho-details.html">MHO DETAILS</a>
+
+      <a href="konsultasi.html">MHO KONSULTASI</a>
 
     </div>
 
   </div>
 
 </header>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", function () {
+
+    mobileMenu.classList.toggle("hidden");
+
+  });
+
+});
+
+</script>
+
+<!-- END HEADER -->
 
 <!-- MOBILE MENU SCRIPT -->
 <script>
