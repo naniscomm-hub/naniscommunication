@@ -344,7 +344,45 @@
 
     }
 
-  </style>
+  /* GLOBE */
+
+.nanis-globe{
+
+  width:320px;
+  height:320px;
+
+  border-radius:50%;
+
+  border:2px solid rgba(255,215,0,0.25);
+
+  background:
+
+  radial-gradient(
+    circle at center,
+    rgba(255,215,0,0.15),
+    rgba(0,0,0,0.2)
+  );
+
+  box-shadow:
+    0 0 50px rgba(255,215,0,0.25),
+    0 0 150px rgba(255,215,0,0.12);
+
+  animation:
+    globeSpin 40s linear infinite;
+
+}
+
+@keyframes globeSpin{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+
+}</style>
   
   <!-- ADSENSE -->
 <script async
@@ -683,7 +721,43 @@ fetch(
 
 </script>
   
-  <!-- BACKGROUND -->
+  <!-- GLOBAL BACKGROUND V2 -->
+
+<div class="fixed inset-0 -z-10 overflow-hidden bg-black">
+
+  <!-- WORLD MAP -->
+  <div class="absolute inset-0 opacity-10">
+
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+      alt="World Map"
+      class="w-full h-full object-cover">
+
+  </div>
+
+  <!-- GOLD LIGHT TOP -->
+  <div class="absolute top-[-250px] left-1/2 -translate-x-1/2
+  w-[1400px] h-[800px]
+  rounded-full
+  bg-yellow-500/20
+  blur-[180px]"></div>
+
+  <!-- GOLD LIGHT BOTTOM -->
+  <div class="absolute bottom-[-250px] left-1/2 -translate-x-1/2
+  w-[1400px] h-[800px]
+  rounded-full
+  bg-yellow-500/10
+  blur-[180px]"></div>
+
+  <!-- ROTATING GLOBE -->
+  <div class="absolute right-[-120px] top-[180px]
+  hidden lg:block">
+
+    <div class="nanis-globe"></div>
+
+  </div>
+
+</div><!-- BACKGROUND -->
 <div class="fixed inset-0 -z-10 overflow-hidden bg-black">
 
   <div class="absolute top-[-20%] left-1/2 -translate-x-1/2
