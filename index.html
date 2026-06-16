@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head><!-- GOOGLE ANALYTICS -->
+  
+<head>
+<!-- GOOGLE ANALYTICS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0G5SRTRSY0"></script>
 
   <script>
@@ -399,7 +402,6 @@ crossorigin="anonymous">
 </script>
 
 </head>
-
 <body>
 
 <!-- LIVE MALAYSIA NEWS BAR -->
@@ -509,7 +511,7 @@ crossorigin="anonymous">
     #ffffff 40%,
     #ffffff 60%,
     #ffd700 60%,
-    #ffd700 100%
+    #ffd700 80%
   );
 
   box-shadow:
@@ -740,7 +742,7 @@ fetch(
       alt="World Map"
       class="w-50 h-50 object-cover">
 
-  </div>
+  </div>7
 
   <!-- GOLD LIGHT TOP -->
   <div class="absolute top-[-150px] left-1/2 -translate-x-1/2
@@ -775,7 +777,7 @@ fetch(
 
   <div class="absolute bottom-[-350px] left-1/2 -translate-x-1/2
   w-[1800px] h-[800px]
-  bg-gradient-to-t from-yellow-500/40 to-transparent
+  bg-gradient-to-t from-yellow-500/50 to-transparent
   blur-[120px]
   rounded-full"></div>
 
@@ -803,7 +805,8 @@ fetch(
           NANIS COMMUNICATION
         </h1>
 
-        <p class="uppercase tracking-[0.1em] text-[18px] text-yellow-200/60">
+        <p class="uppercase tracking-[0.1em] text-[14
+          px] text-yellow-200/60">
           Nanis D.Webster ☆ IPK MEDIA ☆ NANI MHO ☆ NANIS.COMM
         </p>
 
@@ -939,84 +942,6 @@ fetch(
 
 </section>
 
-<!-- HERO -->
-<section class="relative min-h-[100px] md:min-h-[120px]
-pt-[40px] flex items-center justify-center text-center overflow-hidden px-4 pt-[120px] pb-10">
-
-  <div class="absolute bottom-[-100px] left-1/2 -translate-x-1/2
-  w-[100px] h-[120px]
-  rounded-justify
-  border-t border-yellow-400/30
-  bg-gradient-to-t from-yellow-500/30 to-transparent
-  blur-[2px]"> </div>
-
-  <div class="absolute w-[100px] h-120px]
-  bg-yellow-400/10 rounded-full blur-[120px]"></div>
-
-  <div class="relative z-10 max-w-4xl">
-
-    <!-- HERO VIDEO -->
-    <div class="relative mx-auto mb-10 max-w-4xl overflow-hidden
-    rounded-[20px]
-    border border-yellow-500/20
-    gold-glow">
-
-      <video
-        id="heroVideo"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        class="w-full h-auto object-cover">
-
-        <source src="111664_github_small.mp4" type="video/mp4">
-
-      </video>
-
-      <!-- SOUND BUTTON -->
-      <button
-        id="soundBtn"
-        onclick="toggleSound()"
-        class="absolute bottom-5 right-5 z-20
-        bg-black/50 backdrop-blur-xl
-        border border-yellow-500/20
-        text-yellow-300
-        px-5 py-3
-        rounded-full
-        hover:bg-yellow-500/20
-        transition duration-300">
-
-        🔇 Sound Off
-
-      </button>
-
-    </div>
-
-    <!-- SOUND SCRIPT -->
-    <script>
-
-    function toggleSound() {
-
-      const video = document.getElementById("heroVideo");
-      const button = document.getElementById("soundBtn");
-
-      video.muted = !video.muted;
-
-      if(video.muted){
-
-        button.innerHTML = "🔇 Sound Off";
-
-      } else {
-
-        button.innerHTML = "🔊 Sound On";
-        video.play();
-
-      }
-
-    }
-
-    </script>
 <!-- KNOWLEDGE BOARD By NANIS.COM -->
 
 <section id="knowledge-board" class="px-6 md:px-16 py-20">
@@ -1180,6 +1105,7 @@ pt-[40px] flex items-center justify-center text-center overflow-hidden px-4 pt-[
   </div>
 
 </section>
+  
   <!-- VIDEO ADS SECTION -->
 <section class="py-12 px-4 max-w-7xl mx-auto">
 
@@ -1211,61 +1137,8 @@ pt-[40px] flex items-center justify-center text-center overflow-hidden px-4 pt-[
     </div>
 
     <!-- VIDEO 4 -->
-    <div class="video-box">
-      <video src="video4.mp4" autoplay muted loop playsinline class="video-item"></video>
-    </div>
-
-    <!-- VIDEO 5 -->
-    <div class="video-box">
-      <video src="video5.mp4" autoplay muted loop playsinline class="video-item"></video>
-    </div>
-
-  </div>
-</section>
-
-<!-- STYLE -->
-<style>
-.video-box{
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid rgba(234,179,8,0.25);
-  background:black;
-  cursor:pointer;
-}
-
-.video-item{
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  display:block;
-}
-</style>
-
-<!-- SCRIPT: TAP TO SOUND -->
-<script>
-const videos = document.querySelectorAll(".video-item");
-
-videos.forEach(video => {
-
-  video.addEventListener("click", () => {
-
-    // mute semua video lain
-    videos.forEach(v => {
-      if(v !== video){
-        v.muted = true;
-      }
-    });
-
-    // toggle video ini
-    video.muted = !video.muted;
-
-    // pastikan play
-    video.play();
-
-  });
-
-});
-</script>
+    <div class="video-box"video.muted = !video.muted;// pastikan play
+    video.play>
     
     <!-- ORNAMENT -->
     <div class="text-yellow-400 text-2xl md:text-4xl mb-5 tracking-[0.2em]">
@@ -1326,22 +1199,19 @@ videos.forEach(video => {
   </a>
 
   <!-- PRODUCT -->
-  <a href="#product.html"
+  <a href="#product"
      class="px-12 py-5 rounded-xl gold-button text-black font-black uppercase tracking-[0.2em]
      hover:scale-105 transition duration-300 text-center">
 
-     PRODUCT
+     SOURCE SUPPLY / PRODUCT
 
   </a>
 
   <!-- QUOTE -->
-  <a href="#catalouge.html"
-     class="px-12 py-5 rounded-xl gold-button text-black font-black uppercase tracking-[0.2em]
-     hover:scale-105 transition duration-300 text-center">
+  <a href="111664_github_small.mp4" class="px-12 py-5 rounded-xl gold-button text-black font-black uppercase tracking-[0.2em]
+    hover:scale-105 transition duration-300 text-center">
 
-      Catalouge
-
-  </a>
+      SOSIAL LINK PROMO & TEAMWORK
 
   <!-- QR PAYMENT -->
   <a href="NanisQR.jpg"
