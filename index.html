@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<head>
-<!-- GOOGLE ANALYTICS -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0G5SRTRSY0"></script>
 
+<head>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0G5SRTRSY0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -34,17 +34,13 @@
 
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="Nanis Communication">
-
   <meta property="og:description"
     content="Global Entertainment, Humanitarian & Business Solutions">
-
   <meta property="og:image" content="logo.png">
-
   <meta property="og:type" content="website">
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
-
   <link rel="apple-touch-icon" href="favicon.png">
 
   <!-- PRELOAD -->
@@ -55,7 +51,6 @@
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
@@ -70,26 +65,24 @@
   <!-- STYLE -->
   <style>
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      background:#000;
-      overflow-x:hidden;
-      color:#f5e7a1;
-      font-family:'Cormorant Garamond', serif;
+    body {
+      background: #000;
+      overflow-x: hidden;
+      color: #f5e7a1;
+      font-family: 'Cormorant Garamond', serif;
     }
 
-    h1,h2,h3,h4,.luxury-font{
-      font-family:'Cinzel', serif;
+    h1,h2,h3,h4,.luxury-font {
+      font-family: 'Cinzel', serif;
     }
 
     /* GOLD TEXT */
-
-    .gold-text{
-
-      background:linear-gradient(
+    .gold-text {
+      background: linear-gradient(
         to bottom,
         #fff8d6,
         #f7d774,
@@ -97,312 +90,188 @@
         #8f6b10
       );
 
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 
       text-shadow:
         0 0 10px rgba(255,215,0,0.15),
         0 0 25px rgba(255,215,0,0.08);
-
     }
 
     /* GLASS */
-
-    .glass{
-      background:rgba(10,10,10,0.45);
-      backdrop-filter:blur(18px);
+    .glass {
+      background: rgba(10,10,10,0.45);
+      backdrop-filter: blur(18px);
     }
 
     /* GOLD GLOW */
-
-    .gold-glow{
-
+    .gold-glow {
       box-shadow:
         0 0 20px rgba(255,215,0,0.15),
         0 0 60px rgba(255,215,0,0.08),
         0 0 120px rgba(255,215,0,0.04);
-
     }
 
     /* FLOAT */
-
-    .floating{
-      animation:float 20s ease-in-out infinite;
+    .floating {
+      animation: float 20s ease-in-out infinite;
     }
 
-    @keyframes float{
-
-      0%{
-        transform:translateY(0px);
-      }
-
-      50%{
-        transform:translateY(-12px);
-      }
-
-      100%{
-        transform:translateY(0px);
-      }
-
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
     }
 
     /* GOLD PULSE */
-
-    .pulse-gold{
-      animation:pulseGold 4s ease-in-out infinite;
+    .pulse-gold {
+      animation: pulseGold 4s ease-in-out infinite;
     }
 
-    @keyframes pulseGold{
-
-      0%,100%{
-
+    @keyframes pulseGold {
+      0%,100% {
         box-shadow:
           0 0 20px rgba(255,215,0,0.15),
           0 0 60px rgba(255,215,0,0.08);
-
       }
 
-      50%{
-
+      50% {
         box-shadow:
           0 0 40px rgba(255,215,0,0.3),
           0 0 120px rgba(255,215,0,0.18);
-
       }
-
     }
 
     /* SPIN */
-
-    .spin-slow{
-      animation:spin 35s linear infinite;
+    .spin-slow {
+      animation: spin 35s linear infinite;
     }
 
-    @keyframes spin{
-
-      from{
-        transform:rotate(0deg);
-      }
-
-      to{
-        transform:rotate(360deg);
-      }
-
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     /* HERO SHADOW */
-
-    .hero-shadow{
-
+    .hero-shadow {
       text-shadow:
         0 0 10px rgba(255,215,0,.18),
         0 0 30px rgba(255,215,0,.12),
         0 0 40px rgba(255,215,0,.08);
-
     }
 
     /* CARD */
-
-    .luxury-card{
-
-      background:rgba(15,15,15,0.55);
-
-      border:1px solid rgba(255,215,0,0.12);
-
-      backdrop-filter:blur(10px);
-
-      box-shadow:
-        0 0 20px rgba(255,215,0,0.05);
-
-      transition:all .4s ease;
-
+    .luxury-card {
+      background: rgba(15,15,15,0.55);
+      border: 1px solid rgba(255,215,0,0.12);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255,215,0,0.05);
+      transition: all .4s ease;
     }
 
-    .luxury-card:hover{
-
-      transform:translateY(-10px);
-
-      border-color:rgba(255,215,0,0.35);
-
-      box-shadow:
-        0 0 20px rgba(255,215,0,0.12);
-
+    .luxury-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,215,0,0.35);
+      box-shadow: 0 15px 40px rgba(255,215,0,0.15);
     }
 
     /* BUTTON */
-
-    .gold-button{
-
-      background:linear-gradient(
+    .gold-button {
+      background: linear-gradient(
         to right,
         #fff0a6,
         #d4af37,
         #8f6b10
       );
-
     }
 
     /* MEDIA BUTTONS */
-
-    .media-btn{
-
-      padding:16px 28px;
-
-      border-radius:18px;
-
-      font-weight:400;
-
-      letter-spacing:1px;
-
-      color:white;
-
-      text-decoration:none;
-
-      transition:0.35s;
-
-      backdrop-filter:blur(12px);
-
-      border:1px solid rgba(255,255,255,0.15);
-
-      box-shadow:
-        0 0 20px rgba(255,255,255,0.08);
-
-      text-transform:uppercase;
-
-      font-size:14px;
-
-      min-width:100px;
-
+    .media-btn {
+      padding: 16px 28px;
+      border-radius: 18px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: white;
+      text-decoration: none;
+      transition: 0.35s;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 20px rgba(255,255,255,0.08);
+      text-transform: uppercase;
+      font-size: 14px;
+      min-width: 100px;
     }
 
-    /* MALAYSIA */
-
-    .malaysia-btn{
-
-      background:
-      linear-gradient(
+    .malaysia-btn {
+      background: linear-gradient(
         to right,
         #001a66,
         #c00000,
         #ffd700
       );
-
     }
 
-    /* GLOBAL */
-
-    .global-btn{
-
-      background:
-      linear-gradient(
+    .global-btn {
+      background: linear-gradient(
         to right,
         #00c6ff,
         #0072ff
       );
-
     }
 
-    /* ENTERTAINMENT */
-
-    .entertainment-btn{
-
-      background:
-      linear-gradient(
+    .entertainment-btn {
+      background: linear-gradient(
         to right,
         #ff00cc,
         #3333ff
       );
-
     }
 
-    /* SPORTS */
-
-    .sports-btn{
-
-      background:
-      linear-gradient(
+    .sports-btn {
+      background: linear-gradient(
         to right,
         #00c853,
         #b2ff59
       );
-
-      color:black;
-
+      color: black;
     }
 
-    /* HOVER */
+    .media-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 0 35px rgba(255,255,255,0.25);
+    }
 
-    .media-btn:hover{
+    /* GLOBE */
+    .nanis-globe {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,215,0,0.25);
 
-      transform:
-        translateY(-5px)
-        scale(1.05);
+      background: radial-gradient(
+        circle at center,
+        rgba(255,215,0,0.15),
+        rgba(0,0,0,0.2)
+      );
 
       box-shadow:
-        0 0 35px rgba(255,255,255,0.25);
+        0 0 50px rgba(255,215,0,0.25),
+        0 0 150px rgba(255,215,0,0.12);
 
+      animation: globeSpin 40s linear infinite;
     }
 
-  /* GLOBE */
+    @keyframes globeSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 
-.nanis-globe{
-
-  width:120px;
-  height:120px;
-
-  border-radius:50%;
-
-  border:2px solid rgba(255,215,0,0.25);
-
-  background:
-
-  radial-gradient(
-    circle at center,
-    rgba(255,215,0,0.15),
-    rgba(0,0,0,0.2)
-  );
-
-  box-shadow:
-    0 0 50px rgba(255,215,0,0.25),
-    0 0 150px rgba(255,215,0,0.12);
-
-  animation:
-    globeSpin 40s linear infinite;
-
-}
-
-@keyframes globeSpin{
-
-  from{
-    transform:rotate(0deg);
-  }
-
-  to{
-    transform:rotate(360deg);
-  }
-
-} /* BUSINESS CARD EFFECT */
-
-.luxury-card{
-  transition: all 0.4s ease;
-}
-
-.luxury-card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(255,215,0,0.15);
-}
-</style>
-
-  <!-- ADSENSE -->
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-395559433"
-crossorigin="anonymous">
-  
-</script>
+  </style>
 
 </head>
-<body>
 
+<body>
+  
 <!-- LIVE MALAYSIA NEWS BAR -->
 
 <div class="malaysia-news-wrapper">
