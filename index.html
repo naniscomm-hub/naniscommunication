@@ -270,7 +270,7 @@
 
 </head>
 
-<body>
+</body>
   
 <!-- LIVE MALAYSIA NEWS BAR -->
 
@@ -327,7 +327,7 @@
 
 .rss-item a{
 
-  color:#fff;
+  color:#ffff;
 
   text-decoration:none;
 
@@ -501,7 +501,7 @@
 
 .news-scroll a{
 
-  color:#ffffff;
+  color:#ffff;
 
   text-decoration:none;
 
@@ -570,32 +570,20 @@ fetch(
 
 .then(data => {
 
-  let output = '<div class="news-scroll">';
+  let output =
+    <div class="news-scroll">
 
   data.items.slice(0,10).forEach(item => {
 
-    output += `
-
-      <a href="${item.link}" target="_blank">
-
-        🇲🇾 ${item.title}
-
-      </a>
-
-    `;
-
-  });
-
-  output += '</div>';
-
-  document.getElementById("rss-news").innerHTML = output;
-
-})
-
-.catch(error => {
+    output += 
+      <a href="${item.link}" target="_blank"></a>
+      
+    🇲🇾 $ {item.title) document.getElementById("rss-news").innerHTML = output;})
+    .catch(error => {
 
   document.getElementById("rss-news").innerHTML =
-  "Berita rasmi Malaysia sedang dikemaskini...";
+  
+    "Berita rasmi Malaysia sedang dikemaskini...";
 
 });
 
@@ -613,7 +601,7 @@ fetch(
       alt="World Map"
       class="w-50 h-50 object-cover">
 
-  </div>7
+  </div>
 
   <!-- GOLD LIGHT TOP -->
   <div class="absolute top-[-150px] left-1/2 -translate-x-1/2
@@ -631,13 +619,9 @@ fetch(
 
   <!-- ROTATING GLOBE -->
   <div class="absolute right-[-120px] top-[180px]
-  hidden lg:block">
-
-    <div class="nanis-globe"></div>
-
-  </div>
-
-</div><!-- BACKGROUND -->
+  hidden lg:block" class="nanis-globe"></div>
+  
+  <!-- BACKGROUND -->
 <div class="fixed inset-0 -z-10 overflow-hidden bg-black">
 
   <div class="absolute top-[-20%] left-1/2 -translate-x-1/2
@@ -657,16 +641,18 @@ fetch(
 
 <!-- HEADER -->
 
-<header class="fixed top-[50px] left-0 w-full z-30 glass border-b border-yellow-500/10">
+<header 
+  class="fixed top-[50px] left-0 w-full z-30 glass border-b border-yellow-500/10">
+  
   <div class="max-w-3xl mx-auto flex items-center justify-between px-3 md:px-10 py-2">
-
+    
     <!-- LOGO -->
     <a href="index.html" class="flex items-center gap-1">
 
       <img
         src="logo.png"
         alt="Nanis Communication"
-        class="w-10 h-10 md:w-20 md:h-20 rounded-full border border-yellow-500/30 object-cover gold-glow">
+        class="w-20 h-20 md:w-20 md:h-20 rounded-full border border-yellow-500/30 object-cover gold-glow">
 
       <div>
 
@@ -674,9 +660,8 @@ fetch(
           NANIS COMMUNICATION
         </h1>
 
-        <p class="uppercase tracking-[0.1em] text-[14
-          px] text-yellow-200/60">
-          Nanis D.Webster ☆ IPK MEDIA ☆ NANI MHO ☆ NANIS.COMM
+        <p class="uppercase tracking-[0.1em] text-[10]
+        px] text-yellow-200/60"> Nanis D.Webster ☆ IPK MEDIA ☆ NANI MHO ☆ NANIS.COMM
         </p>
 
       </div>
@@ -684,24 +669,27 @@ fetch(
     </a>
 
     <!-- DESKTOP MENU -->
-    <nav class="hidden md:flex items-center gap-5 uppercase tracking-[0.15em] text-sm text-yellow-100/80">
+    <nav class="hidden md:flex items-center gap-1 uppercase tracking-[0.15em] text-sm text-yellow-200/60">
 
       <a href="infotoday.html" class="hover:text-yellow-400 transition">
         INFO TODAY
-      </a>à
-
-      <a href="agent.html" class="hover:text-yellow-400 transition">
-        AGENT INFO / JOIN US
       </a>
 
-      <a href="media.html" class="hover:text-yellow-400 transition">
+      <a href="agent.html" class="hover:text-yellow-400 transition">
+        AGENT Code
+      </a>
+
+      <a href="media.html" 
+        class="hover:text-yellow-400 transition">
+        
         MEDIA CHANNEL
       </a>
 
       <a href="mho-details.html" class="hover:text-yellow-400 transition">
-        MHO DETAILS
+        
+      MHO DETAILS
       </a>
-
+      
       <a href="konsultasi.html"
          class="px-5 py-3 rounded-full border border-yellow-500/30 hover:bg-yellow-500/10 transition">
          MHO KONSALTASI
@@ -721,7 +709,6 @@ fetch(
        class="hidden md:hidden bg-black/95 border-t border-yellow-500/20 px-6 py-6">
 
     <div class="flex flex-col gap-5 uppercase tracking-[0.25em] text-sm text-yellow-100/80">
-
       <a href="infotoday.html">INFO TODAY</a>
 
       <a href="agent.html">AGENT INFO / JOIN US</a>
@@ -736,7 +723,8 @@ fetch(
 
   </div>
 
-</header><!-- GLOBAL INFORMATION BAR -->
+</header>
+  <!-- GLOBAL INFORMATION BAR -->
 
 <section class="pt-[100px] pb-8 px-4">
 
@@ -795,10 +783,10 @@ fetch(
       </div>
 
       <!-- LANGUAGE -->
-      <div class=" 🌐🌏-2xl p-2 text-">
+      <div class="-2xl p-2 text-">
 
         <h3 class="gold-text text-xl font-bold mb-2">
-          LANGUAGE
+          TRANSLATE
         </h3>
 
         <div id="google_translate_element"></div>
