@@ -861,71 +861,61 @@ fetch(
   </div>
 
 </header><!-- GLOBAL INFORMATION BAR -->
-
 <section class="pt-[170px] pb-8 px-4">
 
   <div class="max-w-7xl mx-auto">
 
-    <div class="grid lg:grid-cols-3 gap-6">
+    <!-- SATU KOTAK BESAR -->
+    <div class="luxury-card rounded-3xl p-6">
 
-      <!-- DATE TIME -->
-      <div class="luxury-card rounded-3xl p-6 text-center">
+      <div class="grid md:grid-cols-3 gap-6 items-center">
 
-        <h3 class="gold-text text-xl font-bold mb-3">
-          GLOBAL DATE & TIME
-        </h3>
+        <!-- GLOBAL DATE & TIME -->
+        <div class="text-center md:border-r md:border-yellow-500/20 pr-0 md:pr-6">
 
-        <div id="currentDate"
-          class="text-yellow-200 text-lg mb-2">
-        </div>
+          <h3 class="gold-text text-xl font-bold mb-3">
+            GLOBAL DATE & TIME
+          </h3>
 
-        <div id="currentTime"
-          class="text-3xl font-black gold-text">
-        </div>
-
-      </div>
-
-      <!-- WORLD CLOCK -->
-      <div class="luxury-card rounded-3xl p-6">
-
-        <h3 class="gold-text text-xl font-bold mb-4 text-center">
-          WORLD CLOCK
-        </h3>
-
-        <div class="space-y-2 text-yellow-100">
-
-          <div id="klTime">
-            🇲🇾 Kuala Lumpur
+          <div id="currentDate"
+               class="text-yellow-200 text-lg mb-2">
           </div>
 
-          <div id="sgTime">
-            🇸🇬 Singapore
-          </div>
-
-          <div id="dubaiTime">
-            🇦🇪 Dubai
-          </div>
-
-          <div id="londonTime">
-            🇬🇧 London
-          </div>
-
-          <div id="parisTime">
-            🇫🇷 Paris
+          <div id="currentTime"
+               class="text-3xl font-black gold-text">
           </div>
 
         </div>
 
-      </div>
+        <!-- WORLD CLOCK -->
+        <div class="md:border-r md:border-yellow-500/20 px-0 md:px-6">
 
-      <!-- LANGUAGE -->
-      <div class="luxury-card rounded-3xl p-6 text-center">
+          <h3 class="gold-text text-xl font-bold mb-4 text-center">
+            WORLD CLOCK
+          </h3>
 
-        <h3 class="gold-text text-xl font-bold mb-4">
-          LANGUAGE
-        </h3>
+          <div class="space-y-2 text-yellow-100">
 
-        <div id="google_translate_element"></div>
+            <div id="klTime">🇲🇾 Kuala Lumpur</div>
+            <div id="sgTime">🇸🇬 Singapore</div>
+            <div id="dubaiTime">🇦🇪 Dubai</div>
+            <div id="londonTime">🇬🇧 London</div>
+            <div id="parisTime">🇫🇷 Paris</div>
+
+          </div>
+
+        </div>
+
+        <!-- LANGUAGE -->
+        <div class="text-center pl-0 md:pl-6">
+
+          <h3 class="gold-text text-xl font-bold mb-4">
+            LANGUAGE
+          </h3>
+
+          <div id="google_translate_element"></div>
+
+        </div>
 
       </div>
 
