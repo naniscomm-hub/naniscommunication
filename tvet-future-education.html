@@ -1,6 +1,67 @@
-<a href="articles/tvet-future-education.html" class="btn-read">
+<!DOCTYPE html>
+<html lang="en">
+  <a href="articles/tvet-future-education.html" class="btn-read">
   Read Article
-</a>
+  </a>
+  <button onclick="loadArticle()">
+  Read Article
+</button>
+
+<div id="articleContent"></div>
+
+<script>
+async function loadArticle() {
+  const response = await fetch('articles/tvet-future-education.html');
+  const html = await response.text();
+  document.getElementById('articleContent').innerHTML = html;
+}
+</script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TVET, Digital Learning, Skills Development dan Future Education</title>
+
+<style>
+body{
+    background-image:url('../IMGBG2.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    margin:0;
+    padding:20px;
+    font-family:Arial,sans-serif;
+}
+
+.article-section{
+    background:rgba(255,255,255,0.90);
+    max-width:1200px;
+    margin:auto;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+h1,h2{
+    color:#b8860b;
+}
+
+p{
+    line-height:1.8;
+}
+
+blockquote{
+    border-left:4px solid #b8860b;
+    padding-left:15px;
+    font-style:italic;
+}
+</style>
+
+</head>
+<body>
+
+<section class="article-section">
 
 <section class="article-section">
   <div class="container">
@@ -152,34 +213,8 @@
 
   </div>
 </section>
-<button onclick="loadArticle()">
-  Read Article
-</button>
 
-<div id="articleContent"></div>
+</section>
+</body>
+</html>
 
-<script>
-async function loadArticle() {
-  const response = await fetch('articles/tvet-future-education.html');
-  const html = await response.text();
-  document.getElementById('articleContent').innerHTML = html;
-}
-</script>
-<style>
-body{
-    background-image: url('IMGBG2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-.article-section{
-    background: rgba(255,255,255,0.88);
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
-</style>
