@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <a href="articles/tvet-future-education.html" class="btn-read">
-  Read Article
-  </a>
-  <button onclick="loadArticle()">
-  Read Article
-</button>
 
-<div id="articleContent"></div>
-
-<script>
-async function loadArticle() {
-  const response = await fetch('articles/tvet-future-education.html');
-  const html = await response.text();
-  document.getElementById('articleContent').innerHTML = html;
-}
-</script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
