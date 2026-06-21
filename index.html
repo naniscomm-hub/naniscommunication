@@ -1043,11 +1043,23 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
       <p class="text-yellow-100/70 mb-6">
         TVET, Digital Learning, Skills Development and Future Education.
       </p>
+      
+      <a href="articles/tvet-future-education.html" class="btn-read">
+  Read Article
+  </a>
+  <button onclick="loadArticle()">
+  Read Article
+</button>
 
-      <a href="education.html"
-        class="inline-block px-6 py-3 rounded-full gold-button text-black font-bold">
+<div id="articleContent"></div>
 
-        Read Articles
+<script>
+async function loadArticle() {
+  const response = await fetch('articles/tvet-future-education.html');
+  const html = await response.text();
+  document.getElementById('articleContent').innerHTML = html;
+}
+</script>
 
       </a>
 
