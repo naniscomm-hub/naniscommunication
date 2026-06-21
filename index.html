@@ -1149,9 +1149,8 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 
   <a href="articles/tvet-future-education.html" class="btn-read">
   Read Article
-</a>
-
-<button onclick="loadArticle()">
+    
+    <button onclick="loadArticle()">
   Read Article
 </button>
 
@@ -1159,12 +1158,14 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 
 <script>
 async function loadArticle() {
-  const response = await fetch('articles/tvet-future-education.html');
-  const html = await response.text();
-  document.getElementById('articleContent').innerHTML = html(); 
-}
-  
 
+  const response = await fetch('articles/tvet-future-education.html');
+
+  const html = await response.text();
+
+  document.getElementById('articleContent').innerHTML = html;
+
+}
 </script>
   
   <!-- VIDEO ADS SECTION -->
