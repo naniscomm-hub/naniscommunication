@@ -7,473 +7,846 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Technology & AI </title>
+<title>Technology & AI - TVET & Economic Development</title>
 
 <style>
 
 *{
-box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-
-body{
-
-margin:0;
-padding:20px;
-
-font-family:
-"Segoe UI",
-Arial,
-Helvetica,
-sans-serif;
-
-line-height:1.8;
-
-color:#222;
-
-
-background-image:url('IMGBG2.jpg');
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-background-repeat:no-repeat;
-
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #ecf0f1;
 }
 
-.container{
-background:rgba(255,255,255,0.85);
-padding:50px 35px;
-min-height:100vh;
+/* Header Navigation */
+.header {
+  background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.article{
-max-width:1200px;
-margin:auto;
-background:rgba(255,255,255,0.75);
-padding:45px;
-border-radius:30px;
-box-shadow:0 20px 50px rgba(0,0,0,0,25);
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-h1{
-text-align:center;
-color:#003366;
-font-size:45px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-
-.sub{
-text-align:center;
-color:#0d47a1
-font-size:20px;
-margin-bottom:40px;
+.tagline {
+  font-size: 12px;
+  opacity: 0.9;
+  font-style: italic;
 }
 
-
-h2{
-color:#003366;
-margin-top:35px;
-}
-  
-
-h3{
-color:#003366;
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-
-p,li{
-font-size:18px;
-line-height:1.8;
-text-align:justify;
+/* Article Section */
+.article {
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #003366;
 }
 
-
-ul{
-line-height:2;
+/* Title Section */
+.title-section {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #003366;
 }
 
-
-.signature{
-margin-top:50px;
-text-align:right;
-color:#d4af37;
-font-size:20px;
+h1 {
+  color: #003366;
+  font-size: 42px;
+  margin: 0 0 15px 0;
+  font-weight: 700;
 }
 
-
-.ref{
-border-top:1px solid rgba(0,0,0,0.5);
-margin-top:40px;
-padding-top:20px;
+.sub {
+  color: #0d47a1;
+  font-size: 18px;
+  margin: 10px 0 0 0;
+  font-weight: 500;
 }
 
-
-@media(max-width:600px){
-
-.article{
-padding:25px;
+.author {
+  color: #666;
+  font-size: 14px;
+  margin-top: 15px;
+  font-style: italic;
 }
 
-h1{
-font-size:32px;
+/* Section Headers */
+h2 {
+  color: #003366;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d4af37;
+  font-weight: 600;
 }
 
-p,li{
-font-size:20px;
+h3 {
+  color: #0d47a1;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
+/* Content Styling */
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  margin: 15px 0;
+  color: #2c3e50;
 }
 
+ul, ol {
+  font-size: 16px;
+  line-height: 2;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+li {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ul li:before {
+  content: "▸ ";
+  color: #0d47a1;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Highlight Boxes */
+.highlight-box {
+  background: #f0f4f8;
+  border-left: 4px solid #d4af37;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 4px;
+}
+
+.highlight-box h4 {
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Reference Section */
+.ref {
+  border-top: 2px solid #003366;
+  margin-top: 50px;
+  padding-top: 30px;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.ref h2 {
+  border-bottom: none;
+  margin-top: 0;
+}
+
+.ref ol {
+  list-style-type: decimal;
+}
+
+.ref li {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+/* Signature */
+.signature {
+  margin-top: 50px;
+  text-align: right;
+  color: #003366;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 20px;
+  border-top: 2px solid #d4af37;
+}
+
+/* Footer */
+.footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  background: #ecf0f1;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.breadcrumb a {
+  color: #0d47a1;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Table of Contents */
+.toc {
+  background: #f0f4f8;
+  padding: 25px;
+  border-radius: 4px;
+  margin: 30px 0;
+  border-left: 4px solid #003366;
+}
+
+.toc h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin: 8px 0;
+}
+
+.toc li:before {
+  content: "→ ";
+  color: #0d47a1;
+  margin-right: 8px;
+}
+
+.toc a {
+  color: #0d47a1;
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .article {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p, li {
+    font-size: 15px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 20px auto;
+  }
+
+  .article {
+    padding: 20px 15px;
+    border-left-width: 3px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p, li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .signature {
+    font-size: 14px;
+  }
+}
 
 </style>
 
 </head>
 
-
 <body>
 
+<!-- Header -->
+<div class="header">
+  <div class="header-content">
+    <div>
+      <div class="logo">NANIS COMMUNICATION</div>
+      <div class="tagline">Technology & AI for TVET & Economic Development</div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Container -->
 <div class="container">
 
-<div class="article">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> / <span>Technology & AI</span>
+  </div>
+
+  <div class="article">
+
+    <!-- Title Section -->
+    <div class="title-section">
+      <h1>Technology & Artificial Intelligence</h1>
+      <div class="sub">Innovation, TVET Development & Digital Economic Transformation</div>
+      <div class="author">Oleh: NANIS COMMUNICATION (Nanis D. Webster)</div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h3>Kandungan Utama:</h3>
+      <ul>
+        <li><a href="#pengenalan">Pengenalan</a></li>
+        <li><a href="#apakah-ai">Apakah Itu AI?</a></li>
+        <li><a href="#evolusi">Evolusi Teknologi Digital</a></li>
+        <li><a href="#transformasi">Digital Transformation</a></li>
+        <li><a href="#tvet">TVET & Teknologi</a></li>
+        <li><a href="#ekonomi">Impak Ekonomi</a></li>
+        <li><a href="#cabaran">Cabaran & Solusi</a></li>
+        <li><a href="#masa-depan">Masa Depan</a></li>
+      </ul>
+    </div>
+
+    <!-- Content Sections -->
+    <h2 id="pengenalan">Pengenalan</h2>
+
+    <p>
+      Teknologi sentiasa menjadi pemacu utama kepada kemajuan tamadun manusia.
+      Bermula daripada penciptaan roda, mesin wap, elektrik, komputer sehingga internet,
+      setiap revolusi teknologi telah mengubah cara manusia hidup, bekerja dan berinteraksi.
+    </p>
+
+    <p>
+      Hari ini, dunia sedang memasuki satu era baharu yang dikenali sebagai Revolusi Industri Keempat
+      (Industry 4.0), iaitu era di mana teknologi digital, data raya (Big Data),
+      pengkomputeran awan (Cloud Computing), Internet of Things (IoT), robotik dan
+      Kecerdasan Buatan (Artificial Intelligence - AI) bergabung menjadi satu ekosistem pintar.
+    </p>
+
+    <div class="highlight-box">
+      <h4>📌 Kepentingan untuk TVET:</h4>
+      <p>
+        Institusi TVET memainkan peranan kritikal dalam mempersiapkan tenaga kerja untuk menghadapi
+        transformasi industri dengan kemahiran teknikal yang relevan dan berorientasikan teknologi.
+      </p>
+    </div>
 
 
-<h1>Technology & AI</h1>
+    <h2 id="apakah-ai">Apakah Itu Artificial Intelligence (AI)?</h2>
 
-<div class="sub">
-Innovation, Artificial Intelligence and Digital Transformation
-<br>
-Oleh: NANIS COMMUNICATION (Nanis D. Webster)
+    <p>
+      Artificial Intelligence (AI) ialah teknologi yang membolehkan komputer atau mesin meniru
+      kebolehan manusia seperti:
+    </p>
+
+    <ul>
+      <li>Berfikir dan menganalisis maklumat</li>
+      <li>Belajar daripada pengalaman dan data</li>
+      <li>Membuat keputusan berdasarkan logik</li>
+      <li>Mengenal pasti corak dan tren</li>
+      <li>Memahami bahasa manusia (Natural Language Processing)</li>
+      <li>Menyelesaikan masalah kompleks dengan cekap</li>
+    </ul>
+
+    <p>
+      AI tidak semestinya menggantikan manusia. Sebaliknya, AI dibangunkan untuk membantu manusia
+      membuat keputusan dengan lebih pantas, tepat dan berkesan, sambil meningkatkan produktiviti
+      dan daya saing ekonomi.
+    </p>
+
+    <h3>Contoh Penggunaan AI dalam Industri</h3>
+
+    <ul>
+      <li>Google Search & Chrome AI</li>
+      <li>ChatGPT & Generative AI</li>
+      <li>Siri & Google Assistant</li>
+      <li>Tesla Autopilot</li>
+      <li>Netflix, YouTube & Shopee Recommendation</li>
+      <li>TikTok Algorithm</li>
+      <li>Analisis Data & Predictive Analytics</li>
+      <li>Robot dalam Manufaktur</li>
+      <li>Diagnostic Tools dalam Perubatan</li>
+    </ul>
+
+
+    <h2 id="evolusi">Evolusi Teknologi Digital</h2>
+
+    <h3>Era Komputer (1950s-1980s)</h3>
+    <p>
+      Komputer digunakan untuk menggantikan kerja manual dan meningkatkan kecekapan.
+      Pembangunan sistem mainframe dan desktop computing.
+    </p>
+
+    <h3>Era Internet (1990s)</h3>
+    <p>
+      Maklumat menjadi mudah diakses seluruh dunia. World Wide Web membawa revolusi komunikasi global.
+    </p>
+
+    <h3>Era Telefon Pintar (2000s-2010s)</h3>
+    <p>
+      Komunikasi menjadi lebih pantas dan mudah. Mobile technology mengubah cara orang berinteraksi
+      dan mengakses maklumat.
+    </p>
+
+    <h3>Era Cloud Computing (2010s)</h3>
+    <p>
+      Data boleh diakses dari mana-mana sahaja. Infrastructure as a Service (IaaS), Platform as a Service (PaaS),
+      dan Software as a Service (SaaS) membawa fleksibiliti kepada organisasi.
+    </p>
+
+    <h3>Era Artificial Intelligence (2020s onwards)</h3>
+    <p>
+      Mesin mula belajar daripada data dan membantu manusia membuat keputusan. AI menjadi driver utama
+      transformasi digital dan pertumbuhan ekonomi.
+    </p>
+
+
+    <h2 id="transformasi">Digital Transformation</h2>
+
+    <p>
+      Transformasi digital bukan bermaksud sekadar menggunakan komputer.
+      Ia ialah proses mengubah keseluruhan sistem organisasi menggunakan teknologi digital bagi meningkatkan:
+    </p>
+
+    <ul>
+      <li>Produktiviti dan Kecekapan Operasional</li>
+      <li>Ketelusan dan Akuntabiliti</li>
+      <li>Kelajuan Respons Pasar</li>
+      <li>Kualiti Perkhidmatan dan Produk</li>
+      <li>Pengalaman Pelanggan (Customer Experience)</li>
+      <li>Inovasi Produk dan Model Perniagaan</li>
+      <li>Keselamatan Data dan Cyber Security</li>
+    </ul>
+
+    <p>
+      Transformasi digital melibatkan perubahan budaya kerja, struktur organisasi dan cara membuat keputusan
+      berdasarkan data dan analytics. Ia memerlukan investasi dalam teknologi, talenta dan proses bisnes.
+    </p>
+
+
+    <h2 id="tvet">TVET & Teknologi - Mempersiapkan Tenaga Kerja Masa Depan</h2>
+
+    <h3>Peranan TVET dalam Ekonomi Digital</h3>
+
+    <p>
+      TVET (Technical and Vocational Education and Training) memainkan peranan penting dalam:
+    </p>
+
+    <ul>
+      <li>Melatih tenaga kerja terampil dalam bidang teknologi dan industri 4.0</li>
+      <li>Memenuhi permintaan pasar kerja untuk kemahiran teknikal spesifik</li>
+      <li>Meningkatkan daya saing ekonomi negara di peringkat global</li>
+      <li>Mengurangkan kesenjangan antara pembelajaran akademik dan keperluan industri</li>
+      <li>Menyediakan laluan karir alternatif dan berkelanjutan</li>
+    </ul>
+
+    <h3>Kemahiran TVET dalam Era AI</h3>
+
+    <ul>
+      <li>Programmable Logic Controller (PLC) & Automation</li>
+      <li>Internet of Things (IoT) Integration</li>
+      <li>Data Analytics & Business Intelligence</li>
+      <li>Cybersecurity & Information Technology</li>
+      <li>Electrical & Electronics Engineering</li>
+      <li>Mechanical & Robotics Technology</li>
+      <li>Software Development & Coding</li>
+      <li>Cloud Computing & Database Management</li>
+      <li>Digital Marketing & E-Commerce</li>
+    </ul>
+
+
+    <h2 id="ekonomi">Impak Ekonomi Teknologi & AI</h2>
+
+    <h3>Pertumbuhan Ekonomi</h3>
+
+    <ul>
+      <li>Peningkatan produktiviti industri sebanyak 20-30% dengan automasi</li>
+      <li>Penciptaan industri baharu dan peluang perniagaan</li>
+      <li>Peningkatan eksport dan daya saing global</li>
+      <li>Efisiensi biaya operasi melalui automasi dan optimisasi</li>
+    </ul>
+
+    <h3>Penciptaan Lapangan Kerja</h3>
+
+    <ul>
+      <li>Pekerjaan dalam bidang AI, Data Science, Cybersecurity</li>
+      <li>Teknik software development dan system integration</li>
+      <li>Konsultasi teknologi dan business transformation</li>
+      <li>Maintenance dan support teknologi tinggi</li>
+    </ul>
+
+    <h3>Peningkatan Pendapatan</h3>
+
+    <ul>
+      <li>Pekerja dengan kemahiran digital memperoleh gaji 30-50% lebih tinggi</li>
+      <li>Produktiviti yang lebih tinggi membawa keuntungan organisasi lebih besar</li>
+      <li>Nilai added services meningkat melalui personalisasi dan AI</li>
+    </ul>
+
+
+    <h2>AI Dalam Kehidupan Seharian & Industri</h2>
+
+    <h3>Pendidikan & TVET</h3>
+
+    <ul>
+      <li>Pembelajaran pintar dengan AI tutoring systems</li>
+      <li>Tutor AI yang membantu pelajar sesuai dengan kecepatan mereka</li>
+      <li>Semakan tugasan dan grading automatik</li>
+      <li>Pembelajaran adaptif mengikut kemampuan dan gaya pembelajaran pelajar</li>
+      <li>Virtual Reality (VR) untuk praktik teknikal simulasi</li>
+    </ul>
+
+    <h3>Kesihatan</h3>
+
+    <ul>
+      <li>Analisis imej X-Ray, CT Scan dengan accuracy tinggi</li>
+      <li>Pengesanan awal penyakit melalui predictive analytics</li>
+      <li>Robot pembedahan presisi untuk operasi kompleks</li>
+      <li>Diagnostik lebih tepat dan efisien</li>
+      <li>Telemedicine dan monitoring kesehatan jarak jauh</li>
+    </ul>
+
+    <h3>Perniagaan & Industri</h3>
+
+    <ul>
+      <li>Analisis jualan dan forecasting permintaan pelanggan</li>
+      <li>Khidmat pelanggan automatik (Chatbot & AI Assistant)</li>
+      <li>Automasi pemasaran dan customer segmentation</li>
+      <li>Supply chain optimization dan inventory management</li>
+      <li>Predictive maintenance dalam manufaktur</li>
+    </ul>
+
+    <h3>Pertanian</h3>
+
+    <ul>
+      <li>Drone pintar untuk monitoring ladang</li>
+      <li>Sensor kelembapan tanah dan weather prediction</li>
+      <li>Ramalan cuaca real-time untuk perencanaan</li>
+      <li>Penggunaan baja dan pestisida lebih cekap dengan precision farming</li>
+      <li>Automasi hasil panen (Harvesting robots)</li>
+    </ul>
+
+    <h3>Pengangkutan & Logistik</h3>
+
+    <ul>
+      <li>Kenderaan autonomi dan self-driving vehicles</li>
+      <li>Sistem navigasi pintar dan route optimization</li>
+      <li>Pengurusan trafik bandar dengan AI</li>
+      <li>Drone delivery untuk last-mile logistics</li>
+      <li>Predictive logistics dan real-time tracking</li>
+    </ul>
+
+
+    <h2>Big Data & Analytics</h2>
+
+    <p>
+      AI memerlukan data berkualiti tinggi. Lebih banyak data berkualiti, lebih bijak sesuatu sistem AI.
+      Big Data merujuk kepada sejumlah besar maklumat yang dikumpulkan daripada berbagai sumber:
+    </p>
+
+    <ul>
+      <li>Telefon pintar dan perangkat mobile</li>
+      <li>Internet dan website transactions</li>
+      <li>Kamera CCTV dan surveillance systems</li>
+      <li>Media sosial dan user-generated content</li>
+      <li>Sensor IoT dan connected devices</li>
+      <li>Transaksi kewangan dan e-commerce</li>
+      <li>Sensor industri dalam manufacturing</li>
+      <li>Weather stations dan environmental monitoring</li>
+    </ul>
+
+    <p>
+      Daripada data inilah AI belajar mengenal pasti corak, membuat ramalan akurat dan memberikan insights
+      yang berharga untuk pengambilan keputusan strategis organisasi.
+    </p>
+
+
+    <h2>Internet of Things (IoT)</h2>
+
+    <p>
+      Internet of Things ialah rangkaian peranti yang saling berhubung melalui internet dan dapat
+      berkomunikasi satu sama lain secara automatik. Contohnya:
+    </p>
+
+    <ul>
+      <li>Rumah pintar dengan smart lighting dan temperature control</li>
+      <li>Lampu automatik dengan sensor gerak dan cahaya</li>
+      <li>Kamera keselamatan dengan motion detection</li>
+      <li>Jam pintar (Smartwatch) dengan health monitoring</li>
+      <li>Kereta pintar dengan connected systems</li>
+      <li>Kilang pintar (Smart Factory) dengan automated production</li>
+      <li>Alat medis yang terhubung untuk patient monitoring</li>
+      <li>Sistem pertanian pintar dengan soil sensors</li>
+    </ul>
+
+
+    <h2 id="cabaran">Cabaran AI & Solusi</h2>
+
+    <h3>Keselamatan Data</h3>
+    <p>
+      <strong>Cabaran:</strong> Maklumat peribadi dan sensitif perlu dilindungi daripada penyalahgunaan,
+      cybercrime, dan breach data. Serangan siber meningkat seiring dengan digitalisasi.
+    </p>
+    <p>
+      <strong>Solusi:</strong> Implementasi encryption, multi-factor authentication, security audits,
+      dan cyber insurance. Pelatihan karyawan dalam cybersecurity awareness.
+    </p>
+
+    <h3>Privasi & Data Protection</h3>
+    <p>
+      <strong>Cabaran:</strong> Data pengguna perlu digunakan secara beretika dan bertanggungjawab.
+      Regulasi seperti GDPR dan PDPA membatasi penggunaan data pribadi.
+    </p>
+    <p>
+      <strong>Solusi:</strong> Transparent data collection, user consent, data anonymization,
+      dan compliance dengan peraturan privasi global.
+    </p>
+
+    <h3>Pekerjaan & Retraining</h3>
+    <p>
+      <strong>Cabaran:</strong> Sesetengah pekerjaan rutin mungkin digantikan oleh automasi dan AI.
+      Transisi tenaga kerja menjadi isu sosial dan ekonomi.
+    </p>
+    <p>
+      <strong>Solusi:</strong> Program retraining dan upskilling untuk tenaga kerja. Pemerintah dan industri
+      perlu bekerjasama menyediakan kemahiran baru. TVET menjadi kunci penting dalam transisi ini.
+      AI juga mewujudkan pekerjaan baharu dalam bidang teknologi dan inovasi.
+    </p>
+
+    <h3>Etika AI & Bias</h3>
+    <p>
+      <strong>Cabaran:</strong> AI perlu dibangunkan secara bertanggungjawab supaya tidak menghasilkan
+      keputusan yang berat sebelah (bias), diskriminatif, atau tidak adil.
+    </p>
+    <p>
+      <strong>Solusi:</strong> Implementasi Responsible AI frameworks, testing untuk bias detection,
+      diverse development teams, dan ethical governance dalam pengembangan AI.
+    </p>
+
+    <h3>Digital Divide</h3>
+    <p>
+      <strong>Cabaran:</strong> Kesenjangan akses teknologi antara komunitas urban dan rural,
+      serta antara negara maju dan berkembang.
+    </p>
+    <p>
+      <strong>Solusi:</strong> Investasi infrastruktur digital, broadband access expansion,
+      dan affordable technology pricing. Program literasi digital untuk semua lapisan masyarakat.
+    </p>
+
+
+    <h2 id="masa-depan">Masa Depan AI & Teknologi</h2>
+
+    <p>
+      AI dijangka menjadi sebahagian daripada hampir semua sektor ekonomi dalam dekade mendatang.
+      Tren dan aplikasi masa depan termasuk:
+    </p>
+
+    <ul>
+      <li><strong>Bandar Pintar (Smart Cities):</strong> Urban management dengan IoT dan AI</li>
+      <li><strong>Hospital Pintar (Smart Healthcare):</strong> Diagnostik dan treatment berbasis AI</li>
+      <li><strong>Kilang Autonomi (Autonomous Manufacturing):</strong> Fully automated production lines</li>
+      <li><strong>Pendidikan Digital:</strong> Personalized learning dengan AI tutoring</li>
+      <li><strong>Pertanian Pintar (Smart Agriculture):</strong> Precision farming dan crop optimization</li>
+      <li><strong>Robot Kolaboratif (Collaborative Robots):</strong> Bekerja bersama manusia</li>
+      <li><strong>Pembantu Maya Peribadi:</strong> AI assistants untuk kehidupan sehari-hari</li>
+      <li><strong>Pengangkutan Autonomi:</strong> Self-driving vehicles dan logistics</li>
+      <li><strong>Quantum Computing:</strong> Komputasi dengan kecepatan revolusioner</li>
+      <li><strong>Augmented Reality (AR) & Virtual Reality (VR):</strong> Immersive experiences</li>
+    </ul>
+
+
+    <h2>Kepentingan Literasi Digital & Kemahiran Abad 21</h2>
+
+    <p>
+      Dalam era AI dan digital transformation, kemahiran paling penting bukan sekadar menggunakan teknologi,
+      tetapi memahami cara teknologi berfungsi dan bagaimana mengaplikasikannya secara efektif.
+    </p>
+
+    <ul>
+      <li><strong>Literasi Digital:</strong> Memahami teknologi dan tools digital</li>
+      <li><strong>Pemikiran Kritikal:</strong> Analisis mendalam dan evaluasi informasi</li>
+      <li><strong>Analisis Data:</strong> Interpretasi data untuk decision making</li>
+      <li><strong>Penyelesaian Masalah:</strong> Problem-solving skills dalam konteks teknologi</li>
+      <li><strong>Kreativiti:</strong> Inovasi dan out-of-the-box thinking</li>
+      <li><strong>Komunikasi:</strong> Presentasi dan kolaborasi dalam tim digital</li>
+      <li><strong>Pembelajaran Sepanjang Hayat (Lifelong Learning):</strong> Continuous upskilling</li>
+      <li><strong>Adaptabilitas:</strong> Kemampuan beradaptasi dengan perubahan cepat teknologi</li>
+      <li><strong>Emotional Intelligence:</strong> Empati dan interpersonal skills</li>
+    </ul>
+
+
+    <h2>Analisis & Rekomendasi</h2>
+
+    <p>
+      Artificial Intelligence bukan sekadar satu teknologi, tetapi satu revolusi yang sedang mengubah
+      struktur ekonomi global. Negara yang melabur dalam inovasi, pendidikan STEM, penyelidikan dan
+      pembangunan (R&D), serta pembangunan bakat digital akan mempunyai kelebihan daya saing yang
+      lebih tinggi di panggung global.
+    </p>
+
+    <p>
+      <strong>Rekomendasi untuk Pemerintah:</strong>
+    </p>
+    <ul>
+      <li>Investasi dalam infrastruktur digital dan broadband connectivity</li>
+      <li>Pengembangan kurikulum TVET yang selaras dengan Industry 4.0</li>
+      <li>Insentif untuk penelitian dan pengembangan teknologi lokal</li>
+      <li>Program upskilling dan reskilling untuk tenaga kerja</li>
+      <li>Regulasi yang jelas untuk data privacy dan AI governance</li>
+    </ul>
+
+    <p>
+      <strong>Rekomendasi untuk Industri:</strong>
+    </p>
+    <ul>
+      <li>Kolaborasi dengan institusi TVET untuk pengembangan talenta</li>
+      <li>Implementasi AI dan digital tools untuk efisiensi operasional</li>
+      <li>Investasi dalam R&D untuk inovasi produk dan layanan</li>
+      <li>Corporate social responsibility dalam adopsi teknologi yang inklusif</li>
+    </ul>
+
+    <p>
+      Namun, kemajuan teknologi perlu diseimbangkan dengan nilai kemanusiaan. AI sepatutnya digunakan
+      untuk meningkatkan kesejahteraan masyarakat, bukan menggantikan sepenuhnya peranan manusia.
+      Keputusan penting yang melibatkan etika, empati dan tanggungjawab sosial masih memerlukan
+      kebijaksanaan manusia dan pertimbangan moral yang mendalam.
+    </p>
+
+
+    <h2>Kesimpulan</h2>
+
+    <p>
+      Teknologi dan Artificial Intelligence merupakan pemacu utama kepada pembangunan masa depan.
+      Dunia sedang bergerak ke arah masyarakat yang lebih digital, pintar dan saling berhubung.
+      Perubahan ini membawa peluang besar dalam bidang ekonomi, pendidikan, kesihatan dan keusahawanan.
+    </p>
+
+    <p>
+      Institusi TVET mempunyai peranan kritikal dalam mempersiapkan tenaga kerja yang kompeten,
+      adaptif, dan siap menghadapi tantangan ekonomi digital. Melalui kurikulum yang relevan, pengajar
+      terlatih, dan fasilitas terkini, TVET dapat membentuk generasi pemimpin teknologi.
+    </p>
+
+    <p>
+      Kejayaan sesebuah negara atau individu tidak bergantung kepada teknologi semata-mata,
+      tetapi kepada kemampuan untuk belajar, menyesuaikan diri dan menggunakan teknologi secara
+      bertanggungjawab dan etis.
+    </p>
+
+    <p>
+      <strong>AI bukan pengganti manusia, tetapi alat yang dapat memperkukuhkan kebolehan manusia apabila
+      digunakan dengan ilmu, etika dan visi yang jelas untuk pembangunan yang berkelanjutan.</strong>
+    </p>
+
+
+    <!-- Reference Section -->
+    <div class="ref">
+
+      <h2>Rujukan & Sumber Bacaan</h2>
+
+      <ol>
+        <li>UNESCO – Recommendation on the Ethics of Artificial Intelligence (2021)</li>
+        <li>OECD – OECD AI Principles for Responsible AI (2019)</li>
+        <li>World Economic Forum – The Future of Jobs Report (2023)</li>
+        <li>Artificial Intelligence: A Modern Approach (Russell & Norvig)</li>
+        <li>Life 3.0: Being Human in the Age of Artificial Intelligence (Max Tegmark)</li>
+        <li>The Fourth Industrial Revolution (Klaus Schwab)</li>
+        <li>International Telecommunication Union – Digital Transformation & Global Technology Reports</li>
+        <li>McKinsey Global Institute – AI & Automation Impact on the Workforce</li>
+        <li>Malaysia Ministry of Education – TVET Development Framework</li>
+        <li>Industry 4.0 Implementation Guidelines for SMEs</li>
+      </ol>
+
+    </div>
+
+    <!-- Signature -->
+    <div class="signature">
+      NANIS COMMUNICATION<br>
+      (Nanis D. Webster)<br>
+      <span style="font-size: 12px; color: #999; margin-top: 10px; display: block;">Last Updated: 2026</span>
+    </div>
+
+  </div>
+
 </div>
 
-
-<h2>Pengenalan</h2>
-
-<p>
-Teknologi sentiasa menjadi pemacu utama kepada kemajuan tamadun manusia.
-Bermula daripada penciptaan roda, mesin wap, elektrik, komputer sehingga internet,
-setiap revolusi teknologi telah mengubah cara manusia hidup, bekerja dan berinteraksi.
-</p>
-
-<p>
-Hari ini, dunia sedang memasuki satu era baharu yang dikenali sebagai Revolusi Industri Keempat
-(Industry 4.0), iaitu era di mana teknologi digital, data raya (Big Data),
-pengkomputeran awan (Cloud Computing), Internet of Things (IoT), robotik dan
-Kecerdasan Buatan (Artificial Intelligence - AI) bergabung menjadi satu ekosistem pintar.
-</p>
-
-
-<h2>Apakah Itu Artificial Intelligence (AI)?</h2>
-
-<p>
-Artificial Intelligence (AI) ialah teknologi yang membolehkan komputer atau mesin meniru
-kebolehan manusia seperti:
-</p>
-
-<ul>
-<li>Berfikir</li>
-<li>Belajar daripada pengalaman</li>
-<li>Membuat keputusan</li>
-<li>Mengenal pasti corak</li>
-<li>Memahami bahasa manusia</li>
-<li>Menyelesaikan masalah</li>
-</ul>
-
-
-<p>
-AI tidak semestinya menggantikan manusia. Sebaliknya, AI dibangunkan untuk membantu manusia
-membuat keputusan dengan lebih pantas, tepat dan berkesan.
-</p>
-
-
-<h2>Contoh Penggunaan AI</h2>
-
-<ul>
-<li>Google Search</li>
-<li>ChatGPT</li>
-<li>Siri</li>
-<li>Google Assistant</li>
-<li>Tesla Autopilot</li>
-<li>Netflix Recommendation</li>
-<li>YouTube Recommendation</li>
-<li>Shopee Recommendation</li>
-<li>TikTok Algorithm</li>
-</ul>
-
-
-<h2>Evolusi Teknologi Digital</h2>
-
-<h3>Era Komputer</h3>
-<p>
-Komputer digunakan untuk menggantikan kerja manual dan meningkatkan kecekapan.
-</p>
-
-<h3>Era Internet</h3>
-<p>
-Maklumat menjadi mudah diakses seluruh dunia.
-</p>
-
-<h3>Era Telefon Pintar</h3>
-<p>
-Komunikasi menjadi lebih pantas dan mudah.
-</p>
-
-<h3>Era Cloud Computing</h3>
-<p>
-Data boleh diakses dari mana-mana sahaja.
-</p>
-
-<h3>Era Artificial Intelligence</h3>
-<p>
-Mesin mula belajar daripada data dan membantu manusia membuat keputusan.
-</p>
-
-<h2>Digital Transformation</h2>
-
-<p>
-Transformasi digital bukan bermaksud sekadar menggunakan komputer.
-Ia ialah proses mengubah keseluruhan sistem organisasi menggunakan teknologi digital bagi meningkatkan:
-</p>
-
-<ul>
-<li>Produktiviti</li>
-<li>Kecekapan</li>
-<li>Ketelusan</li>
-<li>Kelajuan</li>
-<li>Kualiti perkhidmatan</li>
-<li>Pengalaman pelanggan</li>
-</ul>
-
-
-<p>
-Transformasi digital melibatkan perubahan budaya kerja, struktur organisasi dan cara membuat keputusan
-berdasarkan data.
-</p>
-
-
-<h2>AI Dalam Kehidupan Seharian</h2>
-
-<p>
-AI telah menjadi sebahagian daripada kehidupan harian manusia tanpa disedari.
-Ia digunakan dalam pelbagai sektor seperti:
-</p>
-
-
-<h3>Pendidikan</h3>
-
-<ul>
-<li>Pembelajaran pintar</li>
-<li>Tutor AI</li>
-<li>Semakan tugasan automatik</li>
-<li>Pembelajaran mengikut kemampuan pelajar</li>
-</ul>
-
-
-<h3>Kesihatan</h3>
-
-<ul>
-<li>Analisis imej X-Ray</li>
-<li>Pengesanan awal penyakit</li>
-<li>Robot pembedahan</li>
-<li>Diagnostik lebih tepat</li>
-</ul>
-
-
-<h3>Perniagaan</h3>
-
-<ul>
-<li>Analisis jualan</li>
-<li>Ramalan permintaan pelanggan</li>
-<li>Khidmat pelanggan automatik</li>
-<li>Automasi pemasaran</li>
-</ul>
-
-
-<h3>Pertanian</h3>
-
-<ul>
-<li>Drone pintar</li>
-<li>Sensor kelembapan tanah</li>
-<li>Ramalan cuaca</li>
-<li>Penggunaan baja lebih cekap</li>
-</ul>
-
-
-<h3>Pengangkutan</h3>
-
-<ul>
-<li>Kenderaan autonomi</li>
-<li>Sistem navigasi pintar</li>
-<li>Pengurusan trafik bandar</li>
-</ul>
-
-
-<h2>Big Data</h2>
-
-<p>
-AI memerlukan data. Lebih banyak data berkualiti, lebih bijak sesuatu sistem AI.
-Big Data merujuk kepada sejumlah besar maklumat yang dikumpulkan daripada:
-</p>
-
-<ul>
-<li>Telefon pintar</li>
-<li>Internet</li>
-<li>Kamera CCTV</li>
-<li>Media sosial</li>
-<li>Sensor IoT</li>
-<li>Transaksi kewangan</li>
-</ul>
-
-
-<p>
-Daripada data inilah AI belajar mengenal pasti corak dan membuat ramalan.
-</p>
-
-
-<h2>Internet of Things (IoT)</h2>
-
-<p>
-Internet of Things ialah rangkaian peranti yang saling berhubung melalui internet.
-Contohnya:
-</p>
-
-<ul>
-<li>Rumah pintar</li>
-<li>Lampu automatik</li>
-<li>Kamera keselamatan</li>
-<li>Jam pintar</li>
-<li>Kereta pintar</li>
-<li>Kilang pintar</li>
-</ul>
-
-
-<h2>Cabaran AI</h2>
-
-<h3>Keselamatan Data</h3>
-<p>
-Maklumat peribadi perlu dilindungi daripada penyalahgunaan.
-</p>
-
-
-<h3>Privasi</h3>
-
-<p>
-Data pengguna perlu digunakan secara beretika dan bertanggungjawab.
-</p>
-
-
-<h3>Pekerjaan</h3>
-
-<p>
-Sesetengah pekerjaan rutin mungkin digantikan oleh automasi.
-Namun AI juga mewujudkan pekerjaan baharu yang berkaitan teknologi.
-</p>
-
-
-<h3>Etika</h3>
-
-<p>
-AI perlu dibangunkan secara bertanggungjawab supaya tidak menghasilkan keputusan yang berat sebelah.
-</p>
-
-
-<h2>Masa Depan AI</h2>
-
-<p>
-AI dijangka menjadi sebahagian daripada hampir semua sektor ekonomi.
-Antaranya:
-</p>
-
-<ul>
-<li>Bandar pintar</li>
-<li>Hospital pintar</li>
-<li>Kilang autonomi</li>
-<li>Pendidikan digital</li>
-<li>Pertanian pintar</li>
-<li>Robot kolaboratif</li>
-<li>Pembantu maya peribadi</li>
-<li>Pengangkutan autonomi</li>
-</ul>
-
-
-<h2>Kepentingan Literasi Digital</h2>
-
-<p>
-Dalam era AI, kemahiran paling penting bukan sekadar menggunakan teknologi,
-tetapi memahami cara teknologi berfungsi.
-</p>
-
-<ul>
-<li>Literasi digital</li>
-<li>Pemikiran kritikal</li>
-<li>Analisis data</li>
-<li>Penyelesaian masalah</li>
-<li>Kreativiti</li>
-<li>Komunikasi</li>
-<li>Pembelajaran sepanjang hayat</li>
-</ul>
-
-<h2>Analisis</h2>
-
-<p>
-Artificial Intelligence bukan sekadar satu teknologi, tetapi satu revolusi yang sedang mengubah
-struktur ekonomi global. Negara yang melabur dalam inovasi, pendidikan STEM, penyelidikan dan
-pembangunan (R&D), serta pembangunan bakat digital akan mempunyai kelebihan daya saing yang
-lebih tinggi.
-</p>
-
-<p>
-Namun, kemajuan teknologi perlu diseimbangkan dengan nilai kemanusiaan. AI sepatutnya digunakan
-untuk meningkatkan kesejahteraan masyarakat, bukan menggantikan sepenuhnya peranan manusia.
-Keputusan penting yang melibatkan etika, empati dan tanggungjawab sosial masih memerlukan
-kebijaksanaan manusia.
-</p>
-
-
-<h2>Kesimpulan</h2>
-
-<p>
-Teknologi dan Artificial Intelligence merupakan pemacu utama kepada pembangunan masa depan.
-Dunia sedang bergerak ke arah masyarakat yang lebih digital, pintar dan saling berhubung.
-Perubahan ini membawa peluang besar dalam bidang ekonomi, pendidikan, kesihatan dan keusahawanan.
-</p>
-
-<p>
-Namun, kejayaan sesebuah negara atau individu tidak bergantung kepada teknologi semata-mata,
-tetapi kepada kemampuan untuk belajar, menyesuaikan diri dan menggunakan teknologi secara
-bertanggungjawab.
-</p>
-
-<p>
-AI bukan pengganti manusia, tetapi alat yang dapat memperkukuhkan kebolehan manusia apabila
-digunakan dengan ilmu, etika dan visi yang jelas.
-</p>
-
-
-<h2>Rujukan</h2>
-
-<ul>
-<li>UNESCO – Recommendation on the Ethics of Artificial Intelligence</li>
-<li>OECD – OECD AI Principles</li>
-<li>World Economic Forum – The Future of Jobs Report</li>
-<li>Artificial Intelligence: A Modern Approach</li>
-<li>Life 3.0: Being Human in the Age of Artificial Intelligence</li>
-<li>The Fourth Industrial Revolution</li>
-<li>International Telecommunication Union – Laporan berkaitan transformasi digital dan teknologi global</li>
-</ul>
-
-
-<div class="signature">
-
-NANIS COMMUNICATION<br>
-(Nanis D. Webster)
-
+<!-- Footer -->
+<div class="footer">
+  <p>&copy; 2026 NANIS COMMUNICATION. All Rights Reserved.</p>
+  <p>Technology & AI for TVET & Economic Development</p>
 </div>
-
-
-</div>
-</div>
-
 
 </body>
+
 </html>
