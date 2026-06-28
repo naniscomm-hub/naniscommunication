@@ -1,336 +1,686 @@
 <!DOCTYPE html>
-<html>
+<html lang="ms">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TVET, Digital Learning, Skills Development dan Future Education</title>
 
+
 <style>
-    body{
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+    padding:20px;
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    line-height:1.8;
+
+    color:#222222;
+
+
     background-image:url('IMGBG2.jpg');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
     background-repeat:no-repeat;
-    margin:0;
-    padding:20px;
-    font-family:Arial,sans-serif;
+
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.8;
-    color:#000000;
-}
+
+
+/* MAIN ARTICLE CARD */
 
 .container{
+
     max-width:1200px;
+
     margin:auto;
-    padding:60px 25px;
+
+    padding:50px 35px;
+
+
+    background:
+    rgba(255,255,255,0.93);
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.25);
+
 }
+
+
+
+/* HERO */
 
 .hero{
+
     text-align:center;
-    padding:80px 20px;
-    border-bottom:2px solid #000000;
+
+    padding:50px 20px;
+
+    border-bottom:
+    2px solid rgba(212,175,55,0.45);
+
 }
+
+
 
 .hero h1{
-    font-size:3rem;
-    color:#000000;
+
+
+    font-size:clamp(2rem,5vw,3.5rem);
+
     margin-bottom:20px;
+
+
+    color:#D4AF37;
+
+
+    font-weight:900;
+
+
+    letter-spacing:1px;
+
 }
+
+
 
 .hero p{
-    max-width:900px;
+
+    max-width:850px;
+
     margin:auto;
-    font-size:1.1rem;
-    color:#000000;
+
+
+    font-size:1.15rem;
+
+    color:#123A63;
+
 }
+
+
+
+/* SECTION */
 
 .section{
+
     margin-top:60px;
+
 }
+
+
 
 .section h2{
-    color:#000000;
-    margin-bottom:20px;
+
+
+    color:#123A63;
+
+
     font-size:2rem;
+
+
+    border-left:
+    6px solid #D4AF37;
+
+
+    padding-left:15px;
+
+
+    margin-bottom:25px;
+
 }
+
+
 
 .section p{
-    margin-bottom:20px;
+
     text-align:justify;
+
+    margin-bottom:22px;
+
+    font-size:1.05rem;
+
 }
+
+
+
+/* HIGHLIGHT BOX */
 
 .highlight-box{
-    border-left:5px solid #000000;
-    padding:25px;
-    margin:30px 0;
-    border-radius:10px;
+
+
+    margin:35px 0;
+
+    padding:30px;
+
+
+    background:
+    rgba(212,175,55,0.12);
+
+
+    border-left:
+    6px solid #D4AF37;
+
+
+    border-radius:18px;
+
+
 }
+
+
+
+.highlight-box strong{
+
+    color:#123A63;
+
+    font-size:1.15rem;
+
+}
+
+
 
 ul{
+
     padding-left:25px;
+
 }
+
+
 
 li{
+
     margin-bottom:12px;
+
 }
 
-.quote{
-    margin-top:60px;
-    padding:40px;
-    border-radius:15px;
-    text-align:center;
-}
 
-.quote p{
-    font-size:1.3rem;
-    color:#000000;
-    font-style:italic;
-}
 
-.footer-note{
-    text-align:center;
-    margin-top:40px;
-    color:#000000;
-}
+/* QUOTE */
 
 blockquote{
-    border-left:5px solid #000000;
-    padding:25px;
-    margin:30px 0;
-    border-radius:10px;
+
+
+    margin:35px 0;
+
+
+    padding:30px;
+
+
+    background:
+    rgba(18,58,99,0.08);
+
+
+    border-left:
+    6px solid #123A63;
+
+
+    border-radius:18px;
+
+
     font-style:italic;
-    color:#000000;
+
+
+    color:#123A63;
+
+
     font-size:1.1rem;
+
 }
+
+
+
+/* FINAL QUOTE */
+
+.quote{
+
+
+    margin-top:70px;
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    background:
+    rgba(212,175,55,0.15);
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.quote p{
+
+
+    font-size:1.3rem;
+
+    color:#123A63;
+
+
+    font-style:italic;
+
+}
+
+
+
+
+.footer-note{
+
+
+    margin-top:60px;
+
+    padding-top:25px;
+
+
+    text-align:center;
+
+
+    border-top:
+    1px solid rgba(0,0,0,0.2);
+
+
+    color:#555;
+
+}
+
+
+
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:2rem;
+
+body{
+
+padding:10px;
+
 }
+
+
+
+.container{
+
+padding:30px 18px;
+
+}
+
+
 
 .section h2{
-    font-size:1.6rem;
-}
+
+font-size:1.5rem;
 
 }
+
+
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+
+
+}
+
 </style>
+
 
 </head>
 
+
+
 <body>
+
 
 <div class="container">
 
-    <div class="hero">
-        <h1>TVET, Digital Learning, Skills Development dan Future Education</h1>
 
-        <p>
-            Membentuk Generasi Masa Hadapan Melalui Pendidikan Teknikal, Pembelajaran Digital
-            dan Pembangunan Kemahiran yang Mampan.
-        </p>
-    </div>
 
-    <div class="section">
+<div class="hero">
 
-        <h2>Asal Usul dan Perkembangan TVET</h2>
 
-        <p>
-            Konsep TVET bukanlah sesuatu yang baharu. Ia bermula sejak zaman pertukangan tradisional apabila
-            kemahiran dipindahkan daripada seorang tukang kepada pelatih melalui sistem perantisan
-            (apprenticeship). Kaedah ini digunakan dalam pelbagai bidang seperti pertukangan kayu, pertukangan
-            besi, pembinaan dan pembuatan.
-        </p>
+<h1>
+TVET, Digital Learning, Skills Development dan Future Education
+</h1>
 
-        <p>
-            Semasa Revolusi Perindustrian pada abad ke-18 dan ke-19, perkembangan sektor perkilangan dan
-            teknologi menyebabkan permintaan terhadap tenaga kerja mahir meningkat dengan ketara. Dari sinilah
-            lahirnya sekolah-sekolah teknikal dan institusi latihan vokasional yang menjadi asas kepada sistem
-            TVET moden yang digunakan di seluruh dunia hari ini.
-        </p>
 
-        <p>
-            Organisasi antarabangsa seperti UNESCO dan International Labour Organization (ILO) kemudiannya
-            memperkukuhkan peranan TVET sebagai salah satu instrumen penting dalam pembangunan ekonomi,
-            pengurangan kadar pengangguran dan peningkatan taraf hidup masyarakat.
-        </p>
+<p>
 
-    </div>
+Membentuk Generasi Masa Hadapan Melalui Pendidikan Teknikal,
+Pembelajaran Digital dan Pembangunan Kemahiran yang Mampan.
 
-    <div class="section">
+</p>
 
-        <h2>TVET Sebagai Pemangkin Kemahiran Industri</h2>
 
-        <blockquote>
-            "TVET dibangunkan berasaskan prinsip bahawa manusia belajar dengan lebih berkesan melalui pengalaman
-            praktikal dan aplikasi dunia sebenar, bukan sekadar teori di dalam bilik darjah."
-        </blockquote>
+</div>
+<div class="section">
 
-        <p>
-            TVET memainkan peranan penting dalam menyediakan tenaga kerja yang memenuhi keperluan industri
-            semasa. Berbeza dengan sistem pendidikan akademik yang lebih menekankan teori, TVET memberi fokus
-            kepada latihan praktikal, kemahiran teknikal dan pengalaman industri.
-        </p>
 
-        <p>
-            Hari ini, TVET tidak lagi terhad kepada bidang mekanikal atau kejuruteraan semata-mata. Ia turut
-            merangkumi teknologi maklumat, keselamatan siber, automasi, robotik, multimedia digital, logistik,
-            perniagaan digital dan pelbagai bidang profesional lain yang diperlukan dalam ekonomi moden.
-        </p>
+<h2>Asal Usul dan Perkembangan TVET</h2>
 
-        <div class="highlight-box">
 
-            <strong>Bidang-Bidang Utama TVET Masa Kini:</strong>
+<p>
+Konsep TVET bukanlah sesuatu yang baharu. Ia bermula sejak zaman pertukangan tradisional apabila
+kemahiran dipindahkan daripada seorang tukang kepada pelatih melalui sistem perantisan
+(apprenticeship). Kaedah ini digunakan dalam pelbagai bidang seperti pertukangan kayu,
+pertukangan besi, pembinaan dan pembuatan.
+</p>
 
-            <ul>
-                <li>Kejuruteraan dan teknologi mekanik.</li>
-                <li>Teknologi maklumat dan keselamatan siber.</li>
-                <li>Automasi, robotik dan teknologi pintar.</li>
-                <li>Multimedia digital dan grafik komputer.</li>
-                <li>Logistik, perniagaan digital dan pengurusan.</li>
-                <li>Energi terbarukan dan kelestarian alam sekitar.</li>
-            </ul>
 
-        </div>
+<p>
+Semasa Revolusi Perindustrian pada abad ke-18 dan ke-19, perkembangan sektor perkilangan dan
+teknologi menyebabkan permintaan terhadap tenaga kerja mahir meningkat dengan ketara.
+Dari sinilah lahirnya sekolah-sekolah teknikal dan institusi latihan vokasional yang menjadi asas
+kepada sistem TVET moden yang digunakan di seluruh dunia hari ini.
+</p>
 
-    </div>
 
-    <div class="section">
+<p>
+Organisasi antarabangsa seperti UNESCO dan International Labour Organization (ILO) kemudiannya
+memperkukuhkan peranan TVET sebagai salah satu instrumen penting dalam pembangunan ekonomi,
+pengurangan kadar pengangguran dan peningkatan taraf hidup masyarakat.
+</p>
 
-        <h2>Digital Learning: Pendidikan Tanpa Sempadan</h2>
-
-        <p>
-            Perkembangan internet dan teknologi komunikasi telah mengubah cara manusia memperoleh ilmu.
-            Pembelajaran digital atau Digital Learning membolehkan akses kepada pendidikan pada bila-bila masa
-            dan di mana sahaja tanpa batasan lokasi.
-        </p>
-
-        <p>
-            Penggunaan platform e-pembelajaran, kelas maya, aplikasi mudah alih, simulasi interaktif dan
-            kecerdasan buatan (AI) telah membuka peluang kepada lebih ramai individu untuk meningkatkan ilmu dan
-            kemahiran mereka secara fleksibel serta berterusan.
-        </p>
-
-        <p>
-            Pendekatan ini bukan sahaja meningkatkan akses kepada pendidikan, malah membantu pelajar membina
-            kemahiran digital yang menjadi keperluan utama dalam dunia pekerjaan masa kini.
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>Skills Development: Pembangunan Kemahiran Sepanjang Hayat</h2>
-
-        <p>
-            Dalam pasaran kerja yang sentiasa berubah, pembelajaran tidak boleh berhenti selepas tamat pengajian.
-            Konsep Skills Development atau pembangunan kemahiran menekankan kepentingan pembelajaran sepanjang
-            hayat (Lifelong Learning).
-        </p>
-
-        <div class="highlight-box">
-
-            <strong>Kemahiran Penting Untuk Era Digital:</strong>
-
-            <ul>
-                <li>Kemahiran teknikal yang relevan dengan industri.</li>
-                <li>Komunikasi dan kepimpinan yang berkesan.</li>
-                <li>Pemikiran kritis dan analisis data.</li>
-                <li>Penyelesaian masalah dan kreativiti.</li>
-                <li>Kolaborasi dan kerja berpasukan.</li>
-                <li>Keseimbangan emosi dan kesejahteraan mental.</li>
-            </ul>
-
-        </div>
-
-        <p>
-            Individu yang sentiasa meningkatkan kemahiran akan mempunyai kelebihan dalam kerjaya, perniagaan dan
-            pembangunan diri, sekaligus mampu menyesuaikan diri dengan perubahan teknologi serta keperluan
-            industri global.
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>Future Education: Pendidikan Untuk Masa Hadapan</h2>
-
-        <p>
-            Pendidikan masa hadapan bukan lagi sekadar memberi tumpuan kepada hafalan fakta dan peperiksaan.
-            Sebaliknya, ia menekankan inovasi, kreativiti, pemikiran analitikal dan kebolehan menyelesaikan
-            masalah dalam persekitaran yang sentiasa berubah.
-        </p>
-
-        <p>
-            Teknologi seperti Artificial Intelligence (AI), Internet of Things (IoT), Big Data, Robotik,
-            Automasi dan Teknologi Realiti Maya dijangka menjadi sebahagian daripada sistem pendidikan generasi
-            akan datang.
-        </p>
-
-        <p>
-            Institusi pendidikan perlu menyediakan kurikulum yang lebih fleksibel, responsif terhadap perubahan
-            industri dan mampu melahirkan graduan yang bersedia menghadapi cabaran ekonomi digital global.
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>TVET dan Masa Depan Malaysia</h2>
-
-        <p>
-            Di Malaysia, TVET terus diberi penekanan sebagai salah satu agenda utama pembangunan modal insan
-            negara. Pelbagai institusi latihan dan pendidikan menawarkan program TVET bagi melahirkan tenaga
-            kerja berkemahiran tinggi yang mampu menyokong pertumbuhan ekonomi serta pembangunan teknologi
-            negara.
-        </p>
-
-        <p>
-            Dengan gabungan TVET, Digital Learning, Skills Development dan Future Education, Malaysia berpotensi
-            menjadi sebuah negara yang mempunyai tenaga kerja kompeten, inovatif dan bersedia menghadapi cabaran
-            Revolusi Industri 4.0 serta era kecerdasan buatan.
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>Kesimpulan</h2>
-
-        <p>
-            TVET, Digital Learning, Skills Development dan Future Education merupakan empat elemen penting yang
-            saling melengkapi dalam membentuk generasi masa hadapan. Pendidikan moden bukan lagi sekadar
-            memperoleh sijil atau kelulusan akademik, tetapi membangunkan kemahiran sebenar yang mampu memberi
-            nilai kepada individu, industri dan negara.
-        </p>
-
-        <p>
-            Pelaburan dalam pendidikan dan pembangunan kemahiran hari ini adalah pelaburan untuk masa depan yang
-            lebih maju, mampan dan berdaya saing.
-        </p>
-
-    </div>
-
-    <div class="quote">
-
-        <p>
-            "Masa depan bukan ditentukan oleh apa yang kita tahu hari ini,
-            tetapi oleh kesediaan kita untuk terus belajar, menyesuaikan diri dan menguasai kemahiran baharu."
-        </p>
-
-        <p style="font-size:0.9rem; margin-top:20px;">— Nanis D.Webster (21.06.2026) TVET Digital</p>
-
-    </div>
-
-    <div class="footer-note">
-        © NANIS COMMUNICATION | TVET, Digital Learning, Skills Development dan Future Education
-    </div>
 
 </div>
 
+
+
+
+<div class="section">
+
+
+<h2>TVET Sebagai Pemangkin Kemahiran Industri</h2>
+
+
+<blockquote>
+
+"TVET dibangunkan berasaskan prinsip bahawa manusia belajar dengan lebih berkesan melalui
+pengalaman praktikal dan aplikasi dunia sebenar, bukan sekadar teori di dalam bilik darjah."
+
+</blockquote>
+
+
+
+<p>
+TVET memainkan peranan penting dalam menyediakan tenaga kerja yang memenuhi keperluan industri
+semasa. Berbeza dengan sistem pendidikan akademik yang lebih menekankan teori, TVET memberi fokus
+kepada latihan praktikal, kemahiran teknikal dan pengalaman industri.
+</p>
+
+
+<p>
+Hari ini, TVET tidak lagi terhad kepada bidang mekanikal atau kejuruteraan semata-mata. Ia turut
+merangkumi teknologi maklumat, keselamatan siber, automasi, robotik, multimedia digital, logistik,
+perniagaan digital dan pelbagai bidang profesional lain yang diperlukan dalam ekonomi moden.
+</p>
+
+
+
+<div class="highlight-box">
+
+
+<strong>
+Bidang-Bidang Utama TVET Masa Kini:
+</strong>
+
+
+<ul>
+
+<li>Kejuruteraan dan teknologi mekanik.</li>
+
+<li>Teknologi maklumat dan keselamatan siber.</li>
+
+<li>Automasi, robotik dan teknologi pintar.</li>
+
+<li>Multimedia digital dan grafik komputer.</li>
+
+<li>Logistik, perniagaan digital dan pengurusan.</li>
+
+<li>Energi terbarukan dan kelestarian alam sekitar.</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>Digital Learning: Pendidikan Tanpa Sempadan</h2>
+
+
+<p>
+Perkembangan internet dan teknologi komunikasi telah mengubah cara manusia memperoleh ilmu.
+Pembelajaran digital atau Digital Learning membolehkan akses kepada pendidikan pada bila-bila masa
+dan di mana sahaja tanpa batasan lokasi.
+</p>
+
+
+<p>
+Penggunaan platform e-pembelajaran, kelas maya, aplikasi mudah alih, simulasi interaktif dan
+kecerdasan buatan (AI) telah membuka peluang kepada lebih ramai individu untuk meningkatkan ilmu
+dan kemahiran mereka secara fleksibel serta berterusan.
+</p>
+
+
+<p>
+Pendekatan ini bukan sahaja meningkatkan akses kepada pendidikan, malah membantu pelajar membina
+kemahiran digital yang menjadi keperluan utama dalam dunia pekerjaan masa kini.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>Skills Development: Pembangunan Kemahiran Sepanjang Hayat</h2>
+
+
+<p>
+Dalam pasaran kerja yang sentiasa berubah, pembelajaran tidak boleh berhenti selepas tamat pengajian.
+Konsep Skills Development atau pembangunan kemahiran menekankan kepentingan pembelajaran sepanjang
+hayat (Lifelong Learning).
+</p>
+
+
+
+<div class="highlight-box">
+
+
+<strong>
+Kemahiran Penting Untuk Era Digital:
+</strong>
+
+
+<ul>
+
+<li>Kemahiran teknikal yang relevan dengan industri.</li>
+
+<li>Komunikasi dan kepimpinan yang berkesan.</li>
+
+<li>Pemikiran kritis dan analisis data.</li>
+
+<li>Penyelesaian masalah dan kreativiti.</li>
+
+<li>Kolaborasi dan kerja berpasukan.</li>
+
+<li>Keseimbangan emosi dan kesejahteraan mental.</li>
+
+</ul>
+
+
+</div>
+
+
+
+<p>
+Individu yang sentiasa meningkatkan kemahiran akan mempunyai kelebihan dalam kerjaya, perniagaan
+dan pembangunan diri, sekaligus mampu menyesuaikan diri dengan perubahan teknologi serta keperluan
+industri global.
+</p>
+
+
+</div>
+
+<div class="section">
+
+
+<h2>Future Education: Pendidikan Untuk Masa Hadapan</h2>
+
+
+<p>
+Pendidikan masa hadapan bukan lagi sekadar memberi tumpuan kepada hafalan fakta dan peperiksaan.
+Sebaliknya, ia menekankan inovasi, kreativiti, pemikiran analitikal dan kebolehan menyelesaikan
+masalah dalam persekitaran yang sentiasa berubah.
+</p>
+
+
+<p>
+Teknologi seperti Artificial Intelligence (AI), Internet of Things (IoT), Big Data, Robotik,
+Automasi dan Teknologi Realiti Maya dijangka menjadi sebahagian daripada sistem pendidikan generasi
+akan datang.
+</p>
+
+
+<p>
+Institusi pendidikan perlu menyediakan kurikulum yang lebih fleksibel, responsif terhadap perubahan
+industri dan mampu melahirkan graduan yang bersedia menghadapi cabaran ekonomi digital global.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>TVET dan Masa Depan Malaysia</h2>
+
+
+<p>
+Di Malaysia, TVET terus diberi penekanan sebagai salah satu agenda utama pembangunan modal insan
+negara. Pelbagai institusi latihan dan pendidikan menawarkan program TVET bagi melahirkan tenaga
+kerja berkemahiran tinggi yang mampu menyokong pertumbuhan ekonomi serta pembangunan teknologi
+negara.
+</p>
+
+
+<p>
+Dengan gabungan TVET, Digital Learning, Skills Development dan Future Education, Malaysia berpotensi
+menjadi sebuah negara yang mempunyai tenaga kerja kompeten, inovatif dan bersedia menghadapi cabaran
+Revolusi Industri 4.0 serta era kecerdasan buatan.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>Kesimpulan</h2>
+
+
+<p>
+TVET, Digital Learning, Skills Development dan Future Education merupakan empat elemen penting yang
+saling melengkapi dalam membentuk generasi masa hadapan. Pendidikan moden bukan lagi sekadar
+memperoleh sijil atau kelulusan akademik, tetapi membangunkan kemahiran sebenar yang mampu memberi
+nilai kepada individu, industri dan negara.
+</p>
+
+
+<p>
+Pelaburan dalam pendidikan dan pembangunan kemahiran hari ini adalah pelaburan untuk masa depan yang
+lebih maju, mampan dan berdaya saing.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="quote">
+
+
+<p>
+
+"Masa depan bukan ditentukan oleh apa yang kita tahu hari ini,
+tetapi oleh kesediaan kita untuk terus belajar, menyesuaikan diri dan menguasai kemahiran baharu."
+
+</p>
+
+
+<p style="font-size:0.95rem; margin-top:20px;">
+
+— Nanis D.Webster (21.06.2026) TVET Digital
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="footer-note">
+
+
+© NANIS COMMUNICATION | TVET, Digital Learning, Skills Development dan Future Education
+
+
+</div>
+
+
+
+</div>
+
+
 </body>
+
 </html>
