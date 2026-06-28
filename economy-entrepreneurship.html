@@ -1,530 +1,1023 @@
 <!DOCTYPE html>
-<html>
+<html lang="ms">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Economy, Entrepreneurship, Digital Economy and Community Growth</title>
+
+<title>
+Economy, Entrepreneurship, Digital Economy and Community Growth
+</title>
+
 
 <style>
-    body{
-    background-image:url('IMGBG2.jpg');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-    margin:0;
-    padding:20px;
-    font-family:Arial,sans-serif;
+
+*{
+box-sizing:border-box;
 }
+
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.8;
-    color:#00000;
+
+margin:0;
+padding:20px;
+
+font-family:
+"Segoe UI",
+Arial,
+Helvetica,
+sans-serif;
+
+line-height:1.8;
+
+color:#222222;
+
+
+background-image:url('IMGBG2.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+
 }
+
+
 
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 25px;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:50px 35px;
+
+
+background:
+rgba(255,255,255,0.93);
+
+
+border-radius:30px;
+
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.25);
+
 }
+
+
+
+/* HERO */
 
 .hero{
-    text-align:center;
-    padding:80px 20px;
-    border-bottom:2px solid #000000;
+
+text-align:center;
+
+padding:50px 20px;
+
+border-bottom:
+2px solid rgba(212,175,55,.45);
+
 }
+
+
 
 .hero h1{
-    font-size:3rem;
-    color:#000000;
-    margin-bottom:20px;
+
+font-size:
+clamp(2rem,5vw,3.4rem);
+
+
+color:#D4AF37;
+
+
+font-weight:900;
+
+
+margin-bottom:20px;
+
 }
+
+
 
 .hero p{
-    max-width:900px;
-    margin:auto;
-    font-size:1.1rem;
-    color:#000000;
+
+max-width:900px;
+
+margin:auto;
+
+font-size:1.15rem;
+
+color:#123A63;
+
 }
+
+
+
+/* SECTION */
+
 
 .section{
-    margin-top:60px;
+
+margin-top:60px;
+
 }
+
+
 
 .section h2{
-    color:#000000;
-    margin-bottom:20px;
-    font-size:2rem;
+
+color:#123A63;
+
+font-size:2rem;
+
+
+border-left:
+6px solid #D4AF37;
+
+
+padding-left:15px;
+
+
+margin-bottom:25px;
+
 }
+
+
 
 .section p{
-    margin-bottom:20px;
-    text-align:justify;
+
+text-align:justify;
+
+margin-bottom:22px;
+
+font-size:1.05rem;
+
 }
+
+
+
+/* HIGHLIGHT */
+
 
 .highlight-box{
-    border-left:5px solid #000000;
-    padding:25px;
-    margin:30px 0;
-    border-radius:10px;
+
+margin:35px 0;
+
+padding:30px;
+
+
+background:
+rgba(212,175,55,.12);
+
+
+border-left:
+6px solid #D4AF37;
+
+
+border-radius:18px;
+
 }
+
+
+
+.highlight-box strong{
+
+color:#123A63;
+
+}
+
+
 
 ul{
-    padding-left:25px;
+
+padding-left:25px;
+
 }
+
 
 li{
-    margin-bottom:12px;
+
+margin-bottom:12px;
+
 }
+
+
+
+/* BOOK GRID */
+
 
 .books-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-    margin-top:30px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+
+gap:25px;
+
+margin-top:30px;
+
 }
+
+
 
 .book-card{
-    background:yellow;
-    border:1px solid rgba(212,175,55,0.3);
-    border-radius:12px;
-    padding:25px;
-    transition:0.3s;
+
+
+background:
+rgba(255,255,255,.75);
+
+
+border:
+1px solid rgba(212,175,55,.4);
+
+
+border-radius:20px;
+
+
+padding:25px;
+
+
+transition:.3s;
+
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
 }
+
+
 
 .book-card:hover{
-    transform:translateY(-5px);
-    border-color:yellow;
+
+transform:translateY(-6px);
+
 }
+
+
 
 .book-card h3{
-    color:yellow;
-    margin-bottom:10px;
+
+color:#D4AF37;
+
+margin-bottom:8px;
+
 }
+
+
 
 .book-card h4{
-    color:yellow;
-    margin-bottom:10px;
+
+color:#123A63;
+
+margin-bottom:10px;
+
 }
+
+
+
+.book-card p{
+
+font-size:.95rem;
+
+}
+
+
+
+/* QUOTE */
+
 
 .quote{
-    margin-top:60px;
-    padding:40px;
-    border-radius:15px;
-    text-align:center;
+
+margin-top:60px;
+
+padding:40px;
+
+
+background:
+rgba(212,175,55,.15);
+
+
+border-radius:25px;
+
+
+text-align:center;
+
 }
+
 
 .quote p{
-    font-size:1.3rem;
-    color:#000000;
-    font-style:italic;
+
+font-size:1.3rem;
+
+font-style:italic;
+
+color:#123A63;
+
 }
 
-.footer-note{
-    text-align:center;
-    margin-top:40px;
-    color:#000000;
+
+
+
+/* VIEWPOINT */
+
+
+.viewpoint-header{
+
+text-align:center;
+
+margin-bottom:45px;
+
 }
+
+
+
+.viewpoint-header span{
+
+color:#D4AF37;
+
+letter-spacing:4px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+
+
+.viewpoint-header h2{
+
+color:#123A63;
+
+font-size:2.3rem;
+
+margin-top:15px;
+
+}
+
+
+
+.viewpoint-content p{
+
+text-align:justify;
+
+margin-bottom:25px;
+
+}
+
+
+
+
+.viewpoint-highlight,
+.future-box{
+
+
+margin:40px 0;
+
+
+padding:30px;
+
+
+background:
+rgba(18,58,99,.08);
+
+
+border-left:
+6px solid #123A63;
+
+
+border-radius:18px;
+
+}
+
+
+
+.viewpoint-highlight h3,
+.future-box h3{
+
+color:#123A63;
+
+}
+
+
+
+.final-quote{
+
+margin-top:50px;
+
+text-align:center;
+
+padding:35px;
+
+background:
+rgba(212,175,55,.15);
+
+
+border-radius:20px;
+
+}
+
+
+
+.final-quote blockquote{
+
+font-size:1.4rem;
+
+font-style:italic;
+
+color:#123A63;
+
+}
+
+
+
+.footer-note{
+
+margin-top:60px;
+
+padding-top:25px;
+
+text-align:center;
+
+
+border-top:
+1px solid rgba(0,0,0,.2);
+
+color:#555;
+
+}
+
+
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:2rem;
+
+body{
+
+padding:10px;
+
 }
 
-.section h2{
-    font-size:1.6rem;
+
+.container{
+
+padding:30px 18px;
+
 }
+
+
+.section h2{
+
+font-size:1.5rem;
+
+}
+
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 
 <div class="container">
 
-    <div class="hero">
-        <h1>Economy, Entrepreneurship, Digital Economy and Community Growth</h1>
 
-        <p>
-            Membina Masa Depan Ekonomi Melalui Keusahawanan,
-            Transformasi Digital dan Pembangunan Komuniti yang Mampan.
-        </p>
-    </div>
+<div class="hero">
 
-    <div class="section">
 
-        <h2>Keusahawanan Sebagai Pemacu Ekonomi</h2>
+<h1>
+Economy, Entrepreneurship, Digital Economy and Community Growth
+</h1>
 
-        <p>
-            Usahawan merupakan nadi kepada pertumbuhan ekonomi moden.
-            Mereka mencipta peluang pekerjaan, menghasilkan inovasi
-            dan membina nilai ekonomi yang memberi manfaat kepada masyarakat.
-            Dalam era digital, keusahawanan tidak lagi terhad kepada
-            premis fizikal tetapi berkembang melalui platform digital,
-            e-dagang dan teknologi pintar.
-        </p>
 
-        <div class="highlight-box">
+<p>
+Membina Masa Depan Ekonomi Melalui Keusahawanan,
+Transformasi Digital dan Pembangunan Komuniti yang Mampan.
+</p>
 
-            <strong>Tiga Elemen Utama Kejayaan Usahawan:</strong>
 
-            <ul>
-                <li>Pemikiran kreatif dan inovatif.</li>
-                <li>Kemahiran pengurusan serta kewangan.</li>
-                <li>Keupayaan menyesuaikan diri dengan perubahan teknologi.</li>
-            </ul>
-
-        </div>
-
-    </div>
-    
-        <h2>Kebangkitan Ekonomi Digital</h2>
-
-        <p>
-            Ekonomi digital telah mengubah cara manusia bekerja,
-            berniaga dan berinteraksi. Teknologi seperti kecerdasan buatan (AI),
-            automasi, pembayaran digital, analitik data dan e-dagang
-            membuka peluang baharu kepada individu dan organisasi.
-        </p>
-
-        <ul>
-            <li>Mengurangkan kos operasi.</li>
-            <li>Meningkatkan produktiviti.</li>
-            <li>Memperluaskan pasaran global.</li>
-            <li>Membantu membuat keputusan berasaskan data.</li>
-            <li>Meningkatkan daya saing perniagaan.</li>
-        </ul>
-
-    </div>
-
-    <div class="section">
-
-        <h2>Pertumbuhan Komuniti Yang Mampan</h2>
-
-        <p>
-            Pertumbuhan ekonomi yang sebenar berlaku apabila manfaat
-            pembangunan dapat dirasai oleh seluruh masyarakat.
-            Pendidikan, latihan kemahiran, TVET, teknologi digital
-            dan pembangunan usahawan komuniti memainkan peranan penting
-            dalam meningkatkan taraf hidup rakyat.
-        </p>
-
-        <p>
-            Komuniti yang berilmu akan melahirkan tenaga kerja berkemahiran.
-            Tenaga kerja berkemahiran akan mewujudkan lebih banyak peluang
-            perniagaan dan seterusnya mengukuhkan ekonomi negara.
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>Cabaran dan Peluang Masa Hadapan</h2>
-
-        <p>
-            Dunia sedang berhadapan dengan perubahan teknologi yang pantas.
-            Cabaran seperti jurang digital, keselamatan siber dan ketidaktentuan
-            ekonomi global perlu ditangani secara bijak. Namun setiap cabaran
-            juga membawa peluang kepada mereka yang bersedia belajar,
-            berinovasi dan menyesuaikan diri.
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>Cadangan Buku Rujukan Keusahawanan dan Ekonomi</h2>
-
-        <div class="books-grid">
-
-            <div class="book-card">
-                <h3>Peter Drucker</h3>
-                <h4>Innovation and Entrepreneurship</h4>
-                <p>
-                    Buku klasik mengenai inovasi, pengurusan dan pembangunan
-                    keusahawanan moden.
-                </p>
-            </div>
-
-            <div class="book-card">
-                <h3>Muhammad Yunus</h3>
-                <h4>Banker to the Poor</h4>
-                <p>
-                    Kisah kejayaan pembiayaan mikro dalam membantu komuniti
-                    membina ekonomi mereka sendiri.
-                </p>
-            </div>
-
-            <div class="book-card">
-                <h3>Lee Kuan Yew</h3>
-                <h4>From Third World to First</h4>
-                <p>
-                    Transformasi ekonomi Singapura daripada negara membangun
-                    kepada ekonomi bertaraf dunia.
-                </p>
-            </div>
-
-            <div class="book-card">
-                <h3>Robert T. Kiyosaki</h3>
-                <h4>Rich Dad Poor Dad</h4>
-                <p>
-                    Memahami pengurusan kewangan, aset dan pemikiran usahawan.
-                </p>
-            </div>
-
-            <div class="book-card">
-                <h3>Tony Fernandes</h3>
-                <h4>Flying High</h4>
-                <p>
-                    Perjalanan membangunkan AirAsia menjadi jenama global.
-                </p>
-            </div>
-
-            <div class="book-card">
-                <h3>Tun Dr. Mahathir Mohamad</h3>
-                <h4>A Doctor in the House</h4>
-                <p>
-                    Pengalaman kepimpinan dan pembangunan ekonomi Malaysia.
-                </p>
-            </div>
-
-            <div class="book-card">
-                <h3>Azman Hashim</h3>
-                <h4>The Azman Hashim Story</h4>
-                <p>
-                    Inspirasi dunia korporat dan pembangunan sektor kewangan.
-                </p>
-            </div>
-
-            <div class="book-card">
-                <h3>Walter Isaacson</h3>
-                <h4>Steve Jobs</h4>
-                <p>
-                    Kisah inovasi dan kepimpinan dalam era teknologi digital.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="section">
-
-        <h2>Tokoh Media dan Penulisan Yang Menyumbang Kepada Pembangunan Negara</h2>
-
-        <ul>
-            <li><strong>Walter Isaacson</strong> - Penulis biografi tokoh teknologi dan inovasi.</li>
-
-            <li><strong>Thomas Friedman</strong> - Penulis mengenai globalisasi dan ekonomi digital.</li>
-
-            <li><strong>Tan Sri Johan Jaaffar</strong> - Tokoh media Malaysia yang banyak menghasilkan karya berkaitan kepimpinan dan masyarakat.</li>
-
-            <li><strong>Datuk A. Kadir Jasin</strong> - Wartawan dan penulis yang aktif membincangkan ekonomi dan pembangunan negara.</li>
-        </ul>
-
-    </div>
-
-    <div class="quote">
-
-        <p>
-            "Ekonomi yang kukuh bermula dengan usahawan yang berani,
-            teknologi yang dimanfaatkan dengan bijak,
-            dan komuniti yang berkembang bersama menuju kejayaan."
-        </p>
-
-    </div>
-<section class="section"><div class="viewpoint-header">
-    <span>NANIS COMMUNICATION VIEWPOINT</span>
-    <h2>Ekonomi Dunia Hari Ini: Di Antara Kemajuan, Cabaran dan Harapan Masa Depan</h2>
 </div>
+
+
+
+<div class="section">
+
+<h2>Keusahawanan Sebagai Pemacu Ekonomi</h2>
+
+
+<p>
+Usahawan merupakan nadi kepada pertumbuhan ekonomi moden.
+Mereka mencipta peluang pekerjaan, menghasilkan inovasi dan membina
+nilai ekonomi yang memberi manfaat kepada masyarakat.
+Dalam era digital, keusahawanan tidak lagi terhad kepada premis fizikal
+tetapi berkembang melalui platform digital, e-dagang dan teknologi pintar.
+</p>
+
+
+<div class="highlight-box">
+
+
+<strong>
+Tiga Elemen Utama Kejayaan Usahawan:
+</strong>
+
+
+<ul>
+
+<li>Pemikiran kreatif dan inovatif.</li>
+
+<li>Kemahiran pengurusan serta kewangan.</li>
+
+<li>Keupayaan menyesuaikan diri dengan perubahan teknologi.</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+<div class="section">
+
+
+<h2>Kebangkitan Ekonomi Digital</h2>
+
+
+<p>
+Ekonomi digital telah mengubah cara manusia bekerja, berniaga dan
+berinteraksi. Teknologi seperti kecerdasan buatan (AI), automasi,
+pembayaran digital, analitik data dan e-dagang membuka peluang baharu
+kepada individu dan organisasi.
+</p>
+
+
+<ul>
+
+<li>Mengurangkan kos operasi.</li>
+
+<li>Meningkatkan produktiviti.</li>
+
+<li>Memperluaskan pasaran global.</li>
+
+<li>Membantu membuat keputusan berasaskan data.</li>
+
+<li>Meningkatkan daya saing perniagaan.</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>Pertumbuhan Komuniti Yang Mampan</h2>
+
+
+<p>
+Pertumbuhan ekonomi yang sebenar berlaku apabila manfaat pembangunan
+dapat dirasai oleh seluruh masyarakat. Pendidikan, latihan kemahiran,
+TVET, teknologi digital dan pembangunan usahawan komuniti memainkan
+peranan penting dalam meningkatkan taraf hidup rakyat.
+</p>
+
+
+<p>
+Komuniti yang berilmu akan melahirkan tenaga kerja berkemahiran.
+Tenaga kerja berkemahiran akan mewujudkan lebih banyak peluang
+perniagaan dan seterusnya mengukuhkan ekonomi negara.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>Cabaran dan Peluang Masa Hadapan</h2>
+
+
+<p>
+Dunia sedang berhadapan dengan perubahan teknologi yang pantas.
+Cabaran seperti jurang digital, keselamatan siber dan ketidaktentuan
+ekonomi global perlu ditangani secara bijak.
+</p>
+
+
+<p>
+Namun setiap cabaran juga membawa peluang kepada mereka yang bersedia
+belajar, berinovasi dan menyesuaikan diri dengan perubahan zaman.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+
+<h2>Cadangan Buku Rujukan Keusahawanan dan Ekonomi</h2>
+
+
+
+<div class="books-grid">
+
+
+
+<div class="book-card">
+
+<h3>Peter Drucker</h3>
+
+<h4>Innovation and Entrepreneurship</h4>
+
+<p>
+Buku klasik mengenai inovasi, pengurusan dan pembangunan
+keusahawanan moden.
+</p>
+
+</div>
+
+
+
+
+<div class="book-card">
+
+<h3>Muhammad Yunus</h3>
+
+<h4>Banker to the Poor</h4>
+
+<p>
+Kisah kejayaan pembiayaan mikro dalam membantu komuniti
+membina ekonomi mereka sendiri.
+</p>
+
+</div>
+
+
+
+
+<div class="book-card">
+
+<h3>Lee Kuan Yew</h3>
+
+<h4>From Third World to First</h4>
+
+<p>
+Transformasi ekonomi Singapura daripada negara membangun
+kepada ekonomi bertaraf dunia.
+</p>
+
+</div>
+
+
+
+
+<div class="book-card">
+
+<h3>Robert T. Kiyosaki</h3>
+
+<h4>Rich Dad Poor Dad</h4>
+
+<p>
+Memahami pengurusan kewangan, aset dan pemikiran usahawan.
+</p>
+
+</div>
+
+
+
+
+<div class="book-card">
+
+<h3>Tony Fernandes</h3>
+
+<h4>Flying High</h4>
+
+<p>
+Perjalanan membangunkan AirAsia menjadi jenama global.
+</p>
+
+</div>
+
+
+
+
+<div class="book-card">
+
+<h3>Tun Dr. Mahathir Mohamad</h3>
+
+<h4>A Doctor in the House</h4>
+
+<p>
+Pengalaman kepimpinan dan pembangunan ekonomi Malaysia.
+</p>
+
+</div>
+
+
+
+
+<div class="book-card">
+
+<h3>Azman Hashim</h3>
+
+<h4>The Azman Hashim Story</h4>
+
+<p>
+Inspirasi dunia korporat dan pembangunan sektor kewangan.
+</p>
+
+</div>
+
+
+
+
+<div class="book-card">
+
+<h3>Walter Isaacson</h3>
+
+<h4>Steve Jobs</h4>
+
+<p>
+Kisah inovasi dan kepimpinan dalam era teknologi digital.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="section">
+
+
+<h2>
+Tokoh Media dan Penulisan Yang Menyumbang Kepada Pembangunan Negara
+</h2>
+
+
+<ul>
+
+<li>
+<strong>Walter Isaacson</strong> -
+Penulis biografi tokoh teknologi dan inovasi.
+</li>
+
+
+<li>
+<strong>Thomas Friedman</strong> -
+Penulis mengenai globalisasi dan ekonomi digital.
+</li>
+
+
+<li>
+<strong>Tan Sri Johan Jaaffar</strong> -
+Tokoh media Malaysia yang banyak menghasilkan karya berkaitan kepimpinan dan masyarakat.
+</li>
+
+
+<li>
+<strong>Datuk A. Kadir Jasin</strong> -
+Wartawan dan penulis yang aktif membincangkan ekonomi dan pembangunan negara.
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="quote">
+
+
+<p>
+
+"Ekonomi yang kukuh bermula dengan usahawan yang berani,
+teknologi yang dimanfaatkan dengan bijak,
+dan komuniti yang berkembang bersama menuju kejayaan."
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<section class="section">
+
+
+
+<div class="viewpoint-header">
+
+
+<span>
+NANIS COMMUNICATION VIEWPOINT
+</span>
+
+
+
+<h2>
+Ekonomi Dunia Hari Ini: Di Antara Kemajuan, Cabaran dan Harapan Masa Depan
+</h2>
+
+
+
+</div>
+
+
+
+
 
 <div class="viewpoint-content">
 
-    <p>
-        Sepanjang sejarah peradaban manusia, ekonomi sentiasa menjadi asas kepada pembangunan sesebuah masyarakat. Daripada pertanian tradisional sehingga kepada era kecerdasan buatan (AI), setiap zaman membawa perubahan yang membentuk cara manusia bekerja, berniaga dan membina kehidupan yang lebih baik.
-    </p>
 
-    <p>
-        Hari ini, dunia berada dalam fasa transformasi ekonomi yang paling pantas pernah disaksikan. Teknologi digital telah mengubah hampir setiap aspek kehidupan. Perniagaan boleh dijalankan merentasi sempadan, maklumat boleh diperoleh dalam beberapa saat, dan peluang ekonomi baharu muncul setiap hari melalui inovasi teknologi.
-    </p>
 
-    <p>
-        Namun di sebalik kemajuan tersebut, dunia masih berhadapan dengan pelbagai cabaran yang memerlukan perhatian bersama. Jurang kekayaan antara golongan kaya dan miskin masih wujud. Banyak komuniti di negara membangun masih berdepan kesukaran mendapatkan akses kepada pendidikan berkualiti, teknologi moden dan peluang ekonomi yang adil.
-    </p>
+<p>
+Sepanjang sejarah peradaban manusia, ekonomi sentiasa menjadi asas kepada pembangunan sesebuah masyarakat.
+Daripada pertanian tradisional sehingga kepada era kecerdasan buatan (AI), setiap zaman membawa perubahan
+yang membentuk cara manusia bekerja, berniaga dan membina kehidupan yang lebih baik.
+</p>
 
-    <p>
-        Ketidaktentuan pasaran global, perubahan iklim, konflik geopolitik dan perkembangan teknologi yang terlalu pantas turut memberi tekanan kepada sistem ekonomi sedia ada. Dalam keadaan ini, pembangunan ekonomi tidak boleh hanya bergantung kepada pertumbuhan angka semata-mata, tetapi perlu mengambil kira kesejahteraan masyarakat secara menyeluruh.
-    </p>
 
-    <div class="viewpoint-highlight">
 
-        <h3>Pandangan NANIS COMMUNICATION</h3>
+<p>
+Hari ini, dunia berada dalam fasa transformasi ekonomi yang paling pantas pernah disaksikan.
+Teknologi digital telah mengubah hampir setiap aspek kehidupan. Perniagaan boleh dijalankan merentasi
+sempadan, maklumat boleh diperoleh dalam beberapa saat, dan peluang ekonomi baharu muncul setiap hari
+melalui inovasi teknologi.
+</p>
 
-        <p>
-            Cabaran terbesar ekonomi dunia hari ini bukanlah kekurangan sumber atau teknologi. Cabaran sebenar adalah bagaimana memastikan manfaat pembangunan dapat dikongsi secara lebih seimbang dan inklusif oleh seluruh masyarakat.
-        </p>
 
-        <p>
-            Pertumbuhan ekonomi yang baik bukan hanya diukur melalui peningkatan nilai pasaran saham, keuntungan korporat atau pertumbuhan KDNK semata-mata. Kejayaan sebenar sesebuah ekonomi perlu dinilai berdasarkan kemampuan rakyat memperoleh pendidikan yang baik, pekerjaan yang berkualiti, peluang keusahawanan yang adil dan kehidupan yang lebih sejahtera.
-        </p>
 
-    </div>
 
-    <p>
-        Dalam era digital, usahawan, perusahaan kecil dan sederhana (PKS), pencipta kandungan, penggiat teknologi dan komuniti setempat mempunyai peranan yang semakin penting dalam menggerakkan ekonomi. Teknologi telah membuka peluang yang sebelum ini hanya dinikmati oleh organisasi besar.
-    </p>
+<p>
+Namun di sebalik kemajuan tersebut, dunia masih berhadapan dengan pelbagai cabaran yang memerlukan
+perhatian bersama. Jurang kekayaan, akses pendidikan, teknologi dan peluang ekonomi masih menjadi isu
+yang perlu diselesaikan.
+</p>
 
-    <p>
-        Hari ini, seorang individu dengan idea yang baik dan akses kepada internet mampu membina perniagaan yang memberi impak kepada ribuan atau jutaan pengguna di seluruh dunia. Oleh itu, pelaburan dalam pendidikan, TVET, pembangunan kemahiran digital dan pembelajaran sepanjang hayat perlu menjadi agenda utama semua negara.
-    </p>
 
-    <div class="future-box">
 
-        <h3>Harapan Untuk Masa Hadapan</h3>
 
-        <p>
-            Saya percaya bahawa masa depan ekonomi dunia perlu bergerak ke arah sistem yang lebih seimbang, mampan dan berorientasikan manusia.
-        </p>
+<div class="viewpoint-highlight">
 
-        <ul>
-            <li>Teknologi digunakan untuk memperkasakan manusia.</li>
-            <li>Pendidikan berkualiti dapat diakses oleh semua lapisan masyarakat.</li>
-            <li>Keusahawanan terus digalakkan sebagai pemacu pertumbuhan ekonomi.</li>
-            <li>Pembangunan komuniti menjadi sebahagian daripada strategi ekonomi negara.</li>
-            <li>Inovasi berkembang seiring dengan tanggungjawab sosial dan kelestarian alam sekitar.</li>
-        </ul>
 
-        <p>
-            Ekonomi yang kukuh bukan sekadar menghasilkan kekayaan, tetapi mampu mencipta peluang yang boleh dinikmati oleh semua lapisan masyarakat.
-        </p>
+<h3>
+Pandangan NANIS COMMUNICATION
+</h3>
 
-    </div>
 
-    <p>
-        Apabila pendidikan diperkasakan, keusahawanan digalakkan, teknologi dimanfaatkan secara bertanggungjawab dan komuniti dibangunkan secara mampan, maka lahirlah sebuah ekosistem ekonomi yang lebih adil dan berdaya tahan.
-    </p>
+<p>
+Cabaran terbesar ekonomi dunia hari ini bukanlah kekurangan sumber atau teknologi.
+Cabaran sebenar adalah bagaimana memastikan manfaat pembangunan dapat dikongsi secara lebih seimbang
+dan inklusif oleh seluruh masyarakat.
+</p>
 
-    <p>
-        Masa depan yang lebih baik bukanlah sesuatu yang mustahil. Ia bermula dengan ilmu, kerjasama, inovasi dan kesediaan untuk berubah mengikut keperluan zaman.
-    </p>
 
-    <div class="final-quote">
 
-        <blockquote>
-            "Ekonomi yang terbaik bukanlah ekonomi yang menjadikan segelintir manusia lebih kaya, tetapi ekonomi yang memberi peluang kepada lebih ramai manusia untuk berjaya."
-        </blockquote>
+<p>
+Pertumbuhan ekonomi yang baik bukan hanya diukur melalui keuntungan, tetapi juga kemampuan rakyat
+mendapat pendidikan, pekerjaan berkualiti, peluang keusahawanan dan kehidupan yang lebih sejahtera.
+</p>
 
-        <span>— NANIS COMMUNICATION</span>
-
-    </div>
 
 </div>
 
-</section><style>
 
-.viewpoint-header{
-    text-align:center;
-    margin-bottom:50px;
-}
 
-.viewpoint-header span{
-    color:#000000;
-    letter-spacing:4px;
-    font-size:12px;
-    font-weight:700;
-    text-transform:uppercase;
-}
 
-.viewpoint-header h2{
-    margin-top:15px;
-    font-size:2.5rem;
-    color:#000;
-}
 
-.viewpoint-content{
-    max-width:1000px;
-    margin:auto;
-}
+<p>
+Dalam era digital, usahawan, perusahaan kecil dan sederhana (PKS), pencipta kandungan,
+penggiat teknologi dan komuniti setempat mempunyai peranan yang semakin penting dalam menggerakkan ekonomi.
+</p>
 
-.viewpoint-content p{
-    margin-bottom:25px;
-    line-height:1.9;
-    color:#0000;
-    text-align:justify;
-}
 
-.viewpoint-highlight,
-.future-box{
-    border:1px solid rgba(212,175,55,0.25);
-    border-left:5px solid #000000;
-    padding:30px;
-    margin:40px 0;
-    border-radius:12px;
-}
 
-.viewpoint-highlight h3,
-.future-box h3{
-    color:#000;
-    margin-bottom:15px;
-}
+<p>
+Pelaburan dalam pendidikan, TVET, pembangunan kemahiran digital dan pembelajaran sepanjang hayat perlu
+menjadi agenda utama semua negara.
+</p>
 
-.future-box ul{
-    margin-top:15px;
-    padding-left:20px;
-}
 
-.future-box li{
-    margin-bottom:10px;
-    color:#000;
-}
 
-.final-quote{
-    margin-top:60px;
-    text-align:center;
-    padding:40px;
-    background:linear-gradient;
-    border:1px solid;
-    border-radius:15px;
-}
 
-.final-quote blockquote{
-    font-size:1.5rem;
-    color:#000;
-    font-style:italic;
-    line-height:1.8;
-    margin-bottom:20px;
-}
 
-.final-quote span{
-    color:#000;
-    font-weight:600;
-    letter-spacing:2px;
-}
+<div class="future-box">
 
-@media(max-width:768px){
 
-.viewpoint-header h2{
-    font-size:1.8rem;
-}
+<h3>
+Harapan Untuk Masa Hadapan
+</h3>
 
-.final-quote blockquote{
-    font-size:1.2rem;
-}
 
-}
+<ul>
 
-</style>
+<li>Teknologi digunakan untuk memperkasakan manusia.</li>
 
-    <div class="footer-note">
-        © NANIS COMMUNICATION | Economy, Entrepreneurship, Digital Economy and Community Growth
-    </div>
+<li>Pendidikan berkualiti dapat diakses oleh semua lapisan masyarakat.</li>
+
+<li>Keusahawanan terus digalakkan sebagai pemacu pertumbuhan ekonomi.</li>
+
+<li>Pembangunan komuniti menjadi sebahagian daripada strategi ekonomi negara.</li>
+
+<li>Inovasi berkembang seiring tanggungjawab sosial dan kelestarian alam sekitar.</li>
+
+</ul>
+
+
+
+<p>
+Ekonomi yang kukuh bukan sekadar menghasilkan kekayaan,
+tetapi mampu mencipta peluang yang boleh dinikmati oleh semua lapisan masyarakat.
+</p>
+
 
 </div>
+
+
+
+
+
+<p>
+Apabila pendidikan diperkasakan, keusahawanan digalakkan, teknologi dimanfaatkan secara bertanggungjawab
+dan komuniti dibangunkan secara mampan, maka lahirlah sebuah ekosistem ekonomi yang lebih adil dan berdaya tahan.
+</p>
+
+
+
+
+<div class="final-quote">
+
+
+<blockquote>
+
+"Ekonomi yang terbaik bukanlah ekonomi yang menjadikan segelintir manusia lebih kaya,
+tetapi ekonomi yang memberi peluang kepada lebih ramai manusia untuk berjaya."
+
+</blockquote>
+
+
+<span>
+— NANIS COMMUNICATION
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<div class="footer-note">
+
+
+© NANIS COMMUNICATION | Economy, Entrepreneurship, Digital Economy and Community Growth
+
+
+</div>
+
+
+
+</div>
+
 
 </body>
+
 </html>
