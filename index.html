@@ -950,6 +950,176 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 
     </script>
     
+<!-- VISITOR COUNTER -->
+
+  <div class="visitor-box">
+
+  <div class="visitor-title">
+    TOTAL VISITORS
+  </div>
+
+  <div id="visitor-count">
+    890780
+  </div>
+
+  <div class="online-box">
+    <span class="online-dot"></span>
+
+    <span id="online-users">
+      3340
+    </span>
+
+    USERS ONLINE
+  </div>
+
+</div>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+section{
+  position:relative;
+  z-index:2;
+}
+
+video{
+  width:100%;
+  display:block;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.visitor-box{
+
+  width:320px;
+  max-width:90%;
+
+  margin:60px auto;
+
+  padding:30px;
+
+  text-align:center;
+
+  background:rgba(0,0,0,0.55);
+
+  border:1px solid rgba(255,215,0,0.2);
+
+  border-radius:35px;
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:
+    0 0 30px rgba(255,215,0,0.10),
+    0 0 80px rgba(255,215,0,0.05);
+
+}
+
+.visitor-title{
+
+  color:#d4af37;
+
+  letter-spacing:3px;
+
+  font-size:12px;
+
+  margin-bottom:14px;
+
+  text-transform:uppercase;
+
+}
+
+#visitor-count{
+
+  font-size:50px;
+
+  font-weight:800;
+
+  background:linear-gradient(
+    to bottom,
+    #fff8d6,
+    #f7d774,
+    #d4af37,
+    #8f6b10
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 0 20px rgba(255,215,0,0.25);
+
+}
+
+.online-box{
+
+  margin-top:18px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:10px;
+
+  color:#eee;
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+}
+
+.online-dot{
+
+  width:10px;
+
+  height:10px;
+
+  border-radius:50%;
+
+  background:#00ff88;
+
+  box-shadow:0 0 15px #00ff88;
+
+  animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  50%{
+    transform:scale(1.5);
+    opacity:.5;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+</style>    
+    
 <!-- NANIS KNOWLEDGE BOARD -->
 
 <section id="knowledge-board" class="px-6 md:px-16 py-20">
@@ -2099,14 +2269,14 @@ if(menuBtn && mobileMenu){
   </div>
 
   <div id="visitor-count">
-    521810
+    890780
   </div>
 
   <div class="online-box">
     <span class="online-dot"></span>
 
     <span id="online-users">
-      1340
+      3340
     </span>
 
     USERS ONLINE
