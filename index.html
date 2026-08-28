@@ -1176,6 +1176,133 @@ img{
   }
 }
 </style>   
+<!-- MEDIA NEWS CARDS -->
+<div class="media-grid">
+
+  <!-- ARTICLE 1 -->
+  <article class="media-card">
+    <img src="nadi-community.jpg" alt="Program NADI">
+
+    <div class="media-card-content">
+      <span class="media-date">27 OGOS 2026 · PETALING JAYA</span>
+
+      <h3>
+        NADI: Memacu Transformasi Digital Industri Wellness,
+        Fitness & Sports Selangor
+      </h3>
+
+      <p>
+        NADI menyasarkan 1,000 perniagaan dalam sektor kesihatan,
+        kecergasan dan sukan di Selangor untuk melalui proses
+        pendigitalan menjelang 2027.
+      </p>
+
+      <a href="#artikel-nadi">Baca Artikel →</a>
+    </div>
+  </article>
+
+
+  <!-- ARTICLE 2 -->
+  <article class="media-card">
+    <img src="rms-panel.jpg" alt="Raja Muda Selangor di Program NADI">
+
+    <div class="media-card-content">
+      <span class="media-date">27 OGOS 2026 · PETALING JAYA</span>
+
+      <h3>
+        Daripada Akar Umbi ke Masa Depan:
+        Membina Generasi Muda Melalui Sukan, Pendidikan & Teknologi
+      </h3>
+
+      <p>
+        Pesanan Raja Muda Selangor menekankan kepentingan pembangunan
+        sukan akar umbi, pertandingan komuniti dan pembentukan generasi
+        muda yang aktif serta berdaya saing.
+      </p>
+
+      <a href="#artikel-rms">Baca Artikel →</a>
+    </div>
+  </article>
+
+</div>
+
+
+<style>
+.media-grid {
+  max-width: 1100px;
+  margin: 45px auto 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.media-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+.media-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.media-card-content {
+  padding: 28px;
+}
+
+.media-date {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0b55c7;
+}
+
+.media-card h3 {
+  margin: 12px 0;
+  color: #102a56;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.media-card p {
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.media-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0b55c7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.media-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-card h3 {
+    font-size: 21px;
+  }
+}
+</style>
     
 <!-- NANIS KNOWLEDGE BOARD -->
 
