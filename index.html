@@ -1556,7 +1556,88 @@ img{
        class="flex justify-center gap-2 mt-2">
   </div>
 
-</div>    
+</div>   
+    <script>
+
+const albumImages = [
+  "gambar-01.jpg"
+];
+
+let currentImage = 0;
+
+const albumImage =
+  document.getElementById("albumImage");
+
+const albumCounter =
+  document.getElementById("albumCounter");
+
+const albumDots =
+  document.getElementById("albumDots");
+
+
+function showImage(index) {
+
+  currentImage = index;
+
+  albumImage.src =
+    albumImages[currentImage];
+
+  albumCounter.textContent =
+    `${currentImage + 1} / ${albumImages.length}`;
+
+  albumDots.innerHTML = "";
+
+  albumImages.forEach((image, i) => {
+
+    const dot =
+      document.createElement("button");
+
+    dot.className =
+      "w-2.5 h-2.5 rounded-full " +
+      (i === currentImage
+        ? "bg-yellow-400"
+        : "bg-gray-500");
+
+    dot.onclick = () =>
+      showImage(i);
+
+    albumDots.appendChild(dot);
+
+  });
+
+}
+
+
+function nextImage() {
+
+  currentImage++;
+
+  if (currentImage >= albumImages.length) {
+    currentImage = 0;
+  }
+
+  showImage(currentImage);
+
+}
+
+
+function prevImage() {
+
+  currentImage--;
+
+  if (currentImage < 0) {
+    currentImage = albumImages.length - 1;
+  }
+
+  showImage(currentImage);
+
+}
+
+
+showImage(0);
+
+    </script>
+  
     
     <!-- ORNAMENT -->
     <div class="text-yellow-400 text-center md:text-4xl mb-5 tracking-[0.2em]">
