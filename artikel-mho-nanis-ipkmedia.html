@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Datuk Hishamuddin Hashim & Perjuangan MHO | NANIS.COM / IPK MEDIA</title>
+
+  <meta name="description"
+    content="Artikel khas NANIS.COM / IPK MEDIA mengenai Datuk Hishamuddin Hashim bersama barisan aktivis dan pengurus kes MHO dalam perjuangan kemanusiaan.">
+
+  <style>
+
+    /* =====================================================
+       NANIS.COM / IPK MEDIA
+       MHO SPECIAL FEATURE
+       BLUE + BLACK + GOLD / GLOBAL THEME
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #05080d;
+      color: #f4f7fb;
+      line-height: 1.8;
+    }
+
+    /* ===============================
+       MAIN WRAPPER
+    =============================== */
+
+    .nc-mho-page {
+      width: 100%;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 0%,
+          rgba(64, 185, 255, 0.16),
+          transparent 38%),
+        #05080d;
+    }
+
+    .nc-mho-container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* ===============================
+       HERO
+    =============================== */
+
+    .nc-mho-hero {
+      position: relative;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          rgba(2, 8, 15, 0.74),
+          rgba(2, 8, 15, 0.96)
+        ),
+        radial-gradient(
+          circle at center,
+          rgba(69, 196, 255, 0.20),
+          transparent 55%
+        );
+    }
+
+    /* DIGITAL GLOBE */
+
+    .nc-mho-globe {
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+
+      background:
+        repeating-linear-gradient(
+          90deg,
+          transparent 0px,
+          transparent 38px,
+          rgba(86, 205, 255, 0.16) 39px,
+          transparent 40px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          transparent 0px,
+          transparent 38px,
+          rgba(86, 205, 255, 0.12) 39px,
+          transparent 40px
+        );
+
+      border: 1px solid rgba(93, 208, 255, 0.35);
+
+      box-shadow:
+        0 0 70px rgba(49, 183, 255, 0.18),
+        inset 0 0 80px rgba(49, 183, 255, 0.10);
+
+      opacity: 0.75;
+    }
+
+    .nc-mho-globe::before {
+      content: "";
+      position: absolute;
+      inset: 7%;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 203, 72, 0.28);
+      transform: rotate(25deg);
+    }
+
+    .nc-mho-globe::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      width: 110%;
+      height: 1px;
+      background: rgba(255, 207, 78, 0.45);
+      box-shadow:
+        0 -110px 0 rgba(88, 205, 255, 0.14),
+        0 110px 0 rgba(88, 205, 255, 0.14);
+    }
+
+    .nc-mho-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 950px;
+      padding: 60px 20px;
+    }
+
+    .nc-mho-label {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid #d8ae45;
+      border-radius: 30px;
+      color: #f2cb62;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .nc-mho-hero h1 {
+      font-size: clamp(34px, 6vw, 68px);
+      line-height: 1.08;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff 20%,
+          #8bdcff 55%,
+          #d8ae45 90%
+        );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nc-mho-hero-subtitle {
+      max-width: 760px;
+      margin: auto;
+      color: #dce8f2;
+      font-size: 18px;
+    }
+
+    /* ===============================
+       GOLD LINE
+    =============================== */
+
+    .nc-mho-gold-line {
+      width: 100px;
+      height: 3px;
+      background: #d8ae45;
+      margin: 28px auto;
+    }
+
+    /* ===============================
+       ARTICLE
+    =============================== */
+
+    .nc-mho-article {
+      padding: 70px 0;
+    }
+
+    .nc-mho-article-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .nc-mho-article-header h2 {
+      font-size: clamp(26px, 4vw, 42px);
+      color: #8edfff;
+      line-height: 1.25;
+      margin-bottom: 15px;
+    }
+
+    .nc-mho-byline {
+      color: #d8ae45;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nc-mho-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .nc-mho-content p {
+      color: #d9e2e9;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .nc-mho-content strong {
+      color: #ffffff;
+    }
+
+    .nc-mho-heading {
+      color: #8edfff;
+      font-size: 28px;
+      line-height: 1.3;
+      margin: 55px 0 20px;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .nc-mho-heading::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 4px;
+      height: 80%;
+      background: #d8ae45;
+    }
+
+    /* ===============================
+       IMAGE
+    =============================== */
+
+    .nc-mho-image-box {
+      margin: 45px 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #0b1119;
+      border: 1px solid rgba(216, 174, 69, 0.35);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .nc-mho-image-box img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .nc-mho-caption {
+      padding: 12px 18px;
+      color: #a9bac7;
+      font-size: 13px;
+      text-align: center;
+      background: #080d13;
+    }
+
+    /* ===============================
+       QUOTE
+    =============================== */
+
+    .nc-mho-quote {
+      position: relative;
+      margin: 55px 0;
+      padding: 38px 35px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(44, 173, 232, 0.13),
+          rgba(216, 174, 69, 0.07)
+        );
+
+      border-left: 5px solid #d8ae45;
+      border-radius: 0 18px 18px 0;
+    }
+
+    .nc-mho-quote p {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .nc-mho-quote span {
+      color: #8edfff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* ===============================
+       THREE IMAGE GRID
+    =============================== */
+
+    .nc-mho-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 50px 0;
+    }
+
+    .nc-mho-gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 1px solid rgba(216, 174, 69, 0.35);
+      transition: 0.3s ease;
+    }
+
+    .nc-mho-gallery img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(47, 183, 255, 0.20);
+    }
+
+    /* ===============================
+       CONTACT BOX
+    =============================== */
+
+    .nc-mho-contact {
+      margin-top: 70px;
+      padding: 50px 25px;
+      text-align: center;
+      border-radius: 22px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(62, 190, 255, 0.15),
+          transparent 60%
+        ),
+        #080d14;
+
+      border: 1px solid rgba(216, 174, 69, 0.45);
+    }
+
+    .nc-mho-contact small {
+      color: #8edfff;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .nc-mho-contact h3 {
+      font-size: 31px;
+      color: #ffffff;
+      margin: 15px 0;
+    }
+
+    .nc-mho-phone {
+      display: inline-block;
+      color: #f1c95d;
+      font-size: 30px;
+      font-weight: 900;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+
+    .nc-mho-contact p {
+      color: #c6d2db;
+      margin-top: 8px;
+    }
+
+    /* ===============================
+       BRAND FOOTER
+    =============================== */
+
+    .nc-mho-brand {
+      padding: 70px 20px 80px;
+      text-align: center;
+      border-top: 1px solid rgba(216, 174, 69, 0.25);
+      background: #030508;
+    }
+
+    .nc-mho-brand-name {
+      font-size: 32px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 3px;
+    }
+
+    .nc-mho-brand-name span {
+      color: #d8ae45;
+    }
+
+    .nc-mho-tagline {
+      margin-top: 10px;
+      color: #8edfff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nc-mho-footer-text {
+      margin-top: 22px;
+      color: #788995;
+      font-size: 13px;
+    }
+
+    /* ===============================
+       MOBILE
+    =============================== */
+
+    @media (max-width: 700px) {
+
+      .nc-mho-hero {
+        min-height: 570px;
+      }
+
+      .nc-mho-globe {
+        width: 420px;
+        height: 420px;
+      }
+
+      .nc-mho-hero-subtitle {
+        font-size: 15px;
+      }
+
+      .nc-mho-content p {
+        font-size: 16px;
+      }
+
+      .nc-mho-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .nc-mho-gallery img {
+        height: auto;
+      }
+
+      .nc-mho-quote p {
+        font-size: 20px;
+      }
+
+      .nc-mho-phone {
+        font-size: 25px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<div class="nc-mho-page">
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="nc-mho-hero">
+
+    <div class="nc-mho-globe"></div>
+
+    <div class="nc-mho-hero-content">
+
+      <div class="nc-mho-label">
+        NANIS.COM / IPK MEDIA
+      </div>
+
+      <h1>
+        Bukan Sekadar Bersuara
+      </h1>
+
+      <div class="nc-mho-gold-line"></div>
+
+      <p class="nc-mho-hero-subtitle">
+        Datuk Hishamuddin Hashim dan barisan aktivis serta
+        pengurus kes MHO yang memilih untuk terus berdiri
+        bersama suara kemanusiaan.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ARTICLE
+  ====================================================== -->
+
+  <main class="nc-mho-article">
+
+    <div class="nc-mho-container">
+
+      <header class="nc-mho-article-header">
+
+        <h2>
+          DATUK HISHAMUDDIN HASHIM DAN BARISAN PERJUANG MHO
+          YANG MEMILIH UNTUK TIDAK BERDIAM DIRI
+        </h2>
+
+        <div class="nc-mho-gold-line"></div>
+
+        <div class="nc-mho-byline">
+          ARTIKEL KHAS NANIS.COM / IPK MEDIA
+        </div>
+
+      </header>
+
+
+      <div class="nc-mho-content">
+
+
+        <!-- INTRO -->
+
+        <p>
+          Dalam dunia yang semakin pantas menilai sesuatu melalui
+          tajuk berita, rakaman video dan paparan media sosial,
+          ada satu perkara yang sering terlupakan:
+        </p>
+
+        <p>
+          <strong>
+            Di sebalik setiap isu kemanusiaan, ada manusia.
+          </strong>
+        </p>
+
+        <p>
+          Ada keluarga yang sedang menunggu jawapan.
+          Ada individu yang mencari pembelaan.
+          Ada mereka yang tidak tahu kepada siapa harus mengadu.
+          Dan ada suara yang mungkin terlalu kecil untuk didengari
+          jika tiada siapa yang sanggup berdiri bersama mereka.
+        </p>
+
+        <p>
+          Di sinilah perjuangan Malaysia International Humanitarian
+          Organisation (MHO) mengambil tempat.
+        </p>
+
+        <p>
+          Kerja kemanusiaan bukan sekadar tampil ketika sesuatu isu
+          menjadi perhatian. Ia menuntut keberanian untuk mendengar,
+          ketekunan untuk meneliti, kesungguhan mengurus sesuatu kes
+          dan keberanian membawa isu yang wajar diberi perhatian
+          kepada masyarakat.
+        </p>
+
+
+        <!-- IMAGE 1 -->
+
+        <div class="nc-mho-image-box">
+
+          <img
+            src="https://raw.githubusercontent.com/naniscomm-hub/naniscommunication/refs/heads/main/mho-hishamuddin-01.jpg"
+            alt="Datuk Hishamuddin Hashim bersama wakil MHO">
+
+          <div class="nc-mho-caption">
+            Datuk Hishamuddin Hashim bersama barisan MHO dalam
+            usaha membawa suara kemanusiaan kepada masyarakat.
+          </div>
+
+        </div>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          BERDIRI DI HADAPAN, BERSAMA MEREKA DI BELAKANG TABIR
+        </h3>
+
+        <p>
+          Apabila seseorang berada di hadapan sesebuah organisasi,
+          masyarakat lazimnya hanya melihat wajah yang memberikan
+          kenyataan.
+        </p>
+
+        <p>
+          Namun di sebalik setiap kenyataan terdapat sebuah pasukan.
+          Ada aktivis. Ada pengurus kes. Ada sukarelawan. Ada mereka
+          yang menerima aduan, meneliti maklumat, menghubungi pihak
+          berkaitan dan memastikan sesuatu kes terus diberi perhatian.
+        </p>
+
+        <p>
+          Apa yang dilihat di hadapan kamera hanyalah sebahagian
+          daripada cerita.
+        </p>
+
+        <p>
+          <strong>
+            Selebihnya berlaku selepas kamera ditutup.
+          </strong>
+        </p>
+
+
+        <!-- QUOTE -->
+
+        <div class="nc-mho-quote">
+
+          <p>
+            “Di sebalik setiap kes, ada manusia.
+            Di sebalik setiap suara, ada harapan.”
+          </p>
+
+          <span>
+            NANIS.COM / IPK MEDIA
+          </span>
+
+        </div>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          APABILA SEBUAH PANGGILAN MENJADI TITIK PERMULAAN
+        </h3>
+
+        <p>
+          Dalam salah satu sidang media MHO, terpampang nombor
+          hotline MHO:
+        </p>
+
+        <p style="text-align:center;">
+          <strong style="font-size:28px;color:#f1c95d;">
+            019 538 0000
+          </strong>
+          <br>
+          <span style="color:#8edfff;">
+            HOTLINE MHO
+          </span>
+        </p>
+
+        <p>
+          Bagi sesetengah orang, ia mungkin sekadar nombor telefon.
+          Tetapi bagi seseorang yang sedang berdepan masalah dan
+          tidak tahu ke mana harus mendapatkan bantuan, panggilan
+          tersebut mungkin menjadi titik permulaan untuk mendapatkan
+          perhatian.
+        </p>
+
+        <p>
+          Di sebalik sebuah panggilan mungkin ada cerita yang panjang.
+          Ada persoalan yang belum terjawab. Ada keluarga yang sedang
+          menunggu.
+        </p>
+
+        <p>
+          Dan mungkin ada seseorang yang hanya mahu satu perkara:
+        </p>
+
+        <p>
+          <strong>
+            “Tolong dengarkan suara kami.”
+          </strong>
+        </p>
+
+
+        <!-- IMAGE 2 -->
+
+        <div class="nc-mho-image-box">
+
+          <img
+            src="https://raw.githubusercontent.com/naniscomm-hub/naniscommunication/refs/heads/main/mho-hishamuddin-02.jpg"
+            alt="Datuk Hishamuddin Hashim bersama pasukan MHO">
+
+          <div class="nc-mho-caption">
+            Kebersamaan pasukan menjadi antara kekuatan dalam
+            gerak kerja kemanusiaan.
+          </div>
+
+        </div>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          AKTIVIS MHO — MEREKA YANG MEMILIH UNTUK TURUN PADANG
+        </h3>
+
+        <p>
+          Gambar-gambar pasukan MHO memperlihatkan satu perkara
+          yang jelas — semangat kebersamaan.
+        </p>
+
+        <p>
+          Mereka berdiri bersama. Mereka bekerja bersama.
+          Mereka hadir bersama apabila sesuatu isu memerlukan
+          perhatian.
+        </p>
+
+        <p>
+          Dalam perjuangan kemanusiaan, tidak semua orang mengejar
+          perhatian. Tidak semua nama mereka dikenali masyarakat.
+          Tidak semua usaha mereka menjadi tajuk berita.
+        </p>
+
+        <p>
+          Namun mereka tetap hadir apabila diperlukan.
+        </p>
+
+        <p>
+          Kerana ukuran sebenar perjuangan bukanlah berapa banyak
+          perhatian yang diterima.
+        </p>
+
+        <p>
+          <strong>
+            Tetapi berapa banyak usaha yang sanggup diberikan
+            kepada mereka yang memerlukan.
+          </strong>
+        </p>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          PENGURUS KES — WIRA YANG JARANG KELIHATAN
+        </h3>
+
+        <p>
+          Di sebalik sesuatu kes yang sampai kepada perhatian
+          masyarakat, terdapat proses yang mungkin tidak pernah
+          dilihat.
+        </p>
+
+        <p>
+          Maklumat perlu dikumpulkan. Kes perlu difahami.
+          Komunikasi perlu dilakukan. Perkembangan perlu dipantau.
+          Tindakan susulan perlu diambil.
+        </p>
+
+        <p>
+          Mereka yang menjalankan tugas ini tidak semestinya berdiri
+          di hadapan kamera.
+        </p>
+
+        <p>
+          Tetapi tanpa mereka, perjuangan mungkin tidak bergerak
+          sejauh yang diharapkan.
+        </p>
+
+        <p>
+          <strong>
+            Mereka adalah wira yang jarang kelihatan.
+          </strong>
+        </p>
+
+
+        <!-- IMAGE 3 -->
+
+        <div class="nc-mho-image-box">
+
+          <img
+            src="https://raw.githubusercontent.com/naniscomm-hub/naniscommunication/refs/heads/main/mho-hishamuddin-03.jpg"
+            alt="Sidang media MHO">
+
+          <div class="nc-mho-caption">
+            Sidang media MHO — ruang membawa isu kemanusiaan
+            kepada perhatian masyarakat.
+          </div>
+
+        </div>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          SIDANG MEDIA — APABILA SUARA DIBAWA KE RUANG AWAM
+        </h3>
+
+        <p>
+          Sidang media MHO bukan sekadar sesi untuk bercakap kepada
+          media.
+        </p>
+
+        <p>
+          Ia menjadi salah satu ruang untuk membawa sesuatu isu
+          kepada perhatian masyarakat.
+        </p>
+
+        <p>
+          Apabila Datuk Hishamuddin dan pasukan MHO berada di
+          hadapan media, mereka bukan hanya membawa suara sendiri.
+        </p>
+
+        <p>
+          Mereka membawa isu dan kebimbangan yang perlu didengar.
+        </p>
+
+        <p>
+          Namun keberanian bersuara juga datang bersama tanggungjawab.
+          Setiap isu perlu ditangani dengan serius dan setiap maklumat
+          perlu diteliti.
+        </p>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          BUKAN SEMUA PERJUANGAN MENDAPAT PUJIAN
+        </h3>
+
+        <p>
+          Perjuangan kemanusiaan tidak pernah menjanjikan jalan
+          yang mudah.
+        </p>
+
+        <p>
+          Akan ada kritikan. Akan ada persoalan.
+          Akan ada perbezaan pandangan.
+        </p>
+
+        <p>
+          Tetapi sebuah organisasi yang mahu membantu masyarakat
+          perlu bersedia berdepan dengan semua itu.
+        </p>
+
+        <p>
+          Kerana matlamat perjuangan bukan untuk memastikan semua
+          orang bersetuju.
+        </p>
+
+        <p>
+          Matlamatnya ialah memastikan isu yang wajar diberi perhatian
+          <strong>tidak dibiarkan tanpa suara.</strong>
+        </p>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          SEBUAH PASUKAN. SATU SEMANGAT. SATU PERJUANGAN.
+        </h3>
+
+        <p>
+          Melihat gambar Datuk Hishamuddin bersama pasukan MHO,
+          mesejnya begitu jelas.
+        </p>
+
+        <p>
+          <strong>
+            Tiada siapa mampu menggerakkan perjuangan kemanusiaan
+            seorang diri.
+          </strong>
+        </p>
+
+        <p>
+          Datuk Hishamuddin mungkin berada di barisan hadapan.
+          Tetapi di belakangnya terdapat aktivis, pengurus kes
+          dan anggota pasukan yang turut memainkan peranan.
+        </p>
+
+        <p>
+          Ada yang menerima panggilan.
+          Ada yang turun ke lapangan.
+          Ada yang mengurus kes.
+          Ada yang menyusun maklumat.
+          Ada yang mengurus gerak kerja.
+        </p>
+
+        <p>
+          Ada yang bekerja di belakang tabir tanpa meminta
+          pengiktirafan.
+        </p>
+
+
+        <!-- FINAL QUOTE -->
+
+        <div class="nc-mho-quote">
+
+          <p>
+            “Tugas kami bukan sekadar melihat —
+            tetapi memastikan suara kemanusiaan terus didengar.”
+          </p>
+
+          <span>
+            NANIS.COM / IPK MEDIA
+          </span>
+
+        </div>
+
+
+        <!-- SECTION -->
+
+        <h3 class="nc-mho-heading">
+          KERANA DI SEBALIK SETIAP KES, ADA SEBUAH KEHIDUPAN
+        </h3>
+
+        <p>
+          Dalam perdebatan awam, kita sering melihat angka.
+          Kita melihat tajuk. Kita melihat kenyataan.
+          Kita melihat video.
+        </p>
+
+        <p>
+          Tetapi di sebalik semuanya ada manusia.
+        </p>
+
+        <p>
+          Ada ibu. Ada bapa. Ada anak. Ada keluarga.
+          Ada individu yang sedang menunggu pembelaan.
+        </p>
+
+        <p>
+          Bagi mereka, perhatian daripada sebuah organisasi
+          kemanusiaan mungkin bukan sekadar satu tindakan.
+        </p>
+
+        <p>
+          Ia mungkin menjadi tanda bahawa:
+        </p>
+
+        <p>
+          <strong>
+            “Masih ada yang mahu mendengar.”
+          </strong>
+        </p>
+
+
+        <!-- FINAL -->
+
+        <h3 class="nc-mho-heading">
+          PERJUANGAN INI BELUM SELESAI
+        </h3>
+
+        <p>
+          Perjuangan kemanusiaan tidak mempunyai garisan penamat
+          yang mudah.
+        </p>
+
+        <p>
+          Selagi masih ada manusia yang memerlukan bantuan,
+          selagi masih ada aduan yang perlu didengar dan selagi
+          masih ada isu yang memerlukan perhatian, perjuangan itu
+          akan terus berjalan.
+        </p>
+
+        <p>
+          Datuk Hishamuddin Hashim bersama barisan aktivis dan
+          pengurus kes MHO mungkin tidak mampu menyelesaikan
+          setiap masalah.
+        </p>
+
+        <p>
+          Namun mereka boleh memilih untuk melakukan sesuatu
+          apabila ada manusia yang datang meminta bantuan.
+        </p>
+
+        <p>
+          Dan kadangkala, sebuah perjuangan besar memang bermula
+          dengan sesuatu yang kecil:
+        </p>
+
+        <p>
+          <strong>
+            Kesanggupan untuk mendengar.
+          </strong>
+        </p>
+
+      </div>
+
+
+      <!-- =====================================================
+           CONTACT
+      ====================================================== -->
+
+      <section class="nc-mho-contact">
+
+        <small>
+          MEDIA & PENGURUS KES (MHO)
+        </small>
+
+        <h3>
+          Ada isu yang perlu diketengahkan?
+        </h3>
+
+        <a
+          class="nc-mho-phone"
+          href="tel:+60133324777">
+          013 332 4777
+        </a>
+
+        <p>
+          Cik Nani — Media & Pengurusan Kes MHO
+        </p>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       BRAND FOOTER
+  ====================================================== -->
+
+  <footer class="nc-mho-brand">
+
+    <div class="nc-mho-brand-name">
+      NANIS<span>.COM</span> / IPK MEDIA
+    </div>
+
+    <div class="nc-mho-tagline">
+      “Leading the Lens to the Voice of Humanity”
+    </div>
+
+    <div class="nc-mho-footer-text">
+      Menjadi lensa kepada suara kemanusiaan.
+    </div>
+
+    <div class="nc-mho-footer-text">
+      © 2026 NANIS.COM / IPK MEDIA
+    </div>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
