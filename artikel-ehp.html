@@ -1,103 +1,409 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ms">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Nanis Communication — informasi, analisa dan persoalan yang memberi makna kepada masyarakat.">
-<title>EHP — Tuntutan Bilion Ringgit | Nanis Communication</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(0,255,200,.10), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(0,180,255,.12), transparent 35%),
+    linear-gradient(135deg, #061b17, #082b27, #061b2b);
+  color: #eafcf7;
+  line-height: 1.8;
+}
+
+.article-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 18px 70px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #5dffe0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.article {
+  background: rgba(5, 30, 27, .82);
+  border: 1px solid rgba(65,255,220,.18);
+  border-radius: 22px;
+  padding: clamp(25px, 5vw, 55px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.article-title {
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.15;
+  margin: 0 0 30px;
+  background: linear-gradient(90deg, #ffffff, #63ffe3, #58caff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.article p {
+  margin: 0 0 20px;
+  color: #d8eee9;
+  font-size: 17px;
+}
+
+.lead {
+  font-size: 19px !important;
+  color: #f1fffb !important;
+}
+
+.section-title {
+  color: #62ffe1;
+  font-size: clamp(25px, 4vw, 34px);
+  margin: 42px 0 18px;
+  line-height: 1.25;
+  border-left: 4px solid #4deed4;
+  padding-left: 15px;
+}
+
+.question-box {
+  margin: 25px 0;
+  padding: 20px 22px;
+  background: rgba(0, 220, 190, .055);
+  border: 1px solid rgba(0,255,210,.15);
+  border-radius: 14px;
+  color: #e9fffa;
+}
+
+.question-box p {
+  margin-bottom: 10px;
+}
+
+.quote {
+  margin: 28px 0;
+  padding: 25px;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(0,255,200,.08),
+    rgba(0,150,255,.08)
+  );
+  border: 1px solid rgba(80,220,255,.18);
+  color: #f0fffc;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #64ffe4 !important;
+  font-weight: bold;
+}
+
+.divider {
+  height: 1px;
+  margin: 40px 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(80,255,220,.4),
+    transparent
+  );
+}
+
+.disclaimer {
+  margin-top: 45px;
+  padding: 20px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  color: #a9c8c1;
+  font-size: 14px;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 35px;
+  color: #739d95;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .article-wrap {
+    padding: 20px 12px 50px;
+  }
+
+  .article {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .article p {
+    font-size: 16px;
+  }
+
+  .lead {
+    font-size: 17px !important;
+  }
+
+  .question-box,
+  .quote {
+    padding: 17px;
+  }
+}
+</style>
 </head>
+
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">NANIS <span>COMMUNICATION</span></a>
-    <nav class="nav-links">
-      <a href="index.html">Utama</a>
-      <a href="artikel-ehp.html">Artikel</a>
-    </nav>
-  </div>
-</header>
 
-<main class="article">
-  <div class="container">
-    <div class="article-head">
-      <span class="kicker">SIASATAN • EHP • FELDA</span>
-      <h1><span class="gradient-text">EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?</span></h1>
-      <div class="meta">Nanis Communication • Dikemas kini: September 2026</div>
+<div class="article-wrap">
+
+  <a href="index.html" class="back">← Kembali ke Nanis Communication</a>
+
+  <article class="article">
+
+    <h1 class="article-title">
+      EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?
+    </h1>
+
+    <p class="lead">
+      <strong>KUALA LUMPUR:</strong> Persoalan mengenai status tuntutan pembayaran balik pelaburan FELDA dalam Eagle High Plantations Tbk (EHP) kembali menjadi perhatian susulan perkembangan terbaharu siasatan terhadap pelaburan dan pengambilalihan aset FELDA serta FELDA Investment Corporation Sdn. Bhd. (FIC).
+    </p>
+
+    <p>
+      Persoalan utama yang timbul ialah: selepas keputusan timbang tara antarabangsa memihak kepada FELDA, mengapa proses mendapatkan semula wang pelaburan tersebut masih belum selesai?
+    </p>
+
+    <p>
+      Isu ini kembali mendapat perhatian ketika Suruhanjaya Pencegahan Rasuah Malaysia (SPRM) sedang menjalankan Op Fella, yang melibatkan tujuh kertas siasatan berkaitan urusan FELDA dan FIC bagi tempoh 2010 hingga 2020.
+    </p>
+
+    <p>
+      Menurut SPRM pada 19 September 2026, enam kertas siasatan baharu telah dibuka manakala satu lagi merupakan kertas siasatan lama yang masih diteruskan. Setakat 18 September, seramai 34 saksi telah dipanggil untuk memberi keterangan.
+    </p>
+
+    <p>
+      Namun, berdasarkan butiran yang diumumkan secara terbuka oleh SPRM setakat ini, EHP tidak disenaraikan secara khusus sebagai salah satu daripada tujuh kes tersebut. Kes yang dinyatakan termasuk beberapa urusan aset dan pelaburan seperti Tataran Aras, Grand Borneo Hotel, Grand Plaza Serviced Apartments di London, FELDA Wellness Corporation, FELDA House, Grand FELDA House, KLVC dan satu kertas siasatan lama berkaitan Park City Grand Plaza.
+    </p>
+
+    <div class="question-box">
+      <p><strong>Justeru, persoalan yang lebih tepat ialah:</strong></p>
+      <p>
+        Adakah keputusan pelaburan EHP turut termasuk dalam mana-mana semakan atau siasatan berkaitan pelaburan lama FELDA, atau ia merupakan isu berasingan?
+      </p>
     </div>
 
-    <div class="article-image">
-      <img src="IMG-20260919-WA0039.jpg" alt="Eagle High Plantations — dokumen dan persoalan tuntutan">
+
+    <h2 class="section-title">Pelaburan RM2.3 bilion</h2>
+
+    <p>
+      Rekod rasmi Kertas Putih FELDA menunjukkan bahawa pada 2015, FELDA meluluskan pembelian exchangeable bond berkaitan EHP melalui FIC Properties Sdn. Bhd. (FICP) bernilai USD505.4 juta.
+    </p>
+
+    <p>
+      Pada Oktober 2016, struktur tersebut ditukar kepada pembelian 37 peratus pegangan saham EHP pada nilai yang sama, bersama kemudahan put option. Pembelian itu dibiayai melalui pinjaman sebanyak RM2.3 bilion.
+    </p>
+
+    <p>
+      Kertas Putih tersebut turut merekodkan bahawa put option membolehkan FELDA mendapatkan semula pelaburan berserta faedah 6 peratus setahun, tertakluk kepada syarat-syarat dalam perjanjian.
+    </p>
+
+    <p class="highlight">
+      Maka, persoalan EHP bukan sekadar mengenai turun naik nilai saham.
+    </p>
+
+    <p>
+      Ia juga berkaitan dengan hak kontrak yang telah diwujudkan sejak perjanjian pelaburan asal.
+    </p>
+
+
+    <h2 class="section-title">
+      FELDA menang timbang tara — tetapi wang belum kembali
+    </h2>
+
+    <p>
+      FICP kemudiannya menggunakan put option tersebut dan membawa pertikaian berhubung pelaksanaannya ke Singapore International Arbitration Centre (SIAC).
+    </p>
+
+    <p>
+      Dalam jawapan bertulis di Dewan Rakyat, kerajaan memaklumkan bahawa pada 14 Jun 2024, tribunal timbang tara memutuskan memihak kepada FICP dan mengarahkan salah satu atau kedua-dua pihak, PT Rajawali Capital International (RCI) dan PT Rajawali Corpora (RC), melaksanakan obligasi di bawah put option dengan membeli semula saham EHP pada harga yang dipersetujui.
+    </p>
+
+    <p>
+      Di sinilah persoalan menjadi lebih kompleks.
+    </p>
+
+    <p>
+      Keputusan timbang tara bukan bermaksud wang secara automatik telah masuk ke akaun FELDA.
+    </p>
+
+    <p>
+      Jawapan kerajaan di Parlimen pada 5 Ogos 2025 menunjukkan bahawa proses penguatkuasaan keputusan tersebut masih berdepan cabaran perundangan apabila RCI dan RC memfailkan permohonan di Mahkamah Daerah Jakarta Pusat berkaitan penguatkuasaan award SIAC.
+    </p>
+
+    <div class="quote">
+      Award sudah ada.<br>
+      Obligasi sudah diputuskan.<br>
+      Tetapi proses mendapatkan wang masih belum selesai.
     </div>
 
-    <article class="article-body">
-      <p><strong>KUALA LUMPUR:</strong> Persoalan mengenai status tuntutan pembayaran balik pelaburan FELDA dalam <strong>Eagle High Plantations Tbk (EHP)</strong> kembali menjadi perhatian susulan perkembangan terbaharu siasatan terhadap pelaburan dan pengambilalihan aset FELDA serta FELDA Investment Corporation Sdn. Bhd. (FIC).</p>
 
-      <p>Persoalan utama yang timbul ialah: <strong>selepas keputusan timbang tara antarabangsa memihak kepada FELDA, mengapa proses mendapatkan semula wang pelaburan tersebut masih belum selesai?</strong></p>
+    <h2 class="section-title">
+      Jadi, di mana kedudukan tuntutan itu hari ini?
+    </h2>
 
-      <p>Isu ini kembali mendapat perhatian ketika Suruhanjaya Pencegahan Rasuah Malaysia (SPRM) menjalankan <strong>Op Fella</strong>, yang melibatkan tujuh kertas siasatan berkaitan urusan FELDA dan FIC bagi tempoh 2010 hingga 2020.</p>
+    <p>
+      Inilah persoalan yang masih wajar dijelaskan kepada orang ramai.
+    </p>
 
-      <div class="fact"><strong>Fakta penting:</strong> Setakat maklumat yang diumumkan secara terbuka, EHP tidak disenaraikan secara khusus sebagai salah satu daripada tujuh kes Op Fella. Oleh itu, persoalan tentang EHP perlu dikemukakan sebagai persoalan — bukan kesimpulan bahawa EHP sedang disiasat.</div>
+    <div class="question-box">
 
-      <h2>Adakah EHP termasuk dalam semakan?</h2>
+      <p>
+        Adakah proses penguatkuasaan di Indonesia masih berjalan?
+      </p>
 
-      <p>Persoalan yang lebih tepat ialah:</p>
-      <div class="quote">“Adakah keputusan pelaburan EHP turut termasuk dalam mana-mana semakan atau siasatan berkaitan pelaburan lama FELDA, atau ia merupakan isu berasingan?”</div>
+      <p>
+        Adakah terdapat perkembangan baharu selepas cabaran di Mahkamah Daerah Jakarta Pusat?
+      </p>
 
-      <h2>Pelaburan RM2.3 bilion</h2>
+      <p>
+        Berapakah jumlah sebenar yang telah berjaya dipulihkan, jika ada?
+      </p>
 
-      <p>Rekod rasmi Kertas Putih FELDA menunjukkan bahawa pada 2015, FELDA meluluskan pembelian <em>exchangeable bond</em> berkaitan EHP melalui FIC Properties Sdn. Bhd. bernilai USD505.4 juta.</p>
+      <p>
+        Apakah jumlah prinsipal, faedah dan kos berkaitan yang masih dituntut?
+      </p>
 
-      <p>Pada Oktober 2016, struktur tersebut ditukar kepada pembelian <strong>37 peratus pegangan saham EHP</strong> pada nilai yang sama, bersama kemudahan <em>put option</em>. Pembelian itu dibiayai melalui pinjaman sebanyak <strong>RM2.3 bilion</strong>.</p>
+      <p>
+        Dan apakah status terkini 37 peratus pegangan EHP yang menjadi subjek put option tersebut?
+      </p>
 
-      <p>Kertas Putih tersebut turut merekodkan bahawa <em>put option</em> membolehkan FELDA mendapatkan semula pelaburan berserta faedah <strong>6 peratus setahun</strong>, tertakluk kepada syarat-syarat dalam perjanjian.</p>
+    </div>
 
-      <h2>FELDA menang timbang tara — tetapi wang belum kembali</h2>
+    <p>
+      Persoalan ini menjadi lebih relevan kerana pelaburan asal melibatkan dana berskala RM2.3 bilion, berdasarkan rekod rasmi FELDA.
+    </p>
 
-      <p>FIC Properties kemudiannya menggunakan <em>put option</em> tersebut dan pertikaian berhubung pelaksanaannya dibawa ke <strong>Singapore International Arbitration Centre (SIAC)</strong>.</p>
 
-      <p>Dalam jawapan bertulis di Dewan Rakyat, kerajaan memaklumkan bahawa pada <strong>14 Jun 2024</strong>, tribunal timbang tara memutuskan memihak kepada FIC Properties dan mengarahkan PT Rajawali Capital International (RCI) dan/atau PT Rajawali Corpora (RC) melaksanakan obligasi di bawah <em>put option</em> dengan membeli semula saham EHP pada harga yang dipersetujui.</p>
+    <h2 class="section-title">
+      Adakah EHP termasuk dalam semakan Op Fella?
+    </h2>
 
-      <div class="quote">Keputusan timbang tara bukan bermaksud wang secara automatik telah masuk ke akaun FELDA.</div>
+    <p>
+      Pada masa sama, perkembangan Op Fella membuka satu lagi persoalan yang berbeza.
+    </p>
 
-      <p>Jawapan kerajaan di Parlimen pada 5 Ogos 2025 menunjukkan bahawa proses penguatkuasaan keputusan tersebut masih berdepan cabaran perundangan apabila RCI dan RC memfailkan permohonan di Mahkamah Daerah Jakarta Pusat berkaitan penguatkuasaan award SIAC.</p>
+    <p>
+      SPRM kini menyiasat pelaburan dan pengambilalihan aset FELDA serta FIC bagi tempoh 2010 hingga 2020. Tempoh tersebut secara kronologi merangkumi tahun-tahun ketika keputusan berkaitan pelaburan EHP dibuat pada 2015 dan 2016.
+    </p>
 
-      <h2>Jadi, di mana kedudukan tuntutan itu?</h2>
+    <p>
+      Namun begitu, tiada pengesahan terbuka daripada SPRM setakat ini bahawa EHP merupakan salah satu daripada tujuh kes yang sedang disiasat di bawah Op Fella.
+    </p>
 
-      <p>Inilah persoalan yang masih wajar dijelaskan kepada orang ramai.</p>
+    <p>
+      Oleh itu, persoalan yang sewajarnya dikemukakan bukanlah untuk membuat kesimpulan bahawa EHP sedang disiasat.
+    </p>
 
-      <p>Adakah proses penguatkuasaan di Indonesia masih berjalan?</p>
-      <p>Adakah terdapat perkembangan baharu selepas cabaran di Mahkamah Daerah Jakarta Pusat?</p>
-      <p>Berapakah jumlah sebenar yang telah berjaya dipulihkan, jika ada?</p>
-      <p>Apakah jumlah prinsipal, faedah dan kos berkaitan yang masih dituntut?</p>
-      <p>Dan apakah status terkini 37 peratus pegangan EHP yang menjadi subjek <em>put option</em> tersebut?</p>
+    <div class="question-box">
 
-      <h2>Persoalan yang belum terjawab</h2>
+      <p><strong>Sebaliknya:</strong></p>
 
-      <p>Selepas keputusan SIAC memihak kepada FIC Properties, perhatian kini bukan lagi semata-mata kepada <strong>siapa menang dalam timbang tara</strong>.</p>
+      <p>
+        Adakah keputusan pelaburan EHP akan turut disemak dalam konteks keseluruhan urus tadbir pelaburan FELDA bagi tempoh 2010 hingga 2020?
+      </p>
 
-      <div class="quote">Apakah yang berlaku selepas kemenangan tersebut?</div>
+      <p>
+        Jika tidak, apakah sebabnya?
+      </p>
 
-      <p>Bilakah proses penguatkuasaan dijangka selesai?</p>
-      <p>Berapakah jumlah wang yang masih belum diterima?</p>
-      <p>Apakah tindakan undang-undang yang sedang berjalan di Indonesia?</p>
-      <p>Dan apakah langkah FELDA untuk memastikan kepentingan peneroka serta dana awam terus dilindungi?</p>
+      <p>
+        Jika ya, apakah skop semakan tersebut?
+      </p>
 
-      <h2>Fakta perlu diperjelas</h2>
+    </div>
 
-      <p>Selagi persoalan-persoalan ini belum dijelaskan secara terperinci, isu EHP akan terus meninggalkan satu persoalan besar:</p>
 
-      <div class="quote">“Bagaimana pelaburan bernilai berbilion ringgit boleh sampai ke tahap keputusan timbang tara telah memihak kepada FELDA, tetapi proses mendapatkan semula wang tersebut masih belum berakhir?”</div>
+    <h2 class="section-title">
+      Persoalan yang belum terjawab
+    </h2>
 
-      <p><strong>Fakta perlu diperjelas. Dokumen perlu diteliti. Status tuntutan perlu diketahui. Dan persoalan mengenai wang berbilion ringgit tidak seharusnya berhenti pada keputusan timbang tara semata-mata.</strong></p>
+    <p>
+      Isu EHP juga pernah dibangkitkan di Parlimen sebelum ini, termasuk persoalan mengenai pelaksanaan put option dan perlindungan kepentingan FELDA berhubung pelaburan RM2.3 bilion tersebut.
+    </p>
 
-      <div class="fact">
-        <strong>Nota editorial:</strong> Artikel ini membezakan antara fakta yang telah direkodkan secara rasmi dengan persoalan yang masih memerlukan pengesahan pihak berkuasa atau pihak berkaitan.
-      </div>
-    </article>
+    <p>
+      Justeru, selepas keputusan SIAC memihak kepada FICP, perhatian kini bukan lagi semata-mata kepada siapa menang dalam timbang tara.
+    </p>
+
+    <div class="question-box">
+
+      <p><strong>Persoalan yang lebih penting ialah:</strong></p>
+
+      <p>
+        Apakah yang berlaku selepas kemenangan tersebut?
+      </p>
+
+      <p>
+        Bilakah proses penguatkuasaan dijangka selesai?
+      </p>
+
+      <p>
+        Berapakah jumlah wang yang masih belum diterima?
+      </p>
+
+      <p>
+        Apakah tindakan undang-undang yang sedang berjalan di Indonesia?
+      </p>
+
+      <p>
+        Dan apakah langkah FELDA untuk memastikan kepentingan peneroka serta dana awam terus dilindungi?
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <p>
+      Selagi persoalan-persoalan ini belum dijelaskan secara terperinci, isu EHP akan terus meninggalkan satu persoalan besar:
+    </p>
+
+    <div class="quote">
+      Bagaimana pelaburan bernilai berbilion ringgit boleh sampai ke tahap keputusan timbang tara telah memihak kepada FELDA, tetapi proses mendapatkan semula wang tersebut masih belum berakhir?
+    </div>
+
+    <p class="highlight">
+      Fakta perlu diperjelas.
+    </p>
+
+    <p class="highlight">
+      Dokumen perlu dibuka.
+    </p>
+
+    <p class="highlight">
+      Status tuntutan perlu diketahui.
+    </p>
+
+    <p>
+      Dan persoalan mengenai wang berbilion ringgit tidak seharusnya berhenti pada keputusan timbang tara semata-mata.
+    </p>
+
+  </article>
+
+  <div class="footer-note">
+    © 2026 Nanis Communication • Informasi & Dokumentasi
   </div>
-</main>
 
+</div>
+
+</body>
+</html>
 <footer class="footer">
   <div class="container">
     <strong>Nanis Communication</strong><br>
