@@ -7,141 +7,466 @@
 <title>EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?</title>
 
 <style>
+/* ================================
+   NANIS.COM — PASTEL EDITORIAL
+   ================================ */
+
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --cream: #fbf8f4;
+  --paper: #fffdfb;
+
+  --rose: #d9b9b8;
+  --rose-soft: #f4e8e7;
+
+  --sage: #b9cbbd;
+  --sage-soft: #edf3ee;
+
+  --blue: #a9c8d8;
+  --blue-soft: #edf5f8;
+
+  --gold: #b89b68;
+  --gold-soft: #eee4d2;
+
+  --brown: #5c5049;
+  --text: #403a36;
+  --muted: #827973;
+
+  --line: #e8dfd8;
+  --shadow: rgba(92, 80, 73, .12);
+}
+
+/* ================================
+   BODY
+   ================================ */
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
+
   background:
-    radial-gradient(circle at top left, rgba(0,255,200,.10), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(0,180,255,.12), transparent 35%),
-    linear-gradient(135deg, #061b17, #082b27, #061b2b);
-  color: #eafcf7;
-  line-height: 1.8;
+    radial-gradient(
+      circle at top left,
+      rgba(217,185,184,.35),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(169,200,216,.28),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #f8f3ef,
+      #eef3ef,
+      #f6f8f7
+    );
+
+  color: var(--text);
+  line-height: 1.85;
 }
+
+/* ================================
+   TOP IMAGE
+   ================================ */
+
+.hero-image {
+  width: 100%;
+  max-width: 980px;
+  height: 300px;
+
+  object-fit: cover;
+
+  display: block;
+  margin: 30px auto 0;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 45px rgba(70,60,55,.14);
+
+  border: 1px solid rgba(184,155,104,.25);
+}
+
+/* ================================
+   ARTICLE WRAPPER
+   ================================ */
 
 .article-wrap {
   max-width: 980px;
   margin: 0 auto;
-  padding: 30px 18px 70px;
+  padding: 25px 18px 70px;
 }
+
+/* ================================
+   BACK BUTTON
+   ================================ */
 
 .back {
-  display: inline-block;
-  margin-bottom: 25px;
-  color: #5dffe0;
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0 0 22px;
+
+  padding: 9px 16px;
+
+  color: var(--brown);
+  background: rgba(255,255,255,.65);
+
+  border: 1px solid var(--line);
+  border-radius: 30px;
+
   text-decoration: none;
-  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: .25s ease;
 }
+
+.back:hover {
+  background: var(--rose-soft);
+  border-color: var(--rose);
+  transform: translateX(-2px);
+}
+
+/* ================================
+   ARTICLE CARD
+   ================================ */
 
 .article {
-  background: rgba(5, 30, 27, .82);
-  border: 1px solid rgba(65,255,220,.18);
-  border-radius: 22px;
-  padding: clamp(25px, 5vw, 55px);
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  background: rgba(255,253,251,.94);
+
+  border: 1px solid rgba(217,185,184,.38);
+
+  border-radius: 26px;
+
+  padding: clamp(25px, 5vw, 58px);
+
+  box-shadow:
+    0 20px 60px var(--shadow);
+
+  position: relative;
+  overflow: hidden;
 }
 
-.article-title {
-  font-size: clamp(32px, 6vw, 52px);
-  line-height: 1.15;
-  margin: 0 0 30px;
-  background: linear-gradient(90deg, #ffffff, #63ffe3, #58caff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Decorative top line */
+
+.article::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--rose),
+      var(--gold),
+      var(--sage),
+      var(--blue)
+    );
 }
+
+/* ================================
+   TITLE
+   ================================ */
+
+.artikel-tittle {
+  font-size: clamp(32px, 6vw, 54px);
+
+  line-height: 1.12;
+
+  margin: 10px 0 30px;
+
+  color: var(--brown);
+
+  letter-spacing: -1px;
+}
+
+/* Small decorative line */
+
+.artikel-tittle::after {
+  content: "";
+
+  display: block;
+
+  width: 85px;
+  height: 4px;
+
+  margin-top: 20px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      var(--rose)
+    );
+}
+
+/* ================================
+   PARAGRAPHS
+   ================================ */
 
 .article p {
-  margin: 0 0 20px;
-  color: #d8eee9;
+  margin: 0 0 21px;
+
+  color: var(--text);
+
   font-size: 17px;
 }
 
 .lead {
-  font-size: 19px !important;
-  color: #f1fffb !important;
+  font-size: 20px !important;
+
+  line-height: 1.75;
+
+  color: #4d4540 !important;
+
+  padding-left: 18px;
+
+  border-left: 4px solid var(--rose);
 }
+
+/* ================================
+   SECTION TITLE
+   ================================ */
 
 .section-title {
-  color: #62ffe1;
+  color: var(--brown);
+
   font-size: clamp(25px, 4vw, 34px);
-  margin: 42px 0 18px;
+
+  margin: 48px 0 20px;
+
   line-height: 1.25;
-  border-left: 4px solid #4deed4;
-  padding-left: 15px;
+
+  padding: 14px 18px;
+
+  border-left: 5px solid var(--gold);
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--rose-soft),
+      rgba(255,255,255,0)
+    );
+
+  border-radius: 0 12px 12px 0;
 }
 
+/* ================================
+   QUESTION BOX
+   ================================ */
+
 .question-box {
-  margin: 25px 0;
-  padding: 20px 22px;
-  background: rgba(0, 220, 190, .055);
-  border: 1px solid rgba(0,255,210,.15);
-  border-radius: 14px;
-  color: #e9fffa;
+  margin: 28px 0;
+
+  padding: 22px 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--sage-soft),
+      var(--blue-soft)
+    );
+
+  border: 1px solid rgba(169,200,216,.45);
+
+  border-left: 5px solid var(--sage);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 25px rgba(80,90,80,.07);
 }
 
 .question-box p {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
+
+.question-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================
+   QUOTE
+   ================================ */
 
 .quote {
-  margin: 28px 0;
-  padding: 25px;
-  border-radius: 15px;
-  background: linear-gradient(
-    135deg,
-    rgba(0,255,200,.08),
-    rgba(0,150,255,.08)
-  );
-  border: 1px solid rgba(80,220,255,.18);
-  color: #f0fffc;
+  margin: 32px 0;
+
+  padding: 27px 30px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f6eceb,
+      #f7f1e7
+    );
+
+  border: 1px solid rgba(184,155,104,.30);
+
+  border-left: 5px solid var(--gold);
+
+  color: var(--brown);
+
   font-size: 19px;
+
   font-weight: 600;
+
+  line-height: 1.7;
+
+  box-shadow:
+    0 10px 30px rgba(100,80,60,.07);
 }
 
+/* ================================
+   HIGHLIGHT
+   ================================ */
+
 .highlight {
-  color: #64ffe4 !important;
+  color: #8b6e42 !important;
+
   font-weight: bold;
+
+  background: linear-gradient(
+    transparent 65%,
+    #eee2ca 65%
+  );
+
+  display: inline;
 }
+
+/* ================================
+   DIVIDER
+   ================================ */
 
 .divider {
   height: 1px;
-  margin: 40px 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(80,255,220,.4),
-    transparent
-  );
+
+  margin: 45px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--rose),
+      var(--gold),
+      var(--sage),
+      transparent
+    );
 }
+
+/* ================================
+   DISCLAIMER
+   ================================ */
 
 .disclaimer {
   margin-top: 45px;
+
   padding: 20px;
-  background: rgba(255,255,255,.035);
-  border: 1px solid rgba(255,255,255,.10);
+
+  background: #f7f4f0;
+
+  border: 1px solid var(--line);
+
   border-radius: 14px;
-  color: #a9c8c1;
+
+  color: var(--muted);
+
+  font-family: Arial, Helvetica, sans-serif;
+
   font-size: 14px;
 }
 
-.footer-note {
+/* ================================
+   FOOTER
+   ================================ */
+
+.footer {
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  padding: 28px 18px 45px;
+
   text-align: center;
-  margin-top: 35px;
-  color: #739d95;
+
+  color: #756c65;
+
+  font-family: Arial, Helvetica, sans-serif;
+
   font-size: 13px;
 }
 
+.footer strong {
+  color: var(--brown);
+
+  font-size: 15px;
+}
+
+/* ================================
+   FOOTER NOTE
+   ================================ */
+
+.footer-note {
+  text-align: center;
+
+  margin-top: 30px;
+
+  color: #8c8179;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
 @media (max-width: 600px) {
+
+  body {
+    line-height: 1.75;
+  }
+
+  .hero-image {
+    height: 210px;
+
+    margin-top: 15px;
+
+    border-radius: 17px;
+  }
+
   .article-wrap {
-    padding: 20px 12px 50px;
+    padding: 18px 12px 50px;
   }
 
   .article {
-    padding: 24px 18px;
-    border-radius: 16px;
+    padding: 28px 19px;
+
+    border-radius: 18px;
+  }
+
+  .artikel-tittle {
+    font-size: 34px;
+
+    letter-spacing: -.5px;
+
+    margin-bottom: 25px;
   }
 
   .article p {
@@ -150,11 +475,58 @@ body {
 
   .lead {
     font-size: 17px !important;
+
+    padding-left: 14px;
+  }
+
+  .section-title {
+    font-size: 25px;
+
+    margin-top: 40px;
+
+    padding: 12px 14px;
   }
 
   .question-box,
   .quote {
-    padding: 17px;
+    padding: 18px;
+  }
+
+  .quote {
+    font-size: 17px;
+  }
+
+  .back {
+    font-size: 13px;
+  }
+}
+
+/* ================================
+   PRINT
+   ================================ */
+
+@media print {
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .back {
+    display: none;
+  }
+
+  .article {
+    box-shadow: none;
+    border: none;
+  }
+
+  .hero-image {
+    box-shadow: none;
+  }
+
+  .footer {
+    border-top: 1px solid #ddd;
   }
 }
 </style>
@@ -162,10 +534,23 @@ body {
 
 <body>
 
-  <img src="IMG-20260919-WA0039.jpg">
+<!-- ================================
+     HERO IMAGE
+     ================================ -->
+
+<img
+  src="IMG-20260919-WA0039.jpg"
+  alt="Eagle High Plantations"
+  class="hero-image"
+>
+
+
 <div class="article-wrap">
 
-  <a href="index.html" class="back">← Kembali ke Nanis Communication</a>
+  <a href="index.html" class="back">
+    ← Kembali ke Nanis Communication
+  </a>
+
 
   <article class="article">
 
@@ -173,51 +558,69 @@ body {
       EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?
     </h1>
 
+
     <p class="lead">
       <strong>KUALA LUMPUR:</strong> Persoalan mengenai status tuntutan pembayaran balik pelaburan FELDA dalam Eagle High Plantations Tbk (EHP) kembali menjadi perhatian susulan perkembangan terbaharu siasatan terhadap pelaburan dan pengambilalihan aset FELDA serta FELDA Investment Corporation Sdn. Bhd. (FIC).
     </p>
+
 
     <p>
       Persoalan utama yang timbul ialah: selepas keputusan timbang tara antarabangsa memihak kepada FELDA, mengapa proses mendapatkan semula wang pelaburan tersebut masih belum selesai?
     </p>
 
+
     <p>
       Isu ini kembali mendapat perhatian ketika Suruhanjaya Pencegahan Rasuah Malaysia (SPRM) sedang menjalankan Op Fella, yang melibatkan tujuh kertas siasatan berkaitan urusan FELDA dan FIC bagi tempoh 2010 hingga 2020.
     </p>
+
 
     <p>
       Menurut SPRM pada 19 September 2026, enam kertas siasatan baharu telah dibuka manakala satu lagi merupakan kertas siasatan lama yang masih diteruskan. Setakat 18 September, seramai 34 saksi telah dipanggil untuk memberi keterangan.
     </p>
 
+
     <p>
       Namun, berdasarkan butiran yang diumumkan secara terbuka oleh SPRM setakat ini, EHP tidak disenaraikan secara khusus sebagai salah satu daripada tujuh kes tersebut. Kes yang dinyatakan termasuk beberapa urusan aset dan pelaburan seperti Tataran Aras, Grand Borneo Hotel, Grand Plaza Serviced Apartments di London, FELDA Wellness Corporation, FELDA House, Grand FELDA House, KLVC dan satu kertas siasatan lama berkaitan Park City Grand Plaza.
     </p>
 
+
     <div class="question-box">
-      <p><strong>Justeru, persoalan yang lebih tepat ialah:</strong></p>
+
+      <p>
+        <strong>Justeru, persoalan yang lebih tepat ialah:</strong>
+      </p>
+
       <p>
         Adakah keputusan pelaburan EHP turut termasuk dalam mana-mana semakan atau siasatan berkaitan pelaburan lama FELDA, atau ia merupakan isu berasingan?
       </p>
+
     </div>
 
 
-    <h2 class="section-title">Pelaburan RM2.3 bilion</h2>
+    <h2 class="section-title">
+      Pelaburan RM2.3 bilion
+    </h2>
+
 
     <p>
       Rekod rasmi Kertas Putih FELDA menunjukkan bahawa pada 2015, FELDA meluluskan pembelian exchangeable bond berkaitan EHP melalui FIC Properties Sdn. Bhd. (FICP) bernilai USD505.4 juta.
     </p>
 
+
     <p>
       Pada Oktober 2016, struktur tersebut ditukar kepada pembelian 37 peratus pegangan saham EHP pada nilai yang sama, bersama kemudahan put option. Pembelian itu dibiayai melalui pinjaman sebanyak RM2.3 bilion.
     </p>
+
 
     <p>
       Kertas Putih tersebut turut merekodkan bahawa put option membolehkan FELDA mendapatkan semula pelaburan berserta faedah 6 peratus setahun, tertakluk kepada syarat-syarat dalam perjanjian.
     </p>
 
+
     <p class="highlight">
       Maka, persoalan EHP bukan sekadar mengenai turun naik nilai saham.
     </p>
+
 
     <p>
       Ia juga berkaitan dengan hak kontrak yang telah diwujudkan sejak perjanjian pelaburan asal.
@@ -228,30 +631,38 @@ body {
       FELDA menang timbang tara — tetapi wang belum kembali
     </h2>
 
+
     <p>
       FICP kemudiannya menggunakan put option tersebut dan membawa pertikaian berhubung pelaksanaannya ke Singapore International Arbitration Centre (SIAC).
     </p>
+
 
     <p>
       Dalam jawapan bertulis di Dewan Rakyat, kerajaan memaklumkan bahawa pada 14 Jun 2024, tribunal timbang tara memutuskan memihak kepada FICP dan mengarahkan salah satu atau kedua-dua pihak, PT Rajawali Capital International (RCI) dan PT Rajawali Corpora (RC), melaksanakan obligasi di bawah put option dengan membeli semula saham EHP pada harga yang dipersetujui.
     </p>
 
+
     <p>
       Di sinilah persoalan menjadi lebih kompleks.
     </p>
+
 
     <p>
       Keputusan timbang tara bukan bermaksud wang secara automatik telah masuk ke akaun FELDA.
     </p>
 
+
     <p>
       Jawapan kerajaan di Parlimen pada 5 Ogos 2025 menunjukkan bahawa proses penguatkuasaan keputusan tersebut masih berdepan cabaran perundangan apabila RCI dan RC memfailkan permohonan di Mahkamah Daerah Jakarta Pusat berkaitan penguatkuasaan award SIAC.
     </p>
 
+
     <div class="quote">
+
       Award sudah ada.<br>
       Obligasi sudah diputuskan.<br>
       Tetapi proses mendapatkan wang masih belum selesai.
+
     </div>
 
 
@@ -259,9 +670,11 @@ body {
       Jadi, di mana kedudukan tuntutan itu hari ini?
     </h2>
 
+
     <p>
       Inilah persoalan yang masih wajar dijelaskan kepada orang ramai.
     </p>
+
 
     <div class="question-box">
 
@@ -287,6 +700,7 @@ body {
 
     </div>
 
+
     <p>
       Persoalan ini menjadi lebih relevan kerana pelaburan asal melibatkan dana berskala RM2.3 bilion, berdasarkan rekod rasmi FELDA.
     </p>
@@ -296,25 +710,32 @@ body {
       Adakah EHP termasuk dalam semakan Op Fella?
     </h2>
 
+
     <p>
       Pada masa sama, perkembangan Op Fella membuka satu lagi persoalan yang berbeza.
     </p>
+
 
     <p>
       SPRM kini menyiasat pelaburan dan pengambilalihan aset FELDA serta FIC bagi tempoh 2010 hingga 2020. Tempoh tersebut secara kronologi merangkumi tahun-tahun ketika keputusan berkaitan pelaburan EHP dibuat pada 2015 dan 2016.
     </p>
 
+
     <p>
       Namun begitu, tiada pengesahan terbuka daripada SPRM setakat ini bahawa EHP merupakan salah satu daripada tujuh kes yang sedang disiasat di bawah Op Fella.
     </p>
+
 
     <p>
       Oleh itu, persoalan yang sewajarnya dikemukakan bukanlah untuk membuat kesimpulan bahawa EHP sedang disiasat.
     </p>
 
+
     <div class="question-box">
 
-      <p><strong>Sebaliknya:</strong></p>
+      <p>
+        <strong>Sebaliknya:</strong>
+      </p>
 
       <p>
         Adakah keputusan pelaburan EHP akan turut disemak dalam konteks keseluruhan urus tadbir pelaburan FELDA bagi tempoh 2010 hingga 2020?
@@ -335,17 +756,22 @@ body {
       Persoalan yang belum terjawab
     </h2>
 
+
     <p>
       Isu EHP juga pernah dibangkitkan di Parlimen sebelum ini, termasuk persoalan mengenai pelaksanaan put option dan perlindungan kepentingan FELDA berhubung pelaburan RM2.3 bilion tersebut.
     </p>
+
 
     <p>
       Justeru, selepas keputusan SIAC memihak kepada FICP, perhatian kini bukan lagi semata-mata kepada siapa menang dalam timbang tara.
     </p>
 
+
     <div class="question-box">
 
-      <p><strong>Persoalan yang lebih penting ialah:</strong></p>
+      <p>
+        <strong>Persoalan yang lebih penting ialah:</strong>
+      </p>
 
       <p>
         Apakah yang berlaku selepas kemenangan tersebut?
@@ -369,27 +795,36 @@ body {
 
     </div>
 
+
     <div class="divider"></div>
+
 
     <p>
       Selagi persoalan-persoalan ini belum dijelaskan secara terperinci, isu EHP akan terus meninggalkan satu persoalan besar:
     </p>
 
+
     <div class="quote">
+
       Bagaimana pelaburan bernilai berbilion ringgit boleh sampai ke tahap keputusan timbang tara telah memihak kepada FELDA, tetapi proses mendapatkan semula wang tersebut masih belum berakhir?
+
     </div>
+
 
     <p class="highlight">
       Fakta perlu diperjelas.
     </p>
 
+
     <p class="highlight">
       Dokumen perlu dibuka.
     </p>
 
+
     <p class="highlight">
       Status tuntutan perlu diketahui.
     </p>
+
 
     <p>
       Dan persoalan mengenai wang berbilion ringgit tidak seharusnya berhenti pada keputusan timbang tara semata-mata.
@@ -397,19 +832,26 @@ body {
 
   </article>
 
+
   <div class="footer-note">
     © 2026 Nanis Communication • IPK MEDIA
   </div>
 
 </div>
 
-</body>
-</html>
+
 <footer class="footer">
+
   <div class="container">
+
     <strong>Nanis Communication</strong><br>
+
     Informasi • Fakta • Analisis • Persoalan Masa Depan
+
   </div>
+
 </footer>
+
+
 </body>
 </html>
