@@ -1121,6 +1121,286 @@ img{
   </div>
 </section>
 
+<!-- =========================================
+     NANIS.COM — ARTICLE CARD EHP
+     ========================================= -->
+
+<style>
+.ehp-card {
+  max-width: 420px;
+  margin: 30px auto;
+
+  background: #fffdfb;
+
+  border: 1px solid #e8dfd8;
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 35px rgba(92, 80, 73, 0.12);
+
+  transition: all 0.3s ease;
+}
+
+.ehp-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 45px rgba(92, 80, 73, 0.18);
+}
+
+
+/* IMAGE */
+
+.ehp-card-image {
+  position: relative;
+  width: 100%;
+  height: 235px;
+  overflow: hidden;
+}
+
+.ehp-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.ehp-card:hover .ehp-card-image img {
+  transform: scale(1.05);
+}
+
+
+/* CATEGORY */
+
+.ehp-category {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  padding: 7px 13px;
+
+  background: rgba(255,253,251,0.92);
+
+  border: 1px solid rgba(184,155,104,0.35);
+
+  border-radius: 20px;
+
+  color: #806b4b;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* CONTENT */
+
+.ehp-card-content {
+  padding: 24px 24px 26px;
+}
+
+
+/* DATE */
+
+.ehp-date {
+  margin-bottom: 10px;
+
+  color: #9a8e86;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* TITLE */
+
+.ehp-card-title {
+  margin: 0 0 13px;
+
+  color: #504740;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+
+  font-weight: bold;
+}
+
+
+/* DESCRIPTION */
+
+.ehp-card-description {
+  margin: 0 0 20px;
+
+  color: #746b65;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* DIVIDER */
+
+.ehp-card-divider {
+  width: 55px;
+  height: 3px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d9b9b8,
+      #b89b68
+    );
+}
+
+
+/* BUTTON */
+
+.ehp-card-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 11px 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d9b9b8,
+      #b89b68
+    );
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 25px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  transition: all 0.25s ease;
+}
+
+.ehp-card-button:hover {
+  transform: translateX(3px);
+
+  box-shadow:
+    0 7px 18px rgba(184,155,104,0.25);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .ehp-card {
+    margin: 20px 10px;
+    border-radius: 18px;
+  }
+
+  .ehp-card-image {
+    height: 210px;
+  }
+
+  .ehp-card-content {
+    padding: 21px;
+  }
+
+  .ehp-card-title {
+    font-size: 23px;
+  }
+}
+</style>
+
+
+<!-- =========================================
+     ARTICLE CARD
+     ========================================= -->
+
+<div class="ehp-card">
+
+  <!-- IMAGE -->
+  <div class="ehp-card-image">
+
+    <img
+      src="IMG-20260919-WA0039.jpg"
+      alt="Eagle High Plantations (EHP)"
+    >
+
+    <span class="ehp-category">
+      Laporan Semasa
+    </span>
+
+  </div>
+
+
+  <!-- CONTENT -->
+  <div class="ehp-card-content">
+
+    <div class="ehp-date">
+      20 September 2026 · Nanis.Com
+    </div>
+
+
+    <h2 class="ehp-card-title">
+      EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?
+    </h2>
+
+
+    <div class="ehp-card-divider"></div>
+
+
+    <p class="ehp-card-description">
+      Perkembangan pelaburan FELDA dalam Eagle High Plantations (EHP),
+      pelaksanaan Put Option, keputusan timbang tara SIAC serta
+      perkembangan proses penguatkuasaan di Indonesia.
+    </p>
+
+
+    <a
+      href="artikel-ehp.html"
+      class="ehp-card-button"
+    >
+      Baca Artikel
+      <span>→</span>
+    </a>
+
+  </div>
+
+</div>
+
 <!-- =====================================================
      NANIS.COM / IPK MEDIA
      MHO SPECIAL FEATURE CARD
