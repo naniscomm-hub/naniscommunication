@@ -947,122 +947,302 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 
     </script>
     
-<!-- VISITOR COUNTER -->
+<!-- ===============================
+     NANIS COMMUNICATION
+     NEON VISITOR COUNTER
+================================ -->
 
-  <div class="visitor-box">
-    
+<div class="visitor-box">
+
+  <!-- TOTAL VISITORS -->
   <div class="visitor-title">
     TOTAL VISITORS
   </div>
 
   <div id="visitor-count">
-    <span class="online-dot"></span>
-    <span id="online-visitor">
-    5 Mil Counti...++
-  </div>
 
-  <div class="online-box">
-    <span class="online-dot"></span>
+    <span class="neon-dot neon-blue"></span>
 
-    <span id="online-users">
-      200K counting...
+    <span id="total-visitor">
+      5.1M+
     </span>
 
-    USER ONLINE
+  </div>
+
+
+  <!-- READER / VIEWER -->
+  <div class="online-box">
+
+    <span class="neon-dot neon-green"></span>
+
+    <span id="online-users">
+      479212
+    </span>
+
+    <span class="online-label">
+      READER &amp; VIEWER
+    </span>
+
+  </div>
+
+
+  <!-- USER ONLINE -->
+  <div class="user-online">
+
+    <span class="neon-dot neon-green"></span>
+
+    <span>
+      200K++ USER ONLINE
+    </span>
+
   </div>
 
 </div>
 
+
 <style>
+
+/* ===============================
+   RESET
+================================ */
 
 *{
   box-sizing:border-box;
 }
 
-body{
-  margin:0;
-  padding:0;
-}
 
-section{
-  position:relative;
-  z-index:2;
-}
-
-video{
-  width:100%;
-  display:block;
-  transform:translateZ(0);
-  backface-visibility:hidden;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
+/* ===============================
+   VISITOR CONTAINER
+================================ */
 
 .visitor-box{
 
-  width:320px;
-  max-width:90%;
+  width:350px;
+  max-width:92%;
 
   margin:60px auto;
 
-  padding:30px;
+  padding:32px 28px;
 
   text-align:center;
 
-  background:rgba(0,0,0,0.55);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10,15,25,.92),
+      rgba(0,0,0,.72)
+    );
 
-  border:1px solid rgba(255,215,0,0.2);
+  border:1px solid rgba(0,180,255,.22);
 
-  border-radius:35px;
+  border-radius:30px;
 
-  backdrop-filter:blur(20px);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
 
   box-shadow:
-    0 0 30px rgba(255,215,0,0.10),
-    0 0 80px rgba(255,215,0,0.05);
+
+    0 0 20px rgba(0,180,255,.08),
+
+    0 0 60px rgba(0,180,255,.05),
+
+    inset 0 0 25px rgba(255,255,255,.025);
 
 }
 
+
+/* ===============================
+   TITLE
+================================ */
+
 .visitor-title{
 
-  color:#d4af37;
+  color:#9edfff;
 
-  letter-spacing:3px;
+  letter-spacing:4px;
 
-  font-size:12px;
+  font-size:11px;
 
-  margin-bottom:14px;
+  font-weight:600;
+
+  margin-bottom:16px;
 
   text-transform:uppercase;
 
 }
 
+
+/* ===============================
+   TOTAL VISITOR NUMBER
+================================ */
+
 #visitor-count{
 
-  font-size:50px;
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:14px;
+
+  font-size:52px;
+
+  line-height:1;
 
   font-weight:800;
 
-  background:linear-gradient(
-    to bottom,
-    #fff8d6,
-    #f7d774,
-    #d4af37,
-    #8f6b10
-  );
+  letter-spacing:1px;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #9feaff,
+      #00cfff,
+      #0077aa
+    );
 
   -webkit-background-clip:text;
+  background-clip:text;
+
   -webkit-text-fill-color:transparent;
 
   text-shadow:
-    0 0 20px rgba(255,215,0,0.25);
+
+    0 0 20px rgba(0,210,255,.30),
+
+    0 0 45px rgba(0,180,255,.15);
 
 }
 
+
+/* ===============================
+   NEON DOT
+================================ */
+
+.neon-dot{
+
+  width:11px;
+  height:11px;
+
+  min-width:11px;
+
+  border-radius:50%;
+
+  display:inline-block;
+
+  position:relative;
+
+}
+
+
+/* ===============================
+   BLUE NEON
+   TOTAL VISITORS
+================================ */
+
+.neon-blue{
+
+  background:#00d9ff;
+
+  box-shadow:
+
+    0 0 5px #00d9ff,
+
+    0 0 12px #00d9ff,
+
+    0 0 25px #00bfff,
+
+    0 0 45px rgba(0,190,255,.8);
+
+  animation:
+    bluePulse 1.6s infinite ease-in-out;
+
+}
+
+
+/* ===============================
+   GREEN NEON
+   READER / VIEWER / ONLINE
+================================ */
+
+.neon-green{
+
+  background:#00ff88;
+
+  box-shadow:
+
+    0 0 5px #00ff88,
+
+    0 0 12px #00ff88,
+
+    0 0 25px #00ff88,
+
+    0 0 45px rgba(0,255,136,.75);
+
+  animation:
+    greenPulse 1.5s infinite ease-in-out;
+
+}
+
+
+/* ===============================
+   READER / VIEWER
+================================ */
+
 .online-box{
+
+  margin-top:25px;
+
+  padding-top:18px;
+
+  border-top:1px solid rgba(255,255,255,.08);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:9px;
+
+  color:#f2f2f2;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+}
+
+
+.online-label{
+
+  width:100%;
+
+  margin-top:2px;
+
+  color:#8c8c8c;
+
+  font-size:9px;
+
+  letter-spacing:3px;
+
+  font-weight:500;
+
+}
+
+
+/* ===============================
+   USER ONLINE
+================================ */
+
+.user-online{
 
   margin-top:18px;
 
@@ -1072,51 +1252,162 @@ img{
 
   align-items:center;
 
-  gap:10px;
+  gap:9px;
 
-  color:#eee;
+  color:#00ff88;
 
   font-size:10px;
 
-  letter-spacing:2px;
+  letter-spacing:3px;
+
+  font-weight:600;
 
 }
 
-.online-dot{
 
-  width:10px;
+/* ===============================
+   BLUE PULSE
+================================ */
 
-  height:10px;
-
-  border-radius:50%;
-
-  background:#00ff88;
-
-  box-shadow:0 0 15px #00ff88;
-
-  animation:pulse 1.5s infinite;
-
-}
-
-@keyframes pulse{
+@keyframes bluePulse{
 
   0%{
+
     transform:scale(1);
+
     opacity:1;
+
+    box-shadow:
+
+      0 0 5px #00d9ff,
+
+      0 0 12px #00d9ff,
+
+      0 0 25px #00bfff;
+
   }
 
   50%{
-    transform:scale(1.5);
-    opacity:.5;
+
+    transform:scale(1.55);
+
+    opacity:.65;
+
+    box-shadow:
+
+      0 0 8px #00d9ff,
+
+      0 0 20px #00d9ff,
+
+      0 0 40px #00bfff,
+
+      0 0 65px rgba(0,190,255,.75);
+
   }
 
   100%{
+
     transform:scale(1);
+
     opacity:1;
+
+    box-shadow:
+
+      0 0 5px #00d9ff,
+
+      0 0 12px #00d9ff,
+
+      0 0 25px #00bfff;
+
   }
 
 }
-</style>
+
+
+/* ===============================
+   GREEN PULSE
+================================ */
+
+@keyframes greenPulse{
+
+  0%{
+
+    transform:scale(1);
+
+    opacity:1;
+
+    box-shadow:
+
+      0 0 5px #00ff88,
+
+      0 0 12px #00ff88,
+
+      0 0 25px #00ff88;
+
+  }
+
+  50%{
+
+    transform:scale(1.55);
+
+    opacity:.65;
+
+    box-shadow:
+
+      0 0 8px #00ff88,
+
+      0 0 20px #00ff88,
+
+      0 0 40px #00ff88,
+
+      0 0 65px rgba(0,255,136,.75);
+
+  }
+
+  100%{
+
+    transform:scale(1);
+
+    opacity:1;
+
+    box-shadow:
+
+      0 0 5px #00ff88,
+
+      0 0 12px #00ff88,
+
+      0 0 25px #00ff88;
+
+  }
+
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:480px){
+
+  .visitor-box{
+
+    width:330px;
+
+    padding:28px 20px;
+
+    margin:40px auto;
+
+  }
+
+  #visitor-count{
+
+    font-size:45px;
+
+  }
+
+}
+
+</style> 
   </div>
 </section>
 
