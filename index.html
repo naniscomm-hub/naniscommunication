@@ -2279,6 +2279,120 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 
     </div>
  </section>   
+      <style>
+
+.articles-section {
+  padding: 20px 20px 70px;
+  background: #f6f8fc;
+}
+
+.articles-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* KAD ARTIKEL */
+.article-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(16, 42, 86, 0.10);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(16, 42, 86, 0.16);
+}
+
+.article-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-content {
+  padding: 22px;
+}
+
+.article-category {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #f8d9ee;
+  color: #8b4b87;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.article-content h3 {
+  color: #39234a;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 8px 0 12px;
+}
+
+.article-content p {
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.article-content a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #8b4b9c;
+  transition: color 0.2s ease;
+}
+
+.article-content a:hover {
+  color: #e58ac2;
+}
+
+
+/* IDENTITI KHAS HIBURAN */
+.hiburan-card {
+  border: 2px solid #f3d1ec;
+}
+
+.hiburan-card:hover {
+  box-shadow: 0 12px 30px rgba(190, 110, 190, 0.20);
+}
+
+
+/* TELEFON */
+@media (max-width: 600px) {
+
+  .articles-section {
+    padding: 10px 15px 50px;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-card img {
+    height: 220px;
+  }
+
+  .article-content {
+    padding: 18px;
+  }
+
+  .article-content h3 {
+    font-size: 19px;
+  }
+
+}
+
+      </style>
 
     <!-- SENARAI TAJUK -->
 
