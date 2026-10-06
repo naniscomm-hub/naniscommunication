@@ -1407,6 +1407,48 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 
 }
 
+  <!-- Semua tempat yang tunjuk jumlah pandangan -->
+<div class="text-sm text-gray-400 mb-4">
+  <span class="globe-pulse">🌍</span>
+  <span class="view-count">319110</span> views
+</div>
+
+<div class="text-sm text-gray-400 mb-4">
+  <span class="globe-pulse">🌍</span>
+  <span class="view-count">12580</span> views
+</div>
+
+<div class="text-sm text-gray-400 mb-4">
+  <span class="globe-pulse">🌍</span>
+  <span class="view-count">4562</span> views
+</div>
+
+<style>
+/* Ikon globe berdenyut — tulis SEKALI SAJA, semua guna sama */
+.globe-pulse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-right: 6px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    filter: drop-shadow(0 0 2px #22d3ee) drop-shadow(0 0 4px #22d3ee);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px #22d3ee) drop-shadow(0 0 16px #06b6d4) drop-shadow(0 0 24px #0891b2);
+    transform: scale(1.15);
+  }
+  100% {
+    filter: drop-shadow(0 0 2px #22d3ee) drop-shadow(0 0 4px #22d3ee);
+    transform: scale(1);
+  }
+}
+
 </style> 
   </div>
 </section>
