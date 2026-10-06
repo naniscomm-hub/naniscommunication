@@ -3,191 +3,355 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Prosiding Jalan Semarak Ditangguhkan — Nanis Communication</title>
- <style>
-    * {
-      box-sizing: border-box;
-    }
 
-    body {
-      margin: 0;
-      padding: 0;
-      background: #f4f7f9;
-      color: #20252b;
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.85;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    .article-container {
-      width: 92%;
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 45px 55px;
-      border-radius: 14px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f7f9;
+  color: #20252b;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.85;
+}
 
-    .article-header {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+/* =========================================
+   ARTICLE CONTAINER
+   ========================================= */
 
-    .article-header h1 {
-      margin: 0;
-      color: #172b4d;
-      font-size: 34px;
-      line-height: 1.3;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
+.article-container {
+  width: 92%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 45px 55px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
 
-    .article-header h2 {
-      margin: 18px 0 22px;
-      color: #555;
-      font-size: 20px;
-      line-height: 1.5;
-      font-weight: 600;
-    }
+/* =========================================
+   HEADER
+   ========================================= */
 
-    .author {
-      font-family: Arial, sans-serif;
-      color: #666;
-      font-size: 15px;
-      line-height: 1.6;
-    }
+.article-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
 
-    .author strong {
-      color: #222;
-      font-size: 17px;
-    }
+.article-header img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 30px;
+  border-radius: 12px;
+}
 
-    .divider {
-      width: 80px;
-      height: 4px;
-      margin: 28px auto;
-      background: #c9a227;
-      border-radius: 10px;
-    }
+.article-header h1 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 34px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-weight: 800;
+}
 
-    .article-body p {
-      margin: 0 0 20px;
-      font-size: 18px;
-      text-align: justify;
-    }
+.author {
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
 
-    .section-title {
-      margin: 38px 0 18px;
-      padding: 12px 18px;
-      border-left: 5px solid #c9a227;
-      background: #f6f8fa;
-      color: #172b4d;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 21px;
-      line-height: 1.4;
-      font-weight: 800;
-    }
+.author strong {
+  color: #222;
+  font-size: 17px;
+}
 
-    .highlight {
-      margin: 28px 0;
-      padding: 22px 25px;
-      background: #f8f5e9;
-      border-left: 5px solid #c9a227;
-      font-size: 19px;
-      font-weight: 600;
-    }
+/* =========================================
+   DIVIDER
+   ========================================= */
 
-    .formula {
-      margin: 28px 0;
-      padding: 22px;
-      text-align: center;
-      background: #eef4f8;
-      border: 1px solid #d7e0e7;
-      border-radius: 10px;
-      color: #172b4d;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-    }
+.divider {
+  width: 80px;
+  height: 4px;
+  margin: 28px auto;
+  background: #c9a227;
+  border-radius: 10px;
+}
 
-    .closing {
-      margin-top: 35px;
-      padding-top: 25px;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      font-weight: 700;
-      font-size: 18px;
-      color: #172b4d;
-    }
+/* =========================================
+   ARTICLE BODY
+   ========================================= */
 
-    .article-footer {
-      margin-top: 45px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #777;
-      font-size: 13px;
-    }
+.article-body p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  text-align: justify;
+}
 
-    @media (max-width: 700px) {
-      .article-container {
-        width: 95%;
-        margin: 20px auto;
-        padding: 28px 22px;
-        border-radius: 10px;
-      }
+/* =========================================
+   HIGHLIGHT
+   ========================================= */
 
-      .article-header h1 {
-        font-size: 25px;
-      }
+.highlight {
+  margin: 28px 0;
+  padding: 22px 25px;
+  background: #f8f5e9;
+  border-left: 5px solid #c9a227;
+  font-size: 19px;
+  font-weight: 600;
+}
 
-      .article-header h2 {
-        font-size: 17px;
-      }
+/* =========================================
+   EDITORIAL NOTE
+   ========================================= */
 
-      .article-body p {
-        font-size: 16px;
-        line-height: 1.8;
-        text-align: left;
-      }
+.note {
+  margin-top: 35px;
+  padding: 20px 22px;
+  background: #f6f8fa;
+  border-left: 5px solid #172b4d;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
 
-      .section-title {
-        font-size: 18px;
-        padding: 10px 14px;
-      }
+/* =========================================
+   BACK BUTTON
+   ========================================= */
 
-      .highlight {
-        font-size: 17px;
-        padding: 18px;
-      }
+.back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 11px 20px;
+  background: #172b4d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
 
-      .formula {
-        font-size: 17px;
-      }
-    }
-  </style>
+.back:hover {
+  background: #c9a227;
+  color: #ffffff;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.article-footer {
+  margin-top: 45px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777;
+  font-size: 13px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .article-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 28px 22px;
+    border-radius: 10px;
+  }
+
+  .article-header img {
+    max-height: 300px;
+    border-radius: 9px;
+    margin-bottom: 22px;
+  }
+
+  .article-header h1 {
+    font-size: 25px;
+  }
+
+  .author {
+    font-size: 14px;
+  }
+
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .highlight {
+    font-size: 17px;
+    padding: 18px;
+  }
+
+  .note {
+    font-size: 13px;
+    padding: 17px;
+  }
+
+  .back {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}
+</style>
 
 </head>
+
 <body>
-<header>
- 
- <div class 
-  <img class=" src="IMG-felda.jpg">
-<h1>PROSIDING JALAN SEMARAK DITANGGUHKAN — ISU MASIH MENUNGGU PENENTUAN MAHKAMAH</h1>
-<div class="byline">Oleh: Nanis.Com | Nanis Communication</div>
-<p>Prosiding berkaitan pertikaian projek dan tanah di Jalan Semarak hari ini ditangguhkan dan akan disambung semula esok.</p>
-<p>Penangguhan tersebut susulan persoalan berkaitan kedudukan dua individu yang telah meninggal dunia serta keperluan mendapatkan penjelasan lanjut daripada pihak peguam berhubung perkara berkenaan.</p>
-<p>Perkembangan ini bermakna isu yang melibatkan projek Jalan Semarak masih belum menemui titik noktah dan terus menunggu proses perundangan untuk menentukan kedudukan perkara tersebut.</p>
-<p>Antara persoalan yang menjadi perhatian ialah tempoh masa yang diperlukan sebelum pertikaian ini dapat diselesaikan serta apakah implikasinya terhadap kepentingan dan aset FELDA sekiranya proses perundangan berlanjutan.</p>
-<p>Turut menjadi perhatian ialah nilai tuntutan yang dilaporkan mencecah sehingga RM3.5 bilion. Namun, nilai tuntutan tersebut tidak wajar dianggap sebagai kerugian yang telah diputuskan kerana perkara berkenaan masih tertakluk kepada proses dan keputusan mahkamah.</p>
-<p>Dalam keadaan ini, segala pihak wajar memberikan ruang kepada mahkamah untuk meneliti fakta, dokumen, bukti dan hujahan yang dikemukakan sebelum sebarang kesimpulan dibuat.</p>
-<p>Nanis Communication berpandangan bahawa kepentingan awam perlu terus diberi perhatian, namun prinsip keadilan dan proses undang-undang hendaklah dihormati.</p>
-<p>Apa juga keputusan akhirnya, biarlah ia ditentukan berdasarkan fakta, bukti dan undang-undang.</p>
-<p><strong>Kebenaran tidak perlu dipaksa — biarlah proses yang menentukan.</strong></p>
-<div class="note"><strong>Nota editorial:</strong> Artikel ini bertujuan melaporkan perkembangan prosiding dan persoalan berkaitan berdasarkan maklumat yang tersedia. Sebarang dakwaan, tuntutan atau pertikaian yang masih dalam prosiding tidak dianggap sebagai fakta yang telah diputuskan sehingga terdapat keputusan mahkamah.</div>
-<a class="back" href="index.html">← Kembali ke Nanis.Com</a>
-</article></main>
-<footer>© Nanis Communication. Hak cipta terpelihara.</footer>
+
+<main>
+
+  <article class="article-container">
+
+    <!-- =========================================
+         ARTICLE HEADER
+         ========================================= -->
+
+    <header class="article-header">
+
+      <img
+        src="IMG-felda.jpg"
+        alt="Projek Jalan Semarak dan FELDA"
+      >
+
+      <h1>
+        PROSIDING JALAN SEMARAK DITANGGUHKAN —
+        ISU MASIH MENUNGGU PENENTUAN MAHKAMAH
+      </h1>
+
+      <div class="author">
+        Oleh: <strong>Nanis.Com | Nanis Communication</strong>
+      </div>
+
+      <div class="divider"></div>
+
+    </header>
+
+
+    <!-- =========================================
+         ARTICLE CONTENT
+         ========================================= -->
+
+    <div class="article-body">
+
+      <p>
+        Prosiding berkaitan pertikaian projek dan tanah di Jalan Semarak
+        hari ini ditangguhkan dan akan disambung semula esok.
+      </p>
+
+      <p>
+        Penangguhan tersebut susulan persoalan berkaitan kedudukan dua
+        individu yang telah meninggal dunia serta keperluan mendapatkan
+        penjelasan lanjut daripada pihak peguam berhubung perkara berkenaan.
+      </p>
+
+      <p>
+        Perkembangan ini bermakna isu yang melibatkan projek Jalan Semarak
+        masih belum menemui titik noktah dan terus menunggu proses
+        perundangan untuk menentukan kedudukan perkara tersebut.
+      </p>
+
+      <p>
+        Antara persoalan yang menjadi perhatian ialah tempoh masa yang
+        diperlukan sebelum pertikaian ini dapat diselesaikan serta apakah
+        implikasinya terhadap kepentingan dan aset FELDA sekiranya proses
+        perundangan berlanjutan.
+      </p>
+
+      <p>
+        Turut menjadi perhatian ialah nilai tuntutan yang dilaporkan
+        mencecah sehingga RM3.5 bilion. Namun, nilai tuntutan tersebut
+        tidak wajar dianggap sebagai kerugian yang telah diputuskan kerana
+        perkara berkenaan masih tertakluk kepada proses dan keputusan
+        mahkamah.
+      </p>
+
+      <p>
+        Dalam keadaan ini, segala pihak wajar memberikan ruang kepada
+        mahkamah untuk meneliti fakta, dokumen, bukti dan hujahan yang
+        dikemukakan sebelum sebarang kesimpulan dibuat.
+      </p>
+
+      <p>
+        Nanis Communication berpandangan bahawa kepentingan awam perlu
+        terus diberi perhatian, namun prinsip keadilan dan proses
+        undang-undang hendaklah dihormati.
+      </p>
+
+      <p>
+        Apa juga keputusan akhirnya, biarlah ia ditentukan berdasarkan
+        fakta, bukti dan undang-undang.
+      </p>
+
+
+      <!-- =========================================
+           CLOSING HIGHLIGHT
+           ========================================= -->
+
+      <div class="highlight">
+        <strong>
+          Kebenaran tidak perlu dipaksa — biarlah proses yang menentukan.
+        </strong>
+      </div>
+
+
+      <!-- =========================================
+           EDITORIAL NOTE
+           ========================================= -->
+
+      <div class="note">
+
+        <strong>Nota editorial:</strong>
+        Artikel ini bertujuan melaporkan perkembangan prosiding dan
+        persoalan berkaitan berdasarkan maklumat yang tersedia.
+        Sebarang dakwaan, tuntutan atau pertikaian yang masih dalam
+        prosiding tidak dianggap sebagai fakta yang telah diputuskan
+        sehingga terdapat keputusan mahkamah.
+
+      </div>
+
+
+      <!-- =========================================
+           BACK TO MAIN PAGE
+           ========================================= -->
+
+      <a
+        class="back"
+        href="index.html"
+      >
+        ← Kembali ke Nanis.Com
+      </a>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER ARTICLE
+         ========================================= -->
+
+    <footer class="article-footer">
+      © Nanis Communication. Hak cipta terpelihara.
+    </footer>
+
+  </article>
+
+</main>
+
 </body>
 </html>
