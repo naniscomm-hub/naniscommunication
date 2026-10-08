@@ -2468,6 +2468,172 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 }
 
       </style>
+    
+      <!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANIS Communication | Agenda Malaysia Biru</title>
+    <meta name="description" content="Malaysia Biru: Dari Negara Pemasang Kepada Negara Pencipta — Wawasan 2057">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-blue: #BFD7EA;
+            --pastel-blue-deep: #7FA5C9;
+            --pastel-lavender: #D4D0E1;
+            --pastel-mint: #C7E9C0;
+            --pastel-peach: #FEE3D0;
+            --text-dark: #4A5568;
+            --text-medium: #718096;
+            --bg-soft: #F7F9FC;
+            --white: #FFFFFF;
+            --shadow-soft: 0 4px 20px rgba(127, 165, 201, 0.1);
+            --shadow-hover: 0 8px 25px rgba(127, 165, 201, 0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-soft);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-lavender) 100%);
+            padding: 20px 0;
+            box-shadow: var(--shadow-soft);
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Merriweather', serif; font-size: 1.5rem; font-weight: 700; color: #2C3E50; text-decoration: none; }
+        nav a { color: #2C3E50; text-decoration: none; margin-left: 25px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--pastel-blue-deep); }
+        .hero { padding: 60px 0; background: linear-gradient(to bottom, #EAF2F9, var(--bg-soft)); }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .hero-img { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-soft); }
+        .hero-img img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .hero-badge {
+            display: inline-block; background: var(--pastel-mint); color: #2D6A4F;
+            padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-family: 'Merriweather', serif; font-size: 2.5rem; line-height: 1.3; color: #2C3E50; margin-bottom: 20px;
+        }
+        .hero p { font-size: 1.1rem; color: var(--text-medium); margin-bottom: 30px; }
+        .btn {
+            display: inline-block; background: linear-gradient(135deg, var(--pastel-blue-deep), #6B9AC4);
+            color: white; padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+        .section { padding: 60px 0; }
+        .section-title {
+            font-family: 'Merriweather', serif; font-size: 1.8rem; text-align: center; margin-bottom: 40px;
+            color: #2C3E50; position: relative;
+        }
+        .section-title:after {
+            content: ''; display: block; width: 60px; height: 4px; background: var(--pastel-peach); margin: 12px auto 0; border-radius: 2px;
+        }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card {
+            background: var(--white); border-radius: 16px; padding: 30px; box-shadow: var(--shadow-soft);
+            transition: 0.3s; border-top: 4px solid var(--pastel-blue);
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .card h3 { color: #2C3E50; margin-bottom: 15px; font-size: 1.2rem; }
+        .card p { color: var(--text-medium); font-size: 0.95rem; }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--pastel-peach), #FFF1E8);
+            border-radius: 16px; padding: 40px; text-align: center; margin: 40px 0;
+        }
+        .highlight-box h3 { font-size: 1.5rem; color: #8B4513; margin-bottom: 15px; }
+        footer {
+            background: #2C3E50; color: #CBD5E0; padding: 40px 0; text-align: center; margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8rem; }
+            nav a { margin-left: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">NANIS Communication</a>
+            <nav>
+                <a href="#">Utama</a>
+                <a href="artikel-malaysia-biru.html">Artikel</a>
+                <a href="#">Kategori</a>
+                <a href="#">Hubungi</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <span class="hero-badge">✨ Artikel Pilihan</span>
+                    <h1>Malaysia Biru: Dari Negara Pemasang Kepada Negara Pencipta</h1>
+                    <p>Gagasan besar untuk membentuk Malaysia 2057 dan seterusnya — bukan sekadar slogan politik, tetapi wawasan untuk generasi akan datang.</p>
+                    <a href="artikel-malaysia-biru.html" class="btn">Baca Artikel Penuh →</a>
+                </div>
+                <div class="hero-img">
+                    <img src="gambar-utama-optimized.jpg" alt="Forum BN ke-12: Agenda Malaysia Biru">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Inti Wawasan Malaysia Biru</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🔹 Dari 1957 ke 2057</h3>
+                    <p>Perancangan jangka panjang 30–50 tahun ke hadapan, bukan sekadar tempoh kerajaan 5 tahun. Menjadikan 2057 sebagai tahun sasaran wawasan nasional.</p>
+                </div>
+                <div class="card">
+                    <h3>🔹 Negara Pencipta, Bukan Pemasang</h3>
+                    <p>Beralih daripada sekadar "Made in Malaysia" kepada "Made by Malaysia" — milik teknologi, harta intelek, dan inovasi sendiri.</p>
+                </div>
+                <div class="card">
+                    <h3>🔹 AI & Teknologi Masa Depan</h3>
+                    <p>Jangan hanya jadi pekerja teknologi, tetapi jadi pemilik ilmu dan pencipta teknologi yang dihormati dunia.</p>
+                </div>
+                <div class="card">
+                    <h3>🔹 Air Sebagai Aset Strategik</h3>
+                    <p>Sumber air bukan sekadar keperluan harian — ia boleh menjadi aset ekonomi dan kelebihan negara di masa hadapan.</p>
+                </div>
+                <div class="card">
+                    <h3>🔹 Perpaduan & Inklusif</h3>
+                    <p>Sabah, Sarawak, dan semua kaum — Malaysia milik kita bersama. Pembangunan mesti dirasai oleh semua lapisan masyarakat.</p>
+                </div>
+                <div class="card">
+                    <h3>🔹 Generasi Muda & PRU16</h3>
+                    <p>Masa depan bukan dijual dengan nostalgia, tetapi dengan harapan. Pengundi muda mahu tahu: "Apa seterusnya?"</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>"Parti adalah mekanisme, Rakyat adalah matlamat."</h3>
+                <p>Ukuran kejayaan politik hanya satu: adakah kehidupan rakyat menjadi lebih baik, sejahtera, dan cerah?</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>NANIS Communication | IPK MEDIA</strong></p>
+            <p>&copy; 2026 Semua Hak Terpelihara. Artikel oleh Shahbudin Embun.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
 
     <!-- SENARAI TAJUK -->
 
