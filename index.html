@@ -886,66 +886,78 @@ pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[
 
   <div class="relative z-10 max-w-5xl">
 
-    <!-- HERO VIDEO -->
-    <div class="relative mx-auto mb-20 max-w-6xl overflow-hidden
-    rounded-[40px]
-    border border-yellow-500/20
-    gold-glow">
+    
+<!-- HERO VIDEOS -->
+<div class="relative z-10 mx-auto mb-20 w-full max-w-6xl">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+    <!-- VIDEO PERTAMA: VIDEO ASAL -->
+    <div class="relative overflow-hidden rounded-[24px] md:rounded-[32px]
+    border border-yellow-500/20 gold-glow">
 
       <video
         id="heroVideo"
-        autoplay
-        muted
-        loop
-        playsinline
+        autoplay muted loop playsinline
         preload="auto"
-        class="w-full h-auto object-cover">
+        class="block w-full aspect-video object-cover">
 
-        <source src="lv_7617934611674303752_20260903023127.mp4" type="video/mp4">
-        </div>
+        <source
+          src="lv_7617934611674303752_20260903023127.mp4"
+          type="video/mp4">
       </video>
 
-      <!-- SOUND BUTTON -->
       <button
         id="soundBtn"
+        type="button"
         onclick="toggleSound()"
-        class="absolute bottom-5 right-5 z-20
+        class="absolute bottom-3 right-3 z-20
         bg-black/50 backdrop-blur-xl
         border border-yellow-500/20
-        text-yellow-300
-        px-5 py-3
-        rounded-full
-        hover:bg-yellow-500/20
+        text-yellow-300 px-4 py-2
+        rounded-full hover:bg-yellow-500/20
         transition duration-300">
-
         🔇 Sound Off
-
       </button>
 
-    <!-- SOUND SCRIPT -->
-    <script>
+    </div>
 
-    function toggleSound() {
+    <!-- VIDEO KEDUA -->
+    <div class="relative overflow-hidden rounded-[24px] md:rounded-[32px]
+    border border-yellow-500/20 gold-glow">
 
-      const video = document.getElementById("heroVideo");
-      const button = document.getElementById("soundBtn");
+      <video
+        id="heroVideo2"
+        autoplay muted loop playsinline
+        preload="metadata"
+        class="block w-full aspect-video object-cover">
 
-      video.muted = !video.muted;
+        <source
+          src="111664_github_small.mp4"
+          type="video/mp4">
+      </video>
 
-      if(video.muted){
+    </div>
 
-        button.innerHTML = "🔇 Sound Off";
+  </div>
+</div>
 
-      } else {
+<!-- SOUND SCRIPT -->
+<script>
+function toggleSound() {
+  const video = document.getElementById("heroVideo");
+  const button = document.getElementById("soundBtn");
 
-        button.innerHTML = "🔊 Sound On";
-        video.play();
+  video.muted = !video.muted;
 
-      }
-
-    }
-
-    </script>
+  if (video.muted) {
+    button.innerHTML = "🔇 Sound Off";
+  } else {
+    button.innerHTML = "🔊 Sound On";
+    video.play();
+  }
+}
+</script>
     
 <!-- ===============================
      NANIS COMMUNICATION
