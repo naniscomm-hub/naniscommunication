@@ -959,273 +959,84 @@ function toggleSound() {
 }
 </script>
 
-<div id="global-reach">
-  <style>
-    #global-reach {
-      --ink:#164a91; --blue:#45bdf5; --cyan:#8cecff; --purple:#a995ff;
-      --pink:#f4a6f0; --mint:#8ae9df; --muted:#6485b6;
-      color:var(--ink); font-family:Arial,sans-serif;
-      background:
-        radial-gradient(ellipse at 12% 25%,#e6f8ff 0,transparent 35%),
-        radial-gradient(ellipse at 88% 65%,#f1eaff 0,transparent 35%),
-        linear-gradient(145deg,#ffffff 0%,#f8fcff 48%,#f4f6ff 100%);
-      padding:clamp(16px,3vw,32px); border:1px solid #fff;
-      border-radius:28px; overflow:hidden; box-sizing:border-box;
-      box-shadow:0 12px 40px #91caff24;
-      position:relative;
-    }
-    #global-reach:before,#global-reach:after {
-      content:"";position:absolute;pointer-events:none;width:70%;height:90px;
-      border-radius:50%;filter:blur(22px);opacity:.45;z-index:0;
-    }
-    #global-reach:before{top:-65px;left:15%;background:#d8f3ff}
-    #global-reach:after{bottom:-65px;right:5%;background:#eedfff}
-    #global-reach * {box-sizing:border-box}
-    #global-reach > * {position:relative;z-index:1}
-    #global-reach .gr-brand {display:flex;justify-content:space-between;align-items:center;margin:0 0 18px}
-    #global-reach .gr-brand-name {font-family:Georgia,serif;font-style:italic;font-size:clamp(25px,4vw,39px);color:#7560bd;line-height:1}
-    #global-reach .gr-brand-sub {font-size:10px;letter-spacing:5px;color:#6e77a8;margin:7px 0 0 8px}
-    #global-reach .gr-menu {font-size:29px;color:#7d6bb7;line-height:1}
-    #global-reach .gr-heading {font-family:Georgia,serif;font-size:clamp(29px,5vw,49px);line-height:1.05;color:#164b99;margin:12px 0 5px;text-align:left}
-    #global-reach .gr-heading span {display:block;color:#268bd0;font-family:Arial,sans-serif;font-size:.78em;font-weight:400;margin-top:2px}
-    #global-reach .gr-sub {text-align:center;color:#5e89c6;font-size:10px;letter-spacing:3px;margin:14px 0 24px}
-    #global-reach .gr-main {display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
-    #global-reach .gr-globe {aspect-ratio:1;position:relative;display:grid;place-items:center;isolation:isolate;min-width:0}
-    #global-reach .gr-globe:before {content:"";position:absolute;inset:5%;border-radius:50%;background:radial-gradient(circle,#a9efff7a,#c2dfff44 48%,transparent 72%);filter:blur(4px)}
-    #global-reach .gr-earth {width:74%;aspect-ratio:1;border-radius:50%;position:relative;overflow:hidden;border:2px solid #c8f7ff;background:
-      radial-gradient(ellipse at 30% 24%,#ffffff 0 1.5%,transparent 3%),
-      radial-gradient(ellipse at 63% 55%,#d7f9ff 0 8%,transparent 9%),
-      radial-gradient(ellipse at 40% 45%,#4bbcf6 0 12%,transparent 13%),
-      radial-gradient(ellipse at 62% 30%,#3f91f2 0 15%,transparent 16%),
-      radial-gradient(circle at 35% 28%,#e6ffff 0,#73dfff 28%,#3298f0 57%,#d5c9ff 76%,#ffffff 100%);
-      box-shadow:inset -18px -14px 32px #3974c955,inset 12px 8px 25px #fff,0 0 20px #78dcff99,0 0 50px #a7caff55}
-    #global-reach .gr-earth:before {content:"";position:absolute;inset:0;border-radius:50%;background:
-      radial-gradient(ellipse at 24% 35%,#167ce9 0 8%,transparent 9%),
-      radial-gradient(ellipse at 37% 50%,#0f76df 0 10%,transparent 11%),
-      radial-gradient(ellipse at 56% 27%,#147ce5 0 7%,transparent 8%),
-      radial-gradient(ellipse at 68% 54%,#0d75db 0 13%,transparent 14%),
-      radial-gradient(ellipse at 52% 68%,#1789ed 0 8%,transparent 9%);
-      opacity:.9;filter:drop-shadow(0 0 4px #fff)}
-    #global-reach .gr-earth:after {content:"";position:absolute;inset:8%;border-radius:50%;border:1px solid #fff9;box-shadow:inset 0 0 25px #fff8}
-    #global-reach .gr-orbit {position:absolute;width:108%;height:37%;border:2px solid #5ce3ffb8;border-left-color:#f2a9ff;border-right-color:#c9b4ff;border-radius:50%;transform:rotate(-25deg);box-shadow:0 0 12px #9beaff88;animation:grOrbit 14s linear infinite}
-    #global-reach .gr-orbit:after {content:"";position:absolute;top:4%;left:18%;width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px #8cecffaa,0 0 18px #54dfff}
-    @keyframes grOrbit {to{transform:rotate(335deg)}}
-    #global-reach .gr-stats {display:grid;gap:12px}
-    #global-reach .gr-card,#global-reach .gr-section,#global-reach .gr-manual {
-      border:1px solid #fff;border-radius:23px;
-      background:linear-gradient(120deg,#ffffffed,#edf8ffb8 58%,#f4efffbb);
-      box-shadow:0 8px 22px #8bbdf333,inset 0 0 0 1px #d8edff;
-      backdrop-filter:blur(12px)
-    }
-    #global-reach .gr-card {padding:17px;display:grid;grid-template-columns:70px 1fr;align-items:center;gap:12px}
-    #global-reach .gr-icon {width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:28px;color:white;background:radial-gradient(circle at 35% 25%,#b9f6ff,#4cc5f5 45%,#6d83f4 72%,#d9c6ff);border:4px solid #fff;box-shadow:0 0 0 2px #d9efff,0 0 20px #85dfff88}
-    #global-reach .gr-card:nth-child(2) .gr-icon {background:radial-gradient(circle at 35% 25%,#fff,#b5a2ff 38%,#806cf0 75%)}
-    #global-reach .gr-card:nth-child(3) .gr-icon {background:radial-gradient(circle at 35% 25%,#fff,#8af0e4 38%,#21c8c5 75%)}
-    #global-reach .gr-label {font-size:12px;letter-spacing:1px;color:#2879c8;font-weight:700}
-    #global-reach .gr-number {font-size:clamp(23px,3.4vw,37px);font-weight:900;margin:6px 0 2px;overflow-wrap:anywhere;color:#48aaf2}
-    #global-reach .gr-card:nth-child(2) .gr-number{color:#9a72f1}
-    #global-reach .gr-card:nth-child(3) .gr-number{color:#df7ee8}
-    #global-reach .gr-note {font-size:11px;color:var(--muted);line-height:1.6}
-    #global-reach .gr-section {padding:20px;margin-top:18px}
-    #global-reach .gr-section h3 {font-size:17px;letter-spacing:1px;color:#1b5aa2;margin:0 0 13px}
-    #global-reach .gr-map-layout {display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px}
-    #global-reach .gr-map-preview {width:100%;height:auto;display:block;border-radius:16px;background:linear-gradient(140deg,#dff7ff,#c6ddff 55%,#eadfff);box-shadow:inset 0 0 20px #fff}
-    #global-reach .gr-btn {border:0;border-radius:30px;padding:13px 20px;color:white;font-size:11px;font-weight:bold;letter-spacing:1px;background:linear-gradient(100deg,#56c9f5,#8285f4 55%,#e39be9);cursor:pointer;box-shadow:0 5px 16px #9ebdff66}
-    #global-reach .gr-btn:hover{filter:brightness(1.04);box-shadow:0 7px 22px #9d9aff77}
-    #global-reach .gr-graph {display:block;width:100%;height:160px;overflow:visible}
-    #global-reach .gr-graph-wrap {display:grid;grid-template-columns:minmax(0,2fr) minmax(150px,1fr);gap:18px;align-items:center}
-    #global-reach .gr-legend {border:1px solid #fff;border-radius:18px;padding:16px;background:#ffffffb8;box-shadow:0 4px 15px #a7c9ff33;font-size:11px;color:#6684b4}
-    #global-reach .gr-legend div {display:flex;justify-content:space-between;gap:8px;margin:9px 0}
-    #global-reach .gr-legend strong {color:#367fce}
-    #global-reach .gr-manual {margin-top:18px;padding:18px}
-    #global-reach .gr-manual summary {cursor:pointer;color:#2468b3;font-size:13px;letter-spacing:1px;font-weight:bold}
-    #global-reach .gr-fields {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
-    #global-reach .gr-fields label {font-size:10px;color:#6386b8}
-    #global-reach .gr-fields input {width:100%;min-width:0;margin-top:6px;padding:11px 10px;color:#24538f;background:#fff;border:1px solid #cfe5ff;border-radius:10px;box-shadow:inset 0 1px 4px #c8ddf533}
-    #global-reach .gr-footer {text-align:center;margin-top:25px;color:#756ab0;font-family:Georgia,serif;font-style:italic;letter-spacing:2px}
-    #global-reach .gr-modal {display:none;position:fixed;inset:0;z-index:999999;background:#f5faffef;padding:18px;overflow:auto}
-    #global-reach .gr-modal.open {display:block}
-    #global-reach .gr-modal-inner {max-width:1050px;margin:2vh auto;background:linear-gradient(145deg,#fff,#edf8ff,#f4efff);border:1px solid #cce9ff;border-radius:22px;padding:16px;box-shadow:0 10px 35px #78aee955}
-    #global-reach .gr-modal-head {display:flex;justify-content:space-between;gap:12px;align-items:center;color:#245da1;margin-bottom:12px}
-    #global-reach .gr-world {width:100%;height:auto;display:block;background:linear-gradient(145deg,#e1f7ff,#c8e4ff,#eee6ff);border-radius:14px}
-    #global-reach .gr-world path {fill:#82c9f2;stroke:#fff;stroke-opacity:.9}
-    #global-reach .gr-pin {cursor:pointer}
-    #global-reach .gr-pin circle:first-child {fill:#32c98b;stroke:#fff;stroke-width:1.5;animation:grPin 1.5s infinite;transform-box:fill-box;transform-origin:center}
-    @keyframes grPin {50%{opacity:.5;transform:scale(1.7)}}
-    #global-reach .gr-country-info {color:#376aab;font-size:12px;line-height:1.7;margin-top:10px}
-    @media(max-width:620px) {
-      #global-reach{padding:14px;border-radius:22px}
-      #global-reach .gr-brand{margin-bottom:22px}
-      #global-reach .gr-main{grid-template-columns:1fr;gap:4px}
-      #global-reach .gr-globe{width:min(88%,300px);margin:auto}
-      #global-reach .gr-card{grid-template-columns:58px 1fr;padding:13px;gap:10px}
-      #global-reach .gr-icon{width:52px;height:52px;font-size:23px}
-      #global-reach .gr-map-layout,#global-reach .gr-graph-wrap{grid-template-columns:1fr}
-      #global-reach .gr-fields{grid-template-columns:1fr}
-      #global-reach .gr-section{padding:14px}
-      #global-reach .gr-heading{text-align:left}
-      #global-reach .gr-sub{letter-spacing:1.5px}
-    }
-  </style>
-
-  <div class="gr-brand">
-    <div><div class="gr-brand-name">✿ Nanis♡</div><div class="gr-brand-sub">COMMUNICATION</div></div>
-    <div class="gr-menu" aria-hidden="true">☰</div>
-  </div>
-  <h2 class="gr-heading">Global Reach —<span>Nanis Communication</span></h2>
-  <div class="gr-sub">CONNECTING PEOPLE · BUILDING A BRIGHTER WORLD</div>
-
-  <div class="gr-main">
-    <div class="gr-globe" aria-label="Glowing Earth illustration"><div class="gr-orbit"></div><div class="gr-earth"></div></div>
-    <div class="gr-stats">
-      <div class="gr-card"><div class="gr-icon">♟</div><div><div class="gr-label">TOTAL VISITORS</div><div class="gr-number" id="gr-total">5.1M+</div><div class="gr-note">Global audience reach</div></div></div>
-      <div class="gr-card"><div class="gr-icon">◉</div><div><div class="gr-label">READERS &amp; VIEWERS</div><div class="gr-number" id="gr-readers">562911</div><div class="gr-note">Content readership</div></div></div>
-      <div class="gr-card"><div class="gr-icon">♙</div><div><div class="gr-label">USER ONLINE</div><div class="gr-number" id="gr-online">201K++</div><div class="gr-note">Live-style display</div></div></div>
-    </div>
-  </div>
-
-  <div class="gr-section">
-    <div class="gr-map-layout">
-      <svg class="gr-map-preview" viewBox="0 0 600 250" role="img" aria-label="Decorative world map preview">
-        <defs><linearGradient id="grMapBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8edff"/><stop offset=".55" stop-color="#b4d5ff"/><stop offset="1" stop-color="#e5d2ff"/></linearGradient></defs>
-        <rect width="600" height="250" rx="16" fill="url(#grMapBg)"/>
-        <g fill="#68caff" stroke="#eafcff" stroke-width="2" opacity=".96">
-          <path d="M36 63L68 35 111 28 151 45 172 69 151 94 119 100 105 130 79 119 67 89 44 83Z"/>
-          <path d="M139 126L164 135 180 169 164 214 147 188 141 157Z"/>
-          <path d="M262 51L287 38 314 46 320 62 298 73 286 91 269 76Z"/>
-          <path d="M284 89L320 80 344 103 333 143 311 180 292 149 278 115Z"/>
-          <path d="M328 48L372 29 425 40 474 59 506 78 487 98 451 94 427 113 396 101 372 78 345 72Z"/>
-          <path d="M389 111L415 117 428 150 414 181 396 160 386 136Z"/>
-          <path d="M474 151L506 141 533 156 520 176 491 177Z"/>
-          <path d="M538 184L560 178 580 191 566 202 546 198Z"/>
-        </g>
-        <g fill="none" stroke="#fff" stroke-width="2" opacity=".8"><path d="M60 190Q180 65 300 130T540 70"/><path d="M80 55Q280 235 510 115"/></g>
-        <g fill="#fff"><circle cx="165" cy="94" r="4"/><circle cx="315" cy="112" r="4"/><circle cx="426" cy="84" r="4"/></g>
-      </svg>
-      <div><h3>WORLD MAP</h3><p class="gr-note">Explore countries with visa-free access for Malaysian passport holders.</p><button class="gr-btn" id="gr-open-map" type="button">◎ VIEW WORLD MAP　›</button></div>
-    </div>
-  </div>
-
-  <div class="gr-section">
-    <h3>▥ GLOBAL TRAFFIC GRAPH</h3>
-    <div class="gr-graph-wrap">
-      <svg class="gr-graph" id="gr-graph" viewBox="0 0 600 160" preserveAspectRatio="none" role="img" aria-label="Graph based on manually entered values">
-        <defs><linearGradient id="grGraphLine"><stop stop-color="#54d7f8"/><stop offset=".55" stop-color="#8e91ff"/><stop offset="1" stop-color="#ef9be9"/></linearGradient><linearGradient id="grGraphArea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#89dcff" stop-opacity=".45"/><stop offset="1" stop-color="#d9d5ff" stop-opacity=".05"/></linearGradient></defs>
-        <g stroke="#9bbce8" stroke-opacity=".25"><path d="M0 25H600 M0 60H600 M0 95H600 M0 130H600"/></g>
-        <path id="gr-area" d="" fill="url(#grGraphArea)"/><path id="gr-line" d="" fill="none" stroke="url(#grGraphLine)" stroke-width="3" stroke-linecap="round"/><g id="gr-points" fill="#f0a4eb" stroke="#fff" stroke-width="2"></g>
-      </svg>
-      <div class="gr-legend"><div><span>🔹 Total Visitors</span><strong id="gr-legend-total">5.1M+</strong></div><div><span>🟣 Readers &amp; Viewers</span><strong id="gr-legend-readers">562911</strong></div><div><span>💜 Users Online</span><strong id="gr-legend-online">201K++</strong></div></div>
-    </div>
-    <div class="gr-note" id="gr-graph-label">Graph follows your manual entries below.</div>
-  </div>
-
-  <details class="gr-manual" open>
-    <summary>⚙ MANUAL STATISTICS &amp; GRAPH DATA</summary>
-    <p class="gr-note">Enter the values below to update the cards and graph. The existing visitor counter elsewhere on your website is not changed.</p>
-    <div class="gr-fields">
-      <label>Total visitors<input id="gr-input-total" value="5.1M+" /></label>
-      <label>Readers &amp; viewers<input id="gr-input-readers" type="number" min="0" value="562911" /></label>
-      <label>Users online<input id="gr-input-online" value="201K++" /></label>
-    </div>
-    <p style="margin-bottom:0"><button class="gr-btn" id="gr-update" type="button">↻ UPDATE STATISTICS</button></p>
-    <p class="gr-note">The graph is decorative and animated from the manually entered reader/viewer number; it does not connect to live analytics.</p>
-  </details>
-  <div class="gr-footer">♡　Nanis Communication · Global Reach　♡</div>
-
-  <div class="gr-modal" id="gr-map-modal" role="dialog" aria-modal="true" aria-label="World map visa-free destinations">
-    <div class="gr-modal-inner">
-      <div class="gr-modal-head"><strong>WORLD MAP · MALAYSIAN PASSPORT</strong><button class="gr-btn" id="gr-close-map" type="button">CLOSE ✕</button></div>
-      <p class="gr-note">Illustrative destination pins only. Verify current visa requirements with official sources before travel.</p>
-      <svg class="gr-world" viewBox="0 0 1000 500" role="img" aria-label="Illustrative world map with destination pins">
-        <defs><pattern id="grworldgrid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#fff" stroke-opacity=".35"/></pattern></defs>
-        <rect width="1000" height="500" fill="url(#grworldgrid)"/>
-        <g fill="#82c9f2" stroke="#fff" stroke-width="1.5">
-          <path d="M64 95L106 61 175 52 224 80 245 111 218 141 179 145 157 180 130 177 112 140 82 130Z"/>
-          <path d="M197 190L233 201 251 240 239 288 216 341 193 299 185 248Z"/>
-          <path d="M414 88L451 67 477 79 483 104 456 120 433 109Z"/>
-          <path d="M438 126L480 113 513 139 520 194 492 251 468 224 451 178Z"/>
-          <path d="M487 84L546 62 612 77 671 90 721 119 701 143 652 139 621 165 584 151 552 129 521 121Z"/>
-          <path d="M563 162L600 170 620 218 599 272 574 245 556 201Z"/>
-          <path d="M700 242L744 228 786 248 775 271 737 279 713 263Z"/>
-          <path d="M808 296L842 286 866 302 852 321 823 317Z"/>
-          <path d="M850 123L876 109 894 121 886 143 865 147Z"/>
-          <path d="M900 177L924 165 945 181 933 199 909 196Z"/>
-        </g><g id="gr-world-pins"></g>
-      </svg>
-      <div id="gr-country-info" class="gr-country-info">Tap a green pin to see its destination name.</div>
-      <p class="gr-note">Map positions are approximate and the list is not a complete or officially verified visa-free list. Entry rules may change.</p>
-    </div>
+<!-- NANIS COMMUNICATION · GLOBAL REACH RESET -->
+<div id="nc-global-reach-v2">
+<style>
+#nc-global-reach-v2{--ink:#164b91;--blue:#55bff5;--cyan:#a3edff;--lav:#aa98f5;--pink:#efa5ec;--muted:#6486b5;font-family:Arial,sans-serif;color:var(--ink);padding:clamp(14px,3vw,30px);border-radius:28px;overflow:hidden;box-sizing:border-box;background:radial-gradient(ellipse at 12% 20%,#e2f7ff 0,transparent 35%),radial-gradient(ellipse at 88% 62%,#f0e9ff 0,transparent 38%),linear-gradient(145deg,#fff 0%,#f7fcff 55%,#f7f4ff 100%);border:1px solid #fff;box-shadow:0 12px 40px #a4d4ff33}
+#nc-global-reach-v2 *{box-sizing:border-box}
+#nc-global-reach-v2 .ncgr-brand{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+#nc-global-reach-v2 .ncgr-logo{font:italic clamp(27px,4vw,42px) Georgia,serif;color:#7863b9}
+#nc-global-reach-v2 .ncgr-brand small{display:block;font:10px Arial,sans-serif;letter-spacing:5px;color:#7883b3;margin:5px 0 0 8px}
+#nc-global-reach-v2 .ncgr-menu{font-size:30px;color:#7968b9}
+#nc-global-reach-v2 .ncgr-title{font: bold clamp(30px,5vw,48px)/1.08 Georgia,serif;color:#164c98;margin:8px 0 4px}
+#nc-global-reach-v2 .ncgr-title span{display:block;font:400 .75em Arial,sans-serif;color:#278ed0;margin-top:4px}
+#nc-global-reach-v2 .ncgr-tagline{text-align:center;color:#5d8bc7;font-size:10px;letter-spacing:2.5px;margin:16px 0 25px}
+#nc-global-reach-v2 .ncgr-hero{display:grid;grid-template-columns:1fr 1.05fr;gap:20px;align-items:center}
+#nc-global-reach-v2 .ncgr-globe{aspect-ratio:1;position:relative;display:grid;place-items:center;min-width:0}
+#nc-global-reach-v2 .ncgr-orbit{position:absolute;width:110%;height:38%;border:2px solid #60ddff;border-left-color:#f4a9ed;border-right-color:#b8a8ff;border-radius:50%;transform:rotate(-24deg);box-shadow:0 0 16px #8deaff99;animation:ncgr-spin 16s linear infinite}
+#nc-global-reach-v2 .ncgr-orbit:after{content:"";position:absolute;top:2%;left:18%;width:11px;height:11px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px #86eaffaa,0 0 18px #4bcaff}
+#nc-global-reach-v2 .ncgr-earth{width:73%;aspect-ratio:1;border-radius:50%;position:relative;overflow:hidden;border:2px solid #fff;background:radial-gradient(ellipse at 28% 24%,#fff 0 2%,transparent 3%),radial-gradient(ellipse at 35% 35%,#eaffff 0 8%,transparent 9%),radial-gradient(ellipse at 38% 45%,#1588e9 0 12%,transparent 13%),radial-gradient(ellipse at 65% 30%,#0878db 0 15%,transparent 16%),radial-gradient(ellipse at 68% 62%,#168ce6 0 13%,transparent 14%),radial-gradient(circle at 32% 25%,#eaffff 0,#84e7ff 28%,#369bf1 57%,#c9c8ff 78%,#fff 100%);box-shadow:inset -18px -12px 30px #2c71c655,inset 10px 8px 25px #fff,0 0 25px #72d9ffbb,0 0 55px #a9cfff77}
+#nc-global-reach-v2 .ncgr-earth:after{content:"";position:absolute;inset:8%;border:1px solid #fff9;border-radius:50%;box-shadow:inset 0 0 25px #fff8}
+@keyframes ncgr-spin{to{transform:rotate(336deg)}}
+#nc-global-reach-v2 .ncgr-stats{display:grid;gap:12px}
+#nc-global-reach-v2 .ncgr-card{display:grid;grid-template-columns:65px 1fr;align-items:center;gap:13px;padding:16px;border-radius:22px;border:1px solid #fff;background:linear-gradient(120deg,#ffffffed,#eef9ffce 60%,#f4efffce);box-shadow:0 7px 22px #9ac8f044,inset 0 0 0 1px #d9edff;backdrop-filter:blur(12px)}
+#nc-global-reach-v2 .ncgr-icon{width:60px;height:60px;display:grid;place-items:center;border-radius:50%;font-size:26px;color:white;background:radial-gradient(circle at 32% 25%,#fff,#7ce5ff 42%,#5b91f5 76%);border:4px solid #fff;box-shadow:0 0 0 2px #d9f0ff,0 0 18px #87dfff99}
+#nc-global-reach-v2 .ncgr-card:nth-child(2) .ncgr-icon{background:radial-gradient(circle at 32% 25%,#fff,#c2b3ff 40%,#8770ef 78%)}
+#nc-global-reach-v2 .ncgr-card:nth-child(3) .ncgr-icon{background:radial-gradient(circle at 32% 25%,#fff,#8cf0df 40%,#25c9c1 78%)}
+#nc-global-reach-v2 .ncgr-label{font-size:12px;letter-spacing:.7px;color:#2678c7;font-weight:bold}
+#nc-global-reach-v2 .ncgr-number{font-size:clamp(23px,3.4vw,36px);font-weight:900;margin:5px 0;color:#4aaaf0;overflow-wrap:anywhere}
+#nc-global-reach-v2 .ncgr-card:nth-child(2) .ncgr-number{color:#9b76f0}
+#nc-global-reach-v2 .ncgr-card:nth-child(3) .ncgr-number{color:#df7fe7}
+#nc-global-reach-v2 .ncgr-note{font-size:11px;line-height:1.6;color:var(--muted)}
+#nc-global-reach-v2 .ncgr-panel{margin-top:18px;padding:19px;border:1px solid #fff;border-radius:22px;background:linear-gradient(120deg,#ffffffed,#eef8ffcc 60%,#f4efffbb);box-shadow:0 8px 24px #9ac8f044,inset 0 0 0 1px #dceeff;backdrop-filter:blur(12px)}
+#nc-global-reach-v2 .ncgr-panel h3{font-size:17px;letter-spacing:.7px;color:#1b5aa2;margin:0 0 13px}
+#nc-global-reach-v2 .ncgr-maprow{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+#nc-global-reach-v2 .ncgr-map{width:100%;height:auto;display:block;border-radius:15px;background:linear-gradient(140deg,#dff8ff,#c4ddff 55%,#edddff)}
+#nc-global-reach-v2 .ncgr-btn{border:0;border-radius:30px;padding:13px 20px;color:#fff;font-size:11px;font-weight:bold;letter-spacing:.8px;background:linear-gradient(100deg,#54c8f5,#8887f3 58%,#e49ce9);cursor:pointer;box-shadow:0 5px 16px #9ebdff66}
+#nc-global-reach-v2 .ncgr-graphrow{display:grid;grid-template-columns:minmax(0,2fr) minmax(150px,1fr);gap:16px;align-items:center}
+#nc-global-reach-v2 .ncgr-graph{width:100%;height:155px;display:block}
+#nc-global-reach-v2 .ncgr-legend{background:#ffffffbb;border:1px solid #fff;border-radius:17px;padding:13px;font-size:11px;color:#6787b6}
+#nc-global-reach-v2 .ncgr-legend div{display:flex;justify-content:space-between;gap:7px;margin:10px 0}
+#nc-global-reach-v2 .ncgr-legend b{color:#367fc8}
+#nc-global-reach-v2 .ncgr-manual{margin-top:18px;padding:18px;border:1px solid #fff;border-radius:20px;background:linear-gradient(120deg,#ffffffed,#eef8ffcc,#f4efffbb);box-shadow:0 8px 24px #9ac8f044}
+#nc-global-reach-v2 summary{cursor:pointer;color:#2468b3;font-size:13px;font-weight:bold;letter-spacing:.8px}
+#nc-global-reach-v2 .ncgr-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+#nc-global-reach-v2 .ncgr-fields label{font-size:10px;color:#6386b8}
+#nc-global-reach-v2 .ncgr-fields input{width:100%;min-width:0;margin-top:6px;padding:11px 10px;color:#24538f;background:#fff;border:1px solid #cfe5ff;border-radius:10px}
+#nc-global-reach-v2 .ncgr-footer{text-align:center;margin-top:25px;color:#756ab0;font:italic 17px Georgia,serif;letter-spacing:1px}
+#nc-global-reach-v2 .ncgr-modal{display:none;position:fixed;inset:0;z-index:999999;background:#f5faffef;padding:16px;overflow:auto}
+#nc-global-reach-v2 .ncgr-modal.open{display:block}
+#nc-global-reach-v2 .ncgr-modalbox{max-width:1050px;margin:2vh auto;padding:16px;border:1px solid #cce9ff;border-radius:22px;background:linear-gradient(145deg,#fff,#edf8ff,#f4efff);box-shadow:0 10px 35px #78aee955}
+#nc-global-reach-v2 .ncgr-modalhead{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#245da1;margin-bottom:12px}
+#nc-global-reach-v2 .ncgr-world{width:100%;height:auto;display:block;border-radius:14px;background:linear-gradient(145deg,#e1f7ff,#c8e4ff,#eee6ff)}
+#nc-global-reach-v2 .ncgr-world path{fill:#82c9f2;stroke:#fff;stroke-width:1.5}
+#nc-global-reach-v2 .ncgr-pin{cursor:pointer}
+#nc-global-reach-v2 .ncgr-pin circle:first-child{fill:#32c98b;stroke:#fff;stroke-width:1.5;animation:ncgr-pulse 1.5s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ncgr-pulse{50%{opacity:.5;transform:scale(1.7)}}
+@media(max-width:620px){#nc-global-reach-v2{padding:14px;border-radius:22px}#nc-global-reach-v2 .ncgr-hero{grid-template-columns:1fr;gap:3px}#nc-global-reach-v2 .ncgr-globe{width:min(88%,300px);margin:auto}#nc-global-reach-v2 .ncgr-card{grid-template-columns:55px 1fr;padding:13px;gap:10px}#nc-global-reach-v2 .ncgr-icon{width:50px;height:50px;font-size:22px}#nc-global-reach-v2 .ncgr-maprow,#nc-global-reach-v2 .ncgr-graphrow{grid-template-columns:1fr}#nc-global-reach-v2 .ncgr-fields{grid-template-columns:1fr}#nc-global-reach-v2 .ncgr-panel{padding:14px}#nc-global-reach-v2 .ncgr-tagline{letter-spacing:1.2px}}
+</style>
+<div class="ncgr-brand"><div><div class="ncgr-logo">✿ Nanis♡</div><small>COMMUNICATION</small></div><div class="ncgr-menu">☰</div></div>
+<h2 class="ncgr-title">Global Reach —<span>Nanis Communication</span></h2>
+<div class="ncgr-tagline">CONNECTING PEOPLE · BUILDING A BRIGHTER WORLD</div>
+<div class="ncgr-hero">
+  <div class="ncgr-globe" aria-label="Illustrated glowing Earth"><div class="ncgr-orbit"></div><div class="ncgr-earth"></div></div>
+  <div class="ncgr-stats">
+    <div class="ncgr-card"><div class="ncgr-icon">♟</div><div><div class="ncgr-label">TOTAL VISITORS</div><div class="ncgr-number" id="ncgr-total">5.1M+</div><div class="ncgr-note">Global audience reach</div></div></div>
+    <div class="ncgr-card"><div class="ncgr-icon">◉</div><div><div class="ncgr-label">READERS &amp; VIEWERS</div><div class="ncgr-number" id="ncgr-readers">562911</div><div class="ncgr-note">Content readership</div></div></div>
+    <div class="ncgr-card"><div class="ncgr-icon">♙</div><div><div class="ncgr-label">USER ONLINE</div><div class="ncgr-number" id="ncgr-online">201K++</div><div class="ncgr-note">Display statistik manual</div></div></div>
   </div>
 </div>
-
+<div class="ncgr-panel"><div class="ncgr-maprow">
+<svg class="ncgr-map" viewBox="0 0 600 250" role="img" aria-label="Decorative world map preview"><rect width="600" height="250" rx="15" fill="#cceeff"/><g fill="#65c9f7" stroke="#effcff" stroke-width="2"><path d="M36 63L68 35 111 28 151 45 172 69 151 94 119 100 105 130 79 119 67 89 44 83Z"/><path d="M139 126L164 135 180 169 164 214 147 188 141 157Z"/><path d="M262 51L287 38 314 46 320 62 298 73 286 91 269 76Z"/><path d="M284 89L320 80 344 103 333 143 311 180 292 149 278 115Z"/><path d="M328 48L372 29 425 40 474 59 506 78 487 98 451 94 427 113 396 101 372 78 345 72Z"/><path d="M389 111L415 117 428 150 414 181 396 160 386 136Z"/><path d="M474 151L506 141 533 156 520 176 491 177Z"/><path d="M538 184L560 178 580 191 566 202 546 198Z"/></g><g fill="none" stroke="#fff" stroke-width="2"><path d="M60 190Q180 65 300 130T540 70"/><path d="M80 55Q280 235 510 115"/></g></svg>
+<div><h3>WORLD MAP</h3><p class="ncgr-note">Explore destinations and check current entry requirements for Malaysian passport holders.</p><button class="ncgr-btn" id="ncgr-open">◎ VIEW WORLD MAP　›</button></div>
+</div></div>
+<div class="ncgr-panel"><h3>▥ GLOBAL TRAFFIC GRAPH</h3><div class="ncgr-graphrow"><svg class="ncgr-graph" viewBox="0 0 600 160" preserveAspectRatio="none" aria-label="Decorative statistics graph"><defs><linearGradient id="ncgr-line-grad"><stop stop-color="#54d7f8"/><stop offset=".55" stop-color="#8e91ff"/><stop offset="1" stop-color="#ef9be9"/></linearGradient><linearGradient id="ncgr-area-grad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#89dcff" stop-opacity=".45"/><stop offset="1" stop-color="#d9d5ff" stop-opacity=".05"/></linearGradient></defs><g stroke="#9bbce8" stroke-opacity=".3"><path d="M0 25H600 M0 60H600 M0 95H600 M0 130H600"/></g><path id="ncgr-area" fill="url(#ncgr-area-grad)"/><path id="ncgr-line" fill="none" stroke="url(#ncgr-line-grad)" stroke-width="3" stroke-linecap="round"/><g id="ncgr-points" fill="#efa5ec" stroke="#fff" stroke-width="2"/></svg><div class="ncgr-legend"><div><span>🔹 Total Visitors</span><b id="ncgr-leg-total">5.1M+</b></div><div><span>🟣 Readers &amp; Viewers</span><b id="ncgr-leg-readers">562911</b></div><div><span>💜 Users Online</span><b id="ncgr-leg-online">201K++</b></div></div></div><div class="ncgr-note" id="ncgr-graph-note">Graf ilustrasi berdasarkan nilai yang dimasukkan secara manual.</div></div>
+<div class="ncgr-manual"><details open><summary>⚙ MANUAL STATISTICS &amp; GRAPH DATA</summary><p class="ncgr-note">Masukkan angka sendiri. Bahagian ini berasingan daripada visitor counter lama website.</p><div class="ncgr-fields"><label>Total visitors<input id="ncgr-in-total" value="5.1M+"></label><label>Readers &amp; viewers<input id="ncgr-in-readers" type="number" min="0" value="562911"></label><label>Users online<input id="ncgr-in-online" value="201K++"></label></div><p><button class="ncgr-btn" id="ncgr-update">↻ UPDATE STATISTICS</button></p></details></div>
+<div class="ncgr-footer">♡　Nanis Communication · Global Reach　♡</div>
+<div class="ncgr-modal" id="ncgr-modal" role="dialog" aria-modal="true" aria-label="Illustrative world map"><div class="ncgr-modalbox"><div class="ncgr-modalhead"><strong>WORLD MAP · DESTINATIONS</strong><button class="ncgr-btn" id="ncgr-close">CLOSE ✕</button></div><p class="ncgr-note">Peta ilustrasi. Sahkan syarat visa melalui sumber rasmi sebelum perjalanan.</p><svg class="ncgr-world" viewBox="0 0 1000 500" role="img" aria-label="Illustrative world map with destination markers"><rect width="1000" height="500" fill="transparent"/><g><path d="M64 95L106 61 175 52 224 80 245 111 218 141 179 145 157 180 130 177 112 140 82 130Z"/><path d="M197 190L233 201 251 240 239 288 216 341 193 299 185 248Z"/><path d="M414 88L451 67 477 79 483 104 456 120 433 109Z"/><path d="M438 126L480 113 513 139 520 194 492 251 468 224 451 178Z"/><path d="M487 84L546 62 612 77 671 90 721 119 701 143 652 139 621 165 584 151 552 129 521 121Z"/><path d="M563 162L600 170 620 218 599 272 574 245 556 201Z"/><path d="M700 242L744 228 786 248 775 271 737 279 713 263Z"/><path d="M808 296L842 286 866 302 852 321 823 317Z"/></g><g id="ncgr-pins"></g></svg><div class="ncgr-note" id="ncgr-info">Pilih penanda untuk melihat nama destinasi.</div></div></div>
+</div>
 <script>
-(function(){
-  const root=document.getElementById('global-reach');
-  if(!root||root.dataset.ready)return;
-  root.dataset.ready='1';
-  const $=id=>root.querySelector('#'+id);
-  const destinations=[
-    {name:'Singapore',x:602,y:287},{name:'Thailand',x:581,y:244},
-    {name:'Brunei',x:627,y:284},{name:'Indonesia',x:618,y:313},
-    {name:'Japan',x:769,y:150},{name:'South Korea',x:751,y:151},
-    {name:'Hong Kong',x:694,y:211},{name:'Türkiye',x:515,y:151},
-    {name:'Georgia',x:554,y:137},{name:'United Kingdom',x:452,y:107},
-    {name:'Ireland',x:440,y:105},{name:'France',x:464,y:122},
-    {name:'Germany',x:479,y:116},{name:'Italy',x:480,y:133},
-    {name:'Spain',x:443,y:135},{name:'Netherlands',x:467,y:112},
-    {name:'Switzerland',x:474,y:125},{name:'Austria',x:488,y:125},
-    {name:'Greece',x:499,y:144},{name:'Croatia',x:490,y:132},
-    {name:'Poland',x:499,y:112},{name:'Czechia',x:487,y:119},
-    {name:'Hungary',x:496,y:128},{name:'Portugal',x:430,y:139},
-    {name:'Sweden',x:490,y:86},{name:'Norway',x:475,y:83},
-    {name:'Finland',x:509,y:78},{name:'Denmark',x:480,y:99},
-    {name:'Iceland',x:411,y:77},{name:'Australia',x:783,y:348},
-    {name:'New Zealand',x:883,y:405},{name:'Fiji',x:922,y:331},
-    {name:'Mauritius',x:571,y:355},{name:'Seychelles',x:566,y:308},
-    {name:'South Africa',x:507,y:344},{name:'Botswana',x:517,y:324},
-    {name:'Namibia',x:493,y:324},{name:'Brazil',x:273,y:278},
-    {name:'Argentina',x:251,y:350},{name:'Chile',x:230,y:330},
-    {name:'Uruguay',x:275,y:333},{name:'Costa Rica',x:187,y:211},
-    {name:'Panama',x:207,y:224},{name:'Bahamas',x:218,y:177},
-    {name:'Barbados',x:252,y:222},{name:'Jamaica',x:202,y:192},
-    {name:'Mexico',x:143,y:174},{name:'Peru',x:230,y:260},
-    {name:'Colombia',x:227,y:231}
-  ];
-  const pins=$('gr-world-pins'),ns='http://www.w3.org/2000/svg';
-  destinations.forEach(d=>{
-    const g=document.createElementNS(ns,'g');g.setAttribute('class','gr-pin');
-    g.setAttribute('transform',`translate(${d.x} ${d.y})`);g.setAttribute('tabindex','0');
-    g.setAttribute('role','button');g.setAttribute('aria-label',d.name);
-    g.innerHTML='<circle r="5"></circle><circle r="10" fill="none" stroke="#32c98b" stroke-opacity=".7"><animate attributeName="r" values="5;13;5" dur="2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".8;0;.8" dur="2s" repeatCount="indefinite"/></circle>';
-    const show=()=>{$('gr-country-info').textContent=d.name+' — sila semak syarat kemasukan rasmi sebelum perjalanan.'};
-    g.addEventListener('click',show);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});
-    pins.appendChild(g);
-  });
-  $('gr-open-map').addEventListener('click',()=>{$('gr-map-modal').classList.add('open');document.body.style.overflow='hidden'});
-  function closeMap(){$('gr-map-modal').classList.remove('open');document.body.style.overflow=''}
-  $('gr-close-map').addEventListener('click',closeMap);
-  $('gr-map-modal').addEventListener('click',e=>{if(e.target===$('gr-map-modal'))closeMap()});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMap()});
-  let currentValue=562911,phase=0;
-  function drawGraph(value){
-    currentValue=Math.max(0,Number(value)||0);
-    const line=$('gr-line'),area=$('gr-area'),points=$('gr-points');
-    const vals=Array.from({length:24},(_,i)=>Math.max(.08,Math.min(.96,.48+(i/23)*.48+Math.sin(i*1.12+phase)*.13+Math.sin(i*.47+phase*.6)*.09)));
-    const max=Math.max(...vals),coords=vals.map((v,i)=>[i*600/23,137-(v/max)*100]);
-    const d=coords.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
-    line.setAttribute('d',d);area.setAttribute('d',d+' L600 150 L0 150 Z');points.innerHTML='';
-    coords.forEach((p,i)=>{if(i%4===0||i===23){const c=document.createElementNS(ns,'circle');c.setAttribute('cx',p[0]);c.setAttribute('cy',p[1]);c.setAttribute('r','4');points.appendChild(c)}});
-    $('gr-graph-label').textContent='Manual readers/viewers value: '+currentValue.toLocaleString()+' · graph animation follows this entered value.';
-  }
-  function update(){
-    const total=$('gr-input-total').value.trim()||'0',readers=Math.max(0,Number($('gr-input-readers').value)||0),online=$('gr-input-online').value.trim()||'0';
-    $('gr-total').textContent=total;$('gr-readers').textContent=readers.toLocaleString();$('gr-online').textContent=online;
-    $('gr-legend-total').textContent=total;$('gr-legend-readers').textContent=readers.toLocaleString();$('gr-legend-online').textContent=online;
-    drawGraph(readers);
-  }
-  $('gr-update').addEventListener('click',update);drawGraph(currentValue);
-  setInterval(()=>{phase+=.24;drawGraph(currentValue)},1200);
-})();
+(function(){const r=document.getElementById('nc-global-reach-v2');if(!r||r.dataset.init)return;r.dataset.init='1';const $=id=>r.querySelector('#'+id),ns='http://www.w3.org/2000/svg';const dest=[['Singapore',602,287],['Thailand',581,244],['Brunei',627,284],['Indonesia',618,313],['Japan',769,150],['South Korea',751,151],['Hong Kong',694,211],['Australia',783,348],['New Zealand',883,405],['United Kingdom',452,107],['France',464,122],['Germany',479,116],['Italy',480,133],['Spain',443,135],['South Africa',507,344],['Brazil',273,278],['Argentina',251,350],['Mexico',143,174]];dest.forEach(d=>{const g=document.createElementNS(ns,'g');g.setAttribute('class','ncgr-pin');g.setAttribute('transform',`translate(${d[1]} ${d[2]})`);g.setAttribute('tabindex','0');g.innerHTML='<circle r="5"/><circle r="10" fill="none" stroke="#32c98b" stroke-opacity=".7"><animate attributeName="r" values="5;13;5" dur="2s" repeatCount="indefinite"/></circle>';const show=()=>{$('ncgr-info').textContent=d[0]+' — sila semak syarat kemasukan rasmi sebelum perjalanan.'};g.addEventListener('click',show);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});$('ncgr-pins').appendChild(g)});$('ncgr-open').onclick=()=>{$('ncgr-modal').classList.add('open');document.body.style.overflow='hidden'};function close(){ $('ncgr-modal').classList.remove('open');document.body.style.overflow=''}$('ncgr-close').onclick=close;$('ncgr-modal').addEventListener('click',e=>{if(e.target===$('ncgr-modal'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});let phase=0;function graph(v){const vals=Array.from({length:24},(_,i)=>Math.max(.1,Math.min(1,.48+i/23*.42+Math.sin(i*1.12+phase)*.12+Math.sin(i*.47+phase*.6)*.08)));const pts=vals.map((n,i)=>[i*600/23,137-n/Math.max(...vals)*100]);const d=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');$('ncgr-line').setAttribute('d',d);$('ncgr-area').setAttribute('d',d+' L600 150 L0 150 Z');$('ncgr-points').innerHTML='';pts.forEach((p,i)=>{if(i%4===0||i===23){const c=document.createElementNS(ns,'circle');c.setAttribute('cx',p[0]);c.setAttribute('cy',p[1]);c.setAttribute('r','4');$('ncgr-points').appendChild(c)}});$('ncgr-graph-note').textContent='Readers & viewers: '+Number(v||0).toLocaleString()+' · paparan graf animasi manual.'}function update(){const t=$('ncgr-in-total').value.trim()||'0',n=Math.max(0,Number($('ncgr-in-readers').value)||0),o=$('ncgr-in-online').value.trim()||'0';$('ncgr-total').textContent=t;$('ncgr-readers').textContent=n.toLocaleString();$('ncgr-online').textContent=o;$('ncgr-leg-total').textContent=t;$('ncgr-leg-readers').textContent=n.toLocaleString();$('ncgr-leg-online').textContent=o;graph(n)}$('ncgr-update').onclick=update;graph(562911);setInterval(()=>{phase+=.18;graph($('ncgr-in-readers').value)},1400)})();
 </script>
       
     
