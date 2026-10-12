@@ -958,6 +958,424 @@ function toggleSound() {
   }
 }
 </script>
+
+<div id="global-reach">
+  <style>
+    #global-reach {
+      --blue:#72d8ff; --purple:#ad8bff; --pink:#ff9de8;
+      --green:#39ff91; color:#eff4ff;
+      font-family:Arial,sans-serif;
+      background:radial-gradient(ellipse at 25% 15%,#202c60 0,#10152f 48%,#090d20 100%);
+      padding:22px; border-radius:24px; overflow:hidden;
+      box-sizing:border-box;
+    }
+    #global-reach * {box-sizing:border-box}
+    #global-reach .gr-heading {
+      text-align:center; font-size:clamp(23px,4vw,36px);
+      letter-spacing:3px; font-weight:900;
+      background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));
+      color:transparent;background-clip:text;
+      text-shadow:0 0 25px #a78bff55;margin:4px 0 8px;
+    }
+    #global-reach .gr-sub {
+      text-align:center;color:#b5c6f4;font-size:11px;
+      letter-spacing:3px;margin-bottom:24px;
+    }
+    #global-reach .gr-main {
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:18px;align-items:center;
+    }
+    #global-reach .gr-globe {
+      aspect-ratio:1;position:relative;display:grid;place-items:center;
+      border-radius:50%;isolation:isolate;
+    }
+    #global-reach .gr-globe:before {
+      content:"";position:absolute;inset:8%;border-radius:50%;
+      background:radial-gradient(circle at 35% 30%,#78e8ff55,#806bff22 45%,transparent 70%);
+      box-shadow:0 0 35px #70baff55,inset 0 0 25px #a18aff55;
+    }
+    #global-reach .gr-earth {
+      width:76%;aspect-ratio:1;border-radius:50%;position:relative;
+      display:grid;place-items:center;overflow:hidden;
+      background:
+        radial-gradient(ellipse at 30% 35%,#77eaff 0 2%,transparent 3%),
+        radial-gradient(ellipse at 65% 60%,#55a9f5 0 12%,transparent 13%),
+        radial-gradient(ellipse at 35% 40%,#63cba7 0 12%,transparent 13%),
+        radial-gradient(ellipse at 62% 35%,#b5a7ff 0 16%,transparent 17%),
+        radial-gradient(circle at 35% 30%,#3175bc,#13265d 65%,#070c28);
+      box-shadow:inset -20px -10px 35px #03061d,0 0 24px #66caffaa;
+      border:1px solid #8ceaff99;
+    }
+    #global-reach .gr-earth:after {
+      content:"";position:absolute;inset:-5%;
+      border-radius:50%;border:2px solid #8eeaff66;
+      box-shadow:0 0 15px #78dfff88;
+    }
+    #global-reach .gr-orbit {
+      position:absolute;width:105%;height:38%;border:1px solid #d5aaffaa;
+      border-radius:50%;transform:rotate(-28deg);
+      box-shadow:0 0 10px #b68bff55;animation:grOrbit 12s linear infinite;
+    }
+    #global-reach .gr-orbit:after {
+      content:"";position:absolute;top:4%;left:20%;width:8px;height:8px;
+      border-radius:50%;background:var(--pink);box-shadow:0 0 16px var(--pink);
+    }
+    @keyframes grOrbit {to{transform:rotate(332deg)}}
+    #global-reach .gr-stats {display:grid;gap:12px}
+    #global-reach .gr-card {
+      border:1px solid #a6d9ff55;border-radius:15px;padding:16px;
+      background:linear-gradient(135deg,#ffffff12,#a8b8ff08);
+      box-shadow:inset 0 0 18px #a78bff0a,0 0 15px #7bcaff12;
+      backdrop-filter:blur(10px);
+    }
+    #global-reach .gr-card:nth-child(2){border-color:#b99aff77}
+    #global-reach .gr-card:nth-child(3){border-color:#ff9de866}
+    #global-reach .gr-label {font-size:10px;letter-spacing:2px;color:#c5d7ff}
+    #global-reach .gr-number {
+      font-size:clamp(22px,3.5vw,36px);font-weight:900;
+      margin:9px 0 5px;overflow-wrap:anywhere;
+      color:var(--blue);text-shadow:0 0 16px #72d8ff66;
+    }
+    #global-reach .gr-card:nth-child(2) .gr-number{color:var(--purple)}
+    #global-reach .gr-card:nth-child(3) .gr-number{color:var(--pink)}
+    #global-reach .gr-dot {
+      display:inline-block;width:7px;height:7px;border-radius:50%;
+      background:var(--green);margin-right:7px;
+      box-shadow:0 0 12px var(--green);animation:grPulse 1.5s infinite;
+    }
+    @keyframes grPulse {50%{opacity:.35;transform:scale(.7)}}
+    #global-reach .gr-section {
+      border:1px solid #9ccaff44;border-radius:18px;padding:16px;
+      margin-top:22px;background:#a3b9ff08;
+    }
+    #global-reach .gr-section h3 {
+      font-size:13px;letter-spacing:2px;color:#d7e7ff;margin:0 0 12px;
+    }
+    #global-reach .gr-map-preview {
+      width:100%;height:auto;display:block;border-radius:10px;
+      background:#101a3b;
+    }
+    #global-reach .gr-btn {
+      border:1px solid #9ddfff88;border-radius:30px;padding:12px 18px;
+      color:white;font-size:11px;font-weight:bold;letter-spacing:1.5px;
+      background:linear-gradient(100deg,#3678bd66,#8664c866,#bb6cb566);
+      cursor:pointer;box-shadow:0 0 15px #9d9aff22;
+    }
+    #global-reach .gr-btn:hover{box-shadow:0 0 22px #9bdfff66}
+    #global-reach .gr-graph {
+      display:block;width:100%;height:160px;overflow:visible;
+    }
+    #global-reach .gr-manual {
+      margin-top:18px;padding:15px;border:1px dashed #9caeff66;border-radius:14px;
+    }
+    #global-reach .gr-manual summary {
+      cursor:pointer;color:#c9c9ff;font-size:12px;letter-spacing:1px;
+    }
+    #global-reach .gr-fields {
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:14px;
+    }
+    #global-reach .gr-fields label {font-size:10px;color:#c9d6ff}
+    #global-reach .gr-fields input {
+      width:100%;min-width:0;margin-top:6px;padding:10px 8px;
+      color:white;background:#111a39;border:1px solid #8398d866;border-radius:8px;
+    }
+    #global-reach .gr-note {font-size:10px;color:#aebee3;line-height:1.6}
+    #global-reach .gr-modal {
+      display:none;position:fixed;inset:0;z-index:999999;
+      background:#060a18f5;padding:18px;overflow:auto;
+    }
+    #global-reach .gr-modal.open {display:block}
+    #global-reach .gr-modal-inner {
+      max-width:1050px;margin:2vh auto;background:#111a36;
+      border:1px solid #9bdfff77;border-radius:18px;padding:16px;
+    }
+    #global-reach .gr-modal-head {
+      display:flex;justify-content:space-between;gap:12px;align-items:center;
+      color:#dce9ff;margin-bottom:12px;
+    }
+    #global-reach .gr-world {width:100%;height:auto;display:block;background:#0b1632;border-radius:10px}
+    #global-reach .gr-pin {cursor:pointer}
+    #global-reach .gr-pin circle:first-child {
+      fill:#39ff91;stroke:#b9ffd9;stroke-width:1.5;
+      animation:grPin 1.5s infinite;transform-box:fill-box;transform-origin:center;
+    }
+    @keyframes grPin {50%{opacity:.45;transform:scale(1.7)}}
+    #global-reach .gr-country-info {color:#c5d7ff;font-size:12px;line-height:1.7;margin-top:10px}
+    @media(max-width:620px) {
+      #global-reach{padding:15px}
+      #global-reach .gr-main{grid-template-columns:1fr;gap:12px}
+      #global-reach .gr-globe{width:min(78%,280px);margin:auto}
+      #global-reach .gr-stats{grid-template-columns:1fr}
+      #global-reach .gr-fields{grid-template-columns:1fr}
+    }
+  </style>
+
+  <div class="gr-heading">GLOBAL REACH</div>
+  <div class="gr-sub">NANIS COMMUNICATION · CONNECTING THE WORLD</div>
+
+  <div class="gr-main">
+    <div class="gr-globe" aria-label="Glowing animated Earth">
+      <div class="gr-orbit"></div><div class="gr-earth"></div>
+    </div>
+    <div class="gr-stats">
+      <div class="gr-card">
+        <div class="gr-label">TOTAL VISITORS</div>
+        <div class="gr-number" id="gr-total">5.1M+</div>
+        <div class="gr-note">Global audience reach</div>
+      </div>
+      <div class="gr-card">
+        <div class="gr-label">READERS &amp; VIEWERS</div>
+        <div class="gr-number" id="gr-readers">562911</div>
+        <div class="gr-note">Content readership</div>
+      </div>
+      <div class="gr-card">
+        <div class="gr-label">USER ONLINE</div>
+        <div class="gr-number" id="gr-online">201K++</div>
+        <div class="gr-note"><span class="gr-dot"></span>Live-style display</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gr-section">
+    <h3>WORLD MAP</h3>
+    <svg class="gr-map-preview" viewBox="0 0 600 210" role="img" aria-label="Stylized world map preview">
+      <defs>
+        <pattern id="grgrid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M30 0H0V30" fill="none" stroke="#5277bb" stroke-opacity=".2"/>
+        </pattern>
+      </defs>
+      <rect width="600" height="210" fill="url(#grgrid)"/>
+      <g fill="#517db6" fill-opacity=".58" stroke="#86dfff" stroke-opacity=".6" stroke-width=".7">
+        <path d="M42 48L67 28 105 31 130 48 119 68 93 75 83 101 63 91 54 68Z"/>
+        <path d="M119 108L143 119 154 151 142 188 127 163 124 137Z"/>
+        <path d="M256 44L278 34 301 42 307 56 287 64 276 81 260 70Z"/>
+        <path d="M280 78L313 71 331 91 321 130 303 161 285 132 274 99Z"/>
+        <path d="M330 40L374 27 421 40 453 57 435 74 400 73 385 92 361 82 341 65Z"/>
+        <path d="M357 91L380 99 391 132 376 159 358 139 348 113Z"/>
+        <path d="M431 126L460 116 485 130 474 149 448 151Z"/>
+        <path d="M493 152L515 147 531 158 516 167 500 164Z"/>
+      </g>
+      <g fill="#9aabff" font-size="10" letter-spacing="2">
+        <text x="16" y="197">GLOBAL CONNECTIONS</text>
+        <text x="465" y="197">NANIS · WORLD</text>
+      </g>
+    </svg>
+    <p class="gr-note">Preview sahaja. Tekan butang untuk membuka peta dunia dengan pin negara.</p>
+    <button class="gr-btn" id="gr-open-map" type="button">◎ VIEW WORLD MAP</button>
+  </div>
+
+  <div class="gr-section">
+    <h3>GLOBAL TRAFFIC GRAPH</h3>
+    <svg class="gr-graph" id="gr-graph" viewBox="0 0 600 160" preserveAspectRatio="none" role="img" aria-label="Animated graph based on manually entered values">
+      <g stroke="#7894d5" stroke-opacity=".2">
+        <path d="M0 25H600 M0 60H600 M0 95H600 M0 130H600"/>
+      </g>
+      <path id="gr-area" d="" fill="#7d9cff" fill-opacity=".13"/>
+      <path id="gr-line" d="" fill="none" stroke="#8de8ff" stroke-width="3" stroke-linecap="round"/>
+      <g id="gr-points" fill="#ff9de8"></g>
+    </svg>
+    <div class="gr-note" id="gr-graph-label">Graph follows your manual entries below.</div>
+  </div>
+
+  <details class="gr-manual" open>
+    <summary>✦ MANUAL STATISTICS &amp; GRAPH DATA</summary>
+    <p class="gr-note">Edit these values, then press UPDATE. The graph changes from the entered data only.</p>
+    <div class="gr-fields">
+      <label>Total visitors
+        <input id="gr-input-total" value="5.1M+" />
+      </label>
+      <label>Readers &amp; viewers
+        <input id="gr-input-readers" type="number" min="0" value="562911" />
+      </label>
+      <label>Users online
+        <input id="gr-input-online" value="201K++" />
+      </label>
+    </div>
+    <p style="margin-bottom:0"><button class="gr-btn" id="gr-update" type="button">UPDATE STATISTICS</button></p>
+    <p class="gr-note">Graph points are generated from the numerical reader/viewer value. Change it to change the graph. No live analytics connection is used.</p>
+  </details>
+
+  <div class="gr-note" style="text-align:center;margin-top:18px">
+    NANIS COMMUNICATION · GLOBAL REACH
+  </div>
+
+  <div class="gr-modal" id="gr-map-modal" role="dialog" aria-modal="true" aria-label="World map visa-free destinations">
+    <div class="gr-modal-inner">
+      <div class="gr-modal-head">
+        <strong>WORLD MAP · MALAYSIAN PASSPORT</strong>
+        <button class="gr-btn" id="gr-close-map" type="button">CLOSE ✕</button>
+      </div>
+      <p class="gr-note">Green pins mark a starter selection of commonly visa-free destinations for Malaysian ordinary passport holders. Check entry rules before travel.</p>
+      <svg class="gr-world" viewBox="0 0 1000 500" role="img" aria-label="Illustrative world map with destination pins">
+        <defs>
+          <pattern id="grworldgrid" width="50" height="50" patternUnits="userSpaceOnUse">
+            <path d="M50 0H0V50" fill="none" stroke="#7199d8" stroke-opacity=".16"/>
+          </pattern>
+        </defs>
+        <rect width="1000" height="500" fill="url(#grworldgrid)"/>
+        <g fill="#304e83" stroke="#8cb8ed" stroke-opacity=".65" stroke-width="1.5">
+          <path d="M64 95L106 61 175 52 224 80 245 111 218 141 179 145 157 180 130 177 112 140 82 130Z"/>
+          <path d="M197 190L233 201 251 240 239 288 216 341 193 299 185 248Z"/>
+          <path d="M414 88L451 67 477 79 483 104 456 120 433 109Z"/>
+          <path d="M438 126L480 113 513 139 520 194 492 251 468 224 451 178Z"/>
+          <path d="M487 84L546 62 612 77 671 90 721 119 701 143 652 139 621 165 584 151 552 129 521 121Z"/>
+          <path d="M563 162L600 170 620 218 599 272 574 245 556 201Z"/>
+          <path d="M700 242L744 228 786 248 775 271 737 279 713 263Z"/>
+          <path d="M808 296L842 286 866 302 852 321 823 317Z"/>
+          <path d="M850 123L876 109 894 121 886 143 865 147Z"/>
+          <path d="M900 177L924 165 945 181 933 199 909 196Z"/>
+        </g>
+        <g id="gr-world-pins"></g>
+      </svg>
+      <div id="gr-country-info" class="gr-country-info">Tap a green pin to see its destination name.</div>
+      <p class="gr-note">Pin positions are approximate. This starter map is illustrative, not a live navigation map or a complete official visa list. Entry duration, passport validity and arrival forms can vary.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const root = document.getElementById('global-reach');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  const $ = id => root.querySelector('#' + id);
+
+  // Sample destinations and approximate map positions.
+  // Confirm each country's visa rules before publishing.
+  const destinations = [
+    {name:'Singapore',x:602,y:287},
+    {name:'Thailand',x:581,y:244},
+    {name:'Brunei',x:627,y:284},
+    {name:'Indonesia',x:618,y:313},
+    {name:'Japan',x:769,y:150},
+    {name:'South Korea',x:751,y:151},
+    {name:'Hong Kong',x:694,y:211},
+    {name:'Türkiye',x:515,y:151},
+    {name:'Georgia',x:554,y:137},
+    {name:'United Kingdom',x:452,y:107},
+    {name:'Ireland',x:440,y:105},
+    {name:'France',x:464,y:122},
+    {name:'Germany',x:479,y:116},
+    {name:'Italy',x:480,y:133},
+    {name:'Spain',x:443,y:135},
+    {name:'Netherlands',x:467,y:112},
+    {name:'Switzerland',x:474,y:125},
+    {name:'Austria',x:488,y:125},
+    {name:'Greece',x:499,y:144},
+    {name:'Croatia',x:490,y:132},
+    {name:'Poland',x:499,y:112},
+    {name:'Czechia',x:487,y:119},
+    {name:'Hungary',x:496,y:128},
+    {name:'Portugal',x:430,y:139},
+    {name:'Sweden',x:490,y:86},
+    {name:'Norway',x:475,y:83},
+    {name:'Finland',x:509,y:78},
+    {name:'Denmark',x:480,y:99},
+    {name:'Iceland',x:411,y:77},
+    {name:'Australia',x:783,y:348},
+    {name:'New Zealand',x:883,y:405},
+    {name:'Fiji',x:922,y:331},
+    {name:'Mauritius',x:571,y:355},
+    {name:'Seychelles',x:566,y:308},
+    {name:'South Africa',x:507,y:344},
+    {name:'Botswana',x:517,y:324},
+    {name:'Namibia',x:493,y:324},
+    {name:'Brazil',x:273,y:278},
+    {name:'Argentina',x:251,y:350},
+    {name:'Chile',x:230,y:330},
+    {name:'Uruguay',x:275,y:333},
+    {name:'Costa Rica',x:187,y:211},
+    {name:'Panama',x:207,y:224},
+    {name:'Bahamas',x:218,y:177},
+    {name:'Barbados',x:252,y:222},
+    {name:'Jamaica',x:202,y:192},
+    {name:'Mexico',x:143,y:174},
+    {name:'Peru',x:230,y:260},
+    {name:'Colombia',x:227,y:231}
+  ];
+
+  const pins = $('gr-world-pins');
+  destinations.forEach((d, i) => {
+    const ns = 'http://www.w3.org/2000/svg';
+    const g = document.createElementNS(ns,'g');
+    g.setAttribute('class','gr-pin');
+    g.setAttribute('transform',`translate(${d.x} ${d.y})`);
+    g.setAttribute('tabindex','0');
+    g.setAttribute('role','button');
+    g.setAttribute('aria-label',d.name);
+    g.innerHTML = `<circle r="5"></circle><circle r="10" fill="none" stroke="#39ff91" stroke-opacity=".6"><animate attributeName="r" values="5;13;5" dur="2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".8;0;.8" dur="2s" repeatCount="indefinite"/></circle>`;
+    const show = () => {
+      $('gr-country-info').textContent =
+        d.name + ' — semak tempoh bebas visa dan syarat kemasukan rasmi sebelum perjalanan.';
+    };
+    g.addEventListener('click',show);
+    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});
+    pins.appendChild(g);
+  });
+
+  $('gr-open-map').addEventListener('click',()=>{
+    $('gr-map-modal').classList.add('open');
+    document.body.style.overflow='hidden';
+  });
+  function closeMap(){
+    $('gr-map-modal').classList.remove('open');
+    document.body.style.overflow='';
+  }
+  $('gr-close-map').addEventListener('click',closeMap);
+  $('gr-map-modal').addEventListener('click',e=>{
+    if(e.target === $('gr-map-modal')) closeMap();
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') closeMap();
+  });
+
+  // Animate a line graph using only the manual numeric input.
+  let currentValue = 562911;
+  let phase = 0;
+  function drawGraph(value){
+    currentValue = Math.max(0,Number(value)||0);
+    const line = $('gr-line'), area = $('gr-area'), points = $('gr-points');
+    const vals = Array.from({length:24},(_,i)=>{
+      const trend = (i/23)*0.48;
+      const wave = Math.sin(i*1.12 + phase)*0.13 +
+                   Math.sin(i*0.47 + phase*.6)*0.09;
+      return Math.max(.08,Math.min(.96,.48+trend+wave));
+    });
+    // Same shape, scaled by the manually entered value.
+    const max = Math.max(...vals);
+    const coords = vals.map((v,i)=>[
+      i*600/23, 137-(v/max)*100
+    ]);
+    const d = coords.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+    line.setAttribute('d',d);
+    area.setAttribute('d',d+' L600 150 L0 150 Z');
+    points.innerHTML = '';
+    coords.forEach((p,i)=>{
+      if(i%4===0 || i===23){
+        const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        c.setAttribute('cx',p[0]);c.setAttribute('cy',p[1]);c.setAttribute('r','3');
+        points.appendChild(c);
+      }
+    });
+    $('gr-graph-label').textContent =
+      'Manual readers/viewers value: '+currentValue.toLocaleString()+
+      ' · graph animation follows this entered value.';
+  }
+  function update(){
+    const total = $('gr-input-total').value.trim() || '0';
+    const readers = Math.max(0,Number($('gr-input-readers').value)||0);
+    const online = $('gr-input-online').value.trim() || '0';
+    $('gr-total').textContent = total;
+    $('gr-readers').textContent = readers.toLocaleString();
+    $('gr-online').textContent = online;
+    drawGraph(readers);
+  }
+  $('gr-update').addEventListener('click',update);
+  drawGraph(currentValue);
+  setInterval(()=>{phase += .24;drawGraph(currentValue);},1200);
+})();
+</script>
+
     
 <!-- ===============================
      NANIS COMMUNICATION
