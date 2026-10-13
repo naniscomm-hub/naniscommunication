@@ -806,432 +806,63 @@ fetch(
   </div>
 
 </header>
+  <!-- SATU KOTAK BESAR -->  
+<div class="luxury-card rounded-3xl p-6">  
+
+  <div class="grid md:grid-cols-3 gap-6 items-center">  
+
+    <!-- GLOBAL DATE & TIME -->  
+    <div class="text-center md:border-r md:border-yellow-500/20 pr-0 md:pr-6">  
+
+      <h3 class="gold-text text-xl font-bold mb-3">  
+        GLOBAL DATE & TIME  
+      </h3>  
+
+      <div id="currentDate"  
+           class="text-yellow-200 text-lg mb-2">  
+      </div>  
+
+      <div id="currentTime"  
+           class="text-3xl font-black gold-text">  
+      </div>  
+
+    </div>  
+
+    <!-- WORLD CLOCK -->  
+    <div class="md:border-r md:border-yellow-500/20 px-0 md:px-6">  
+
+      <h3 class="gold-text text-xl font-bold mb-4 text-center">  
+        WORLD CLOCK  
+      </h3>  
+
+      <div class="space-y-2 text-yellow-100">  
+
+        <div id="klTime">🇲🇾 Kuala Lumpur</div>  
+        <div id="sgTime">🇸🇬 Singapore</div>  
+        <div id="dubaiTime">🇦🇪 Dubai</div>  
+        <div id="londonTime">🇬🇧 London</div>  
+        <div id="parisTime">🇫🇷 Paris</div>  
+
+      </div>  
+
+    </div>  
+
+    <!-- LANGUAGE -->  
+    <div class="text-center pl-0 md:pl-6">  
+
+      <h3 class="gold-text text-xl font-bold mb-4">  
+        LANGUAGE  
+      </h3>  
+
+      <div id="google_translate_element"></div>   
+    </div>  
+
+  </div>  
+
+</div>  
+```
   
-  <!-- NANIS COMMUNICATION · PASTEL GLOBAL INFORMATION BAR -->
-
-<section id="nc-global-info" class="pt-[170px] pb-8 px-4">
-
-  <style>
-    #nc-global-info {
-      position: relative;
-      isolation: isolate;
-    }
-
-    /* Pastel background: decorative layer only */
-    #nc-global-info::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background:
-        radial-gradient(ellipse at 10% 20%,
-          rgba(255,182,213,.22), transparent 45%),
-        radial-gradient(ellipse at 85% 15%,
-          rgba(173,225,255,.25), transparent 45%),
-        radial-gradient(ellipse at 50% 90%,
-          rgba(202,184,255,.18), transparent 50%);
-    }
-
-    /* Main glass panel */
-    #nc-global-info .nc-pastel-panel {
-      position: relative;
-      overflow: hidden;
-      border-radius: 28px;
-      padding: 24px;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255,210,230,.16),
-          rgba(190,235,255,.19),
-          rgba(255,255,255,.12),
-          rgba(218,204,255,.16)
-        );
-      border: 1px solid rgba(255,255,255,.32);
-      box-shadow:
-        0 12px 35px rgba(40,75,130,.08),
-        inset 0 1px 0 rgba(255,255,255,.38);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    /* Soft pastel cards */
-    #nc-global-info .nc-time-card {
-      border: 1px solid rgba(255,255,255,.45);
-      border-radius: 17px;
-      padding: 10px 13px;
-      margin-bottom: 9px;
-      background:
-        linear-gradient(
-          115deg,
-          rgba(255,220,237,.32),
-          rgba(205,238,255,.30),
-          rgba(255,255,255,.22)
-        );
-      box-shadow:
-        0 4px 12px rgba(35,70,120,.06),
-        inset 0 1px 0 rgba(255,255,255,.5);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    #nc-global-info .nc-time-card:nth-child(2) {
-      background: linear-gradient(
-        115deg,
-        rgba(202,239,255,.34),
-        rgba(235,220,255,.30)
-      );
-    }
-
-    #nc-global-info .nc-time-card:nth-child(3) {
-      background: linear-gradient(
-        115deg,
-        rgba(255,228,235,.35),
-        rgba(218,211,255,.30)
-      );
-    }
-
-    #nc-global-info .nc-time-card:nth-child(4) {
-      background: linear-gradient(
-        115deg,
-        rgba(255,244,196,.35),
-        rgba(255,220,236,.28)
-      );
-    }
-
-    #nc-global-info .nc-time-card:nth-child(5) {
-      background: linear-gradient(
-        115deg,
-        rgba(220,218,255,.32),
-        rgba(205,239,255,.30)
-      );
-    }
-
-    #nc-global-info .nc-time-card:nth-child(6) {
-      background: linear-gradient(
-        115deg,
-        rgba(202,255,232,.34),
-        rgba(207,239,255,.30)
-      );
-    }
-
-    #nc-global-info .nc-time-card:nth-child(7) {
-      background: linear-gradient(
-        115deg,
-        rgba(255,241,190,.34),
-        rgba(213,231,255,.30)
-      );
-    }
-
-    #nc-global-info .nc-time-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(35,70,120,.11);
-    }
-
-    /* Existing brand colors remain untouched */
-    #nc-global-info .nc-world-city {
-      font-weight: 700;
-    }
-
-    #nc-global-info .nc-country {
-      font-size: 10px;
-      letter-spacing: .12em;
-      opacity: .78;
-    }
-
-    #nc-global-info .nc-clock-time {
-      white-space: nowrap;
-      font-weight: 800;
-      font-size: 17px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    #nc-global-info .nc-time-zone {
-      font-size: 10px;
-      opacity: .8;
-    }
-
-    #nc-global-info .nc-language-card {
-      border: 1px solid rgba(255,255,255,.45);
-      border-radius: 22px;
-      padding: 20px;
-      background: linear-gradient(
-        135deg,
-        rgba(255,214,237,.27),
-        rgba(196,231,255,.30),
-        rgba(255,255,255,.24)
-      );
-      box-shadow: 0 6px 18px rgba(40,75,130,.06);
-    }
-
-    #nc-global-info .nc-date-pill {
-      display: inline-block;
-      max-width: 100%;
-      padding: 10px 15px;
-      border-radius: 30px;
-      background: linear-gradient(
-        100deg,
-        rgba(190,241,255,.40),
-        rgba(255,211,237,.42)
-      );
-      border: 1px solid rgba(255,255,255,.55);
-    }
-
-    #nc-global-info .nc-main-time {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 30px;
-      background: linear-gradient(
-        110deg,
-        rgba(255,244,194,.40),
-        rgba(211,229,255,.40),
-        rgba(255,210,237,.40)
-      );
-      border: 1px solid rgba(255,255,255,.55);
-      box-shadow: 0 4px 15px rgba(50,80,130,.06);
-    }
-
-    #nc-global-info .nc-world-clock {
-      min-width: 0;
-    }
-
-    #nc-global-info .nc-clock-columns {
-      min-width: 0;
-    }
-
-    @media (max-width: 767px) {
-      #nc-global-info {
-        padding-top: 150px;
-      }
-
-      #nc-global-info .nc-pastel-panel {
-        padding: 16px;
-        border-radius: 22px;
-      }
-
-      #nc-global-info .nc-clock-columns {
-        gap: 24px;
-      }
-
-      #nc-global-info .nc-clock-time {
-        font-size: 15px;
-      }
-
-      #nc-global-info .nc-time-card {
-        padding: 10px;
-      }
-
-      #nc-global-info .nc-country {
-        font-size: 9px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #nc-global-info .nc-time-card {
-        transition: none;
-      }
-    }
-  </style>
-
-  <div class="max-w-7xl mx-auto">
-
-    <div class="nc-pastel-panel">
-
-      <div class="grid md:grid-cols-3 gap-6 items-start nc-clock-columns">
-
-        <!-- GLOBAL DATE & TIME -->
-        <div class="text-center md:border-r md:border-yellow-500/20 pr-0 md:pr-6">
-
-          <h3 class="gold-text text-xl font-bold mb-5">
-            GLOBAL DATE &amp; TIME
-          </h3>
-
-          <div id="currentDate"
-               class="nc-date-pill text-yellow-200 text-base md:text-lg mb-4">
-          </div>
-
-          <div id="currentTime"
-               class="nc-main-time text-3xl md:text-4xl font-black gold-text">
-          </div>
-
-          <p class="text-sm mt-5 opacity-80">
-            Different places ✦ Same sky ✦ One world
-          </p>
-
-        </div>
-
-        <!-- WORLD CLOCK -->
-        <div class="nc-world-clock md:border-r md:border-yellow-500/20 px-0 md:px-6">
-
-          <h3 class="gold-text text-xl font-bold mb-5 text-center">
-            WORLD CLOCK
-          </h3>
-
-          <div class="space-y-2">
-
-            <div class="nc-time-card flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <div class="nc-world-city">🇲🇾 Kuala Lumpur</div>
-                <div class="nc-country">MALAYSIA</div>
-              </div>
-              <div class="text-right">
-                <span id="klTime" class="nc-clock-time"></span>
-              </div>
-            </div>
-
-            <div class="nc-time-card flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <div class="nc-world-city">🇸🇬 Singapore</div>
-                <div class="nc-country">SINGAPORE</div>
-              </div>
-              <div class="text-right">
-                <span id="sgTime" class="nc-clock-time"></span>
-              </div>
-            </div>
-
-            <div class="nc-time-card flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <div class="nc-world-city">🇦🇪 Dubai</div>
-                <div class="nc-country">UNITED ARAB EMIRATES</div>
-              </div>
-              <div class="text-right">
-                <span id="dubaiTime" class="nc-clock-time"></span>
-              </div>
-            </div>
-
-            <div class="nc-time-card flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <div class="nc-world-city">🇬🇧 London</div>
-                <div class="nc-country">UNITED KINGDOM</div>
-              </div>
-              <div class="text-right">
-                <span id="londonTime" class="nc-clock-time"></span>
-              </div>
-            </div>
-
-            <div class="nc-time-card flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <div class="nc-world-city">🇫🇷 Paris</div>
-                <div class="nc-country">FRANCE</div>
-              </div>
-              <div class="text-right">
-                <span id="parisTime" class="nc-clock-time"></span>
-              </div>
-            </div>
-
-            <!-- NEW: MECCA -->
-            <div class="nc-time-card flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <div class="nc-world-city">🕋 Mecca</div>
-                <div class="nc-country">SAUDI ARABIA</div>
-              </div>
-              <div class="text-right">
-                <span id="meccaTime" class="nc-clock-time"></span>
-              </div>
-            </div>
-
-            <!-- NEW: SOUTH KOREA -->
-            <div class="nc-time-card flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <div class="nc-world-city">🇰🇷 Seoul</div>
-                <div class="nc-country">SOUTH KOREA</div>
-              </div>
-              <div class="text-right">
-                <span id="seoulTime" class="nc-clock-time"></span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- LANGUAGE -->
-        <div class="text-center pl-0 md:pl-6">
-
-          <h3 class="gold-text text-xl font-bold mb-5">
-            LANGUAGE
-          </h3>
-
-          <div class="nc-language-card">
-
-            <p class="text-lg font-bold mb-5">
-              🌐 Select Language
-            </p>
-
-            <div id="google_translate_element"></div>
-
-          </div>
-
-          <p class="text-sm italic mt-7 opacity-75">
-            Connect Beyond Borders ♡
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- WORLD CLOCK SCRIPT -->
-<script>
-(function () {
-  const clocks = [
-    ["klTime", "Asia/Kuala_Lumpur"],
-    ["sgTime", "Asia/Singapore"],
-    ["dubaiTime", "Asia/Dubai"],
-    ["londonTime", "Europe/London"],
-    ["parisTime", "Europe/Paris"],
-    ["meccaTime", "Asia/Riyadh"],
-    ["seoulTime", "Asia/Seoul"]
-  ];
-
-  function updateGlobalClock() {
-    const now = new Date();
-
-    const dateElement = document.getElementById("currentDate");
-    const mainTimeElement = document.getElementById("currentTime");
-
-    if (dateElement) {
-      dateElement.textContent = new Intl.DateTimeFormat("en-GB", {
-        timeZone: "Asia/Kuala_Lumpur",
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-      }).format(now);
-    }
-
-    if (mainTimeElement) {
-      mainTimeElement.textContent = new Intl.DateTimeFormat("en-MY", {
-        timeZone: "Asia/Kuala_Lumpur",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true
-      }).format(now);
-    }
-
-    clocks.forEach(function (clock) {
-      const element = document.getElementById(clock[0]);
-      if (!element) return;
-
-      element.textContent = new Intl.DateTimeFormat("en-MY", {
-        timeZone: clock[1],
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: true
-      }).format(now);
-    });
-  }
-
-  updateGlobalClock();
-  setInterval(updateGlobalClock, 1000);
-})();
-</script>
-  
-<!-- HERO -->
+  <!-- HERO -->
 <section class="relative min-h-[450px] md:min-h-[220px]
 pt-[80px] flex items-center justify-center text-center overflow-hidden px-6 pt-[220px] pb-20">
 
