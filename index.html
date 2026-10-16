@@ -1736,249 +1736,309 @@ function toggleSound() {
 }
 
 </style>  
-  
- <!-- =====≈========≈============ 
-  ARTICLE CARD
-  ========================================= -->
-<div class="nc-wrap">
-<article class="nc-card">
-<a href="artikel-1billion.html" aria-label="Baca artikel penuh">
-<img src="felda-cover.jpg" alt="asas kerugian 1 billion">
-</a>
-<div class="nc-content">
-<span class="nc-tag">NANIS.COM • ISU &amp; SOROTAN KES</span>
-<h1>FELDA TAK KELUAR MODAL? JADI, APA ASAS KERUGIAN RM1 BILION?</h1>
-<div class="nc-meta">Nanis.Com &nbsp;|&nbsp; 11 Oktober 2026</div>
-    <div class="text-sm text-gray-400 mb-4">
-      <span class="globe-pulse">🌍</span>
-<span>43</span> views </div>
-<a class="nc-btn" href="artikel-1billion.html">Baca Artikel Penuh →</a>
-</div>
-</div>
-</article>
-</div>
-  
-   <!-- =========================================
-     ARTICLE CARD
-     ========================================= -->
 
-<div class="nc-wrap">
+  <!-- NANIS.COM — ISU SEMASA & ANALISIS -->
+  <section id="nanis-isu-analisis">  
+    <style>
+    #nanis-isu-analisis {
+      --nc-ink: #263b59;
+      --nc-purple: #7656a5;
+      --nc-border: #e7def2;
+      --nc-muted: #77758a;
+      padding: 35px 16px;
+      background: #fcfaff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-  <article class="nc-card">
+    #nanis-isu-analisis * {
+      box-sizing: border-box;
+    }
 
-    <img 
-      src="IMG-felda.jpg" 
-      alt="Projek Jalan Semarak dan FELDA"
-    >
+    #nanis-isu-analisis .nc-section-heading {
+      max-width: 1200px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
 
-    <h1>
-      PROSIDING JALAN SEMARAK DITANGGUHKAN —
-      ISU MASIH MENUNGGU PENENTUAN MAHKAMAH
-    </h1>
+    #nanis-isu-analisis .nc-section-heading span {
+      color: var(--nc-purple);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
 
+    #nanis-isu-analisis .nc-section-heading h2 {
+      margin: 12px 0;
+      color: var(--nc-ink);
+      font-size: clamp(25px, 4vw, 34px);
+      line-height: 1.3;
+    }
+
+    #nanis-isu-analisis .nc-section-heading p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--nc-muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    #nanis-isu-analisis .nc-articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #nanis-isu-analisis .nc-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--nc-border);
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(80, 60, 110, .08);
+    }
+
+    #nanis-isu-analisis .nc-card-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #f1ebf8;
+    }
+
+    #nanis-isu-analisis .nc-card-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #nanis-isu-analisis .nc-card-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 22px;
+    }
+
+    #nanis-isu-analisis .nc-tag {
+      margin-bottom: 12px;
+      color: var(--nc-purple);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: .8px;
+    }
+
+    #nanis-isu-analisis .nc-card-title {
+      margin: 0 0 12px;
+      color: var(--nc-ink);
+      font-size: 21px;
+      line-height: 1.45;
+    }
+
+    #nanis-isu-analisis .nc-meta {
+      margin-bottom: 12px;
+      color: var(--nc-muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    #nanis-isu-analisis .nc-excerpt {
+      margin: 0 0 16px;
+      color: #5e6170;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    #nanis-isu-analisis .nc-highlight {
+      width: 100%;
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border-left: 4px solid #9a83c5;
+      border-radius: 6px;
+      background: #f5f0fc;
+      color: #55466f;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    #nanis-isu-analisis .nc-views {
+      margin-top: auto;
+      margin-bottom: 16px;
+      color: var(--nc-muted);
+      font-size: 12px;
+    }
+
+    #nanis-isu-analisis .nc-btn {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 11px 19px;
+      border-radius: 24px;
+      background: linear-gradient(90deg, #dceeff, #eadfff);
+      color: #514073;
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #nanis-isu-analisis .nc-byline {
+      margin-top: 14px;
+      color: #888194;
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      #nanis-isu-analisis {
+        padding: 28px 12px;
+      }
+
+      #nanis-isu-analisis .nc-articles-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      #nanis-isu-analisis .nc-card-content {
+        padding: 18px;
+      }
+
+      #nanis-isu-analisis .nc-card-title {
+        font-size: 19px;
+      }
+    }
+  </style>  <header class="nc-section-heading">
+    <span>NANIS.COM • CURRENT AFFAIRS</span>
+    <h2>Isu Semasa &amp; Analisis</h2>
     <p>
-      Prosiding berkaitan pertikaian projek dan tanah di Jalan Semarak
-      hari ini ditangguhkan dan akan disambung semula esok.
+      Laporan, persoalan dasar, tadbir urus dan analisis
+      isu-isu penting untuk pemahaman pembaca.
     </p>
-
-    <div class="text-sm text-gray-400 mb-4">
-      <span class="globe-pulse">🌍</span>
-<span>6271</span> views </div>
-
-    <div class="byline">
-      Oleh: Nanis.Com | Nanis Communication | 5 SEPTEMBER 2026
+  </header>  <div class="nc-articles-grid"><!-- ARTIKEL 1 -->
+<article class="nc-card">
+  <a class="nc-card-image" href="artikel-felda.html">
+    <img src="IMG-felda.jpg"
+         alt="Prosiding Jalan Semarak dan FELDA"
+         loading="lazy">
+  </a>
+  <div class="nc-card-content">
+    <span class="nc-tag">ISU SEMASA • FELDA</span>
+    <h3 class="nc-card-title">
+      Prosiding Jalan Semarak Ditangguhkan —
+      Isu Masih Menunggu Penentuan Mahkamah
+    </h3>
+    <div class="nc-meta">
+      Oleh: Nanis.Com<br>
+      5 September 2026
     </div>
-
-    <!-- BUTANG BACA ARTIKEL -->
-    <a 
-      href="artikel-felda.html" 
-      class="read-more"
-      aria-label="Baca artikel penuh"
-    >
+    <p class="nc-excerpt">
+      Prosiding berkaitan pertikaian projek dan tanah di
+      Jalan Semarak ditangguhkan dan akan disambung semula.
+    </p>
+    <div class="nc-views">🌍 6,271 views</div>
+    <a class="nc-btn" href="artikel-felda.html">
       Baca Artikel Penuh →
     </a>
-
-  </article>
-
-</div>
-  
- <!-- =========================================
-     ARTICLE CARD
-     ========================================= -->
-<div class="nc-wrap">
-<article class="nc-card">
-<a href="artikel-jalan-semarak-felda.html" aria-label="Baca artikel penuh">
-<img src="projek-jalan-semarak-felda.jpg" alt="Projek Jalan Semarak dan persoalan kelulusan serta akauntabiliti FELDA">
-</a>
-<div class="nc-content">
-<span class="nc-tag">NANIS.COM • ISU &amp; TADBIR URUS</span>
-<h1>BETUL KE PROJEK JALAN SEMARAK DILULUSKAN TANPA KELULUSAN MENTERI? SIAPA SEBENARNYA BERTANGGUNGJAWAB?</h1>
-<div class="nc-meta">Nanis.Com &nbsp;|&nbsp; 2 Oktober 2026</div>
-    <div class="text-sm text-gray-400 mb-4">
-      <span class="globe-pulse">🌍</span>
-<span>16101</span> views </div>
-
-<p class="nc-excerpt">Persoalan mengenai status kelulusan Menteri bagi projek pembangunan Jalan Semarak yang melibatkan aset bernilai tinggi FELDA perlu diberikan penjelasan segera.</p>
-<a class="nc-btn" href="artikel-jalan-semarak-felda.html">Baca Artikel Penuh →</a>
-</div>
-</div>
+  </div>
 </article>
-</div>
 
-  <!-- =========================================
-     ARTICLE CARD
-     ========================================= -->
-
-<div class="ehp-card">
-
-  <!-- IMAGE -->
-  <div class="ehp-card-image">
-
-    <img
-      src="IMG-20260919-WA0039.jpg"
-      alt="Eagle High Plantations (EHP)"
-    >
-
-    <span class="ehp-category">
-      Laporan Semasa
-    </span>
-
-  </div>
-
-
-  <!-- CONTENT -->
-  <div class="ehp-card-content">
-
-    <div class="ehp-date">
-      20 September 2026 · Nanis.Com
+<!-- ARTIKEL 2 -->
+<article class="nc-card">
+  <a class="nc-card-image"
+     href="artikel-jalan-semarak-felda.html">
+    <img src="projek-jalan-semarak-felda.jpg"
+         alt="Projek Jalan Semarak dan persoalan kelulusan FELDA"
+         loading="lazy">
+  </a>
+  <div class="nc-card-content">
+    <span class="nc-tag">ISU &amp; TADBIR URUS</span>
+    <h3 class="nc-card-title">
+      Betul Ke Projek Jalan Semarak Diluluskan Tanpa
+      Kelulusan Menteri? Siapa Sebenarnya Bertanggungjawab?
+    </h3>
+    <div class="nc-meta">
+      Oleh: Nanis.Com<br>
+      2 Oktober 2026
     </div>
-
-
-    <h2 class="ehp-card-title">
-      EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?
-    </h2>
-
-
-    <div class="ehp-card-divider"></div>
-
-
-    <p class="ehp-card-description">
-      Perkembangan pelaburan FELDA dalam Eagle High Plantations (EHP),
-      pelaksanaan Put Option, keputusan timbang tara SIAC serta
-      perkembangan proses penguatkuasaan di Indonesia.
+    <p class="nc-excerpt">
+      Persoalan mengenai status kelulusan Menteri bagi
+      projek pembangunan Jalan Semarak yang melibatkan
+      aset bernilai tinggi FELDA memerlukan penjelasan.
     </p>
-     <div class="text-sm text-gray-400 mb-4">
-      <span class="globe-pulse">🌍</span>
-<span>1001</span> views </div>
-
-
-    <a
-      href="artikel-ehp.html"
-      class="ehp-card-button"
-    >
-      Baca Artikel
-      <span>→</span>
+    <div class="nc-views">🌍 16,101 views</div>
+    <a class="nc-btn" href="artikel-jalan-semarak-felda.html">
+      Baca Artikel Penuh →
     </a>
+  </div>
+</article>
+
+<!-- ARTIKEL 3 -->
+<article class="nc-card">
+  <a class="nc-card-image" href="artikel-ehp.html">
+    <img src="IMG-20260919-WA0039.jpg"
+         alt="Eagle High Plantations"
+         loading="lazy">
+  </a>
+  <div class="nc-card-content">
+    <span class="nc-tag">LAPORAN SEMASA • EHP</span>
+    <h3 class="nc-card-title">
+      EHP: Mengapa Tuntutan Bilion Ringgit Masih Belum Selesai?
+    </h3>
+    <div class="nc-meta">
+      Oleh: Nanis.Com<br>
+      20 September 2026
+    </div>
+    <p class="nc-excerpt">
+      Perkembangan pelaburan FELDA dalam Eagle High
+      Plantations, pelaksanaan Put Option, keputusan
+      timbang tara SIAC serta proses penguatkuasaan di Indonesia.
+    </p>
+    <div class="nc-views">🌍 1,001 views</div>
+    <a class="nc-btn" href="artikel-ehp.html">
+      Baca Artikel Penuh →
+    </a>
+  </div>
+</article>
+
+<!-- ARTIKEL 4 -->
+<article class="nc-card">
+  <a class="nc-card-image"
+     href="https://naniscommunication.com/artikel-klvc.html">
+    <img src="IMG_4641.PNG"
+         alt="Projek KLVC dan potensi pendapatan FELDA"
+         loading="lazy">
+  </a>
+  <div class="nc-card-content">
+    <span class="nc-tag">ANALISIS • FELDA • KLVC</span>
+    <h3 class="nc-card-title">
+      Tiada Wang yang Didakwa Disakau, Tetapi Benarkah
+      FELDA Berdepan Risiko Kehilangan Potensi Pendapatan
+      Ratusan Juta Ringgit Akibat Projek KLVC?
+    </h3>
+    <div class="nc-meta">Oleh: Nanis.Com</div>
+    <p class="nc-excerpt">
+      Projek Kuala Lumpur Vertical City pernah dirancang
+      sebagai pembangunan bernilai berbilion ringgit
+      melibatkan tanah FELDA. Selepas projek terhenti,
+      timbul persoalan mengenai potensi pulangan serta
+      tuntutan pampasan yang difailkan.
+    </p>
+    <div class="nc-highlight">
+      <strong>RM500 juta – RM830 juta</strong><br>
+      Potensi pulangan berbanding tuntutan pampasan
+      <strong>RM3.5 bilion</strong>.
+    </div>
+    <div class="nc-views">🌍 10,917 views</div>
+    <a class="nc-btn"
+       href="https://naniscommunication.com/artikel-klvc.html">
+      Baca Artikel Penuh →
+    </a>
+  </div>
+</article>
 
   </div>
-
-</div>
-  
-  <!-- =========================================
-     ARTICLE CARD
-     ========================================= -->
-<div class="KLVC-card">
-
-        <!-- IMAGE -->
-         <img src="IMG_4641.PNG"
-                 alt="KLVC dan potensi pendapatan FELDA">
-
-        <!-- CONTENT -->
-        <div style="padding: 25px 24px 28px;">
-
-            <div style="
-                display:inline-block;
-                background:#eaf4f7;
-                color:#176b7a;
-                padding:6px 13px;
-                border-radius:20px;
-                font-size:12px;
-                font-weight:bold;
-                margin-bottom:12px;
-            ">
-                ANALISIS • FELDA • KLVC
-            </div>
-
-            <h2 style="
-                margin:0 0 12px;
-                font-family:Arial, Helvetica, sans-serif;
-                font-size:26px;
-                line-height:1.35;
-                color:#123f4a;
-            ">
-                Tiada Wang yang Didakwa Disakau, Tetapi Benarkah FELDA Berdepan Risiko Kehilangan Potensi Pendapatan Ratusan Juta Ringgit Akibat Projek KLVC?
-            </h2>
-
-            <p style="
-                margin:0 0 15px;
-                font-family:Arial, Helvetica, sans-serif;
-                font-size:15px;
-                line-height:1.7;
-                color:#555;
-            ">
-                Projek Kuala Lumpur Vertical City (KLVC) pernah dirancang sebagai pembangunan bernilai berbilion ringgit yang melibatkan tanah FELDA. Selepas projek itu terhenti, timbul persoalan mengenai potensi pulangan kepada FELDA serta implikasi tuntutan pampasan yang difailkan.
-            </p>
-
-            <div style="
-                background:#f0f8fa;
-                border-left:4px solid #2d8c9d;
-                padding:13px 15px;
-                margin:18px 0;
-                border-radius:7px;
-                font-family:Arial, Helvetica, sans-serif;
-                font-size:14px;
-                line-height:1.6;
-                color:#333;
-            ">
-                <strong>RM500 juta – RM830 juta</strong><br>
-                Potensi pulangan berbanding tuntutan pampasan
-                <strong>RM3.5 bilion</strong>.
-            </div>
-            <div class="text-sm text-gray-400 mb-4">
-      <span class="globe-pulse">🌍</span>
-<span>10917</span> views </div>
-
-
-            <div style="margin-top:20px;">
-
-                <a href="https://naniscommunication.com/artikel-klvc.html"
-                   style="
-                      display:inline-block;
-                      background:#176b7a;
-                      color:#ffffff;
-                      text-decoration:none;
-                      padding:11px 20px;
-                      border-radius:25px;
-                      font-family:Arial, Helvetica, sans-serif;
-                      font-size:14px;
-                      font-weight:bold;
-                   ">
-                    BACA ARTIKEL PENUH →
-                </a>
-
-            </div>
-
-            <div style="
-                margin-top:18px;
-                font-family:Arial, Helvetica, sans-serif;
-                font-size:12px;
-                color:#999;
-            ">
-                Oleh: Nanis.Com
-            </div>
-
-        </div>
-    </div>
+</section>
   
   !-- NANIS.COM - MEDIA & ENTERTAINMENT -->
   <section class="media-entertainment">
