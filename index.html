@@ -1456,8 +1456,6 @@ function toggleSound() {
   </div>
 </section>
 
-
-  
 <!-- ===== BTS THE LEGENDS | MAIN PAGE GATEWAY ===== -->
 <section id="bts-the-legends"
   class="relative isolate my-12 overflow-hidden rounded-2xl border border-amber-400/40 bg-[#10091f] text-white shadow-2xl">
@@ -1487,13 +1485,19 @@ function toggleSound() {
       NANIS COMMUNICATION PRESENTS
     </p>
 
-    <!-- ARMY artwork: insert verified, permitted BTS artwork here -->
-    <div class="mx-auto mb-7 flex max-w-4xl items-center justify-center">
-      <img
-        src="images/bts-army-seven-members.png"
-        alt="Artwork featuring all seven BTS members arranged in the word ARMY"
-        class="max-h-64 w-full object-contain drop-shadow-[0_0_22px_rgba(168,85,247,0.5)]"
-        loading="lazy">
+    <!-- BTS artwork: mobile portrait and desktop landscape -->
+    <div class="mx-auto mb-7 flex max-w-5xl items-center justify-center">
+      <picture class="block w-full">
+        <source
+          media="(min-width: 768px)"
+          srcset="images/bts-the-legends-desktop.jpg">
+
+        <img
+          src="images/bts-the-legends-mobile.png"
+          alt="Nanis Communication presents BTS The Legends"
+          class="mx-auto block h-auto w-full object-contain drop-shadow-[0_0_22px_rgba(168,85,247,0.5)]"
+          loading="eager">
+      </picture>
     </div>
 
     <h2 class="text-4xl font-bold uppercase leading-tight tracking-wide
@@ -1536,8 +1540,8 @@ function toggleSound() {
   </div>
 </section>
 <!-- ===== END BTS THE LEGENDS ===== -->
-  
 
+  
 <!-- =====================================================
      NANIS.COM / IPK MEDIA
      MHO SPECIAL FEATURE CARD
