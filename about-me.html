@@ -6,27 +6,61 @@
   <meta name="description" content="Profil profesional Nanis D.Webster (Yusnani Dahlan), penulis, pencipta kandungan digital, usahawan media digital dan aktivis Malaysian Humanitarian Organisation (MHO).">
   <title>About Me | Nanis Communication</title>
   <style>
-    :root {
-      --bg: #101010;
-      --panel: #191919;
-      --gold: #c8a96b;
-      --gold-light: #ead7a7;
-      --text: #f4f0e8;
-      --muted: #c2bdb2;
-      --line: rgba(200,169,107,.35);
+    
+:root {
+  --bg: #08080D;
+  --panel: #11101A;
+
+  --gold: #FFD700;
+  --gold-light: #FFF0A6;
+
+  --text: #F8F5FF;
+  --muted: #C9C4D8;
+
+  --purple: #8B35FF;
+  --purple-light: #B77CFF;
+  --blue: #00BFFF;
+  --pink: #FF4FCB;
+
+  --line: rgba(139, 53, 255, 0.48);
+
+  --glow-purple:
+    0 0 8px rgba(139, 53, 255, 0.35),
+    0 0 22px rgba(139, 53, 255, 0.12);
+
+  --glow-blue:
+    0 0 8px rgba(0, 191, 255, 0.4),
+    0 0 18px rgba(0, 191, 255, 0.14);
+}
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at 12% 8%, rgba(200,169,107,.10), transparent 28rem),
-        radial-gradient(circle at 90% 35%, rgba(200,169,107,.06), transparent 25rem),
-        var(--bg);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.75;
-    }
+    
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 10% 5%,
+      rgba(139, 53, 255, 0.20),
+      transparent 32rem
+    ),
+    radial-gradient(
+      ellipse at 95% 24%,
+      rgba(0, 191, 255, 0.13),
+      transparent 28rem
+    ),
+    radial-gradient(
+      ellipse at 50% 75%,
+      rgba(255, 79, 203, 0.07),
+      transparent 30rem
+    ),
+    var(--bg);
+
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.75;
+}
     a { color: var(--gold-light); }
     .wrap { width: min(1080px, 92%); margin: auto; }
     header {
@@ -172,6 +206,144 @@
 .media-label {
   font: 12px/1.4 Arial, sans-serif;
   overflow-wrap: anywhere;
+}
+
+/* LUXURY NEON — ABOUT ME */
+
+header {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 191, 255, 0.55);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.eyebrow {
+  color: var(--blue);
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+}
+
+h1 {
+  color: var(--gold-light);
+  text-shadow:
+    0 0 10px rgba(255, 215, 0, 0.22),
+    0 0 28px rgba(139, 53, 255, 0.25);
+}
+
+.aka {
+  color: var(--pink);
+  text-shadow: 0 0 12px rgba(255, 79, 203, 0.28);
+}
+
+.intro,
+section.card {
+  background: linear-gradient(
+    145deg,
+    rgba(25, 17, 39, 0.96),
+    rgba(12, 12, 20, 0.96)
+  );
+
+  border: 1px solid var(--line);
+  box-shadow: var(--glow-purple);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.intro {
+  border-top: 2px solid var(--blue);
+}
+
+.intro:hover,
+section.card:hover {
+  border-color: rgba(0, 191, 255, 0.72);
+  box-shadow: var(--glow-blue), var(--glow-purple);
+}
+
+h2 {
+  color: var(--gold-light);
+  text-shadow: 0 0 12px rgba(139, 53, 255, 0.28);
+}
+
+h3 {
+  color: var(--purple-light);
+}
+
+a {
+  color: #8EDFFF;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+.btn {
+  border-color: var(--purple-light);
+  color: #E8D6FF;
+  box-shadow: 0 0 10px rgba(139, 53, 255, 0.12);
+}
+
+.btn.primary {
+  background: linear-gradient(110deg, #7C2BDB, #9B45FF);
+  color: #FFFFFF;
+  border-color: var(--purple-light);
+  box-shadow: 0 0 14px rgba(139, 53, 255, 0.28);
+}
+
+.btn:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #08080D;
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.35);
+}
+
+.portfolio-item,
+.contact-item,
+.media-source {
+  background: rgba(139, 53, 255, 0.055);
+  border-color: rgba(139, 53, 255, 0.35);
+}
+
+.portfolio-item strong {
+  color: var(--gold-light);
+}
+
+.media-source {
+  color: var(--text);
+  box-shadow: 0 0 12px rgba(139, 53, 255, 0.08);
+}
+
+.media-source:hover {
+  background: rgba(0, 191, 255, 0.09);
+  border-color: var(--blue);
+  box-shadow: var(--glow-blue);
+}
+
+.media-icon {
+  color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.18);
+}
+
+.resume-kicker,
+.resume-subtitle,
+.contact-item span {
+  color: var(--pink);
+}
+
+.resume-objective {
+  border-left-color: var(--gold);
+  background: rgba(255, 215, 0, 0.055);
+}
+
+.signature {
+  color: var(--gold-light);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.15);
+}
+
+footer {
+  border-top-color: rgba(0, 191, 255, 0.45);
 }
 
 @media (max-width: 480px) {
