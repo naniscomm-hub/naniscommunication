@@ -121,6 +121,76 @@
       .grid, .portfolio-list, .contact-grid { grid-template-columns: 1fr; }
       .intro, section.card { padding: 20px; }
     }
+  
+.media-sources-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 20px 0 26px;
+}
+
+.media-source {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 125px;
+  min-height: 110px;
+  padding: 14px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(200, 169, 107, 0.045);
+  color: var(--gold-light);
+  text-align: center;
+  text-decoration: none;
+  transition: transform .2s ease,
+              background .2s ease,
+              border-color .2s ease;
+}
+
+.media-source:hover {
+  transform: translateY(-4px);
+  background: rgba(200, 169, 107, 0.13);
+  border-color: var(--gold);
+}
+
+.media-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.media-label {
+  font: 12px/1.4 Arial, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .media-sources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .media-source {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 5px;
+  }
+
+  .media-label {
+    font-size: 10px;
+  }
+}
   </style>
 </head>
 <body>
@@ -129,7 +199,7 @@
       <div class="eyebrow">Nanis Communication · Professional Profile</div>
       <h1>Nanis D.Webster</h1>
       <div class="aka">Yusnani Dahlan</div>
-      <p class="tagline">FULL TIME WRITER / ARTICLE WRITER / PUBLISHER><div>Content Creator · Pengusaha Media Digital · Aktivis Kemanusiaan</div></p>
+      <p class="tagline">FULL TIME WRITER / ARTICLE WRITER / PUBLISHER<div>Content Creator · Pengusaha Media Digital · Aktivis Kemanusiaan</div></p>
       <div class="actions">
         <a class="btn primary" href="https://wa.me/60133324777" target="_blank" rel="noopener">Hubungi melalui WhatsApp</a>
         <a class="btn" href="mailto:nanis.comm@gmail.com">E-mel Profesional</a>
@@ -238,20 +308,93 @@
       <div class="resume-objective">Menyumbang kemahiran penulisan, penyelidikan dan analisis untuk menghasilkan kandungan berkualiti, di samping membina kerjaya profesional dalam bidang penulisan artikel dan kandungan digital secara jarak jauh atau bebas.</div>
     </section>
 
-    <section class="card wide">
-      <h2>Portfolio Penulisan & Kandungan</h2>
-      <p>Portfolio ini merangkumi contoh kerja penulisan, pembangunan kandungan dan penerbitan digital. Pengunjung boleh melayari laman Nanis Communication untuk melihat artikel yang tersedia.</p>
-      <div class="portfolio-list">
-        <div class="portfolio-item"><strong>Artikel & Editorial</strong>Artikel informatif, isu semasa, perniagaan, ekonomi, pendidikan dan masyarakat.</div>
-        <div class="portfolio-item"><strong>Pendidikan & TVET</strong>Kandungan berkaitan pembelajaran, kemahiran dan pembangunan ilmu.</div>
-        <div class="portfolio-item"><strong>Hiburan & Media Digital</strong>Kandungan hiburan dan bahan digital untuk khalayak dalam talian.</div>
-        <div class="portfolio-item"><strong>Penyelidikan & Analisis</strong>Penyusunan maklumat, penelitian konteks dan pembangunan kandungan berasaskan penyelidikan.</div>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="https://naniscommunication.com" target="_blank" rel="noopener">Lihat Nanis Communication</a>
-      </div>
-      <p style="color:var(--muted);font-size:.9rem;margin-top:12px">Nota: Tambahkan pautan terus kepada artikel pilihan di sini apabila senarai portfolio khusus telah ditentukan.</p>
-    </section>
+    
+<section class="card wide" id="media-sources">
+  <h2>Portfolio Penulisan & Kandungan</h2>
+  <p>
+    Portfolio ini merangkumi penulisan artikel, pembangunan kandungan,
+    penerbitan digital dan aktiviti media melalui Nanis Communication.
+    Layari saluran rasmi di bawah untuk melihat hasil kandungan dan
+    penerbitan saya.
+  </p>
+
+  <div class="portfolio-list">
+    <div class="portfolio-item">
+      <strong>Artikel & Editorial</strong>
+      Artikel informatif, isu semasa, perniagaan, ekonomi,
+      pendidikan dan masyarakat.
+    </div>
+
+    <div class="portfolio-item">
+      <strong>Pendidikan & TVET</strong>
+      Kandungan berkaitan pembelajaran, kemahiran dan pembangunan ilmu.
+    </div>
+
+    <div class="portfolio-item">
+      <strong>Hiburan & Media Digital</strong>
+      Kandungan hiburan dan bahan digital untuk khalayak dalam talian.
+    </div>
+
+    <div class="portfolio-item">
+      <strong>Penyelidikan & Analisis</strong>
+      Penyusunan maklumat, penelitian konteks dan pembangunan
+      kandungan berasaskan penyelidikan.
+    </div>
+  </div>
+
+  <h2 style="margin-top:28px;">Media Sources</h2>
+  <p>
+    Ikuti saluran media sosial dan platform penerbitan saya.
+    Klik mana-mana simbol untuk terus ke akaun berkenaan.
+  </p>
+
+  <div class="media-sources-grid">
+
+    <a class="media-source" href="https://x.com/NanisDwebster"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Nanis D.Webster di X">
+      <span class="media-icon">𝕏</span>
+      <span class="media-label">X</span>
+    </a>
+
+    <a class="media-source" href="https://www.threads.com/@ipk.media"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="IPK Media di Threads">
+      <span class="media-icon">＠</span>
+      <span class="media-label">Threads</span>
+    </a>
+
+    <a class="media-source" href="https://www.instagram.com/nanis.d.webster"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Nanis D.Webster di Instagram">
+      <span class="media-icon">◎</span>
+      <span class="media-label">Instagram</span>
+    </a>
+
+    <a class="media-source" href="https://www.facebook.com/naniscommunication"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Nanis Communication di Facebook">
+      <span class="media-icon">f</span>
+      <span class="media-label">Facebook — Nanis Communication</span>
+    </a>
+
+    <a class="media-source" href="https://www.facebook.com/NanisD.webster"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Nanis D.Webster di Facebook">
+      <span class="media-icon">f</span>
+      <span class="media-label">Facebook — Nanis D.Webster</span>
+    </a>
+
+  </div>
+
+  <div class="actions">
+    <a class="btn primary"
+       href="https://naniscommunication.com"
+       target="_blank" rel="noopener noreferrer">
+      Lihat Nanis Communication
+    </a>
+  </div>
+</section>
 
     <section class="card wide">
       <h2>Nilai Profesional & Peluang Kerjasama</h2>
@@ -286,7 +429,7 @@
   <footer>
     <div class="wrap">
       <div class="signature">Writing with purpose. Creating with vision. Communicating with humanity.</div>
-      <div>© <span id="year"></span> Nanis Communication |IPK MEDIA · Nanis D.Webster | NANIS.COM</div>
+      <div>© <span id="year"></span> Nanis Communication | IPK MEDIA · Nanis D.Webster | NANIS.COM</div>
     </div>
   </footer>
   <script>
