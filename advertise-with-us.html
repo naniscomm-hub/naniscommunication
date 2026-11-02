@@ -181,6 +181,58 @@ header{padding-top:45px}
 .card{padding:22px}
 .section{padding:30px 0}
 }
+
+/* NANIS COMMUNICATION WALLPAPER */
+
+body {
+    position: relative;
+    background: #030609;
+    isolation: isolate;
+}
+
+/* Logo sebagai wallpaper kekal */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        url("nanis-wallpaper.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: min(95vw, 850px) auto;
+
+    opacity: 0.17;
+}
+
+/* Kandungan kekal jelas di hadapan */
+
+header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Kad separa telus */
+
+.card {
+    background: rgba(5, 14, 27, 0.88);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Ruang hubungan */
+
+.contact {
+    background: rgba(5, 17, 32, 0.90);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
 </style>
 </head>
 
