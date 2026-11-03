@@ -98,6 +98,30 @@ footer strong{color:var(--gold2)}
  .nav{min-height:62px}.menu-btn{display:block}nav{display:none;position:absolute;top:62px;left:0;right:0;padding:16px 5%;background:#0b1220;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
  nav.open{display:flex}.hero{padding:30px 0}.hero-box{padding:28px 22px}.section-head{display:block}.grid{gap:12px}.cover{height:190px}.book-info{padding:12px}.book-info h3{font-size:16px}.feature-row,.steps{grid-template-columns:1fr}.chapter-list{grid-template-columns:1fr}
 }
+
+/* Poster Koleksi Pilihan — gaya diasingkan supaya tidak mengganggu reka bentuk asal */
+.ndl-collections{width:100%;padding:42px 14px 34px;color:#fff;background:radial-gradient(ellipse at 50% 0%,rgba(173,120,28,.18),transparent 48%),linear-gradient(145deg,#080b12,#101725 55%,#080b12);font-family:Georgia,"Times New Roman",serif}
+.ndl-collections *{box-sizing:border-box}
+.ndl-collections-inner{width:min(1180px,100%);margin:auto}
+.ndl-heading{text-align:center;margin:0 0 24px}
+.ndl-heading span{color:#e8bd58;font:700 11px Arial,sans-serif;letter-spacing:4px}
+.ndl-heading h2{margin:8px 0;color:#ffe7a0;font-size:clamp(30px,5vw,46px);text-shadow:0 0 18px #b8873444}
+.ndl-heading p{margin:0;color:#e8d9b4;letter-spacing:2px;font-size:13px}
+.ndl-poster-wrap{position:relative;width:min(100%,1000px);margin:0 auto;border:1px solid #e8bd58;border-radius:13px;overflow:hidden;box-shadow:0 0 22px #e6aa3230;line-height:0}
+.ndl-poster-image{display:block;width:100%;height:auto}
+.ndl-hotspot{position:absolute;top:76.5%;height:5.2%;width:14.3%;display:block;z-index:2;border-radius:30px;outline:0;cursor:pointer;transition:background .18s,box-shadow .18s}
+.ndl-hotspot-1{left:4.2%}.ndl-hotspot-2{left:23.9%}.ndl-hotspot-3{left:43.2%}.ndl-hotspot-4{left:62.5%}.ndl-hotspot-5{left:82.0%}
+.ndl-hotspot:hover,.ndl-hotspot:focus-visible{background:rgba(255,220,90,.18);box-shadow:0 0 0 2px rgba(255,220,90,.95),0 0 18px rgba(255,190,45,.7)}
+.ndl-category-message{max-width:1000px;margin:22px auto 0;padding:20px 22px;border:1px solid #8c713b;border-radius:12px;background:linear-gradient(135deg,rgba(216,184,106,.10),rgba(12,19,31,.92));text-align:center;scroll-margin-top:95px}
+.ndl-message-eyebrow{color:#e8bd58;font:700 10px Arial,sans-serif;letter-spacing:3px}
+.ndl-category-message h3{margin:7px 0;color:#ffe7a0;font-size:clamp(20px,3vw,27px)}
+.ndl-category-message p{margin:5px 0 12px;color:#d8dfeb;font:14px/1.6 Arial,sans-serif}
+.ndl-message-link{display:inline-block;color:#ffe7a0;font:700 12px Arial,sans-serif;text-decoration:none;border-bottom:1px solid #a98a4b;padding-bottom:3px}
+.ndl-footer{text-align:center;margin:26px auto 0;color:#e8d9b4}
+.ndl-footer h3{margin:0;color:#ffe7a0;font-size:23px}
+.ndl-footer p{margin:3px 0 0;font-style:italic}
+@media(max-width:620px){.ndl-collections{padding:30px 10px}.ndl-heading{margin-bottom:17px}.ndl-heading p{letter-spacing:1px;font-size:11px}.ndl-poster-wrap{border-radius:8px}.ndl-hotspot{top:76.5%;height:5.2%;width:14.3%}.ndl-category-message{padding:16px 13px;margin-top:15px}.ndl-category-message p{font-size:12px}}
+
 </style>
 </head>
 <body>
@@ -166,176 +190,39 @@ footer strong{color:var(--gold2)}
       <div class="empty" id="emptyState">Tiada koleksi ditemui. Cuba kata carian atau kategori lain.</div>
     </div>
   </section>
-  <!-- NANIS DIGITAL LIBRARY: POSTER KOLEKSI PILIHAN DENGAN 5 BUTANG KLIK -->
-<section class="ndl-collections" id="koleksi-pilihan">
-  <div class="ndl-collections-inner">
-    <header class="ndl-heading">
-      <span>NANIS DIGITAL LIBRARY</span>
-      <h2>Koleksi Pilihan</h2>
-      <p>Baca • Belajar • Kongsi • Inspirasi</p>
-    </header>
 
-    <div class="ndl-poster-wrap">
-      <img class="ndl-poster-image"
-           src="koleksi-pilihan-nanis.png"
-           alt="Nanis Digital Library - Koleksi Pilihan">
 
-      <!-- Lima kawasan klik diletakkan tepat di atas butang yang tercetak pada poster.
-           Tukar nilai href kepada URL halaman kategori sebenar apabila sudah tersedia. -->
-      <a class="ndl-hotspot ndl-hotspot-1" href="#kisah-seram"
-         aria-label="Terokai Kisah Seram dan Misteri" title="Kisah Seram & Misteri"></a>
-      <a class="ndl-hotspot ndl-hotspot-2" href="#pendidikan"
-         aria-label="Terokai Pendidikan dan Ilmu" title="Pendidikan & Ilmu"></a>
-      <a class="ndl-hotspot ndl-hotspot-3" href="#tafsir-mimpi"
-         aria-label="Terokai Koleksi Tafsir Mimpi" title="Koleksi Tafsir Mimpi"></a>
-      <a class="ndl-hotspot ndl-hotspot-4" href="#novel-cerpen-ebook"
-         aria-label="Terokai Novel, Cerpen dan eBook" title="Novel, Cerpen & eBook"></a>
-      <a class="ndl-hotspot ndl-hotspot-5" href="#quote-inspirasi"
-         aria-label="Terokai Quote dan Kata-Kata Inspirasi" title="Quote & Kata-Kata Inspirasi"></a>
+  <!-- NANIS DIGITAL LIBRARY: POSTER KOLEKSI PILIHAN -->
+  <section class="ndl-collections" id="koleksi-pilihan">
+    <div class="ndl-collections-inner">
+      <header class="ndl-heading">
+        <span>NANIS DIGITAL LIBRARY</span>
+        <h2>Koleksi Pilihan</h2>
+        <p>Baca • Belajar • Kongsi • Inspirasi</p>
+      </header>
+
+      <div class="ndl-poster-wrap">
+        <img class="ndl-poster-image" src="koleksi-pilihan-nanis.png" alt="Nanis Digital Library - lima kategori koleksi pilihan" loading="lazy">
+        <a class="ndl-hotspot ndl-hotspot-1" href="#kategori-pilihan" data-category="Kisah Seram & Misteri" aria-label="Terokai Kisah Seram dan Misteri" title="Kisah Seram & Misteri"></a>
+        <a class="ndl-hotspot ndl-hotspot-2" href="#kategori-pilihan" data-category="Pendidikan & Ilmu" aria-label="Terokai Pendidikan dan Ilmu" title="Pendidikan & Ilmu"></a>
+        <a class="ndl-hotspot ndl-hotspot-3" href="#kategori-pilihan" data-category="Koleksi Tafsir Mimpi" aria-label="Terokai Koleksi Tafsir Mimpi" title="Koleksi Tafsir Mimpi"></a>
+        <a class="ndl-hotspot ndl-hotspot-4" href="#kategori-pilihan" data-category="Novel, Cerpen & eBook" aria-label="Terokai Novel, Cerpen dan eBook" title="Novel, Cerpen & eBook"></a>
+        <a class="ndl-hotspot ndl-hotspot-5" href="#kategori-pilihan" data-category="Quote & Kata-Kata Inspirasi" aria-label="Terokai Quote dan Kata-Kata Inspirasi" title="Quote & Kata-Kata Inspirasi"></a>
+      </div>
+
+      <div class="ndl-category-message" id="kategori-pilihan" aria-live="polite" tabindex="-1">
+        <div class="ndl-message-eyebrow">PILIHAN KATEGORI</div>
+        <h3 id="ndlCategoryTitle">Selamat Datang ke Nanis Digital Library</h3>
+        <p id="ndlCategoryText">Klik salah satu butang “Terokai Sekarang” pada poster untuk melihat kategori pilihan anda.</p>
+        <a href="#koleksi" class="ndl-message-link">Lihat koleksi bacaan yang tersedia ↓</a>
+      </div>
+
+      <footer class="ndl-footer">
+        <h3>✦ Selamat Membaca ✦</h3>
+        <p>Ilmu hari ini, kejayaan esok.</p>
+      </footer>
     </div>
-
-    <footer class="ndl-footer">
-      <h3>✦ Selamat Membaca ✦</h3>
-      <p>Ilmu hari ini, kejayaan esok.</p>
-    </footer>
-  </div>
-</section>
-
-<style>
-/* CSS khusus seksyen ini sahaja */
-.ndl-collections {
-  --ndl-gold:#e8bd58;
-  --ndl-light:#ffe7a0;
-  width:100%;
-  padding:42px 14px;
-  box-sizing:border-box;
-  color:#fff;
-  background:
-    radial-gradient(ellipse at 50% 0%,rgba(173,120,28,.18),transparent 48%),
-    linear-gradient(145deg,#080b12,#101725 55%,#080b12);
-  font-family:Georgia,"Times New Roman",serif;
-}
-.ndl-collections * {box-sizing:border-box}
-.ndl-collections-inner {width:min(1180px,100%);margin:auto}
-.ndl-heading {text-align:center;margin:0 0 24px}
-.ndl-heading span {
-  color:var(--ndl-gold);
-  font:700 11px Arial,sans-serif;
-  letter-spacing:4px;
-}
-.ndl-heading h2 {
-  margin:8px 0;
-  color:var(--ndl-light);
-  font-size:clamp(30px,5vw,46px);
-  text-shadow:0 0 18px #b8873444;
-}
-.ndl-heading p {margin:0;color:#e8d9b4;letter-spacing:2px}
-
-/* Poster responsif */
-.ndl-poster-wrap {
-  position:relative;
-  width:100%;
-  max-width:1100px;
-  margin:0 auto;
-  overflow:hidden;
-  border:1px solid #e8bd58;
-  border-radius:13px;
-  background:#050608;
-  box-shadow:0 0 24px #e6aa3230;
-}
-.ndl-poster-image {
-  display:block;
-  width:100%;
-  height:auto;
-}
-
-/* Kawasan klik lutsinar berada di atas lima butang dalam poster */
-.ndl-hotspot {
-  position:absolute;
-  top:77.2%;
-  height:7.2%;
-  width:17.2%;
-  display:block;
-  z-index:2;
-  border-radius:30px;
-  background:rgba(255,255,255,0);
-  outline:none;
-  -webkit-tap-highlight-color:transparent;
-}
-.ndl-hotspot-1 {left:4.0%}
-.ndl-hotspot-2 {left:23.9%}
-.ndl-hotspot-3 {left:43.8%}
-.ndl-hotspot-4 {left:63.7%}
-.ndl-hotspot-5 {left:83.6%}
-.ndl-hotspot:focus-visible {
-  outline:3px solid #fff1b5;
-  outline-offset:2px;
-  background:rgba(255,220,130,.16);
-}
-.ndl-footer {
-  text-align:center;
-  margin:28px auto 0;
-  padding-top:14px;
-  border-top:1px solid #e8bd5870;
-}
-.ndl-footer h3 {margin:0 0 5px;color:var(--ndl-light);font-size:21px}
-.ndl-footer p {margin:0;color:#d8c28f;font-style:italic}
-
-@media(max-width:600px) {
-  .ndl-collections {padding:30px 10px}
-  .ndl-heading {margin-bottom:18px}
-  .ndl-poster-wrap {border-radius:9px}
-  /* Kekalkan kedudukan hotspot mengikut nisbah poster pada telefon */
-  .ndl-hotspot {top:77.2%;height:7.2%}
-}
-</style>
-
-<style>
-/* Gaya khusus Nanis Digital Library - tidak mengubah gaya elemen laman lain */
-.ndl-collections {
-  --ndl-gold:#e8bd58; --ndl-light:#ffe7a0;
-  width:100%; padding:46px 18px; box-sizing:border-box;
-  color:#fff; background:
-    radial-gradient(ellipse at 50% 0%,rgba(173,120,28,.18),transparent 48%),
-    linear-gradient(145deg,#080b12,#101725 55%,#080b12);
-  font-family:Georgia,"Times New Roman",serif;
-}
-.ndl-collections * {box-sizing:border-box}
-.ndl-collections-inner {width:min(1180px,100%);margin:auto}
-.ndl-heading {text-align:center;margin-bottom:26px}
-.ndl-heading span {color:var(--ndl-gold);font:700 11px Arial,sans-serif;letter-spacing:4px}
-.ndl-heading h2 {margin:8px 0;color:var(--ndl-light);font-size:clamp(30px,5vw,46px);text-shadow:0 0 18px #b8873444}
-.ndl-heading p {margin:0;color:#e8d9b4;letter-spacing:2px}
-.ndl-poster {max-width:1000px;margin:0 auto 30px;border:1px solid #e8bd58;border-radius:13px;overflow:hidden;box-shadow:0 0 22px #e6aa3230}
-.ndl-poster img {display:block;width:100%;height:auto}
-.ndl-grid {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
-.ndl-card {
-  position:relative;display:flex;flex-direction:column;min-height:270px;
-  padding:22px 16px 18px;text-align:center;text-decoration:none!important;
-  color:#fff!important;border:1px solid #e8bd5899;border-radius:13px;
-  background:radial-gradient(circle at 50% 0%,#e8bd5828,transparent 48%),linear-gradient(160deg,#182131,#090d15 75%);
-  box-shadow:inset 0 0 20px #e8bd580b,0 8px 22px #0005;
-  transition:transform .25s,border-color .25s,box-shadow .25s;
-}
-.ndl-card:hover {transform:translateY(-5px);border-color:var(--ndl-light);box-shadow:0 0 22px #e8bd5833}
-.ndl-card small {position:absolute;top:12px;left:13px;color:#ffe19dcc;font:700 11px Arial}
-.ndl-icon {font-size:34px;margin:8px auto 12px;filter:drop-shadow(0 0 9px #e8bd5840)}
-.ndl-card h3 {margin:0 0 11px;color:var(--ndl-light);font-size:19px;line-height:1.25}
-.ndl-card p {margin:0 0 18px;color:#c5c9d1;font:13px/1.55 Arial,sans-serif;flex:1}
-.ndl-card b {display:inline-block;margin-top:auto;padding:9px 12px;color:#ffe5a0;border:1px solid #e8bd58;border-radius:30px;font:700 12px Arial}
-.ndl-footer {text-align:center;margin-top:35px;padding-top:14px;border-top:1px solid #e8bd5870}
-.ndl-footer h3 {margin:0 0 5px;color:var(--ndl-light);font-size:21px}
-.ndl-footer p {margin:0;color:#d8c28f;font-style:italic}
-@media(max-width:1050px){.ndl-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:650px){
-  .ndl-collections{padding:34px 12px}
-  .ndl-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
-  .ndl-card{min-height:255px;padding:20px 12px 15px}
-  .ndl-card h3{font-size:17px}.ndl-card p{font-size:12px}
-  .ndl-card b{font-size:11px;padding:8px 9px}
-}
-@media(max-width:390px){.ndl-grid{grid-template-columns:1fr}.ndl-card{min-height:220px}}
-</style>
+  </section>
 
   <section class="section" id="premium">
     <div class="wrap feature-row">
@@ -368,8 +255,7 @@ footer strong{color:var(--gold2)}
   <div class="wrap">
     <strong>NANIS DIGITAL LIBRARY</strong><br>
     Sebahagian daripada Nanis Communication.<br>
-    <span>© <span id="year">
-    </span> Nanis Communication. Hak cipta terpelihara.</span>
+    <span>© <span id="year"></span> Nanis Communication. Hak cipta terpelihara.</span>
     <p style="margin-bottom:0">Semua karya tertakluk kepada hak cipta penulis dan syarat penerbitan yang berkenaan.</p>
   </div>
 </footer>
@@ -452,6 +338,24 @@ function readChapter(n,access){
 function closeBook(){modal.classList.remove('show');document.body.style.overflow=''}
 modal.addEventListener('click',e=>{if(e.target===modal)closeBook()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBook()});
+
+// Interaksi lima butang pada poster Koleksi Pilihan
+const ndlCategoryDetails={
+  'Kisah Seram & Misteri':'Himpunan pengalaman seram, kisah misteri, gangguan dan cerita-cerita menarik. Koleksi kategori ini akan dikemas kini dari semasa ke semasa.',
+  'Pendidikan & Ilmu':'Ruang perkongsian ilmu, panduan pembelajaran, kemahiran dan pengetahuan untuk pembaca pelbagai peringkat.',
+  'Koleksi Tafsir Mimpi':'Himpunan maklumat dan perspektif berkaitan tafsir mimpi. Kandungan akan disusun mengikut tema untuk memudahkan carian.',
+  'Novel, Cerpen & eBook':'Koleksi karya penulisan, novel bersiri, cerpen dan eBook daripada Nanis Communication serta penulis jemputan.',
+  'Quote & Kata-Kata Inspirasi':'Koleksi kata-kata motivasi, petikan inspirasi, nasihat dan kata hikmah untuk bacaan harian.'
+};
+document.querySelectorAll('.ndl-hotspot').forEach(link=>{
+  link.addEventListener('click',()=>{
+    const category=link.dataset.category;
+    document.getElementById('ndlCategoryTitle').textContent=category;
+    document.getElementById('ndlCategoryText').textContent=ndlCategoryDetails[category]||'Kategori ini akan dikemas kini tidak lama lagi.';
+    document.getElementById('kategori-pilihan').scrollIntoView({behavior:'smooth',block:'center'});
+  });
+});
+
 </script>
 </body>
 </html>
