@@ -166,6 +166,106 @@ footer strong{color:var(--gold2)}
       <div class="empty" id="emptyState">Tiada koleksi ditemui. Cuba kata carian atau kategori lain.</div>
     </div>
   </section>
+  <!-- NANIS DIGITAL LIBRARY: KOLEKSI PILIHAN -->
+<section class="ndl-collections" id="koleksi-pilihan">
+  <div class="ndl-collections-inner">
+    <header class="ndl-heading">
+      <span>NANIS DIGITAL LIBRARY</span>
+      <h2>Koleksi Pilihan</h2>
+      <p>Baca • Belajar • Kongsi • Inspirasi</p>
+    </header>
+
+    <!-- Letakkan koleksi-pilihan-nanis.png dalam folder yang sama dengan HTML ini -->
+    <div class="ndl-poster">
+      <img src="koleksi-pilihan-nanis.png" alt="Nanis Digital Library - Koleksi Pilihan">
+    </div>
+
+    <div class="ndl-grid">
+      <a class="ndl-card" href="#kisah-seram">
+        <span class="ndl-icon">🌙</span><small>01</small>
+        <h3>Kisah Seram &amp; Misteri</h3>
+        <p>Pengalaman sebenar di asrama, kisah gangguan, kejadian pelik dan cerita seram.</p>
+        <b>Terokai Koleksi →</b>
+      </a>
+      <a class="ndl-card" href="#pendidikan">
+        <span class="ndl-icon">📚</span><small>02</small>
+        <h3>Pendidikan &amp; Ilmu</h3>
+        <p>Petua pembelajaran, panduan kehidupan, kemahiran dan perkongsian pengetahuan.</p>
+        <b>Terokai Koleksi →</b>
+      </a>
+      <a class="ndl-card" href="#tafsir-mimpi">
+        <span class="ndl-icon">🌌</span><small>03</small>
+        <h3>Koleksi Tafsir Mimpi</h3>
+        <p>Himpunan tafsiran mimpi menurut tradisi, budaya dan pelbagai perspektif.</p>
+        <b>Terokai Koleksi →</b>
+      </a>
+      <a class="ndl-card" href="#novel-cerpen-ebook">
+        <span class="ndl-icon">📖</span><small>04</small>
+        <h3>Novel, Cerpen &amp; eBook</h3>
+        <p>Karya sendiri, penulis jemputan, cerita bersiri dan koleksi bahan bacaan.</p>
+        <b>Terokai Koleksi →</b>
+      </a>
+      <a class="ndl-card" href="#quote-inspirasi">
+        <span class="ndl-icon">✒️</span><small>05</small>
+        <h3>Quote &amp; Kata-Kata Inspirasi</h3>
+        <p>Kata-kata motivasi, quote kehidupan, nasihat dan himpunan kata hikmah.</p>
+        <b>Terokai Koleksi →</b>
+      </a>
+    </div>
+
+    <footer class="ndl-footer">
+      <h3>✦ Selamat Membaca ✦</h3>
+      <p>Ilmu hari ini, kejayaan esok.</p>
+    </footer>
+  </div>
+</section>
+
+<style>
+/* Gaya khusus Nanis Digital Library - tidak mengubah gaya elemen laman lain */
+.ndl-collections {
+  --ndl-gold:#e8bd58; --ndl-light:#ffe7a0;
+  width:100%; padding:46px 18px; box-sizing:border-box;
+  color:#fff; background:
+    radial-gradient(ellipse at 50% 0%,rgba(173,120,28,.18),transparent 48%),
+    linear-gradient(145deg,#080b12,#101725 55%,#080b12);
+  font-family:Georgia,"Times New Roman",serif;
+}
+.ndl-collections * {box-sizing:border-box}
+.ndl-collections-inner {width:min(1180px,100%);margin:auto}
+.ndl-heading {text-align:center;margin-bottom:26px}
+.ndl-heading span {color:var(--ndl-gold);font:700 11px Arial,sans-serif;letter-spacing:4px}
+.ndl-heading h2 {margin:8px 0;color:var(--ndl-light);font-size:clamp(30px,5vw,46px);text-shadow:0 0 18px #b8873444}
+.ndl-heading p {margin:0;color:#e8d9b4;letter-spacing:2px}
+.ndl-poster {max-width:1000px;margin:0 auto 30px;border:1px solid #e8bd58;border-radius:13px;overflow:hidden;box-shadow:0 0 22px #e6aa3230}
+.ndl-poster img {display:block;width:100%;height:auto}
+.ndl-grid {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+.ndl-card {
+  position:relative;display:flex;flex-direction:column;min-height:270px;
+  padding:22px 16px 18px;text-align:center;text-decoration:none!important;
+  color:#fff!important;border:1px solid #e8bd5899;border-radius:13px;
+  background:radial-gradient(circle at 50% 0%,#e8bd5828,transparent 48%),linear-gradient(160deg,#182131,#090d15 75%);
+  box-shadow:inset 0 0 20px #e8bd580b,0 8px 22px #0005;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.ndl-card:hover {transform:translateY(-5px);border-color:var(--ndl-light);box-shadow:0 0 22px #e8bd5833}
+.ndl-card small {position:absolute;top:12px;left:13px;color:#ffe19dcc;font:700 11px Arial}
+.ndl-icon {font-size:34px;margin:8px auto 12px;filter:drop-shadow(0 0 9px #e8bd5840)}
+.ndl-card h3 {margin:0 0 11px;color:var(--ndl-light);font-size:19px;line-height:1.25}
+.ndl-card p {margin:0 0 18px;color:#c5c9d1;font:13px/1.55 Arial,sans-serif;flex:1}
+.ndl-card b {display:inline-block;margin-top:auto;padding:9px 12px;color:#ffe5a0;border:1px solid #e8bd58;border-radius:30px;font:700 12px Arial}
+.ndl-footer {text-align:center;margin-top:35px;padding-top:14px;border-top:1px solid #e8bd5870}
+.ndl-footer h3 {margin:0 0 5px;color:var(--ndl-light);font-size:21px}
+.ndl-footer p {margin:0;color:#d8c28f;font-style:italic}
+@media(max-width:1050px){.ndl-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){
+  .ndl-collections{padding:34px 12px}
+  .ndl-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  .ndl-card{min-height:255px;padding:20px 12px 15px}
+  .ndl-card h3{font-size:17px}.ndl-card p{font-size:12px}
+  .ndl-card b{font-size:11px;padding:8px 9px}
+}
+@media(max-width:390px){.ndl-grid{grid-template-columns:1fr}.ndl-card{min-height:220px}}
+</style>
 
   <section class="section" id="premium">
     <div class="wrap feature-row">
@@ -198,7 +298,8 @@ footer strong{color:var(--gold2)}
   <div class="wrap">
     <strong>NANIS DIGITAL LIBRARY</strong><br>
     Sebahagian daripada Nanis Communication.<br>
-    <span>© <span id="year"></span> Nanis Communication. Hak cipta terpelihara.</span>
+    <span>© <span id="year">
+    </span> Nanis Communication. Hak cipta terpelihara.</span>
     <p style="margin-bottom:0">Semua karya tertakluk kepada hak cipta penulis dan syarat penerbitan yang berkenaan.</p>
   </div>
 </footer>
