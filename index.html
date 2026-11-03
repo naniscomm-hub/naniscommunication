@@ -947,59 +947,110 @@ function toggleSound(videoId, button) {
 }
 </script>
     
-<!-- ===============================
-     NANIS COMMUNICATION
-     NEON VISITOR COUNTER
-================================ -->
+<!-- VISITOR COUNTER -->
+<section class="visitor-library-section">
+  <div class="visitor-library-row">
 
-<div class="visitor-box">
+    <!-- Visitor counter asal: kandungan dan ID dikekalkan -->
+    <div class="visitor-box">
+      <div class="visitor-title">TOTAL VISITORS</div>
+      <div id="visitor-count">
+        <span class="neon-dot neon-blue"></span>
+        <span id="total-visitor">6M+</span>
+      </div>
+      <div class="online-box">
+        <span class="neon-dot neon-green"></span>
+        <span id="online-users">1M+counting..</span>
+        <span class="online-label">READER &amp; VIEWER</span>
+      </div>
+      <div class="user-online">
+        <span class="neon-dot neon-green"></span>
+        <span>300K++ USER ONLINE</span>
+      </div>
+    </div>
 
-  <!-- TOTAL VISITORS -->
-  <div class="visitor-title">
-    TOTAL VISITORS
-  </div>
-
-  <div id="visitor-count">
-
-    <span class="neon-dot neon-blue"></span>
-
-    <span id="total-visitor">
-      6M+
-    </span>
-
-  </div>
-
-
-  <!-- READER / VIEWER -->
-  <div class="online-box">
-
-    <span class="neon-dot neon-green"></span>
-
-    <span id="online-users">
-      1M+counting..
-    </span>
-
-    <span class="online-label">
-      READER &amp; VIEWER
-    </span>
+    <!-- Pintu Library berasingan, format landscape 3:2 -->
+    <a class="library-entrance" href="nanis-digital-library.html"
+       aria-label="Masuk ke Nanis Digital Library">
+      <img src="liberary-nanis.jpg"
+           alt="Pintu masuk Nanis Digital Library"
+           class="library-entrance-image">
+      <span class="library-entrance-overlay">
+        <span class="library-entrance-label">ENTER THE LIBRARY</span>
+      </span>
+    </a>
 
   </div>
+</section>
 
+<style>
+/* Susunan desktop: visitor di kiri, gambar library di kanan */
+.visitor-library-section{width:100%;padding:24px 18px;margin:28px auto}
+.visitor-library-row{
+  width:min(1120px,100%);margin:0 auto;display:flex;
+  align-items:center;justify-content:center;gap:24px;
+}
 
-  <!-- USER ONLINE -->
-  <div class="user-online">
+/* Visitor box: gaya asal dikekalkan */
+.visitor-box{
+  width:350px;max-width:92%;flex:0 0 350px;margin:0;
+  padding:32px 28px;text-align:center;
+  background:linear-gradient(145deg,rgba(10,15,25,.92),rgba(0,0,0,.72));
+  border:1px solid rgba(0,180,255,.22);border-radius:30px;
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  box-shadow:0 0 20px rgba(0,180,255,.08),0 0 60px rgba(0,180,255,.05),
+             inset 0 0 25px rgba(255,255,255,.025);
+}
+.visitor-title{color:#9edfff;letter-spacing:4px;font-size:11px;font-weight:600;margin-bottom:16px;text-transform:uppercase}
+#visitor-count{
+  display:flex;justify-content:center;align-items:center;gap:14px;
+  font-size:52px;line-height:1;font-weight:800;letter-spacing:1px;
+  background:linear-gradient(to bottom,#fff,#9feaff,#00cfff,#0077aa);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  text-shadow:0 0 20px rgba(0,210,255,.30),0 0 45px rgba(0,180,255,.15);
+}
+.neon-dot{width:11px;height:11px;min-width:11px;border-radius:50%;display:inline-block;position:relative}
+.neon-blue{background:#00d9ff;box-shadow:0 0 5px #00d9ff,0 0 12px #00d9ff,0 0 25px #00bfff,0 0 45px rgba(0,190,255,.8);animation:bluePulse 1.6s infinite ease-in-out}
+.neon-green{background:#00ff88;box-shadow:0 0 5px #00ff88,0 0 12px #00ff88,0 0 25px #00ff88,0 0 45px rgba(0,255,136,.75);animation:greenPulse 1.5s infinite ease-in-out}
+.online-box{
+  margin-top:25px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px;
+  color:#f2f2f2;font-size:18px;font-weight:700;letter-spacing:1px;
+}
+.online-label{width:100%;margin-top:2px;color:#8c8c8c;font-size:9px;letter-spacing:3px;font-weight:500}
+.user-online{margin-top:18px;display:flex;justify-content:center;align-items:center;gap:9px;color:#00ff88;font-size:10px;letter-spacing:3px;font-weight:600}
+@keyframes bluePulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.55);opacity:.65}}
+@keyframes greenPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.55);opacity:.65}}
 
-    <span class="neon-dot neon-green"></span>
+/* Gambar Library: segi empat tepat landscape, bukan segi empat sama */
+.library-entrance{
+  position:relative;display:block;flex:1 1 0;min-width:0;max-width:720px;
+  aspect-ratio:3/2;overflow:hidden;border-radius:22px;
+  border:1px solid rgba(255,215,0,.5);background:#050b18;
+  box-shadow:0 0 22px rgba(0,170,255,.16),0 0 38px rgba(255,190,55,.12);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.library-entrance:hover{transform:translateY(-5px);box-shadow:0 0 30px rgba(0,190,255,.28),0 0 55px rgba(255,190,55,.22)}
+.library-entrance-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease}
+.library-entrance:hover .library-entrance-image{transform:scale(1.025)}
+.library-entrance-overlay{
+  position:absolute;inset:auto 0 0;display:flex;justify-content:center;padding:12px;
+  background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:opacity .3s ease;
+}
+.library-entrance:hover .library-entrance-overlay,.library-entrance:focus-visible .library-entrance-overlay{opacity:1}
+.library-entrance-label{color:#ffe6a0;font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;text-shadow:0 0 12px #000}
 
-    <span>
-      300K++ USER ONLINE
-    </span>
-
-  </div>
-
-</div>
-
-
+/* Telefon: visitor dan pintu library disusun menegak */
+@media(max-width:760px){
+  .visitor-library-section{padding:18px 14px}
+  .visitor-library-row{flex-direction:column;gap:20px}
+  .visitor-box{width:350px;max-width:100%;flex:0 0 auto}
+  .library-entrance{width:100%;max-width:620px;flex:0 0 auto;aspect-ratio:3/2}
+  .library-entrance-overlay{opacity:1}
+}
+@media(max-width:480px){.visitor-box{padding:28px 20px}#visitor-count{font-size:45px}}
+</style>
+  
 <style>
 
 /* ===============================
