@@ -166,7 +166,7 @@ footer strong{color:var(--gold2)}
       <div class="empty" id="emptyState">Tiada koleksi ditemui. Cuba kata carian atau kategori lain.</div>
     </div>
   </section>
-  <!-- NANIS DIGITAL LIBRARY: KOLEKSI PILIHAN -->
+  <!-- NANIS DIGITAL LIBRARY: POSTER KOLEKSI PILIHAN DENGAN 5 BUTANG KLIK -->
 <section class="ndl-collections" id="koleksi-pilihan">
   <div class="ndl-collections-inner">
     <header class="ndl-heading">
@@ -175,42 +175,23 @@ footer strong{color:var(--gold2)}
       <p>Baca • Belajar • Kongsi • Inspirasi</p>
     </header>
 
-    <!-- Letakkan koleksi-pilihan-nanis.png dalam folder yang sama dengan HTML ini -->
-    <div class="ndl-poster">
-      <img src="koleksi-pilihan-nanis.png" alt="Nanis Digital Library - Koleksi Pilihan">
-    </div>
+    <div class="ndl-poster-wrap">
+      <img class="ndl-poster-image"
+           src="koleksi-pilihan-nanis.png"
+           alt="Nanis Digital Library - Koleksi Pilihan">
 
-    <div class="ndl-grid">
-      <a class="ndl-card" href="#kisah-seram">
-        <span class="ndl-icon">🌙</span><small>01</small>
-        <h3>Kisah Seram &amp; Misteri</h3>
-        <p>Pengalaman sebenar di asrama, kisah gangguan, kejadian pelik dan cerita seram.</p>
-        <b>Terokai Koleksi →</b>
-      </a>
-      <a class="ndl-card" href="#pendidikan">
-        <span class="ndl-icon">📚</span><small>02</small>
-        <h3>Pendidikan &amp; Ilmu</h3>
-        <p>Petua pembelajaran, panduan kehidupan, kemahiran dan perkongsian pengetahuan.</p>
-        <b>Terokai Koleksi →</b>
-      </a>
-      <a class="ndl-card" href="#tafsir-mimpi">
-        <span class="ndl-icon">🌌</span><small>03</small>
-        <h3>Koleksi Tafsir Mimpi</h3>
-        <p>Himpunan tafsiran mimpi menurut tradisi, budaya dan pelbagai perspektif.</p>
-        <b>Terokai Koleksi →</b>
-      </a>
-      <a class="ndl-card" href="#novel-cerpen-ebook">
-        <span class="ndl-icon">📖</span><small>04</small>
-        <h3>Novel, Cerpen &amp; eBook</h3>
-        <p>Karya sendiri, penulis jemputan, cerita bersiri dan koleksi bahan bacaan.</p>
-        <b>Terokai Koleksi →</b>
-      </a>
-      <a class="ndl-card" href="#quote-inspirasi">
-        <span class="ndl-icon">✒️</span><small>05</small>
-        <h3>Quote &amp; Kata-Kata Inspirasi</h3>
-        <p>Kata-kata motivasi, quote kehidupan, nasihat dan himpunan kata hikmah.</p>
-        <b>Terokai Koleksi →</b>
-      </a>
+      <!-- Lima kawasan klik diletakkan tepat di atas butang yang tercetak pada poster.
+           Tukar nilai href kepada URL halaman kategori sebenar apabila sudah tersedia. -->
+      <a class="ndl-hotspot ndl-hotspot-1" href="#kisah-seram"
+         aria-label="Terokai Kisah Seram dan Misteri" title="Kisah Seram & Misteri"></a>
+      <a class="ndl-hotspot ndl-hotspot-2" href="#pendidikan"
+         aria-label="Terokai Pendidikan dan Ilmu" title="Pendidikan & Ilmu"></a>
+      <a class="ndl-hotspot ndl-hotspot-3" href="#tafsir-mimpi"
+         aria-label="Terokai Koleksi Tafsir Mimpi" title="Koleksi Tafsir Mimpi"></a>
+      <a class="ndl-hotspot ndl-hotspot-4" href="#novel-cerpen-ebook"
+         aria-label="Terokai Novel, Cerpen dan eBook" title="Novel, Cerpen & eBook"></a>
+      <a class="ndl-hotspot ndl-hotspot-5" href="#quote-inspirasi"
+         aria-label="Terokai Quote dan Kata-Kata Inspirasi" title="Quote & Kata-Kata Inspirasi"></a>
     </div>
 
     <footer class="ndl-footer">
@@ -219,6 +200,95 @@ footer strong{color:var(--gold2)}
     </footer>
   </div>
 </section>
+
+<style>
+/* CSS khusus seksyen ini sahaja */
+.ndl-collections {
+  --ndl-gold:#e8bd58;
+  --ndl-light:#ffe7a0;
+  width:100%;
+  padding:42px 14px;
+  box-sizing:border-box;
+  color:#fff;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(173,120,28,.18),transparent 48%),
+    linear-gradient(145deg,#080b12,#101725 55%,#080b12);
+  font-family:Georgia,"Times New Roman",serif;
+}
+.ndl-collections * {box-sizing:border-box}
+.ndl-collections-inner {width:min(1180px,100%);margin:auto}
+.ndl-heading {text-align:center;margin:0 0 24px}
+.ndl-heading span {
+  color:var(--ndl-gold);
+  font:700 11px Arial,sans-serif;
+  letter-spacing:4px;
+}
+.ndl-heading h2 {
+  margin:8px 0;
+  color:var(--ndl-light);
+  font-size:clamp(30px,5vw,46px);
+  text-shadow:0 0 18px #b8873444;
+}
+.ndl-heading p {margin:0;color:#e8d9b4;letter-spacing:2px}
+
+/* Poster responsif */
+.ndl-poster-wrap {
+  position:relative;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  overflow:hidden;
+  border:1px solid #e8bd58;
+  border-radius:13px;
+  background:#050608;
+  box-shadow:0 0 24px #e6aa3230;
+}
+.ndl-poster-image {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* Kawasan klik lutsinar berada di atas lima butang dalam poster */
+.ndl-hotspot {
+  position:absolute;
+  top:77.2%;
+  height:7.2%;
+  width:17.2%;
+  display:block;
+  z-index:2;
+  border-radius:30px;
+  background:rgba(255,255,255,0);
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.ndl-hotspot-1 {left:4.0%}
+.ndl-hotspot-2 {left:23.9%}
+.ndl-hotspot-3 {left:43.8%}
+.ndl-hotspot-4 {left:63.7%}
+.ndl-hotspot-5 {left:83.6%}
+.ndl-hotspot:focus-visible {
+  outline:3px solid #fff1b5;
+  outline-offset:2px;
+  background:rgba(255,220,130,.16);
+}
+.ndl-footer {
+  text-align:center;
+  margin:28px auto 0;
+  padding-top:14px;
+  border-top:1px solid #e8bd5870;
+}
+.ndl-footer h3 {margin:0 0 5px;color:var(--ndl-light);font-size:21px}
+.ndl-footer p {margin:0;color:#d8c28f;font-style:italic}
+
+@media(max-width:600px) {
+  .ndl-collections {padding:30px 10px}
+  .ndl-heading {margin-bottom:18px}
+  .ndl-poster-wrap {border-radius:9px}
+  /* Kekalkan kedudukan hotspot mengikut nisbah poster pada telefon */
+  .ndl-hotspot {top:77.2%;height:7.2%}
+}
+</style>
 
 <style>
 /* Gaya khusus Nanis Digital Library - tidak mengubah gaya elemen laman lain */
