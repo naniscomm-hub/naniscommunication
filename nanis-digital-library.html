@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nanis Digital Library - Perpustakaan digital untuk novel, cerpen, eBook dan karya penulis.">
+<title>Nanis Digital Library | Nanis Communication</title>
+<style>
+:root{
+  --bg:#080d17;--panel:#111a2a;--panel2:#172337;--gold:#d8b86a;
+  --gold2:#f1dda4;--text:#edf1f7;--muted:#aab5c5;--line:#29364a;
+  --blue:#6cb7ff;--green:#75d6ae;--shadow:0 18px 50px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 15% 0%,#17243a 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(7,12,21,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Georgia,serif;font-size:23px;letter-spacing:3px;color:var(--gold2);font-weight:bold}
+.brand small{display:block;font:10px Arial;letter-spacing:3px;color:var(--muted);margin-top:-3px}
+nav{display:flex;gap:22px;align-items:center;font-size:13px;color:#d8dfeb}
+nav a:hover{color:var(--gold2)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:white;padding:7px 11px;border-radius:8px}
+.hero{padding:66px 0 48px}
+.hero-box{border:1px solid #36445a;border-radius:24px;overflow:hidden;position:relative;background:linear-gradient(110deg,rgba(8,13,23,.98),rgba(14,27,45,.82)),radial-gradient(circle at 85% 40%,#29466b,transparent 42%);box-shadow:var(--shadow);padding:clamp(28px,6vw,68px)}
+.hero-box:after{content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(216,184,106,.22);border-radius:50%;right:-75px;top:-90px;box-shadow:0 0 0 25px rgba(216,184,106,.035),0 0 0 55px rgba(216,184,106,.025)}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:bold}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.08;max-width:680px;margin:12px 0;color:#fff}
+.hero p{max-width:610px;color:#c0cad8;font-size:16px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{border:1px solid var(--gold);background:var(--gold);color:#111827;padding:11px 18px;border-radius:8px;font-weight:bold;font-size:13px;display:inline-flex;justify-content:center;align-items:center}
+.btn.secondary{background:transparent;color:var(--gold2)}
+.btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.section{padding:34px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}
+.section-head h2{font-size:29px;margin:4px 0}
+.section-head p{margin:0;color:var(--muted);font-size:13px}
+.searchbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.searchbar input,.searchbar select{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:12px 14px;color:var(--text);outline:none}
+.searchbar input{flex:1;min-width:210px}
+.searchbar select{min-width:155px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 22px}
+.chip{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:30px;padding:7px 13px;font-size:12px}
+.chip.active,.chip:hover{border-color:var(--gold);color:var(--gold2);background:rgba(216,184,106,.08)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.book{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s}
+.book:hover{transform:translateY(-4px);border-color:#8c7747;box-shadow:var(--shadow)}
+.cover{height:225px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;overflow:hidden;background:linear-gradient(145deg,#263c59,#101827)}
+.cover:before{content:"";position:absolute;inset:12px;border:1px solid rgba(241,221,164,.4)}
+.cover:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(241,221,164,.22);border-radius:50%}
+.cover .cover-title{z-index:1;font-family:Georgia,serif;font-size:22px;line-height:1.2;color:#fff;text-shadow:0 2px 12px #000}
+.cover .cover-author{position:absolute;z-index:2;bottom:24px;font-size:9px;letter-spacing:2px;color:#e8d7a5;text-transform:uppercase}
+.cover.rose{background:linear-gradient(145deg,#623b50,#1d1a2c)}
+.cover.green{background:linear-gradient(145deg,#315c52,#101d25)}
+.cover.purple{background:linear-gradient(145deg,#51416f,#17182c)}
+.cover.amber{background:linear-gradient(145deg,#74512e,#201a19)}
+.cover.blue{background:linear-gradient(145deg,#315b7b,#111c2c)}
+.book-info{padding:15px}
+.book-info h3{font-size:18px;margin:0 0 5px}
+.book-info p{font-size:12px;color:var(--muted);margin:4px 0}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:13px}
+.tag{font-size:10px;padding:4px 8px;border-radius:20px;background:#24334a;color:#b9d7f5}
+.tag.premium{background:rgba(216,184,106,.13);color:var(--gold2)}
+.small-btn{border:1px solid var(--gold);background:transparent;color:var(--gold2);padding:7px 10px;border-radius:7px;font-size:11px}
+.small-btn:hover{background:var(--gold);color:#111}
+.feature-row{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+.feature{padding:25px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(135deg,#17263b,#101725)}
+.feature h3{font-size:24px;margin:7px 0}
+.feature p{color:var(--muted);font-size:13px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.step{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.step b{display:block;color:var(--gold2);margin-bottom:5px}
+.step span{font-size:12px;color:var(--muted)}
+footer{margin-top:45px;border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}
+footer strong{color:var(--gold2)}
+.modal{display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.78);padding:18px;overflow:auto}
+.modal.show{display:block}
+.modal-card{max-width:780px;margin:35px auto;background:#101a2a;border:1px solid #49566a;border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.modal-top{display:flex;justify-content:space-between;gap:15px;align-items:start}
+.modal-top h2{margin:0;color:var(--gold2)}
+.close{background:transparent;border:1px solid var(--line);color:white;border-radius:7px;padding:5px 10px}
+.chapter-list{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:18px 0}
+.chapter{background:#18263a;border:1px solid var(--line);color:#e7edf6;padding:12px;border-radius:8px;text-align:left}
+.chapter.locked{color:var(--gold2);border-color:#78643a}
+.reader{display:none;margin-top:20px;padding:22px;background:#0b1320;border-radius:12px}
+.reader.show{display:block}
+.reader h3{font-size:25px;color:var(--gold2)}
+.reader p{color:#d4dbe5;white-space:pre-line}
+.notice{border-left:3px solid var(--gold);background:rgba(216,184,106,.08);padding:12px 14px;color:#d9dfeb;font-size:12px;margin-top:16px}
+.empty{display:none;padding:25px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}nav{gap:12px}}
+@media(max-width:620px){
+ .nav{min-height:62px}.menu-btn{display:block}nav{display:none;position:absolute;top:62px;left:0;right:0;padding:16px 5%;background:#0b1220;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
+ nav.open{display:flex}.hero{padding:30px 0}.hero-box{padding:28px 22px}.section-head{display:block}.grid{gap:12px}.cover{height:190px}.book-info{padding:12px}.book-info h3{font-size:16px}.feature-row,.steps{grid-template-columns:1fr}.chapter-list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">NANIS<small>DIGITAL LIBRARY</small></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+    <nav id="navLinks">
+      <a href="#koleksi">Koleksi</a><a href="#kategori">Kategori</a><a href="#penulis">Penulis</a><a href="#premium">Premium</a><a href="index.html">Nanis Communication</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-box">
+        <div class="eyebrow">Nanis Communication mempersembahkan</div>
+        <h1>Setiap halaman,<br><span style="color:var(--gold2)">membuka dunia baharu.</span></h1>
+        <p>Terokai koleksi novel digital, cerpen, eBook dan karya penulis jemputan. Baca pada bila-bila masa, di mana sahaja.</p>
+        <div class="actions">
+          <a class="btn" href="#koleksi">Terokai Koleksi</a>
+          <a class="btn secondary" href="#premium">Kenali Bacaan Premium</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="koleksi">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Perpustakaan digital</div><h2>Koleksi Pilihan</h2><p>Temui cerita dan karya yang menanti untuk dibaca.</p></div>
+      </div>
+      <div class="searchbar">
+        <input type="search" id="searchInput" placeholder="Cari tajuk, penulis atau kata kunci..." aria-label="Cari koleksi">
+        <select id="typeFilter" aria-label="Tapis kategori">
+          <option value="all">Semua kategori</option><option value="Novel">Novel</option><option value="Cerpen">Cerpen</option><option value="eBook">eBook</option><option value="Penulis Jemputan">Penulis jemputan</option>
+        </select>
+      </div>
+      <div class="chips" id="kategori">
+        <button class="chip active" data-filter="all">Semua</button>
+        <button class="chip" data-filter="Novel">Novel</button>
+        <button class="chip" data-filter="Cerpen">Cerpen</button>
+        <button class="chip" data-filter="eBook">eBook</button>
+        <button class="chip" data-filter="Penulis Jemputan">Penulis Jemputan</button>
+      </div>
+      <div class="grid" id="bookGrid">
+        <!-- CONTOH KOLEKSI: Gantikan tajuk, nama penulis dan kandungan dengan karya sebenar. -->
+        <article class="book" data-type="Novel" data-search="di sebalik sebuah rahsia novel misteri editor nanis">
+          <div class="cover"><div class="cover-title">DI SEBALIK<br>SEBUAH RAHSIA</div><div class="cover-author">Nanis Digital Library</div></div>
+          <div class="book-info"><h3>Di Sebalik Sebuah Rahsia</h3><p>Oleh: Nama Penulis</p><p>Novel misteri · 8 bab contoh</p><div class="meta"><span class="tag premium">Premium</span><button class="small-btn" onclick="openBook('Di Sebalik Sebuah Rahsia','Novel misteri','premium')">Lihat Buku</button></div></div>
+        </article>
+        <article class="book" data-type="Cerpen" data-search="surat terakhir cerpen kehidupan">
+          <div class="cover rose"><div class="cover-title">SURAT<br>TERAKHIR</div><div class="cover-author">Koleksi Cerpen</div></div>
+          <div class="book-info"><h3>Surat Terakhir</h3><p>Oleh: Nama Penulis</p><p>Cerpen · 1 bahagian</p><div class="meta"><span class="tag">Percuma</span><button class="small-btn" onclick="openBook('Surat Terakhir','Cerpen','free')">Baca</button></div></div>
+        </article>
+        <article class="book" data-type="eBook" data-search="langkah kecil perubahan ebook motivasi">
+          <div class="cover green"><div class="cover-title">LANGKAH<br>KECIL</div><div class="cover-author">eBook Inspirasi</div></div>
+          <div class="book-info"><h3>Langkah Kecil</h3><p>Oleh: Nama Penulis</p><p>eBook inspirasi · 5 bab contoh</p><div class="meta"><span class="tag premium">Premium</span><button class="small-btn" onclick="openBook('Langkah Kecil','eBook inspirasi','premium')">Lihat Buku</button></div></div>
+        </article>
+        <article class="book" data-type="Penulis Jemputan" data-search="jejak kehidupan penulis jemputan">
+          <div class="cover purple"><div class="cover-title">JEJAK<br>KEHIDUPAN</div><div class="cover-author">Karya Jemputan</div></div>
+          <div class="book-info"><h3>Jejak Kehidupan</h3><p>Oleh: Penulis Jemputan</p><p>Kisah kehidupan · 1 bahagian</p><div class="meta"><span class="tag">Percuma</span><button class="small-btn" onclick="openBook('Jejak Kehidupan','Karya penulis jemputan','free')">Baca</button></div></div>
+        </article>
+      </div>
+      <div class="empty" id="emptyState">Tiada koleksi ditemui. Cuba kata carian atau kategori lain.</div>
+    </div>
+  </section>
+
+  <section class="section" id="premium">
+    <div class="wrap feature-row">
+      <div class="feature">
+        <div class="eyebrow">Akses bacaan</div><h3>Bacaan Percuma & Premium</h3>
+        <p>Nikmati pilihan bacaan percuma dan terokai karya premium yang ditawarkan oleh penulis. Maklumat harga dan kaedah pembayaran akan dipaparkan apabila sistem pembayaran rasmi disambungkan.</p>
+        <a class="btn secondary" href="#koleksi">Lihat koleksi</a>
+      </div>
+      <div class="feature">
+        <div class="eyebrow">Untuk penulis</div><h3>Terbitkan Karya Anda</h3>
+        <p>Nanis Digital Library turut membuka ruang untuk novelis, penulis cerpen dan pengkarya digital berkongsi hasil penulisan.</p>
+        <a class="btn secondary" href="mailto:info@naniscommunication.com?subject=Pertanyaan%20Penerbitan%20Nanis%20Digital%20Library">Hubungi pihak penerbit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="penulis">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Komuniti kreatif</div><h2>Ruang Untuk Penulis</h2><p>Platform untuk karya sendiri dan penulis jemputan.</p></div></div>
+      <div class="steps">
+        <div class="step"><b>01 · Hantar karya</b><span>Kemukakan manuskrip atau cadangan karya kepada pihak Nanis Communication.</span></div>
+        <div class="step"><b>02 · Semakan editorial</b><span>Karya akan melalui semakan, persetujuan penerbitan dan penetapan hak penggunaan.</span></div>
+        <div class="step"><b>03 · Terbit & baca</b><span>Karya yang diluluskan akan disenaraikan dalam perpustakaan digital.</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>NANIS DIGITAL LIBRARY</strong><br>
+    Sebahagian daripada Nanis Communication.<br>
+    <span>© <span id="year"></span> Nanis Communication. Hak cipta terpelihara.</span>
+    <p style="margin-bottom:0">Semua karya tertakluk kepada hak cipta penulis dan syarat penerbitan yang berkenaan.</p>
+  </div>
+</footer>
+
+<div class="modal" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <div class="modal-top"><div><div class="eyebrow">Butiran bacaan</div><h2 id="modalTitle">Tajuk Buku</h2><p id="modalSubtitle" style="color:var(--muted);margin:5px 0"></p></div><button class="close" onclick="closeBook()" aria-label="Tutup">✕</button></div>
+    <p style="color:var(--muted);font-size:13px">Pilih bab untuk mula membaca. Kandungan di bawah ialah teks contoh yang perlu digantikan dengan manuskrip sebenar.</p>
+    <div class="chapter-list" id="chapterList"></div>
+    <div class="reader" id="reader">
+      <h3 id="readerTitle">Bab 1</h3>
+      <p id="readerText">Kandungan bab akan dipaparkan di sini.</p>
+      <div class="notice" id="readerNotice">Demo paparan bacaan. Sambungkan sistem akaun dan pembayaran sebelum menerbitkan kandungan premium.</div>
+    </div>
+    <div class="notice">PENTING: Label premium pada halaman demo bukan sistem sekatan sebenar. Jangan muat naik manuskrip penuh atau anggap bab premium terlindung sehingga backend, log masuk pelanggan dan pengesahan pembayaran dilaksanakan.</div>
+  </div>
+</div>
+
+<script>
+const modal=document.getElementById('bookModal');
+const grid=document.getElementById('bookGrid');
+let currentBook='';
+document.getElementById('year').textContent=new Date().getFullYear();
+
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+
+function filterBooks(){
+  const q=document.getElementById('searchInput').value.toLowerCase().trim();
+  const type=document.getElementById('typeFilter').value;
+  let visible=0;
+  document.querySelectorAll('.book').forEach(book=>{
+    const matchQ=book.dataset.search.toLowerCase().includes(q);
+    const matchType=type==='all'||book.dataset.type===type;
+    book.style.display=matchQ&&matchType?'':'none';
+    if(matchQ&&matchType)visible++;
+  });
+  document.getElementById('emptyState').style.display=visible?'none':'block';
+}
+document.getElementById('searchInput').addEventListener('input',filterBooks);
+document.getElementById('typeFilter').addEventListener('change',()=>{
+  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c.dataset.filter===document.getElementById('typeFilter').value));
+  filterBooks();
+});
+document.querySelectorAll('.chip').forEach(chip=>chip.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  chip.classList.add('active');
+  document.getElementById('typeFilter').value=chip.dataset.filter;
+  filterBooks();
+}));
+
+function openBook(title,subtitle,access){
+  currentBook=title;
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('modalSubtitle').textContent=subtitle+(access==='premium'?' · Koleksi Premium':' · Bacaan Percuma');
+  const list=document.getElementById('chapterList');
+  list.innerHTML='';
+  const count=title==='Di Sebalik Sebuah Rahsia'?8:(title==='Langkah Kecil'?5:1);
+  for(let i=1;i<=count;i++){
+    const b=document.createElement('button');
+    b.className='chapter'+(access==='premium'&&i>1?' locked':'');
+    b.textContent=(title==='Surat Terakhir'||title==='Jejak Kehidupan'?'Baca karya':'Bab '+i)+(access==='premium'&&i>1?' · Premium':'');
+    b.addEventListener('click',()=>readChapter(i,access));
+    list.appendChild(b);
+  }
+  document.getElementById('reader').classList.remove('show');
+  modal.classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function readChapter(n,access){
+  if(access==='premium'&&n>1){
+    alert('Bab ini ditandakan sebagai premium dalam demo. Untuk membuka akses berbayar sebenar, sistem akaun dan pembayaran perlu disambungkan.');
+    return;
+  }
+  document.getElementById('readerTitle').textContent=currentBook+(n>1?' — Bab '+n:'');
+  document.getElementById('readerText').textContent='Ini ialah ruang contoh untuk kandungan karya. Gantikan teks ini dengan manuskrip sebenar yang telah mendapat kelulusan penulis dan penerbit.\\n\\nSusun perenggan mengikut bab supaya pengalaman membaca lebih kemas dan selesa.';
+  document.getElementById('reader').classList.add('show');
+  document.getElementById('reader').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function closeBook(){modal.classList.remove('show');document.body.style.overflow=''}
+modal.addEventListener('click',e=>{if(e.target===modal)closeBook()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBook()});
+</script>
+</body>
+</html>
