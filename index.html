@@ -1873,100 +1873,70 @@ function toggleSound(videoId, button) {
 
 }
   </style>
-  <!-- NANIS.COM | MHO HQ LEADER — Pintu Masuk Portal -->
+  
+  
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030b27">
+<title>NANIS.COM | LEADER MHO</title>
 <style>
-  .mho-entry {
-    --mho-gold: #ffd02f;
-    --mho-cyan: #00dfff;
-    --mho-navy: #030b27;
-    width: min(100% - 28px, 920px);
-    margin: 42px auto;
-    padding: clamp(20px, 4vw, 34px);
-    text-align: center;
-    color: #f7fbff;
-    background:
-      radial-gradient(ellipse at 50% 0%, rgba(0,115,255,.30), transparent 58%),
-      linear-gradient(145deg, #071943, #02091f 72%);
-    border: 1px solid rgba(255,208,47,.65);
-    border-radius: 22px;
-    box-shadow: 0 0 24px rgba(0,190,255,.16), inset 0 0 22px rgba(0,80,210,.12);
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .mho-entry-logo {
-    display: block;
-    width: min(100%, 270px);
-    height: auto;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    border: 3px solid var(--mho-gold);
-    box-shadow: 0 0 18px rgba(255,208,47,.35), 0 0 30px rgba(0,223,255,.22);
-  }
-  .mho-entry-kicker {
-    margin: 0 0 8px;
-    color: var(--mho-cyan);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-  }
-  .mho-entry-title {
-    margin: 0;
-    color: var(--mho-gold);
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(20px, 4vw, 29px);
-    letter-spacing: 1px;
-    line-height: 1.25;
-  }
-  .mho-entry-subtitle {
-    margin: 9px 0 22px;
-    color: #eaf4ff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-  .mho-entry-button {
-    display: inline-block;
-    min-width: 155px;
-    padding: 13px 28px;
-    color: #07132f !important;
-    background: linear-gradient(135deg, #fff0a1, #ffd02f 55%, #d99a13);
-    border: 1px solid #fff0a1;
-    border-radius: 999px;
-    box-shadow: 0 0 18px rgba(255,208,47,.28);
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-decoration: none !important;
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .mho-entry-button:hover,
-  .mho-entry-button:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 0 24px rgba(0,223,255,.38), 0 0 20px rgba(255,208,47,.30);
-    outline: 2px solid var(--mho-cyan);
-    outline-offset: 4px;
-  }
-  .mho-entry-note {
-    margin: 16px 0 0;
-    color: #a9c4e8;
-    font-size: 10px;
-    letter-spacing: 1.2px;
-  }
-  @media (max-width: 480px) {
-    .mho-entry { margin: 28px auto; border-radius: 16px; }
-    .mho-entry-logo { width: min(100%, 225px); }
-  }
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 0,#0750a9,transparent 55%),linear-gradient(145deg,#020719,#061844);font-family:Arial,sans-serif;color:#f7fbff}
+.panel{width:min(100%,760px);padding:30px 22px;text-align:center;border:1px solid #ffd02f;border-radius:22px;background:#071943eF;box-shadow:0 0 30px #00dfff22}
+.logo{width:175px;height:175px;object-fit:contain;border-radius:50%;border:3px solid #ffd02f;box-shadow:0 0 22px #ffd02f44}
+.kicker{color:#00dfff;font-size:11px;letter-spacing:3px;font-weight:bold;margin-top:22px}
+h1{font: bold clamp(24px,5vw,36px) Georgia;color:#ffd02f;margin:10px 0}
+.sub{font-size:12px;letter-spacing:2px;color:#dceaff}
+.desc{max-width:560px;margin:18px auto;color:#b9cce8;font-size:13px;line-height:1.7}
+.options{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:28px}
+.option{padding:25px 14px;border:1px solid #00dfff66;border-radius:15px;background:linear-gradient(145deg,#102b68,#061333);text-decoration:none;color:white;transition:.2s}
+.option:hover{transform:translateY(-3px);box-shadow:0 0 22px #00dfff44}
+.symbol{font-size:36px;color:#00dfff}
+.option b{display:block;color:#ffd02f;margin:12px 0 7px}
+.option small{color:#b9cce8;line-height:1.6}
+.contact{margin-top:22px;color:#ffd02f;font-size:12px}
+.note{font-size:10px;letter-spacing:1px;color:#9bb4d9;margin-top:22px;line-height:1.8}
+@media(max-width:480px){.options{grid-template-columns:1fr}.logo{width:145px;height:145px}}
 </style>
+</head>
+<body>
+<main class="panel">
+<img class="logo" src="mho-logo.png" alt="Logo pasukan">
+<div class="kicker">NANIS.COM | LEADER MHO</div>
+<h1>ACTIVIST MANAGEMENT PORTAL</h1>
+<div class="sub">MEMBERSHIP • REGISTRATION • CASE MANAGEMENT</div>
 
-<section class="mho-entry" aria-label="Pintu masuk MHO HQ Leader">
-  <img class="mho-entry-logo"
-       src="mho-logo.png"
-       alt="Nanis Communication — MHO Malaysia, Stay Human">
-  <p class="mho-entry-kicker">NANIS.COM [MHO HQ LEADER]</p>
-  <h2 class="mho-entry-title">REGISTRATION &amp; CLIENT RECORD</h2>
-  <p class="mho-entry-subtitle">MHO MALAYSIA • STAY HUMAN</p>
-  <a class="mho-entry-button" href="admin.html" aria-label="Log in ke MHO HQ Leader">LOG IN</a>
-  <p class="mho-entry-note">SECURE PORTAL • AUTHORISED ACCESS</p>
+<p class="desc">
+Portal pengurusan persendirian untuk pendaftaran ahli aktivis,
+rekod keahlian dan urusan pengurusan kes di bawah tanggungjawab
+Leader MHO (NANIS.COM).
+</p>
+
+<section class="options">
+<a class="option" href="/mho/admin.html">
+<div class="symbol">♙</div>
+<b>LEADER / ADMIN HQ</b>
+<small>Pengurusan ahli, semakan permohonan, rekod dan kes.</small>
+</a>
+<a class="option" href="/mho/member.html">
+<div class="symbol">♧</div>
+<b>MEMBER PORTAL</b>
+<small>Pendaftaran, profil ahli dan semakan status permohonan.</small>
+</a>
 </section>
+
+<div class="contact">LEADER CONTACT: 013-3324777</div>
+<div class="note">
+NANIS.COM • LEADER MHO<br>
+PORTAL PENGURUSAN PASUKAN AKTIVIS<br>
+Bukan pangkalan data organisasi MHO secara keseluruhan.
+</div>
+</main>
+</body>
+</html>
 
   <!-- NANIS.COM - MEDIA & ENTERTAINMENT -->
   <section class="media-entertainment">
