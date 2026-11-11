@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#b9dcf4">
+  <meta name="description" content="A Nanis Communication international feature on BTS leader RM (Kim Nam-joon), his music, the ARIRANG era, art collection and SFMOMA exhibition.">
+  <title>RM — Beyond the Stage | Nanis Communication</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ice:#edf7ff; --sky:#c9e6fa; --blue:#83bde5; --deep:#28577e;
+      --navy:#173b5b; --ink:#243d52; --muted:#607b91; --white:#fff;
+      --line:rgba(62,119,159,.18); --shadow:0 18px 50px rgba(44,102,145,.13);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#dff1ff 0%,#f6fbff 42%,#eaf6ff 100%);color:var(--ink);font-family:Montserrat,Arial,sans-serif;line-height:1.8}
+    a{color:var(--deep)}
+    .page-shell{max-width:1120px;margin:auto;padding:24px 18px 60px}
+    .topline{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 2px 20px;color:var(--deep);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .brand{display:flex;align-items:center;gap:9px}
+    .brand-mark{width:12px;height:12px;border-radius:50%;background:#78bce8;box-shadow:0 0 0 5px rgba(120,188,232,.18)}
+    .topline a{text-decoration:none;border:1px solid var(--line);border-radius:30px;padding:8px 14px;letter-spacing:.08em;background:rgba(255,255,255,.55)}
+    .hero{position:relative;overflow:hidden;border-radius:28px;background:#a8d2ef;box-shadow:var(--shadow);min-height:420px;display:grid;grid-template-columns:1.05fr .95fr}
+    .hero-copy{padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+    .eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#28577e}
+    h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--navy);line-height:1.05}
+    h1{font-size:clamp(3.3rem,7vw,6.6rem);margin:18px 0 12px;letter-spacing:-.04em}
+    .hero-sub{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.25;color:#244d70;max-width:540px}
+    .hero-meta{margin-top:24px;font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#315e80;text-transform:uppercase}
+    .hero-image{min-height:420px;position:relative}
+    .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+    .hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(168,210,239,.38),transparent 35%)}
+    .intro{max-width:850px;margin:42px auto 34px;text-align:center;padding:0 14px}
+    .intro p{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.45;color:#315a78}
+    .article-grid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:34px;align-items:start}
+    article{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);border-radius:24px;padding:clamp(22px,4vw,48px);box-shadow:var(--shadow)}
+    article h2{font-size:clamp(2rem,4vw,3rem);margin:42px 0 14px}
+    article h2:first-child{margin-top:0}
+    article h3{font-size:1.65rem;margin:28px 0 8px}
+    article p{font-size:.94rem;color:#405c72;margin:0 0 17px}
+    .lead{font-size:1.08rem;color:#2e506b}
+    .pullquote{margin:28px 0;padding:20px 24px;border-left:4px solid #79b9e5;background:#edf7ff;border-radius:0 14px 14px 0;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.65rem;line-height:1.3;color:#28577e}
+    figure{margin:28px 0 30px}
+    figure img{display:block;width:100%;max-height:560px;object-fit:cover;border-radius:17px;box-shadow:0 12px 28px rgba(44,102,145,.14)}
+    figcaption{font-size:.68rem;line-height:1.6;color:#698398;margin:9px 4px 0}
+    .image-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .image-pair figure{margin:18px 0}
+    .image-pair img{height:240px}
+    .fact-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0}
+    .fact{background:#eaf6ff;border:1px solid #d2e9f9;border-radius:15px;padding:16px;text-align:center}
+    .fact strong{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.8rem;color:#28577e}
+    .fact span{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#648198;font-weight:700}
+    aside{position:sticky;top:18px}
+    .side-card{background:rgba(255,255,255,.76);border:1px solid white;border-radius:20px;padding:22px;box-shadow:var(--shadow);margin-bottom:16px}
+    .side-card h3{font-size:1.6rem;margin:0 0 12px}
+    .side-card p,.side-card li{font-size:.78rem;color:#59758b}
+    .side-card ul{padding-left:18px;margin:8px 0}
+    .side-card a{font-weight:700;text-decoration:none}
+    .side-card a:hover{text-decoration:underline}
+    .timeline{border-left:2px solid #b6d9f1;margin:22px 0 10px 8px;padding-left:22px}
+    .timeline-item{position:relative;margin:0 0 22px}
+    .timeline-item:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#70b4e3;left:-28px;top:7px;box-shadow:0 0 0 4px #e7f4fd}
+    .timeline-item strong{display:block;color:#28577e;font-size:.78rem}
+    .timeline-item span{display:block;color:#607b91;font-size:.75rem}
+    .sources{border-top:1px solid var(--line);margin-top:42px;padding-top:22px}
+    .sources h3{margin-top:0}
+    .sources li{font-size:.75rem;margin:8px 0;color:#607b91;overflow-wrap:anywhere}
+    .sources a{font-weight:700}
+    .closing{margin:32px 0 0;padding:26px;border-radius:18px;background:linear-gradient(135deg,#d8edfc,#f5fbff);text-align:center}
+    .closing strong{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.8rem;color:#28577e}
+    footer{text-align:center;padding:30px 10px 0;color:#648198;font-size:.68rem;letter-spacing:.08em}
+    .credit-note{font-size:.68rem;color:#6b8498}
+    @media(max-width:850px){.article-grid{grid-template-columns:1fr}aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:14px}.side-card{margin:0}}
+    @media(max-width:650px){.page-shell{padding:12px 10px 38px}.topline{font-size:.6rem}.hero{grid-template-columns:1fr}.hero-copy{padding:30px 25px 22px}.hero-image{min-height:290px;height:65vw;max-height:420px}.hero-image:after{background:linear-gradient(180deg,rgba(168,210,239,.15),transparent 25%)}.intro{margin:30px auto}.image-pair{grid-template-columns:1fr}.image-pair img{height:auto;max-height:420px}.fact-strip{grid-template-columns:1fr}.fact{padding:10px}aside{grid-template-columns:1fr}article{padding:23px 19px}}
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="topline">
+      <div class="brand"><span class="brand-mark"></span><span>Nanis Communication</span></div>
+      <a href="index.html">BTS The Legend</a>
+    </div>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">International Feature · Music · Art · Culture</div>
+        <h1>RM</h1>
+        <div class="hero-sub">Beyond the Stage: The Creative World of Kim Nam-joon</div>
+        <div class="hero-meta">BTS Leader · Artist · Songwriter · Art Collector</div>
+      </div>
+      <div class="hero-image">
+        <img src="https://d1hhug17qm51in.cloudfront.net/www-media/2026/02/05121955/RM_218-portrait_design_v1_crop.jpg" alt="BTS leader RM, Kim Nam-joon, in an editorial portrait" loading="eager">
+      </div>
+    </header>
+
+    <section class="intro">
+      <p>“Influence is not measured only by the size of an audience, but by the ideas, curiosity and cultural connections an artist inspires.”</p>
+    </section>
+
+    <div class="article-grid">
+      <article>
+        <p class="eyebrow">Nanis Communication · 11 November 2026</p>
+        <h2>More Than a Global Music Icon</h2>
+        <p class="lead">Kim Nam-joon, known professionally as RM, has built a public identity that reaches well beyond the boundaries of popular music. As the leader of BTS, he has performed before audiences around the world. Away from the stage, his interests in literature, visual art, museums and reflective living reveal another dimension of his creative life.</p>
+        <p>His story offers a compelling view of contemporary cultural influence: an artist whose work connects music with questions of identity, heritage, creativity and well-being.</p>
+
+        <figure>
+          <img src="https://apicms.thestar.com.my/uploads/images/2026/03/21/3824471.jpg" alt="BTS performing at the comeback concert in Gwanghwamun Square, Seoul, March 2026" loading="lazy">
+          <figcaption>BTS at “BTS Comeback Live: ARIRANG” in Gwanghwamun Square, Seoul, 21 March 2026. Photo: The Star / Big Hit Music coverage. This is a group performance image, not an individual RM portrait.</figcaption>
+        </figure>
+
+        <h2>1. The ARIRANG Era: A Leader Back on the Global Stage</h2>
+        <p>In March 2026, BTS returned as a complete group with “BTS Comeback Live: ARIRANG” at Seoul’s historic Gwanghwamun Square. The performance connected a major contemporary music event with one of Korea’s most recognisable cultural landmarks.</p>
+        <p>RM’s role as group leader was especially visible in the way he introduced the performance and spoke about the creative direction behind the project. The new album “ARIRANG” brought together the members’ reflections on identity, change and the experience of returning to music after an extended period apart.</p>
+        <p>For RM, leadership is not simply a position within a successful group. It is also the responsibility of communicating the group’s artistic intentions and helping its members’ voices reach an international audience.</p>
+
+        <div class="fact-strip">
+          <div class="fact"><strong>2026</strong><span>ARIRANG era</span></div>
+          <div class="fact"><strong>7</strong><span>BTS members</span></div>
+          <div class="fact"><strong>Global</strong><span>Touring audience</span></div>
+        </div>
+
+        <h2>2. RM x SFMOMA: A Personal Art Collection Enters the Museum</h2>
+        <p>One of the most significant cultural developments in RM’s recent career is “RM x SFMOMA: Between You and Me”, presented by the San Francisco Museum of Modern Art from 3 October 2026 to 7 February 2027.</p>
+        <p>The exhibition brings together approximately 200 works from the collections of RM and SFMOMA. Nearly 150 works come from RM’s personal collection, assembled over almost a decade. The presentation places Korean modern and contemporary art in conversation with works from the museum’s collection and international artistic traditions.</p>
+        <p>This is RM’s first museum partnership as an exhibition co-curator. He worked with SFMOMA curators América Castillo and Hyoeun Kim, contributing to the selection and presentation of works. He also wrote personal reflections for gallery texts and recorded an audio guide, giving visitors insight into the art that has moved him.</p>
+
+        <figure>
+          <img src="https://d1hhug17qm51in.cloudfront.net/www-media/2026/10/22112226/SFMOMA-RMxSFMOMA-1954_install_cropped3.jpg" alt="Installation view of Korean artworks in the RM x SFMOMA exhibition" loading="lazy">
+          <figcaption>Installation view, “RM x SFMOMA: Between You and Me”, San Francisco Museum of Modern Art. Photo: Matthew Millman / SFMOMA.</figcaption>
+        </figure>
+
+        <p>The exhibition is not simply a display of celebrity-owned objects. It offers visitors an opportunity to encounter Korean art across different periods and mediums, including painting, sculpture, ceramics and works on paper. Many of the works are being shown publicly in the United States for the first time.</p>
+        <p>By sharing his collection, RM creates a meeting point between personal taste and public cultural experience. His approach invites visitors to discover art through emotional connection and curiosity, rather than through status or market value alone.</p>
+
+        <div class="image-pair">
+          <figure>
+            <img src="https://d1hhug17qm51in.cloudfront.net/www-media/2026/10/22112502/SFMOMA-RMxSFMOMA-2008_preview-772x1024.jpg" alt="A visitor viewing artworks in the RM x SFMOMA exhibition" loading="lazy">
+            <figcaption>Visitors encounter works selected for the exhibition. Photo: Matthew Millman / SFMOMA.</figcaption>
+          </figure>
+          <figure>
+            <img src="https://d1hhug17qm51in.cloudfront.net/www-media/2026/10/22113931/SFMOMA-RMxSFMOMA-1605_install_cropped2-794x1024.jpg" alt="Gallery installation at the RM x SFMOMA exhibition" loading="lazy">
+            <figcaption>Another view of the exhibition space. Photo: Matthew Millman / SFMOMA.</figcaption>
+          </figure>
+        </div>
+
+        <h2>3. “Namjooning”: Everyday Curiosity as a Way of Living</h2>
+        <p>The word “Namjooning” emerged among BTS fans to describe activities associated with RM’s interests: visiting museums, reading, cycling, spending time in nature and making room for reflection. It has become a shorthand for slowing down and finding inspiration beyond the demands of work and public life.</p>
+        <p>Its wider appeal lies in its simplicity. These are accessible activities, yet they can encourage observation, self-awareness and a more balanced relationship with everyday life.</p>
+
+        <h2>4. Stanford University: A Course Inspired by BTS and Well-Being</h2>
+        <p>RM’s cultural influence has also entered an academic setting. Stanford University’s 2026–2027 course catalogue lists PSYC 65N, “Namjooning, and Other Well-Being Inspiration from BTS”, taught by Associate Professor James R. Jacobs.</p>
+        <p>The introductory seminar uses BTS and the idea of “Namjooning” as an entry point for examining well-being. Topics listed by Stanford include nature and biking, art and literature, journaling, sleep, anxiety, creative blocks, self-awareness, exercise, nutrition, psychotherapy and coaching.</p>
+        <p>The course is an academic exploration inspired by the group and RM’s public interests. It does not mean RM is a Stanford lecturer or that he has received an academic appointment there. Its significance is that popular culture can provide a relatable starting point for evidence-based discussions about how people live and flourish.</p>
+
+        <div class="pullquote">“A museum, a book, a bicycle ride or a quiet moment outdoors can become an invitation to see the world differently.”</div>
+
+        <h2>5. “Indigo”: Music as a Personal and Artistic Statement</h2>
+        <p>Released in December 2022, RM’s solo album “Indigo” offered listeners a more intimate view of his artistic identity. The project moves across musical styles and collaborations while reflecting on memory, relationships, uncertainty and personal growth.</p>
+        <p>Its thoughtful presentation also reflects RM’s interest in visual art and the emotional connections between different creative disciplines. “Indigo” can be understood as more than a collection of songs: it is a record of an artist exploring who he is, what has shaped him and how he wishes to express himself.</p>
+
+        <h2>6. Cultural Influence Beyond Entertainment</h2>
+        <p>RM’s work with SFMOMA highlights the ability of artists to introduce audiences to cultural histories that may be unfamiliar to them. By placing Korean artists alongside works from different parts of the world, the exhibition encourages visitors to look for connections across geography, generations and artistic movements.</p>
+        <p>This is a form of cultural exchange rather than a formal diplomatic role. RM’s contribution comes through his platform as a musician, his personal collection and his willingness to share the art that has influenced him.</p>
+        <p>His example also challenges the idea that a successful entertainer must be defined by one discipline. Music, reading, art collecting and public communication can coexist, each enriching the others.</p>
+
+        <h2>Conclusion: A Creative Legacy Still Taking Shape</h2>
+        <p>Kim Nam-joon’s journey is a reminder that influence can develop in unexpected directions. From the global stages of BTS to the galleries of SFMOMA and the academic conversation at Stanford, his interests have created new ways for audiences to engage with music, art and well-being.</p>
+        <p>These developments do not replace his identity as a musician. They add depth to it. RM remains first and foremost an artist and the leader of BTS, while his curiosity continues to open doors to other creative and cultural worlds.</p>
+        <div class="closing">
+          <strong>Beyond the stage. Beyond the spotlight.</strong>
+          <p>His influence is found not only in the music people hear, but also in the curiosity that encourages them to read, explore, reflect and discover.</p>
+        </div>
+
+        <section class="sources">
+          <h3>Editorial Sources & Further Reading</h3>
+          <ol>
+            <li><a href="https://www.sfmoma.org/exhibition/rm-x-sfmoma/" target="_blank" rel="noopener">San Francisco Museum of Modern Art — RM x SFMOMA: Between You and Me</a>. Exhibition dates, curatorial details and official exhibition images.</li>
+            <li><a href="https://www.sfmoma.org/read/rm-x-sfmoma-a-private-collection-of-korean-art-revealed/" target="_blank" rel="noopener">SFMOMA — A Private Collection of Korean Art Revealed</a>. Background on the collection and exhibition concept.</li>
+            <li><a href="https://explorecourses.stanford.edu/" target="_blank" rel="noopener">Stanford University ExploreCourses — PSYC 65N</a>. Official course catalogue.</li>
+            <li><a href="https://med.stanford.edu/profiles/74204" target="_blank" rel="noopener">Stanford Medicine — James R. Jacobs</a>. Academic profile and 2026–2027 course listing.</li>
+            <li><a href="https://www.thestar.com.my/lifestyle/entertainment/2026/03/21/the-wait-is-over-bts-returns-as-seven-in-historic-comeback-concert" target="_blank" rel="noopener">The Star — BTS returns as seven in historic comeback concert</a>. Coverage of the Gwanghwamun comeback performance.</li>
+            <li><a href="https://bighitsmusic.com/bts/tour" target="_blank" rel="noopener">BIGHIT MUSIC — BTS Tour</a>. Official tour information.</li>
+          </ol>
+          <p class="credit-note">Photography: SFMOMA / Matthew Millman; The Star / Big Hit Music coverage; HYBE courtesy image where indicated. Images are linked from their respective publishers. Please confirm permission and licensing before commercial reuse or republication.</p>
+        </section>
+      </article>
+
+      <aside>
+        <div class="side-card">
+          <h3>At a Glance</h3>
+          <p><strong>Kim Nam-joon (RM)</strong><br>BTS leader, rapper, songwriter and art collector.</p>
+          <ul>
+            <li>Music and the ARIRANG era</li>
+            <li>Personal art collection</li>
+            <li>SFMOMA exhibition co-curator</li>
+            <li>Stanford course inspired by BTS</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Key Dates</h3>
+          <div class="timeline">
+            <div class="timeline-item"><strong>December 2022</strong><span>Solo album “Indigo” released.</span></div>
+            <div class="timeline-item"><strong>March 2026</strong><span>BTS comeback performance at Gwanghwamun Square.</span></div>
+            <div class="timeline-item"><strong>Autumn 2026</strong><span>Stanford lists PSYC 65N.</span></div>
+            <div class="timeline-item"><strong>3 Oct 2026 – 7 Feb 2027</strong><span>RM x SFMOMA exhibition.</span></div>
+          </div>
+        </div>
+        <div class="side-card">
+          <h3>Explore the Exhibition</h3>
+          <p>Discover the official exhibition details, visitor information and image credits.</p>
+          <a href="https://www.sfmoma.org/exhibition/rm-x-sfmoma/" target="_blank" rel="noopener">Visit SFMOMA ↗</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      NANIS COMMUNICATION · INTERNATIONAL FEATURE<br>
+      BEYOND HEADLINES. UNDERSTANDING THE BIGGER PICTURE.
+    </footer>
+  </div>
+</body>
+</html>
