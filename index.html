@@ -1879,63 +1879,94 @@ function toggleSound(videoId, button) {
 <html lang="ms">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#030b27">
-<title>NANIS.COM | LEADER MHO</title>
+<title>NANIS.COM</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 0,#0750a9,transparent 55%),linear-gradient(145deg,#020719,#061844);font-family:Arial,sans-serif;color:#f7fbff}
-.panel{width:min(100%,760px);padding:30px 22px;text-align:center;border:1px solid #ffd02f;border-radius:22px;background:#071943eF;box-shadow:0 0 30px #00dfff22}
-.logo{width:175px;height:175px;object-fit:contain;border-radius:50%;border:3px solid #ffd02f;box-shadow:0 0 22px #ffd02f44}
-.kicker{color:#00dfff;font-size:11px;letter-spacing:3px;font-weight:bold;margin-top:22px}
-h1{font: bold clamp(24px,5vw,36px) Georgia;color:#ffd02f;margin:10px 0}
-.sub{font-size:12px;letter-spacing:2px;color:#dceaff}
-.desc{max-width:560px;margin:18px auto;color:#b9cce8;font-size:13px;line-height:1.7}
-.options{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:28px}
-.option{padding:25px 14px;border:1px solid #00dfff66;border-radius:15px;background:linear-gradient(145deg,#102b68,#061333);text-decoration:none;color:white;transition:.2s}
-.option:hover{transform:translateY(-3px);box-shadow:0 0 22px #00dfff44}
-.symbol{font-size:36px;color:#00dfff}
-.option b{display:block;color:#ffd02f;margin:12px 0 7px}
-.option small{color:#b9cce8;line-height:1.6}
-.contact{margin-top:22px;color:#ffd02f;font-size:12px}
-.note{font-size:10px;letter-spacing:1px;color:#9bb4d9;margin-top:22px;line-height:1.8}
-@media(max-width:480px){.options{grid-template-columns:1fr}.logo{width:145px;height:145px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: #020719;
+  font-family: Arial, sans-serif;
+}
+
+.panel {
+  position: relative;
+  width: min(100%, 760px);
+  min-height: 420px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 2px solid #00aaff;
+  box-shadow: 0 0 30px #008cff55;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 35px 20px;
+  background: #061844;
+}
+
+/* LOGO BIRU MEMENUHI SELURUH KOTAK */
+.panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* BUTANG LOG IN SAHAJA */
+.login {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 15px 55px;
+  border-radius: 30px;
+  border: 1px solid #ffd02f;
+  background: #061844;
+  color: #ffd02f;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 0 20px #00bfff66;
+  transition: .25s;
+}
+
+.login:hover {
+  background: #ffd02f;
+  color: #061844;
+  transform: scale(1.04);
+}
+
+@media(max-width:480px) {
+  .panel {
+    min-height: 350px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <main class="panel">
-<img class="logo" src="mho-logo.png" alt="Logo pasukan">
-<div class="kicker">NANIS.COM | LEADER MHO</div>
-<h1>ACTIVIST MANAGEMENT PORTAL</h1>
-<div class="sub">MEMBERSHIP • REGISTRATION • CASE MANAGEMENT</div>
-  
-<a href="/mho/index.html">LOG IN</a>
-<p class="desc">
-Portal pengurusan persendirian untuk pendaftaran ahli aktivis,
-rekod keahlian dan urusan pengurusan kes di bawah tanggungjawab
-Leader MHO (NANIS.COM).
-</p>
 
-<section class="options">
-<a class="option" href="/mho/admin.html">
-<div class="symbol">♙</div>
-<b>LEADER / ADMIN HQ</b>
-<small>Pengurusan ahli, semakan permohonan, rekod dan kes.</small>
-</a>
-<a class="option" href="/mho/member.html">
-<div class="symbol">♧</div>
-<b>MEMBER PORTAL</b>
-<small>Pendaftaran, profil ahli dan semakan status permohonan.</small>
-</a>
-</section>
+  <img src="mho-logo.png" alt="Logo Nanis">
 
-<div class="contact">LEADER CONTACT: 013-3324777</div>
-<div class="note">
-NANIS.COM • LEADER MHO<br>
-PORTAL PENGURUSAN PASUKAN AKTIVIS<br>
-Bukan pangkalan data organisasi MHO secara keseluruhan.
-</div>
+  <a class="login" href="/mho/index.html">
+    LOG IN
+  </a>
+
 </main>
+
 </body>
 </html>
 
