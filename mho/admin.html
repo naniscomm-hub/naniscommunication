@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030b27">
+<title>NANIS.COM | MHO Admin HQ</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#073c9b,transparent 48%),#02091f;color:#f7fbff;font-family:Arial,sans-serif}
+.wrap{width:min(1100px,94%);margin:auto}
+header{padding:20px 0;border-bottom:1px solid #ffd02f;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font: bold 25px Georgia;color:#ffd02f}
+.brand small{display:block;font: bold 10px Arial;color:#00dfff;letter-spacing:2px;margin-top:5px}
+.tag{border:1px solid #ffd02f;border-radius:20px;padding:8px 12px;color:#ffd02f;font-size:10px}
+.hero{display:flex;gap:16px;align-items:center;padding:27px 0}
+.logo{width:75px;height:75px;object-fit:contain;border-radius:50%;border:2px solid #ffd02f}
+.kicker{font-size:11px;letter-spacing:2px;color:#00dfff}
+h1{font: bold clamp(24px,4vw,35px) Georgia;color:#ffd02f;margin:8px 0}
+h2{font: bold 20px Georgia;color:#ffd02f;margin:27px 0 13px}
+.muted{color:#a9bddb;font-size:12px;line-height:1.6}
+.notice{border:1px solid #b98a28;background:#34270d55;color:#ffe5aa;padding:14px;border-radius:12px;font-size:12px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.modules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.box{padding:16px;border:1px solid #00dfff55;border-radius:13px;background:linear-gradient(145deg,#102b68,#061333)}
+.box label{font-size:10px;color:#a9bddb}
+.box strong{display:block;color:#00dfff;font: bold 26px Georgia;margin:9px 0}
+.box b{color:#ffd02f;font-size:13px}
+.box p{font-size:12px;color:#a9bddb;line-height:1.5}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
+.btn{padding:12px 16px;border-radius:9px;background:linear-gradient(120deg,#fff0a1,#ffd02f);color:#07132f;text-decoration:none;font-size:12px;font-weight:bold}
+.alt{background:#08204e;color:#00dfff;border:1px solid #00dfff}
+footer{text-align:center;border-top:1px solid #00dfff33;padding:20px;color:#91a9cf;font-size:10px}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}.modules{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.modules{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="brand">NANIS.COM<small>MHO HQ LEADER</small></div>
+<span class="tag">ADMIN HQ • PRIVATE AREA</span>
+</header>
+
+<main>
+<section class="hero">
+<img class="logo" src="mho-logo.png" alt="MHO Logo">
+<div>
+<div class="kicker">MHO MALAYSIA • STAY HUMAN</div>
+<h1>ADMIN HQ DASHBOARD</h1>
+<div class="muted">REGISTRATION &amp; CLIENT RECORD MANAGEMENT</div>
+</div>
+</section>
+
+<div class="notice">
+<b>PROTOTYPE / DEMO:</b> Ini ialah paparan dashboard sahaja. Sistem login, pengesahan identiti, database, kelulusan dan storan dokumen belum disambungkan. Jangan masukkan maklumat ahli sebenar.
+</div>
+
+<h2>RINGKASAN PENDAFTARAN</h2>
+<section class="grid">
+<div class="box"><label>JUMLAH PERMOHONAN</label><strong>—</strong><small class="muted">Menunggu database</small></div>
+<div class="box"><label>MENUNGGU SEMAKAN</label><strong>—</strong><small class="muted">Belum disahkan</small></div>
+<div class="box"><label>DILULUSKAN</label><strong>—</strong><small class="muted">Ahli aktif</small></div>
+<div class="box"><label>DITOLAK</label><strong>—</strong><small class="muted">Tidak diluluskan</small></div>
+</section>
+
+<h2>PUSAT PENGURUSAN</h2>
+<section class="modules">
+<div class="box"><b>QR REGISTRATION CENTRE</b><p>Pengurusan lapan pautan dan kod QR mengikut kategori.</p></div>
+<div class="box"><b>APPROVAL CENTRE</b><p>Semakan permohonan dan dokumen sebelum kelulusan.</p></div>
+<div class="box"><b>MEMBER &amp; CLIENT DATABASE</b><p>Carian rekod, kategori, nombor rujukan dan status.</p></div>
+<div class="box"><b>MEMBER PORTAL CONTROL</b><p>Aktifkan akses ahli selepas kelulusan.</p></div>
+<div class="box"><b>DOCUMENT CENTRE</b><p>Pengurusan dokumen dengan akses pentadbir.</p></div>
+<div class="box"><b>REPORT &amp; EXPORT</b><p>Laporan, cetakan dan eksport rekod.</p></div>
+</section>
+
+<h2>8 KATEGORI PENDAFTARAN</h2>
+<div class="box">
+<div class="muted">00 — Kad MHO: MYSTATELESS</div>
+<div class="muted">01 — Kad Kemanusiaan: Warga Asing</div>
+<div class="muted">02 — Kad Kemanusiaan: Peniaga</div>
+<div class="muted">03 — Kad Kemanusiaan: Individu</div>
+<div class="muted">07 — Aktivis Warga Tempatan</div>
+<div class="muted">08 — Aktivis Warga Asing</div>
+<div class="muted">09 — Sertai Konsultasi</div>
+<div class="muted">10 — Sertai dan Buka Kes</div>
+</div>
+
+<div class="actions">
+<a class="btn" href="/">KEMBALI KE NANIS.COM</a>
+<a class="btn alt" href="/mho/index.html">PINTU MASUK MHO</a>
+<a class="btn alt" href="/mho/member.html">MEMBER PORTAL</a>
+</div>
+</main>
+
+<footer>NANIS.COM [MHO HQ LEADER] • ADMINISTRATION</footer>
+</div>
+</body>
+</html>
