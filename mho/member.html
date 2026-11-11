@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030b27">
+<title>NANIS.COM | Member Portal</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:20px;background:radial-gradient(ellipse at top,#073c9b,transparent 50%),#02091f;color:#f7fbff;font-family:Arial,sans-serif}
+.panel{width:min(620px,100%);margin:35px auto;padding:25px;border:1px solid #ffd02f;border-radius:20px;background:#071943ef;box-shadow:0 0 25px #00dfff22}
+.logo{display:block;width:130px;height:130px;object-fit:contain;border:2px solid #ffd02f;border-radius:50%;margin:auto}
+.kicker{text-align:center;color:#00dfff;font-size:11px;letter-spacing:3px;margin-top:20px}
+h1{text-align:center;color:#ffd02f;font:bold 29px Georgia}
+.sub{text-align:center;color:#a9bddb;font-size:12px;letter-spacing:1px}
+.notice{margin:22px 0;padding:13px;border:1px solid #00dfff66;border-radius:10px;color:#c5eaff;font-size:12px;line-height:1.6}
+label{display:block;color:#ffd02f;font-size:12px;margin:15px 0 7px}
+input{width:100%;padding:13px;border-radius:8px;border:1px solid #00dfff66;background:#020b24;color:white;font-size:14px}
+button{width:100%;padding:14px;margin-top:20px;border:0;border-radius:9px;background:linear-gradient(120deg,#fff0a1,#ffd02f);color:#07132f;font-weight:bold;letter-spacing:1px;cursor:pointer}
+.back{display:block;text-align:center;color:#00dfff;margin-top:22px;font-size:12px;text-decoration:none}
+footer{text-align:center;color:#91a9cf;font-size:10px;margin-top:25px}
+</style>
+</head>
+<body>
+<main class="panel">
+<img class="logo" src="mho-logo.png" alt="Logo pasukan">
+<div class="kicker">NANIS.COM | LEADER MHO</div>
+<h1>MEMBER PORTAL</h1>
+<div class="sub">ACTIVIST MEMBERSHIP ACCESS</div>
+
+<div class="notice">
+<b>SELAMAT DATANG KE PORTAL AHLI</b><br>
+Portal ini disediakan untuk ahli aktivis yang berdaftar di bawah pengurusan Leader MHO (NANIS.COM). Permohonan baharu perlu melalui semakan dan kelulusan Leader sebelum keahlian diaktifkan.
+</div>
+
+<form onsubmit="event.preventDefault();alert('Portal masih dalam fasa demo. Pengesahan ahli dan TAC belum disambungkan.');">
+<label for="memberid">NOMBOR AHLI / RUJUKAN PERMOHONAN</label>
+<input id="memberid" type="text" placeholder="Masukkan nombor ahli atau rujukan" autocomplete="off" required>
+
+<label for="phone">NOMBOR TELEFON BERDAFTAR</label>
+<input id="phone" type="tel" placeholder="Pengesahan belum diaktifkan" autocomplete="off" required>
+
+<button type="submit">MEMBER LOGIN</button>
+</form>
+
+<div class="notice">
+<b>AKSES AHLI SELEPAS PENGESAHAN</b><br>
+• Profil dan maklumat pendaftaran sendiri.<br>
+• Status permohonan dan keahlian.<br>
+• Maklumat berkaitan keahlian.<br>
+• Dokumen peribadi yang dimuat naik tidak dipaparkan melalui portal ahli.
+</div>
+
+<a class="back" href="/mho/index.html">← KEMBALI KE PINTU MASUK</a>
+<footer>NANIS.COM • LEADER MHO • ACTIVIST TEAM MANAGEMENT<br>CONTACT: 013-3324777</footer>
+</main>
+</body>
+</html>
