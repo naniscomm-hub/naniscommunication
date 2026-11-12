@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kim Seokjin (Jin) BTS — perjalanan seni, pencapaian solo, sumbangan kemanusiaan dan detik konsert bersama ARMY.">
+<title>KIM SEOKJIN (JIN) — The Voice, The Heart, The Worldwide Handsome</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#e98caf;--pink2:#f8dce8;--rose:#b95e83;--ink:#493542;--muted:#806b78;--paper:#fffafd;--line:#f1dce6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#fff8fc 0%,#fff 48%,#fff7fb 100%);color:var(--ink);font-family:Montserrat,Arial,sans-serif;line-height:1.8}
+a{color:#a94f78}
+.wrap{width:min(1120px,92%);margin:auto}
+.topbar{padding:18px 0;border-bottom:1px solid var(--line);background:#fff}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{font-size:12px;letter-spacing:3px;font-weight:800;color:var(--rose)}
+.back{font-size:11px;letter-spacing:1.5px;text-decoration:none;border:1px solid #edc6d8;border-radius:30px;padding:9px 15px;color:var(--rose)}
+.hero{padding:45px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.kicker{color:var(--rose);font-size:11px;font-weight:800;letter-spacing:4px}
+h1{font:700 clamp(42px,7vw,76px)/.98 "Cormorant Garamond",serif;margin:14px 0;color:#57384a}
+.subtitle{font:600 17px/1.5 "Cormorant Garamond",serif;color:#9a6680;letter-spacing:1px}
+.intro{font-size:14px;color:var(--muted);max-width:620px}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;height:520px;object-fit:cover;object-position:center 25%;border-radius:190px 190px 18px 18px;box-shadow:0 20px 55px #d99ab64a}
+.photo-note{font-size:10px;color:#987d8c;text-align:right;margin-top:8px}
+.pill{display:inline-block;background:#fce8f0;color:#a94f78;border-radius:30px;padding:7px 13px;font-size:10px;font-weight:800;letter-spacing:1px;margin:4px 5px 0 0}
+.section{padding:38px 0}
+.section-title{text-align:center;margin-bottom:25px}
+.section-title span{font-size:10px;color:var(--rose);font-weight:800;letter-spacing:4px}
+h2{font:700 clamp(30px,4vw,44px)/1.1 "Cormorant Garamond",serif;margin:8px 0;color:#69445a}
+h3{font:700 27px/1.15 "Cormorant Garamond",serif;color:#71445d;margin:0 0 10px}
+p{font-size:13px;color:#705e69}
+.feature{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 10px 35px #e9c7d533}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.stat{background:linear-gradient(145deg,#fff,#fff0f6);border:1px solid #f3d7e4;border-radius:17px;padding:17px;text-align:center}
+.stat strong{display:block;font:700 30px "Cormorant Garamond",serif;color:#b85f83}
+.stat small{font-size:10px;color:#866d7b;letter-spacing:1px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery figure{margin:0;background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #e6c6d333}
+.gallery img{width:100%;height:290px;object-fit:cover;display:block;transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.035)}
+.gallery figcaption{padding:11px 13px;font-size:10px;line-height:1.5;color:#856e7c}
+.gallery figcaption a{display:block;margin-top:4px;font-weight:700;text-decoration:none}
+.wide-photo{width:100%;max-height:430px;object-fit:cover;border-radius:18px;border:1px solid var(--line)}
+.timeline{border-left:2px solid #efc3d6;margin:20px 0 10px 10px;padding-left:23px}
+.event{position:relative;margin:0 0 22px}
+.event:before{content:"";position:absolute;left:-31px;top:7px;width:13px;height:13px;background:#d77da3;border:3px solid white;border-radius:50%;box-shadow:0 0 0 2px #edc3d5}
+.event b{color:#a95479;font-size:12px;letter-spacing:1px}
+.event p{margin:4px 0}
+.callout{background:linear-gradient(120deg,#fff0f6,#fff);border:1px solid #f1d4e1;border-radius:20px;padding:22px;margin:22px 0}
+.callout p{margin-bottom:0}
+.source-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.source-list a{display:block;background:#fff;border:1px solid var(--line);padding:12px 14px;border-radius:12px;text-decoration:none;font-size:11px;font-weight:700}
+.source-list a:hover{background:#fff0f6}
+.note{font-size:10px;color:#987f8e}
+footer{margin-top:35px;padding:26px 0;background:#fff0f6;border-top:1px solid var(--line);text-align:center;color:#8e6c7d;font-size:10px;letter-spacing:1px}
+@media(max-width:760px){.hero-grid,.two{grid-template-columns:1fr}.hero{padding-top:28px}.hero-photo img{height:420px;border-radius:150px 150px 16px 16px}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:230px}.stat-grid{grid-template-columns:1fr 1fr}.source-list{grid-template-columns:1fr}.topbar .wrap{align-items:flex-start}.brand{max-width:60%}}
+@media(max-width:430px){.gallery{grid-template-columns:1fr}.gallery img{height:310px}.stat-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <div class="brand">BTS THE LEGEND · MEMBER PROFILE</div>
+  <a class="back" href="index.html">← BACK TO MEET THE SEVEN</a>
+</div></header>
+
+<main>
+<section class="hero wrap">
+ <div class="hero-grid">
+  <div>
+   <div class="kicker">KIM SEOKJIN · 김석진</div>
+   <h1>JIN</h1>
+   <div class="subtitle">THE VOICE · THE HEART · THE WORLDWIDE HANDSOME</div>
+   <p class="intro">Di sebalik senyuman yang ceria dan gelaran “Worldwide Handsome”, Kim Seokjin ialah seorang penyanyi yang membina perjalanan seninya dengan kesungguhan, kehangatan dan hubungan istimewa bersama ARMY. Dari pentas BTS ke karya solo, Jin terus menunjukkan sisi seorang penghibur yang matang dan versatil.</p>
+   <span class="pill">BTS VOCALIST</span><span class="pill">SOLO ARTIST</span><span class="pill">ARMY'S MOON</span>
+   <p class="note">Profil dan perkembangan dikemas kini sehingga November 2026.</p>
+  </div>
+  <div class="hero-photo">
+   <img src="https://bts.ibighit.com/images/bts/discography/jin/echo/photo3/01.jpg" alt="Kim Seokjin Jin dalam konsep album Echo">
+   <div class="photo-note">Foto konsep rasmi album ECHO · BIGHIT MUSIC</div>
+  </div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE STORY</span><h2>Seorang artis dengan banyak sisi</h2></div>
+ <div class="feature">
+  <p>Kim Seokjin, lebih dikenali sebagai Jin, dilahirkan pada 4 Disember 1992 dan memulakan perjalanan bersama BTS pada tahun 2013. Sebagai salah seorang vokalis kumpulan, beliau dikenali melalui tona suara yang jernih, penyampaian emosi dalam lagu balada serta keupayaan membawa tenaga ceria ke atas pentas.</p>
+  <p>Jin juga mempunyai identiti tersendiri sebagai penghibur. Sikap spontan, humor dan interaksinya dengan peminat menjadikan beliau dekat dengan ARMY. Namun, di sebalik personaliti yang menghiburkan, perjalanan muzik solonya memperlihatkan disiplin, keberanian mencuba genre baharu dan keinginan untuk terus berkembang.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>SOLO MILESTONES</span><h2>Daripada “The Astronaut” ke “ECHO”</h2></div>
+ <div class="two">
+  <div class="feature">
+   <h3>The Astronaut (2022)</h3>
+   <p>Kolaborasi Jin bersama Coldplay menjadi detik penting dalam perjalanan solonya. Lagu ini memperlihatkan sisi vokal yang emosional dan membawa tema kasih sayang, perpisahan serta hubungan dengan peminat. Ia turut menjadi karya solo penting sebelum Jin menjalani khidmat ketenteraan.</p>
+  </div>
+  <div class="feature">
+   <h3>Happy (2024)</h3>
+   <p>Selepas menamatkan khidmat ketenteraan pada Jun 2024, Jin kembali dengan EP solo pertamanya, <b>Happy</b>, pada November 2024. Projek ini mengetengahkan bunyi pop-rock dan mesej tentang kebahagiaan, harapan serta usaha mencari kegembiraan dalam kehidupan seharian.</p>
+  </div>
+ </div>
+ <div class="feature" style="margin-top:18px">
+  <h3>Echo (16 Mei 2025)</h3>
+  <p>EP keduanya, <b>Echo</b>, mengandungi tujuh lagu dan dibina berasaskan bunyi pop serta rock dengan pengaruh muzik band. Jin meneroka bagaimana pengalaman dan emosi harian boleh bergema dalam kehidupan seseorang. Lagu utama, <i>Don’t Say You Love Me</i>, mengetengahkan kisah hubungan yang semakin rapuh tetapi masih sukar dilepaskan.</p>
+  <p>Album ini mencapai No. 1 carta album iTunes di 63 negara, manakala lagu utamanya menduduki No. 1 carta lagu iTunes di 61 negara. <i>Echo</i> turut debut di No. 3 Billboard 200 — kedudukan tertinggi Jin ketika itu bagi album solo.</p>
+ </div>
+ <div class="stat-grid">
+  <div class="stat"><strong>63</strong><small>NEGARA · iTUNES ALBUM NO. 1</small></div>
+  <div class="stat"><strong>61</strong><small>NEGARA · TITLE TRACK NO. 1</small></div>
+  <div class="stat"><strong>No. 3</strong><small>BILLBOARD 200 · ECHO</small></div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>PHOTO MOMENTS</span><h2>Jin through the ECHO era</h2></div>
+ <div class="gallery">
+  <figure><img loading="lazy" src="https://bts.ibighit.com/images/bts/discography/jin/echo/photo2/origin/04.jpg" alt="Jin Echo concept red leather look"><figcaption>Konsep rock untuk album ECHO.<a href="https://bts.ibighit.com/eng/discography/jin/detail/echo/" target="_blank" rel="noopener">Sumber foto: BIGHIT MUSIC</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://format.creatorcdn.com/fa50d544-a94c-40a2-9e45-376e7f0fc0c9/0/0/0/729%2C638%2C2078%2C1987%2C1200%2C1200/0-0-0/c403f6d2-be88-41ec-ade3-dd8861e5fc6a/1/2/GpES7Fca0AEFnOM.jpg?fjkss=exp%3D2089040118~hmac%3D39f3469f87c7591541004575900fa8129d9f28c90b24f5beabc88dec6e33d172" alt="Jin Echo concept photo in a vintage car"><figcaption>Visual nostalgia dalam era ECHO.<a href="https://www.abcde-official.com/bts-jin-delivers-a-refined-personal-sound-on-second-solo-album-echo" target="_blank" rel="noopener">Sumber foto: ab(CDE)</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://bts.ibighit.com/images/bts/discography/jin/echo/photo3/01.jpg" alt="Jin with vintage microphone"><figcaption>Jin dengan mikrofon vintaj — konsep ECHO.<a href="https://bts.ibighit.com/eng/discography/jin/detail/echo/" target="_blank" rel="noopener">Sumber foto: BIGHIT MUSIC</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://image.koreajoongangdaily.com/12269616.webp?format=jpg&height=640&imageId=12269616&width=960" alt="Jin performing at solo tour"><figcaption>Persembahan Jin dalam jelajah solo RUNSEOKJIN.<a href="https://www.koreajoongangdaily.com/entertainment/by-your-side-btss-jin-wraps-up-world-tour-with-amsterdam-concert/12269529" target="_blank" rel="noopener">Foto: BIGHIT MUSIC / Korea JoongAng Daily</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://image.koreajoongangdaily.com/12269926.webp?format=jpg&height=640&imageId=12269926&width=960" alt="Jin singing on stage"><figcaption>Detik Jin menyampaikan lagu di hadapan ARMY.<a href="https://www.koreajoongangdaily.com/entertainment/by-your-side-btss-jin-wraps-up-world-tour-with-amsterdam-concert/12269529" target="_blank" rel="noopener">Foto: BIGHIT MUSIC / Korea JoongAng Daily</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://image.koreajoongangdaily.com/12270303.webp?format=jpg&height=640&imageId=12270303&width=960" alt="Arena concert filled with fans"><figcaption>Suasana arena konsert RUNSEOKJIN.<a href="https://www.koreajoongangdaily.com/entertainment/by-your-side-btss-jin-wraps-up-world-tour-with-amsterdam-concert/12269529" target="_blank" rel="noopener">Foto: BIGHIT MUSIC / Korea JoongAng Daily</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://image.starnewskorea.com/21/2025/12/2025123107143498606_4.jpg" alt="Jin performing with pink microphone"><figcaption>Jin dalam filem konsert RUNSEOKJIN EP TOUR.<a href="https://www.starnewskorea.com/music/2025/12/31/2025123107143498606" target="_blank" rel="noopener">Foto: STARNEWS</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://media.vogue.co.jp/photos/69beb42d702a3b886bd88bb6/master/w_1600%2Cc_limit/PR-BTS%2520THE%2520COMEBACK%2520LIVE%2520%257C%2520ARIRANG-11.jpg" alt="Jin at BTS Arirang comeback live"><figcaption>Jin bersama BTS di pentas comeback ARIRANG, 2026.<a href="https://www.vogue.co.jp/article/bts-the-comeback-live-arirang" target="_blank" rel="noopener">Foto: VOGUE JAPAN</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://thumb.mtstarnews.com/cdn-cgi/image/f%3Dauto/21/2026/02/2026020807212340791_4.jpg" alt="Jin at RUNSEOKJIN tour performance"><figcaption>RUNSEOKJIN EP TOUR — foto persembahan.<a href="https://www.starnewskorea.com/en/music/2026/02/08/2026020807212340791" target="_blank" rel="noopener">Foto: STARNEWS</a></figcaption></figure>
+ </div>
+ <p class="note">Nota foto: pautan imej dipaparkan daripada laman rasmi dan penerbit media yang dinyatakan. Hak cipta kekal milik pemilik masing-masing. Dapatkan kebenaran atau gunakan bahan media rasmi yang dibenarkan sebelum penerbitan komersial.</p>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>RUNSEOKJIN</span><h2>Jelajah solo yang mencipta sejarah</h2></div>
+ <div class="feature">
+  <p>Pada tahun 2025, Jin mengadakan jelajah solo pertamanya, <b>#RUNSEOKJIN_EP.TOUR</b>, bagi meraikan album <i>Happy</i> dan <i>Echo</i>. Jelajah itu merangkumi 18 persembahan di sembilan bandar merentasi Korea Selatan, Jepun, Amerika Syarikat dan Eropah.</p>
+  <p>Antara pencapaian yang dilaporkan ialah Jin menjadi penyanyi solo Korea pertama yang membuat persembahan di The O2 Arena, London. Jelajah tersebut turut mencatat kehadiran besar peminat di Honda Center, Anaheim, dan persembahan di American Airlines Center, Dallas, yang dilaporkan sold out.</p>
+  <div class="callout">
+   <h3>Konsert penutup jelajah solo</h3>
+   <p>Jelajah utama berakhir di Ziggo Dome, Amsterdam pada 10 Ogos 2025. Selepas itu, Jin kembali untuk konsert encore khas <b>#RUNSEOKJIN_EP.TOUR_ENCORE</b> di Incheon Munhak Main Stadium pada 31 Oktober dan 1 November 2025. Encore ini menutup perjalanan jelajah solo pertamanya dengan persembahan istimewa serta kemunculan ahli BTS sebagai tetamu.</p>
+   <p class="note">Tarikh encore berdasarkan notis rasmi Weverse/BIGHIT MUSIC. Semak sumber rasmi bagi sebarang perubahan jadual.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE LATEST CHAPTER</span><h2>Kembali bersama BTS — ARIRANG 2026</h2></div>
+ <div class="two">
+  <div>
+   <img class="wide-photo" loading="lazy" src="https://media.vogue.co.jp/photos/69beb42d702a3b886bd88bb6/master/w_1600%2Cc_limit/PR-BTS%2520THE%2520COMEBACK%2520LIVE%2520%257C%2520ARIRANG-11.jpg" alt="Jin on stage with BTS during ARIRANG comeback">
+  </div>
+  <div class="feature">
+   <h3>Gwanghwamun Square · 21 Mac 2026</h3>
+   <p>Jin kembali ke pentas bersama enam anggota BTS dalam persembahan penuh kumpulan selepas hampir empat tahun. <i>BTS THE COMEBACK LIVE | ARIRANG</i> di Gwanghwamun Square, Seoul, menjadi detik penting buat kumpulan dan peminat di seluruh dunia.</p>
+   <p>Netflix melaporkan siaran langsung itu meraih kira-kira <b>18.4 juta tontonan global (Live+1)</b>, memasuki Top 10 mingguan di 80 negara dan mencapai kedudukan No. 1 di 24 negara.</p>
+   <p>Ini bukan sekadar kemunculan semula — ia menandakan permulaan bab baharu BTS sebagai tujuh anggota yang kembali berkarya dan membuat persembahan bersama.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>AWARDS & RECOGNITION</span><h2>Pengiktirafan dan kejayaan terkini</h2></div>
+ <div class="feature">
+  <div class="timeline">
+   <div class="event"><b>2026 · THE FACT MUSIC AWARDS</b><p>Jin menerima anugerah FANNSTAR MYSTAR (Male), pengiktirafan pilihan peminat dalam kategori artis lelaki.</p></div>
+   <div class="event"><b>2026 · MUSIC AWARDS JAPAN</b><p>Nama Jin tersenarai sebagai penerima Best of Listeners’ Choice: International Song powered by Spotify.</p></div>
+   <div class="event"><b>2026 · 40TH GOLDEN DISC AWARDS</b><p>Jin menerima Golden Disc Upbit Popularity Award.</p></div>
+   <div class="event"><b>2025 · MNET ASIAN MUSIC AWARDS</b><p>Pengiktirafan Fans’ Choice Top 10 — Male.</p></div>
+   <div class="event"><b>2025 · THE FACT MUSIC AWARDS</b><p>Pengiktirafan FANNSTAR Choice — Solo dan Best Music — Summer.</p></div>
+   <div class="event"><b>2025 · BRAND OF THE YEAR</b><p>Dipilih sebagai Male Entertainment Idol of the Year.</p></div>
+   <div class="event"><b>2025 · ASIA STAR ENTERTAINER AWARDS</b><p>Menerima pengiktirafan The Best OST.</p></div>
+  </div>
+  <p class="note">Senarai ini merangkum pengiktirafan yang disenaraikan dalam profil artis Melon dan laporan pemenang. Nama kategori dikekalkan dalam bahasa asal untuk ketepatan.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>BEYOND THE STAGE</span><h2>Sumbangan dan nilai kemanusiaan</h2></div>
+ <div class="feature">
+  <p>Pengaruh Jin tidak terhad kepada muzik. Beliau turut dikaitkan dengan usaha kebajikan dan mesej positif yang dibawa BTS kepada masyarakat.</p>
+  <h3>Sokongan peribadi kepada UNICEF Korea</h3>
+  <p>Pada Mei 2019, UNICEF Korea mengesahkan bahawa sumbangan peribadi Jin sejak Mei 2018 telah melebihi 100 juta won. Dengan pencapaian itu, beliau menyertai UNICEF Honors Club, sebuah kelompok penderma yang menyumbang sekurang-kurangnya 100 juta won. Sumbangan tersebut pada awalnya dibuat secara rahsia sebelum didedahkan dengan harapan dapat memberi inspirasi kepada orang lain.</p>
+  <h3>LOVE MYSELF — usaha bersama BTS</h3>
+  <p>Jin juga merupakan sebahagian daripada inisiatif kolektif BTS dan BIGHIT MUSIC bersama UNICEF melalui kempen <b>LOVE MYSELF</b>. Kempen ini menyokong usaha melindungi kanak-kanak dan golongan muda daripada keganasan, serta memperluas kesedaran mengenai kesihatan mental melalui inisiatif #OnMyMind. Menurut UNICEF, sehingga Mac 2024 kempen ini telah menyumbang lebih 8.9 bilion won kepada program berkaitan.</p>
+  <p class="note">Penting: angka LOVE MYSELF ialah sumbangan kolektif BTS, BIGHIT MUSIC dan sokongan peminat — bukan sumbangan individu Jin seorang.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>CAREER TIMELINE</span><h2>Perjalanan Seokjin</h2></div>
+ <div class="feature timeline">
+  <div class="event"><b>2013</b><p>Debut bersama BTS melalui single album <i>2 COOL 4 SKOOL</i>.</p></div>
+  <div class="event"><b>2016</b><p>Menyerlah dengan lagu solo BTS seperti <i>Awake</i>.</p></div>
+  <div class="event"><b>2018</b><p>Memperkenalkan <i>Epiphany</i>, salah satu persembahan solo yang paling dikenang peminat.</p></div>
+  <div class="event"><b>2022</b><p>Melancarkan <i>The Astronaut</i>, kolaborasi bersama Coldplay.</p></div>
+  <div class="event"><b>2024</b><p>Menamatkan khidmat ketenteraan dan kembali dengan EP solo <i>Happy</i>.</p></div>
+  <div class="event"><b>2025</b><p>Melancarkan <i>Echo</i>, mengadakan jelajah solo #RUNSEOKJIN_EP.TOUR dan konsert encore di Incheon.</p></div>
+  <div class="event"><b>2026</b><p>Kembali bersama BTS menerusi era <i>ARIRANG</i> dan persembahan pentas global.</p></div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>REFERENCES</span><h2>Sumber rasmi dan bacaan lanjut</h2></div>
+ <div class="source-list">
+  <a href="https://bts.ibighit.com/eng/discography/jin/detail/echo/" target="_blank" rel="noopener">BIGHIT MUSIC — ECHO official album page ↗</a>
+  <a href="https://en.yna.co.kr/view/AEN20250517002600315" target="_blank" rel="noopener">Yonhap — ECHO iTunes chart results ↗</a>
+  <a href="https://en.yna.co.kr/view/AEN20250526001000315" target="_blank" rel="noopener">Yonhap — ECHO debuts at No. 3 Billboard 200 ↗</a>
+  <a href="https://www.koreajoongangdaily.com/entertainment/by-your-side-btss-jin-wraps-up-world-tour-with-amsterdam-concert/12269529" target="_blank" rel="noopener">Korea JoongAng Daily — RUNSEOKJIN tour finale ↗</a>
+  <a href="https://weverse.io/bts/notice/30499" target="_blank" rel="noopener">Weverse — Official encore concert notice ↗</a>
+  <a href="https://campaigns.weverse.io/WS280KP3U5?lang=EN" target="_blank" rel="noopener">Weverse — RUNSEOKJIN EP TOUR ENCORE ↗</a>
+  <a href="https://about.netflix.com/en/news/bts-commands-the-global-stage-as-bts-the-comeback-live-draws-18-million-viewers" target="_blank" rel="noopener">Netflix — BTS Comeback Live global viewership ↗</a>
+  <a href="https://en.yna.co.kr/view/AEN20190531007300315" target="_blank" rel="noopener">Yonhap — Jin joins UNICEF Honors Club ↗</a>
+  <a href="https://www.unicef.org/partnerships/bts-and-unicef-celebrate-love-myself-campaign-renewed-support-unicefs-onmymind" target="_blank" rel="noopener">UNICEF — LOVE MYSELF and #OnMyMind ↗</a>
+  <a href="https://www.melon.com/artist/detail.htm?artistId=725986&snsGate=Y" target="_blank" rel="noopener">Melon — Jin artist profile and awards ↗</a>
+  <a href="https://www.soompi.com/article/1871808wpp/winners-of-2026-the-fact-music-awards" target="_blank" rel="noopener">Soompi — 2026 The Fact Music Awards winners ↗</a>
+  <a href="https://www.forbes.com/sites/jeffbenjamin/2026/09/20/bts-nmixx-cortis-take-top-honors-at-2026-the-fact-music-awards/" target="_blank" rel="noopener">Forbes — 2026 The Fact Music Awards report ↗</a>
+ </div>
+ <p class="note" style="margin-top:18px">Artikel ini disediakan untuk tujuan maklumat dan penghargaan terhadap perjalanan seni Kim Seokjin. Semua tanda dagangan, foto dan bahan visual adalah hak milik pemilik atau penerbit masing-masing. Sila semak syarat penggunaan media sebelum menyalin atau menerbitkannya semula.</p>
+</section>
+</main>
+<footer>
+ <div class="wrap">BTS THE LEGEND · KIM SEOKJIN (JIN) · PINK & WHITE EDITION<br>WITH LOVE FOR ARMY ♡</div>
+</footer>
+</body>
+</html>
