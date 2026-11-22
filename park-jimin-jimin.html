@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BTS THE LEGEND: Park Jimin — the voice, dancer, solo artist and global icon. Discover his journey from Busan to the ARIRANG era.">
+<title>PARK JIMIN — BTS THE LEGEND | Nanis Communication</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+ --yellow:#fff1a8;--yellow2:#fff8d6;--gold:#d5ad45;--gold2:#b78d2e;
+ --ink:#51452d;--muted:#827653;--paper:#fffdf5;--line:#f0df9d;
+ --shadow:0 12px 35px rgba(145,115,35,.12)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#fff9df 0%,#fff 45%,#fff9e7 100%);color:var(--ink);font-family:Montserrat,Arial,sans-serif;line-height:1.8}
+a{color:#92701e}
+.wrap{width:min(1120px,92%);margin:auto}
+.topbar{padding:18px 0;border-bottom:1px solid var(--line);background:#fff}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{font-size:12px;letter-spacing:3px;font-weight:800;color:var(--gold2)}
+.back{font-size:11px;letter-spacing:1.5px;text-decoration:none;border:1px solid #e8d48b;border-radius:30px;padding:9px 15px;color:#92701e;background:#fffdf4}
+.hero{padding:45px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.kicker{color:var(--gold2);font-size:11px;font-weight:800;letter-spacing:4px}
+h1{font:700 clamp(42px,7vw,76px)/.98 "Cormorant Garamond",serif;margin:14px 0;color:#65501e}
+.subtitle{font:600 17px/1.5 "Cormorant Garamond",serif;color:#a17e2c;letter-spacing:1px}
+.intro{font-size:14px;color:var(--muted);max-width:620px}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;height:520px;object-fit:cover;object-position:center 24%;border-radius:190px 190px 18px 18px;box-shadow:0 20px 55px #dfc76a55}
+.photo-note{font-size:10px;color:#987f45;text-align:right;margin-top:8px}
+.pill{display:inline-block;background:#fff3bc;color:#92701e;border:1px solid #f0df9d;border-radius:30px;padding:7px 13px;font-size:10px;font-weight:800;letter-spacing:1px;margin:4px 5px 0 0}
+.section{padding:38px 0}
+.section-title{text-align:center;margin-bottom:25px}
+.section-title span{font-size:10px;color:var(--gold2);font-weight:800;letter-spacing:4px}
+h2{font:700 clamp(30px,4vw,44px)/1.1 "Cormorant Garamond",serif;margin:8px 0;color:#725b25}
+h3{font:700 27px/1.15 "Cormorant Garamond",serif;color:#806529;margin:0 0 10px}
+p{font-size:13px;color:#706346}
+.feature{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 10px 35px #e9dca833}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.stat{background:linear-gradient(145deg,#fff,#fff5c9);border:1px solid #f0df9d;border-radius:17px;padding:17px;text-align:center}
+.stat strong{display:block;font:700 30px "Cormorant Garamond",serif;color:#a17b22}
+.stat small{font-size:10px;color:#87764c;letter-spacing:1px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery figure{margin:0;background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #e6d9a633}
+.gallery img{width:100%;height:290px;object-fit:cover;display:block;transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.035)}
+.gallery figcaption{padding:11px 13px;font-size:10px;line-height:1.5;color:#856f3d}
+.gallery figcaption a{display:block;margin-top:4px;font-weight:700;text-decoration:none}
+.wide-photo{width:100%;max-height:430px;object-fit:cover;border-radius:18px;border:1px solid var(--line)}
+.timeline{border-left:2px solid #e8d27f;margin:20px 0 10px 10px;padding-left:23px}
+.event{position:relative;margin:0 0 22px}
+.event:before{content:"";position:absolute;left:-31px;top:7px;width:13px;height:13px;background:#d4ad45;border:3px solid white;border-radius:50%;box-shadow:0 0 0 2px #efdfa4}
+.event b{color:#967323;font-size:12px;letter-spacing:1px}
+.event p{margin:4px 0}
+.callout{background:linear-gradient(120deg,#fff6cf,#fff);border:1px solid #efdfa4;border-radius:20px;padding:22px;margin:22px 0}
+.callout p{margin-bottom:0}
+.source-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.source-list a{display:block;background:#fff;border:1px solid var(--line);padding:12px 14px;border-radius:12px;text-decoration:none;font-size:11px;font-weight:700}
+.source-list a:hover{background:#fff7d8}
+.note{font-size:10px;color:#987f52}
+.quote{margin:28px 0;padding:20px 24px;border-left:4px solid #d5ad45;background:#fff7d8;border-radius:0 14px 14px 0;font:600 25px/1.35 "Cormorant Garamond",serif;color:#806529}
+footer{margin-top:35px;padding:26px 0;background:#fff5c9;border-top:1px solid var(--line);text-align:center;color:#8c7436;font-size:10px;letter-spacing:1px}
+@media(max-width:760px){.hero-grid,.two{grid-template-columns:1fr}.hero{padding-top:28px}.hero-photo img{height:420px;border-radius:150px 150px 16px 16px}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:230px}.stat-grid{grid-template-columns:1fr 1fr}.source-list{grid-template-columns:1fr}.topbar .wrap{align-items:flex-start}.brand{max-width:60%}}
+@media(max-width:430px){.gallery{grid-template-columns:1fr}.gallery img{height:310px}.stat-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <div class="brand">BTS THE LEGEND · MEMBER PROFILE</div>
+  <a class="back" href="index.html">← BACK TO MEET THE SEVEN</a>
+</div></header>
+
+<main>
+<section class="hero wrap">
+ <div class="hero-grid">
+  <div>
+   <div class="kicker">PARK JIMIN · 박지민</div>
+   <h1>JIMIN</h1>
+   <div class="subtitle">THE VOICE · THE DANCE · THE GOLDEN SOUL</div>
+   <p class="intro">From the dance studios of Busan to the world's biggest stages, Park Jimin has built a distinctive artistic identity through expressive movement, a delicate yet powerful voice and an extraordinary connection with audiences. His story is one of discipline, reinvention and a constant search for growth.</p>
+   <span class="pill">BTS VOCALIST</span><span class="pill">DANCER</span><span class="pill">SOLO ARTIST</span><span class="pill">GLOBAL ICON</span>
+   <p class="note">Editorial profile updated 22 November 2026.</p>
+  </div>
+  <div class="hero-photo">
+   <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Park_Ji-min_for_Dispatch_%22Boy_With_Luv%22_MV_behind_the_scene_shooting%2C_15_March_2019_06.jpg" alt="Park Jimin in a Dispatch behind-the-scenes portrait" loading="eager">
+   <div class="photo-note">Photo: Dispatch · Creative Commons Attribution 3.0 · See full credit below</div>
+  </div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE STORY</span><h2>More Than a Performer</h2></div>
+ <div class="feature">
+  <p>Park Jimin was born on 13 October 1995 in Busan, South Korea. Long before international stadiums, award ceremonies and fashion headlines became part of his life, he was a young student drawn to movement and performance. His early interest in dance developed into serious training, and he studied contemporary dance at Busan High School of Arts. That foundation would later become one of the defining elements of his stage identity.</p>
+  <p>Jimin's path was not an overnight success story. He auditioned for Big Hit Entertainment and moved to Seoul to train. The transition demanded persistence: a new environment, demanding schedules, vocal development and the pressure of preparing for a debut. He became a trainee in 2012 and made his official debut with BTS on 13 June 2013.</p>
+  <p>Within the seven-member group, Jimin developed a role that combines singing with movement. His performances often balance precision and fluidity. A turn, a pause, a hand gesture or a shift in expression can carry as much meaning as a vocal phrase. This quality makes him recognisable not simply as a dancer who sings, but as a performer who treats the stage as a space for storytelling.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE ARTIST</span><h2>A Voice That Carries Emotion</h2></div>
+ <div class="two">
+  <div class="feature">
+   <h3>A distinctive vocal colour</h3>
+   <p>Jimin's voice is often recognised for its clear upper register, delicate texture and expressive phrasing. Rather than relying only on power, he frequently shapes a line through breath, tone and emotional detail. In BTS songs, his vocal parts can add a sense of vulnerability, urgency or warmth, depending on the mood of the composition.</p>
+   <p>His artistry is especially evident in songs that require emotional contrast. He can move from a soft, intimate delivery to a more intense chorus while maintaining a recognisable vocal character. Like every vocalist, his technique continues to evolve through experience, practice and live performance.</p>
+  </div>
+  <div class="feature">
+   <h3>The language of dance</h3>
+   <p>Jimin's contemporary dance background is visible in the way he uses space and movement. His lines are often fluid, his transitions carefully controlled and his gestures expressive. He can make choreography appear effortless while maintaining the strength and stamina required for demanding group performances.</p>
+   <p>In songs such as “Black Swan”, the connection between music and movement becomes particularly clear. The performance explores the fear of losing passion for one's art, and Jimin's movement helps translate that emotional idea into a visual experience.</p>
+  </div>
+ </div>
+ <div class="quote">“A performance is not only about what the audience sees. It is also about what they feel.”</div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE BTS YEARS</span><h2>Growing Together with Six Members</h2></div>
+ <div class="feature">
+  <p>Jimin debuted as one of the seven members of BTS alongside RM, Jin, SUGA, j-hope, V and Jung Kook. The group began in 2013 and gradually developed a musical identity that crossed genres and languages. Their work explored youth, ambition, uncertainty, self-worth, social pressure, love and the experience of growing up.</p>
+  <p>As BTS expanded internationally, Jimin became a familiar presence in music videos, live stages, award-show performances and global tours. He contributed to the group's vocal arrangements and participated in the emotional storytelling that helped define many of its songs. His solo moments within group albums also gave listeners a closer view of his personal artistic interests.</p>
+  <p>Among the songs and performances associated with Jimin are “Lie”, “Serendipity”, “Filter”, “Friends” with V, “Black Swan”, “The Truth Untold” and “Spring Day”. These tracks show different sides of his musical personality: dramatic, playful, tender, introspective and powerful.</p>
+  <p>His relationship with the other members is also part of the BTS story. The group's long journey involved years of training, touring, recording and living through major changes together. For ARMY, the friendship and creative chemistry among the seven members are as meaningful as the music itself.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>SOLO MILESTONES</span><h2>FACE: Finding His Own Voice</h2></div>
+ <div class="feature">
+  <p>Jimin's solo career gave him room to explore personal themes with a different level of focus. On 24 March 2023, he released his first solo album, <b>FACE</b>. The project includes “Face-off”, “Interlude: Dive”, “Like Crazy”, “Alone” and “Set Me Free Pt.2”, along with the English version of “Like Crazy”.</p>
+  <p>The album was introduced as a reflection on facing himself and moving through emotions that had built up during a period of uncertainty. Its sound moves between pop, hip-hop, R&B and synth-pop. “Like Crazy”, the title track, is driven by a synth-pop arrangement that contrasts with the wistful quality of Jimin's voice.</p>
+  <p>“Like Crazy” made history by debuting at No. 1 on the Billboard Hot 100 dated 8 April 2023. Jimin became the first South Korean solo artist to top the chart. The achievement was a major milestone, but it also represented the growing international reach of Korean-language and Korean-led pop music.</p>
+  <p>“Set Me Free Pt.2” presented a different energy: bold, theatrical and determined. Together, the tracks showed that Jimin's solo identity was not limited to one mood or genre. He was willing to experiment, to take creative risks and to let the music reflect different parts of his experience.</p>
+ </div>
+ <div class="stat-grid">
+  <div class="stat"><strong>2023</strong><small>DEBUT SOLO ALBUM · FACE</small></div>
+  <div class="stat"><strong>No. 1</strong><small>BILLBOARD HOT 100 · LIKE CRAZY</small></div>
+  <div class="stat"><strong>6</strong><small>TRACKS ON FACE</small></div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE NEXT CHAPTER</span><h2>MUSE: Exploring Love and Inspiration</h2></div>
+ <div class="feature">
+  <p>On 19 July 2024, Jimin released his second solo album, <b>MUSE</b>. The seven-track project follows his exploration of inspiration, affection and the search for a meaningful connection. It includes “Rebirth (Intro)”, “Interlude: Showtime”, “Smeraldo Garden Marching Band” featuring Loco, “Slow Dance” featuring Sofia Carson, “Be Mine”, “Who” and “Closer Than This”.</p>
+  <p>“Who” became the album's central track and drew wide international attention. Its sound combines contemporary pop and R&B elements, while the lyrics explore longing for someone who feels close in imagination but remains unknown in reality. The track's choreography and performance style gave Jimin another opportunity to connect movement with emotional storytelling.</p>
+  <p>MUSE followed the success of FACE while showing artistic continuity. Where FACE looked inward at a period of personal reflection, MUSE opened a wider conversation about inspiration and the search for connection. The two albums form an important part of Jimin's development as a solo artist.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>PHOTO MOMENTS</span><h2>Jimin Through the Years</h2></div>
+ <div class="gallery">
+  <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Park_Ji-min_for_Dispatch_%22Boy_With_Luv%22_MV_behind_the_scene_shooting%2C_15_March_2019_06.jpg" alt="Jimin behind the scenes for Boy With Luv"><figcaption>Behind-the-scenes portrait from the “Boy With Luv” era. Photo: Dispatch.<a href="https://commons.wikimedia.org/wiki/File:Park_Ji-min_for_Dispatch_%22Boy_With_Luv%22_MV_behind_the_scene_shooting,_15_March_2019_06.jpg" target="_blank" rel="noopener">View image and CC BY 3.0 licence ↗</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Park_Ji-min_for_Dispatch_%22Boy_With_Luv%22_MV_behind_the_scene_shooting%2C_15_March_2019_01.jpg" alt="Jimin in a Dispatch behind the scenes image"><figcaption>Another Dispatch behind-the-scenes moment. Photo: Min Kyung-bin / Dispatch.<a href="https://commons.wikimedia.org/wiki/File:Park_Ji-min_for_Dispatch_%22Boy_With_Luv%22_MV_behind_the_scene_shooting,_15_March_2019_01.jpg" target="_blank" rel="noopener">View image and licence ↗</a></figcaption></figure>
+  <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Park_Ji-min_for_Dispatch_White_Day_Special%2C_27_February_2019_03.jpg" alt="Jimin for Dispatch White Day Special"><figcaption>Dispatch White Day Special, February 2019. Photo: Dispatch.<a href="https://commons.wikimedia.org/wiki/File:Park_Ji-min_for_Dispatch_White_Day_Special,_27_February_2019_03.jpg" target="_blank" rel="noopener">View image and licence ↗</a></figcaption></figure>
+ </div>
+ <div class="callout">
+  <h3>The long-hair era: a new visual chapter</h3>
+  <p>In 2026, Jimin's long blonde hair became one of the most talked-about visual details of the ARIRANG touring era. Reports in June described the style as reaching his shoulders, while later tour appearances featured different textures and styling variations. In November, STARNEWS highlighted the contrast between his glamorous stage presence and relaxed everyday photographs. The changing look became a talking point among ARMY because it offered a fresh image while keeping his familiar elegance.</p>
+  <p>For the latest long-hair photographs, see the recent editorial coverage and Jimin's own social updates linked below. Those photographs are copyrighted and are not embedded here as “free” images. Obtain permission from the photographer or publisher before using them in a commercial website gallery.</p>
+  <p><a href="https://www.starnewskorea.com/en/music/2026/11/10/2026111008334339715" target="_blank" rel="noopener">STARNEWS — Jimin’s Thousand Charms, 10 November 2026 ↗</a></p>
+  <p><a href="https://www.starnewskorea.com/en/music/2026/06/10/2026061018475497087" target="_blank" rel="noopener">STARNEWS — Jimin’s long-hair look, 10 June 2026 ↗</a></p>
+  <p><a href="https://www.vogue.com/article/last-looks-jimin" target="_blank" rel="noopener">Vogue — Jimin’s Dior show preparation and refined long-hair look ↗</a></p>
+ </div>
+ <p class="note">Image note: The three embedded images are available on Wikimedia Commons under the licences shown on their file pages. The Dispatch images are CC BY 3.0 and require credit to Dispatch; check each file page for full terms. Do not remove attribution.</p>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>FASHION & PERSONAL STYLE</span><h2>An Artist with a Distinctive Visual Identity</h2></div>
+ <div class="feature">
+  <p>Jimin's influence extends beyond music. His appearance at international fashion events has brought him into conversations about contemporary menswear, luxury design and the relationship between performance and personal style. His work with Dior as a global ambassador placed him within a fashion house known for its history, craftsmanship and evolving creative direction.</p>
+  <p>One reason his style attracts attention is its versatility. He can move from a soft, romantic image to a sharply tailored silhouette, from relaxed streetwear to stage costumes built around movement and drama. His clothing choices often work with the way he performs: fabrics, proportions and details become part of the overall visual story.</p>
+  <p>In 2026, his longer hair added another dimension to this image. The look appeared in different forms across public appearances and tour stages, including flowing blonde lengths and more textured styling. Vogue's coverage of his Dior preparation described his decision to grow his hair and pursue a more refined image. This was not simply a hairstyle change; it became part of the visual evolution of an artist entering a new phase of his career.</p>
+  <p>Fashion is only one part of Jimin's identity, however. It complements the music rather than replacing it. His most lasting connection with audiences continues to come from the voice, movement and emotional commitment he brings to performance.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE ARMY CONNECTION</span><h2>Warmth Beyond the Spotlight</h2></div>
+ <div class="feature">
+  <p>Jimin's relationship with ARMY is a recurring theme in his public life. Through concerts, interviews and messages on fan platforms, he has often expressed gratitude for the people who support BTS and his solo work. For many fans, the connection is built not only through major achievements but also through small gestures: a message after a show, a moment of humour, a personal photograph or a sincere expression of thanks.</p>
+  <p>His stage persona can be intense and charismatic, yet fans also see a softer, playful and affectionate side in behind-the-scenes content. This contrast is part of what makes his public image compelling. The performer who commands a stadium can also appear thoughtful and approachable in everyday moments.</p>
+  <p>It is important to remember that artists are also people entitled to privacy and rest. Supporting Jimin means celebrating his work while respecting his boundaries, personal time and well-being. A healthy fan culture allows admiration to remain positive and sustainable.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>MILITARY SERVICE & RETURN</span><h2>A Pause, a Responsibility, a New Beginning</h2></div>
+ <div class="feature">
+  <p>Jimin enlisted for South Korea's mandatory military service in December 2023 alongside Jung Kook. The two served in the Army's 5th Infantry Division and were discharged on 11 June 2025 after completing their service. Their return was an important moment for fans who had followed the members through the group's period of individual military duties.</p>
+  <p>Military service marked a pause in public group activities, but it did not erase the work that had come before. Jimin returned with new experiences and a different stage of life behind him. For an artist whose career began at a young age, this transition represented another chapter in personal growth.</p>
+  <p>The completion of military service by all seven members made a full-group return possible. It also gave BTS and ARMY a shared point of anticipation: the chance to see the members together again, with each bringing the experiences and artistic development of the intervening years.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>THE ARIRANG ERA</span><h2>Jimin Returns to the Global Stage with BTS</h2></div>
+ <div class="feature">
+  <p>2026 marked a new chapter for BTS as the seven members returned to group activity in the ARIRANG era. The comeback connected the group's contemporary sound with themes of Korean identity, memory and cultural expression. For Jimin, returning to the stage with RM, Jin, SUGA, j-hope, V and Jung Kook meant rejoining a creative partnership that had shaped much of his adult life.</p>
+  <p>The ARIRANG world tour also gave fans around the world the opportunity to experience the group together again. Jimin's long blonde hair, stage styling and expressive performance became recurring talking points, but the central attraction remained the music and the energy of seven performers sharing one stage.</p>
+  <p>By November 2026, BTS had continued touring across international markets, with Southeast Asian dates including Kuala Lumpur, Singapore, Bangkok and Jakarta forming part of the wider regional schedule. The tour brought the group closer to fans across the region and renewed the sense of connection that has always been central to BTS's relationship with ARMY.</p>
+  <p>For Malaysian fans, the prospect of seeing BTS in the region adds a special local dimension to the ARIRANG story. It is a reminder that a group formed in Seoul can create a shared cultural moment across countries, languages and generations.</p>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>CAREER TIMELINE</span><h2>The Journey of Park Jimin</h2></div>
+ <div class="feature timeline">
+  <div class="event"><b>13 OCTOBER 1995</b><p>Born in Busan, South Korea.</p></div>
+  <div class="event"><b>2012</b><p>Joins Big Hit Entertainment as a trainee after auditioning.</p></div>
+  <div class="event"><b>13 JUNE 2013</b><p>Makes his official debut as a member of BTS.</p></div>
+  <div class="event"><b>2016–2020</b><p>Develops memorable solo and group performances, including “Lie”, “Serendipity”, “Filter” and “Black Swan”.</p></div>
+  <div class="event"><b>24 MARCH 2023</b><p>Releases his first solo album, <i>FACE</i>; “Like Crazy” reaches No. 1 on the Billboard Hot 100.</p></div>
+  <div class="event"><b>19 JULY 2024</b><p>Releases his second solo album, <i>MUSE</i>, led by “Who”.</p></div>
+  <div class="event"><b>11 JUNE 2025</b><p>Completes mandatory military service with Jung Kook.</p></div>
+  <div class="event"><b>2026</b><p>Returns to group activities with BTS in the ARIRANG era and the world tour; his long-hair look becomes a widely discussed visual signature.</p></div>
+ </div>
+</section>
+
+<section class="section wrap">
+ <div class="section-title"><span>REFERENCES</span><h2>Official Sources & Further Reading</h2></div>
+ <div class="source-list">
+  <a href="https://bts.ibighit.com/eng/discography/jimin/detail/face/" target="_blank" rel="noopener">BIGHIT MUSIC — Jimin, FACE ↗</a>
+  <a href="https://bts.ibighit.com/eng/discography/jimin/detail/muse/" target="_blank" rel="noopener">BIGHIT MUSIC — Jimin, MUSE ↗</a>
+  <a href="https://www.billboard.com/music/chart-beat/jimin-like-crazy-number-one-hot-100-first-south-korean-soloist-1235293208/" target="_blank" rel="noopener">Billboard — “Like Crazy” reaches No. 1 ↗</a>
+  <a href="https://en.yna.co.kr/view/AEN20250611000900315" target="_blank" rel="noopener">Yonhap — Jimin and Jung Kook complete military service ↗</a>
+  <a href="https://www.starnewskorea.com/en/music/2026/11/10/2026111008334339715" target="_blank" rel="noopener">STARNEWS — Jimin’s latest 2026 photos and tour update ↗</a>
+  <a href="https://www.starnewskorea.com/en/music/2026/06/10/2026061018475497087" target="_blank" rel="noopener">STARNEWS — Jimin’s shoulder-length hair, June 2026 ↗</a>
+  <a href="https://www.vogue.com/article/last-looks-jimin" target="_blank" rel="noopener">Vogue — Jimin before the Dior Men show ↗</a>
+  <a href="https://commons.wikimedia.org/wiki/Category:Jimin_in_2026" target="_blank" rel="noopener">Wikimedia Commons — Jimin in 2026 ↗</a>
+ </div>
+ <p class="note" style="margin-top:18px">Editorial and image note: This profile is an independent fan-oriented editorial feature by Nanis Communication. BTS, Jimin and related trademarks belong to their respective owners. The embedded Dispatch photographs are licensed under Creative Commons Attribution 3.0 as identified on their Wikimedia Commons file pages; credit must be retained. Recent press and social-media photographs linked in this article are not represented as free-to-use. Obtain permission from the relevant rights holder before embedding or republishing them.</p>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">NANIS COMMUNICATION · BTS THE LEGEND<br>PARK JIMIN · BABY DUCK YELLOW & WHITE EDITION<br>WITH LOVE FOR ARMY ♡</div>
+</footer>
+</body>
+</html>
